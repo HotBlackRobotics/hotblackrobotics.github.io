@@ -19,25 +19,11 @@ layout: compressed
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
 
-    <style>
-    {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
-    {{ scss_sheet | scssify }}
-    </style>
-
-
 
 </head>
 <body>
 
     {{ content }}
-
-    {% include icons.html %}
-
-    {% include analytics-google.html %}
-    {% include cookies-consent.html %}
-    <script src="/assets/jquery-3.2.1.slim.min.js"></script>
-    <script src="/assets/popper.min.js"></script>
-    <script src="/assets/bootstrap.min.js"></script>
 
 </body>
 </html>
