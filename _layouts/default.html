@@ -1,0 +1,43 @@
+---
+layout: compressed
+---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <meta name=bio content="{{ site.bio }}">
+    <meta name=author content="{{ site.name }}">
+
+    {% seo %}
+
+    {% include favicon.html %}
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
+
+    <style>
+    {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
+    {{ scss_sheet | scssify }}
+    </style>
+
+
+
+</head>
+<body>
+
+    {{ content }}
+
+    {% include icons.html %}
+
+    {% include analytics-google.html %}
+    {% include cookies-consent.html %}
+    <script src="/assets/jquery-3.2.1.slim.min.js"></script>
+    <script src="/assets/popper.min.js"></script>
+    <script src="/assets/bootstrap.min.js"></script>
+
+</body>
+</html>

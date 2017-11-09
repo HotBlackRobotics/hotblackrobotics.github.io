@@ -1,0 +1,10 @@
+$hbr-main-color: #F05A2E;
+
+$theme-colors: (
+   "default": $hbr-main-color
+);
+
+@import "base/general";
+@import "base/nav";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

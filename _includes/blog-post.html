@@ -1,0 +1,15 @@
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <a class="card" href="{{ site.url }}{{ post.url }}" style="margin-top: 10px;">
+    {% if post.image %}
+    <img class="card-img-top" src="{{ post.image }}" alt="{{ post.title }}">
+    {% else %}
+    <img class="card-img-top" src="/assets/hbr.jpg" alt="{{ post.title }}">
+    {% endif %}
+    <div class="card-body">
+      <h4 class="card-title">{{ post.title }}</h4>
+      <p class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></p>
+      <p class="card-text">{{ post.description }}</p>
+    </div>
+  </a>
+</div>
