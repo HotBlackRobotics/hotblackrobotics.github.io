@@ -231,8 +231,7 @@ DEPENDENCIES
   jekyll
   jekyll-feed
   jekyll-redirect-from
-  minima
-  public_suffix
+  public_suffix (= 2.0.5)
   tzinfo-data
 
 BUNDLED WITH
