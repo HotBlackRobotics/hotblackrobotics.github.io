@@ -9,7 +9,7 @@ tag:
  - Hbrain
 category: blog
 redirect_from: /blog/post/2017-05-23-rilascio-hbrain-v052
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

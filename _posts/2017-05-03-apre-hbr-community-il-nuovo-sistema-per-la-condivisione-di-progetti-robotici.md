@@ -8,7 +8,7 @@ tag:
  - Community
 category: blog
 redirect_from: /blog/post/2017-05-03-apre-hbr-community-il-nuovo-sistema-per-la-condivisione-di-progetti-robotici
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

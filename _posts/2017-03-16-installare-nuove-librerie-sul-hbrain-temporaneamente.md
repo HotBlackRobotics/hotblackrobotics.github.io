@@ -10,7 +10,7 @@ tag:
  - Hbrain
 category: blog
 redirect_from: /blog/post/2017-03-16-installare-nuove-librerie-sul-hbrain-temporaneamente
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-04-13-hackeriamo-oggetti-per-costruire-un-robot-completo
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

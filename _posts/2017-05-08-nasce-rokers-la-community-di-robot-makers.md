@@ -9,7 +9,7 @@ tag:
  - Rokers
 category: blog
 redirect_from: /blog/post/2017-05-08-nasce-rokers-la-community-di-robot-makers
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

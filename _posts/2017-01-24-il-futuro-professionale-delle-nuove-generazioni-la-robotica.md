@@ -10,7 +10,7 @@ tag:
  - Vision
 category: blog
 redirect_from: /blog/post/2017-01-24-il-futuro-professionale-delle-nuove-generazioni-la-robotica
-author: Ludovico Russo
+author: ludusrusso
 description: "Perché il mondo del lavoro del futuro sarà dominato dagli sviluppatori di applicazioni robotiche "
 ---
 

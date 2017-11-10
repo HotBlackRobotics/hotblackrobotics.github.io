@@ -4,17 +4,17 @@ layout: post
 date: 2017-02-08 16:52:09
 image: https://www.roboticsbusinessreview.com/wp-content/uploads/2011/07/Roboter-beziehen-Wissen-aus-der-Cloud.jpg
 headerImage: false
-tag: 
+tag:
  - Domande
  - Cloud
  - Robotics
 category: blog
 redirect_from: /blog/post/2017-02-08-cosa-si-puo-fare-con-la-nostra-piattaforma-di-cloud-robotics
-author: Ludovico Russo
+author: ludusrusso
 description: "Ecco alcune cosa che è possibile fare con la nostra piattaforma di Cloud Robotics"
 ---
 
-Da quando abbiamo iniziato a mostrare in giro la nostra piattaforma di Cloud Robotics, sempre più gente mi fa questa domanda: **Ma quindi, cosa si può fare con la piattaforma di Cloud robotics?**. 
+Da quando abbiamo iniziato a mostrare in giro la nostra piattaforma di Cloud Robotics, sempre più gente mi fa questa domanda: **Ma quindi, cosa si può fare con la piattaforma di Cloud robotics?**.
 
 Scrivo questo post per avere un punto di riferimento a cui rimandare le persone che me la fanno (da buon informatico preferisco fare copia incolla che rifare ogni volta le stesse cose)....
 
@@ -65,7 +65,7 @@ Anche in questo caso, applicazioni molte semplice da implementare ma che fa capi
 
 ###Hardware Abstraction
 
-A parte il nome che sembra complicato, l'idea dell'Hardware Abstrction è che la Cloud Robotics riesce ad isolare l'hardware dal software in un'applicazione robotica.. 
+A parte il nome che sembra complicato, l'idea dell'Hardware Abstrction è che la Cloud Robotics riesce ad isolare l'hardware dal software in un'applicazione robotica..
 
 Ma cosa vuol dire?
 

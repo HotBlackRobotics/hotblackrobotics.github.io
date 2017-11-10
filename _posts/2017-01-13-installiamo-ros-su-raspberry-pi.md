@@ -12,7 +12,7 @@ tag:
  - Robotica
 category: blog
 redirect_from: /blog/post/2017-01-13-installiamo-ros-su-raspberry-pi
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

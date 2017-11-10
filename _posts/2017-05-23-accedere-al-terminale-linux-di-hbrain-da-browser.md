@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-05-23-accedere-al-terminale-linux-di-hbrain-da-browser
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

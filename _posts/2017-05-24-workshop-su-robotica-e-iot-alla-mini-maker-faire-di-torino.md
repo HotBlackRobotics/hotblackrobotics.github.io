@@ -9,7 +9,7 @@ tag:
  - Makerfaire
 category: blog
 redirect_from: /blog/post/2017-05-24-workshop-su-robotica-e-iot-alla-mini-maker-faire-di-torino
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

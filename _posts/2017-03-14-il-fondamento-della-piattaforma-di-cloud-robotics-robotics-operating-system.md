@@ -8,7 +8,7 @@ tag:
  - Ros
 category: blog
 redirect_from: /blog/post/2017-03-14-il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-05-19-bug-fix-e-migliorie
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

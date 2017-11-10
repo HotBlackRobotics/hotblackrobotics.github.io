@@ -10,7 +10,7 @@ tag:
  - Hostname
 category: blog
 redirect_from: /blog/post/2017-05-11-cambiare-nome-al-robot-dotbot-da-piattaforma
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

@@ -2,9 +2,9 @@
 title: "Un robot al museo - MuFant e HotBlack Robotics"
 layout: post
 date: 2017-10-31 09:55:34
-image: 
+image:
 headerImage: false
-tag: 
+tag:
 category: blog
 redirect_from: /blog/post/2017-10-31-un-robot-al-museo-mufant-e-hotblack-robotics
 author: sgabello
@@ -19,20 +19,20 @@ Hey! Se sei finito qui è perchè probabilmente ti interessa avere qualche info 
 
 ## Il robot che vedi alla mostra di Cesena
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9lyAfzyFcQQ" frameborder="0" gesture="media" allowfullscreen></iframe> 
+{% include youtube.html id="9lyAfzyFcQQ" %}
 
 ## Il tutorial per rifare questo robot e l'applicazione a casa tua
 
 Se hai dei problemi con questo tutorial o anche solo vuoi fare 4 chiacchiere scrivimi a ermacora.gabriele@gmail.com !!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E9NX3vx4WSw" frameborder="0" gesture="media" allowfullscreen></iframe>
+{% include youtube.html id="E9NX3vx4WSw" %}
 
-## RECAP: come fare questa applicazione robotica a casa tua 
+## RECAP: come fare questa applicazione robotica a casa tua
 Il tutorial per costruire questo robot controllabile da remoto è semplice e consiste in **18** semplici passaggi.
 
 **Cosa ti serve**
 
-Il robot DotBot che uso è open source e puoi costruirtelo a casa. Il tutorial dettagliato per stampare la meccanica in 3D, le schede elettroniche e come farlo lo trovi [qui](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware). 
+Il robot DotBot che uso è open source e puoi costruirtelo a casa. Il tutorial dettagliato per stampare la meccanica in 3D, le schede elettroniche e come farlo lo trovi [qui](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware).
 
 Se però non hai ancora tempo di costruirti tutto il robot puoi già partire solo con:
 
@@ -62,7 +62,7 @@ Se però non hai ancora tempo di costruirti tutto il robot puoi già partire sol
 
 7) Accendi il Raspberry e dopo un po' (30 secondi - 1 minuto) [cerca il robot dalla piattaforma cloud](http://www.hotblackrobotics.com/cloud/index)
 
-8) Ad un certo punto apparirà un robot che si chiama **hotbot**! Premi "connect". 
+8) Ad un certo punto apparirà un robot che si chiama **hotbot**! Premi "connect".
 
 9) Ora vai su ["Skecthes"](http://www.hotblackrobotics.com/cloud/sketch/). Vai al fondo della pagina dove c'è scritto "Examples". Troverai un esempio che si chiama "Mufantbot".Premi "clone"!
 
@@ -70,7 +70,7 @@ Se però non hai ancora tempo di costruirti tutto il robot puoi già partire sol
 
 11) Crea il tuo bot Telegram seguendo il [tutorial qui](http://www.hotblackrobotics.com/blog/posts/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros). Segui tutti i passaggi fino a "Creazione del nostro programma" siccome tu il programma lo copi da me ;)
 
-12) Vai nel codice e dove c'è scritto TOKEN a riga 18 sostituisci "il_tuo_token" con il tuo token. 
+12) Vai nel codice e dove c'è scritto TOKEN a riga 18 sostituisci "il_tuo_token" con il tuo token.
 
 13) Ora inserisci la telecamera per il Raspberry (RaspiCam). La attivi andando su "Apps" sulla barra in alto e selezionando [RaspiCam](http://www.hotblackrobotics.com/cloud/webgui/camera)
 
@@ -78,9 +78,9 @@ Se però non hai ancora tempo di costruirti tutto il robot puoi già partire sol
 
 15) Si apre la schermata con diversi processi e vai a schiacciare "start" su "ros_name". Aspetta 30 secondi.
 
-16) Ora torna su RaspiCam (pagina di prima) e premi start camera. Il LED sulla camera si accende ed inizia lo streaming video.  
+16) Ora torna su RaspiCam (pagina di prima) e premi start camera. Il LED sulla camera si accende ed inizia lo streaming video.
 
-17) Ora torna sul tuo programmino e premi "RUN". Cerca su Telegram il tuo bot, con il nome che gli hai dato. 
+17) Ora torna sul tuo programmino e premi "RUN". Cerca su Telegram il tuo bot, con il nome che gli hai dato.
 
 18)Appena avvii la chat dovrebbe darti segni di vita!
 
@@ -93,6 +93,3 @@ Gli elementi chiave della piattaforma sono quindi i contenuti ovvero progetti ha
 Perchè facciamo questo? Perchè crediamo fermamente che la condivisione open source di contenuti di robotica in una piattaforma cloud possa generare presto nuovi servizi robotici e creare nuovi business. Inoltre crediamo che i nuovi servizi robotici che si andranno a creare andranno a risolvere problemi specifici e customizzati nel mercato (customizzazione di massa).
 
 ![](https://static1.squarespace.com/static/5805c3c003596e2f7b9dd8f1/t/586cb9eee6f2e1c533074259/1483520506614/)
-
-
-

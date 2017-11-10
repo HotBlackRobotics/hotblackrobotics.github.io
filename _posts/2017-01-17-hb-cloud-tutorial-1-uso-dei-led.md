@@ -12,7 +12,7 @@ tag:
  - Python
 category: blog
 redirect_from: /blog/post/2017-01-17-hb-cloud-tutorial-1-uso-dei-led
-author: Ludovico Russo
+author: ludusrusso
 description: "Iniziamo ad utilizzare la piattaforma di Cloud Robotics"
 ---
 

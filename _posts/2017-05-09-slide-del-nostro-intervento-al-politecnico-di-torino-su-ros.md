@@ -9,7 +9,7 @@ tag:
  - Seminario
 category: blog
 redirect_from: /blog/post/2017-05-09-slide-del-nostro-intervento-al-politecnico-di-torino-su-ros
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

@@ -11,7 +11,7 @@ tag:
  - Scuola
 category: blog
 redirect_from: /blog/post/2017-01-16-hb-robotics-allalternanza-scuola-lavoro-nellitis-avogadro
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

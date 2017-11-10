@@ -10,7 +10,7 @@ tag:
  - Telegram
 category: blog
 redirect_from: /blog/post/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 

@@ -10,7 +10,7 @@ tag:
  - Cloud
 category: blog
 redirect_from: /blog/post/2017-10-07-annunciamo-il-programma-di-beta-testing-di-hbr-cloud-api
-author: Ludovico Russo
+author: ludusrusso
 description: ""
 ---
 
