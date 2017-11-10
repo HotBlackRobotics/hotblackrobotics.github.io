@@ -6,11 +6,10 @@ image:
 headerImage: false
 tag: 
  - Shop
-
 category: blog
 redirect_from: /blog/post/2017-01-13-hbrain-raspberry-pi-3-55-euro
 author: Gabriele Ermacora
-description: 
+description: ""
 ---
 
 Questo è il cervello e l'anima della piattaforma cloud.

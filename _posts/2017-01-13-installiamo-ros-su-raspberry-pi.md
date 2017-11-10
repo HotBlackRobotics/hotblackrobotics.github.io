@@ -6,19 +6,14 @@ image: https://cdn.instructables.com/FPN/U31F/HBNXVG6G/FPNU31FHBNXVG6G.MEDIUM.jp
 headerImage: false
 tag: 
  - Ros
-
  - Tutorial
-
  - Turtlesim
-
  - Raspberry
-
  - Robotica
-
 category: blog
 redirect_from: /blog/post/2017-01-13-installiamo-ros-su-raspberry-pi
 author: Ludovico Russo
-description: 
+description: ""
 ---
 
 ![ROS+Raspberry Logo](https://cdn.instructables.com/FPN/U31F/HBNXVG6G/FPNU31FHBNXVG6G.MEDIUM.jpg)

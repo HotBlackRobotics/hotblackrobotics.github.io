@@ -4,22 +4,18 @@ layout: post
 date: 2017-02-02 15:59:55
 image: https://thumbs.dreamstime.com/z/talking-robot-cartoon-38038488.jpg
 headerImage: false
-tag: 
+tag:
  - Speech
-
  - Cloud
-
  - Assistant
-
  - Robotics
-
 category: blog
 redirect_from: /blog/post/2017-02-02-hb-cloud-tutorial-speech-bot
 author: Gabriele Ermacora
 description: Le basi per costruire un "dialogo" con il vostro robot sfruttando le funzionalità di sintesi e riconoscimento vocale.
 ---
 
-Un'applicazione cloud interessante e molto divertente è far parlare il vostro robot! 
+Un'applicazione cloud interessante e molto divertente è far parlare il vostro robot!
 Tecnicamente si chiama TTS - [text to speech](https://en.wikipedia.org/wiki/Speech_synthesis), o *sintesi vocale*. I sistemi TextToSpeech (letteralmente da testo a voce) consistono appunto nel convertire un testo e riprodurlo da un sintetizzatore vocale tramite un computer. Ovviamente le applicazioni nella robotica sono tantissime, quello che faremo è dare le basi per costruire un assistente robotico con cui potrete dialogare!
 
 Iniziamo quindi a far "parlare" il computer tramite ROS. Apriamo la Web App "Speech Rec", che trovate su [http://www.hotblackrobotics.com/cloud/webgui/speech](http://www.hotblackrobotics.com/cloud/webgui/speech) oppure nella tendina "Apps". Questa Web App l'abbiamo già vista in precedenza quando usavamo il controllo vocale. Prima con questa Web App potevamo impartire ordini al robot tramite la nostra voce, ora invece usiamo il sintetizzatore vocale per ottenere una risposta o un feedback. In questa Web App abbiamo un modulo in javascript in grado di sintetizzare la voce umana. Premendo sul tasto "Bot" il computer ci accoglierà con un caloroso "Eccomi!". Da questo momento vedrete nella sezione "Console ROS" la creazione di un nuovo topic ```/<nome_del_vostro_robot>/to_speech ```
@@ -41,12 +37,12 @@ from time import sleep
 
 class Node(dotbot_ros.DotbotNode):
     node_name = 'text_to_speech_node'
-    
+
     def setup(self):
         self.pub_voice = dotbot_ros.Publisher('to_speech', String)
         sleep(0.5)
         self.pub_voice.publish("ciao")
-        
+
         sleep(1)
         self.pub_voice.publish("mi chiamo chat bot")
 

@@ -6,11 +6,10 @@ image: http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v14872384
 headerImage: false
 tag: 
  - Shop
-
 category: blog
 redirect_from: /blog/post/2017-01-13-kit-meccanica-20-euro
 author: Gabriele Ermacora
-description: Il kit comprende tutte le parti da stamprare in 3D.
+description: "Il kit comprende tutte le parti da stamprare in 3D."
 ---
 
 ![kit meccanica dotbot cloud] (http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487238450/meccanica_hii2ip.jpg) 

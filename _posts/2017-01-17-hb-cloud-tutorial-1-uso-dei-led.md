@@ -6,19 +6,14 @@ image: https://raw.githubusercontent.com/ludusrusso/images/master/hbr/tutorial/l
 headerImage: false
 tag: 
  - Tutorial
-
  - Hbr
-
  - Hbrain
-
  - Gpiozero
-
  - Python
-
 category: blog
 redirect_from: /blog/post/2017-01-17-hb-cloud-tutorial-1-uso-dei-led
 author: Ludovico Russo
-description: Iniziamo ad utilizzare la piattaforma di Cloud Robotics
+description: "Iniziamo ad utilizzare la piattaforma di Cloud Robotics"
 ---
 
 Ciao a tutti, iniziamo oggi questa serie di tutorial per insegnare a programmare i robot DotBot-ROS dalla piattaforma di cloud robotics che stiamo sviluppando: **HB Cloud**.

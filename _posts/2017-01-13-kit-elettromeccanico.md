@@ -6,11 +6,10 @@ image: http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v14872384
 headerImage: false
 tag: 
  - Shop
-
 category: blog
 redirect_from: /blog/post/2017-01-13-kit-elettromeccanico
 author: Gabriele Ermacora
-description: I componenti elettronici ed elettromeccanici
+description: "I componenti elettronici ed elettromeccanici"
 ---
 
 ![elettronica meccanica kit dotbot cloud] (http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487238456/elettromeccanica_hqrmoc.jpg)

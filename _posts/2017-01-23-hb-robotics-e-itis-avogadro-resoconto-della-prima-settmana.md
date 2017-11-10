@@ -4,19 +4,15 @@ layout: post
 date: 2017-01-23 14:24:24
 image: http://res.cloudinary.com/hbr/image/upload/v1485173582/IMG_20170118_114658-PANO_ye4xbh.jpg
 headerImage: false
-tag: 
+tag:
  - Scuola
-
  - Ros
-
  - Avogadro
-
  - Hbr
-
 category: blog
 redirect_from: /blog/post/2017-01-23-hb-robotics-e-itis-avogadro-resoconto-della-prima-settmana
 author: Ludovico Russo
-description: Il resoconto della prima settimana di alternanza Scuola-Lavoro presso la scuola ITIS Avogadro di Torino
+description: "Il resoconto della prima settimana di alternanza Scuola-Lavoro presso la scuola ITIS Avogadro di Torino"
 ---
 
 ![HB Robotcs Spiegazione ROS](http://res.cloudinary.com/hbr/image/upload/v1485173582/IMG_20170118_114658-PANO_ye4xbh.jpg)
@@ -44,19 +40,19 @@ Il dare un nome al robot è stata certamente la parte più divertente di tutto. 
 
 ##Programmazione dei robot
 
-La programmazione in ROS è iniziata subito dopo la fase di configurazione. Per il momento, non abbiamo avuto troppo tempo per far lavorare i ragazzi (il tempo rimasto era molto poco), ma ho trovato il tempo per dargli un'infarinatura generale di ROS e della piattaforma. 
+La programmazione in ROS è iniziata subito dopo la fase di configurazione. Per il momento, non abbiamo avuto troppo tempo per far lavorare i ragazzi (il tempo rimasto era molto poco), ma ho trovato il tempo per dargli un'infarinatura generale di ROS e della piattaforma.
 
 I ragazzi erano super interessati, e di questo sono molto contento. Temevo tantissimo che trovassero il tutto troppo complicato per padroneggiarlo nel poco tempo disponibile, però in poco più di mezzora ogni gruppo già smanettava per programmare i robot in modo da accendere led e leggere i valori di pulsanti.
 
 ##OpenDay: un evento inaspettato
 
-Durante la giornata di sabato, si è svolto l'OpenDay della scuola. Questo evento serve per aprire le porte a potenziali studenti, per far capire ai nuovi studenti se la scuola fa per loro. La classe con cui lavoriamo è stata coinvolta attivamente in questo evento. Durante la lezione, quindi, molti ragazzi erano preoccupati per la presentazione dei progetti che sarebbe avvenuta nel pomeriggio. 
-In accordo con loro, quindi, abbiamo deciso di lasciarli un po' più liberi nell'ultimazione dei loro progetti. 
+Durante la giornata di sabato, si è svolto l'OpenDay della scuola. Questo evento serve per aprire le porte a potenziali studenti, per far capire ai nuovi studenti se la scuola fa per loro. La classe con cui lavoriamo è stata coinvolta attivamente in questo evento. Durante la lezione, quindi, molti ragazzi erano preoccupati per la presentazione dei progetti che sarebbe avvenuta nel pomeriggio.
+In accordo con loro, quindi, abbiamo deciso di lasciarli un po' più liberi nell'ultimazione dei loro progetti.
 
-Uno di loro, ci ha proposto di montare il nostro Raspberry PI su un Hardware diverso da loro: una macchina telecomandata che stavano cercando di controllare in Arduino. 
+Uno di loro, ci ha proposto di montare il nostro Raspberry PI su un Hardware diverso da loro: una macchina telecomandata che stavano cercando di controllare in Arduino.
 Il progetto mi sembrava divertente, e nel pochissimo tempo a disposizione siamo riusciti a configurare correttamente il robot e a controllare la macchina via wireless da una webapp!
 
-Mi sono reso conto delle enormi potenzialità della tecnologia che stiamo sviluppando: crediamo che ROS (e la Cloud Robotics) potrà essere quello che adesso è Android (e gli smartphone): una nuova tecnologia che rivoluzionerà la nostra società e creerà una classe di nuovi professionisti chiamati **robot developers** (sviluppatori robotici). 
+Mi sono reso conto delle enormi potenzialità della tecnologia che stiamo sviluppando: crediamo che ROS (e la Cloud Robotics) potrà essere quello che adesso è Android (e gli smartphone): una nuova tecnologia che rivoluzionerà la nostra società e creerà una classe di nuovi professionisti chiamati **robot developers** (sviluppatori robotici).
 
 ![Macchina Dotbot](http://res.cloudinary.com/hbr/image/upload/v1485181164/IMG_20170121_120500_oxnih7.jpg)
 

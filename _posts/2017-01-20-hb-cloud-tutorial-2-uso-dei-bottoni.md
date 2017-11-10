@@ -6,21 +6,15 @@ image: http://res.cloudinary.com/hbr/image/upload/v1484936611/IMG_20170120_17263
 headerImage: false
 tag: 
  - Tutorial
-
  - Hbr
-
  - Hbrain
-
  - Gpiozero
-
  - Python
-
  - Ros
-
 category: blog
 redirect_from: /blog/post/2017-01-20-hb-cloud-tutorial-2-uso-dei-bottoni
 author: Ludovico Russo
-description: Rieccomi con il secondo tutorial legato all'uso dei bottoni per il robot **DotBot-ROS**. In questo tutorial, vedremo come configurare ed utilizzare in Python un bottone attaccato ad un pin GPIO del Raspberry Pi 3.
+description: "Rieccomi con il secondo tutorial legato all'uso dei bottoni per il robot **DotBot-ROS**. In questo tutorial, vedremo come configurare ed utilizzare in Python un bottone attaccato ad un pin GPIO del Raspberry Pi 3."
 ---
 
 Rieccomi con il secondo tutorial legato all'uso dei bottoni per il robot **DotBot-ROS**. In questo tutorial, vedremo come configurare ed utilizzare in Python un bottone attaccato ad un pin GPIO del Raspberry Pi 3.

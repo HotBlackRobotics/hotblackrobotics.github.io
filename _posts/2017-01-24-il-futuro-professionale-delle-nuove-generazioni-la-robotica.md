@@ -6,15 +6,12 @@ image:
 headerImage: false
 tag: 
  - Robotics
-
  - Developer
-
  - Vision
-
 category: blog
 redirect_from: /blog/post/2017-01-24-il-futuro-professionale-delle-nuove-generazioni-la-robotica
 author: Ludovico Russo
-description: Perché il mondo del lavoro del futuro sarà dominato dagli sviluppatori di applicazioni robotiche 
+description: "Perché il mondo del lavoro del futuro sarà dominato dagli sviluppatori di applicazioni robotiche "
 ---
 
 In analogia a quanto successo con gli smartphone, quando nacquero nuove figure professionali come lo sviluppatore di applicazioni, così la robotica di servizio creerà nuove figure lavorative. Lo sviluppatore di applicazioni robotiche potrà diventare quindi il lavoro del futuro. Vediamo che cosa sono esattamente la robotica di servizio e la cloud robotics.
