@@ -8,7 +8,7 @@ tag:
  - News
 category: blog
 redirect_from: /blog/post/2017-03-24-romecup-links-info
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

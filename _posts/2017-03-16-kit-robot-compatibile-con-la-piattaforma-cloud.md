@@ -8,7 +8,7 @@ tag:
  - Kit
 category: blog
 redirect_from: /blog/post/2017-03-16-kit-robot-compatibile-con-la-piattaforma-cloud
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

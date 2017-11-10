@@ -10,7 +10,7 @@ tag:
  - Immagine
 category: blog
 redirect_from: /blog/post/2017-03-24-immagine-sd-per-la-cloud-e-configurazione
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

@@ -8,7 +8,7 @@ tag:
  - Tutorial
 category: blog
 redirect_from: /blog/post/2017-03-16-analizziamo-il-codice-del-primo-esempio-blink-led
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

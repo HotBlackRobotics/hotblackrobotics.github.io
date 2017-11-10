@@ -11,7 +11,7 @@ tag:
  - Cloud
 category: blog
 redirect_from: /blog/post/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o
-author: Gabriele Ermacora
+author: sgabello
 description: "Non avete un robot? C'è il robot in cloud accessibile da remoto tramite il vostro PC o cellulare"
 ---
 

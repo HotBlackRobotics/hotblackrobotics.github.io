@@ -13,7 +13,7 @@ tag:
  - Aws
 category: blog
 redirect_from: /blog/post/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o-cellulare
-author: Gabriele Ermacora
+author: sgabello
 description: "Avete problemi hardware? C'è il robot in cloud accessibile da remoto tramite il vostro PC o cellulare"
 ---
 

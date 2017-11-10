@@ -9,7 +9,7 @@ tag:
  - Dotbot
 category: blog
 redirect_from: /blog/post/2017-03-24-configurare-il-robot-dotbot
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

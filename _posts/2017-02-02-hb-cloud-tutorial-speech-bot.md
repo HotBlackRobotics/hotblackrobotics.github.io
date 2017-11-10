@@ -11,7 +11,7 @@ tag:
  - Robotics
 category: blog
 redirect_from: /blog/post/2017-02-02-hb-cloud-tutorial-speech-bot
-author: Gabriele Ermacora
+author: sgabello
 description: Le basi per costruire un "dialogo" con il vostro robot sfruttando le funzionalità di sintesi e riconoscimento vocale.
 ---
 

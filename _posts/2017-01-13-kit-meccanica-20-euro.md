@@ -8,7 +8,7 @@ tag:
  - Shop
 category: blog
 redirect_from: /blog/post/2017-01-13-kit-meccanica-20-euro
-author: Gabriele Ermacora
+author: sgabello
 description: "Il kit comprende tutte le parti da stamprare in 3D."
 ---
 

@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-02-20-come-creare-una-semplice-web-app-per-interagire-con-il-vostro-robot
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

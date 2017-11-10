@@ -9,7 +9,7 @@ tag:
  - Base
 category: blog
 redirect_from: /blog/post/2017-03-16-iniziamo-a-programmare
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

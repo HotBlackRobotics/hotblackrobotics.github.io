@@ -1,42 +1,47 @@
 ---
-title: "Supporto Tecnico"
+title: "Inizia da qui!"
 layout: post
 date: 2017-03-24 13:36:10
-image: 
+image:
 headerImage: false
-tag: 
+tag:
 category: blog
 redirect_from: /blog/post/supporto-tecnico
-author: Gabriele Ermacora
+author: ludusrusso
 description: ""
 ---
 
-## Tutorial (Introduzione) ##
+Ciao, la nostra piattaforma è ancora un prototipo, ed alcune funzionalità sono
+poco chiare e stiamo cercando di migliorarle.
 
-[00-Introduzione e visione tecnologica](http://www.hotblackrobotics.com/blog/posts/2017-01-12-introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot)
+Se, nonostante questi problemi, sei comunque interessato ad utilizzarla, abbiamo
+sviluppato qeusta pagina appositamente per te. Qui dentro, trovi una serie di informazioni,
+tutorial e risorse su come utilizzare al meglio il sistema che abbiamo sviluppato.
 
-[01-Il fondamento della piattaforma di cloud robotics: Robotic Operating System](http://www.hotblackrobotics.com/blog/posts/2017-03-14-il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system)
+Ti consigliamo di iniziare leggendo la  nostra [visione tecnologica](http://www.hotblackrobotics.com/blog/posts/2017-01-12-introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot) e le basi del sistema operativo [ROS](http://www.hotblackrobotics.com/blog/posts/2017-03-14-il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system).
 
-[02-Costruire il robot Dotbot](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware)
+A questo punto, sei pronto per iniziare a smanettare con il robot.
 
-[**03-Scaricare HBrain - Immagine SD**](http://www.hotblackrobotics.com/blog/posts/2017-03-24-immagine-sd-per-la-cloud-e-configurazione)
+## Tutorial Hardware: come costruire e configurare il robot
 
-[04-Configurare il robot Dotbot](http://www.hotblackrobotics.com/blog/posts/2017-03-24-configurare-il-robot-dotbot)
+Per costruire e configurare il robot, segui queste guide:
 
-[05-Cambiare Nome al Robot](http://www.hotblackrobotics.com/blog/posts/2017-05-11-cambiare-nome-al-robot-dotbot-da-piattaforma)
+ - [Costruire il robot Dotbot](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware)
+ - [**Scaricare HBrain - Immagine SD**](http://www.hotblackrobotics.com/blog/posts/2017-03-24-immagine-sd-per-la-cloud-e-configurazione)
+ - [Configurare il robot Dotbot](http://www.hotblackrobotics.com/blog/posts/2017-03-24-configurare-il-robot-dotbot)
+ - [Cambiare Nome al Robot](http://www.hotblackrobotics.com/blog/posts/2017-05-11-cambiare-nome-al-robot-dotbot-da-piattaforma)
 
-## Tutorial (Programmazione) ##
+## Tutorial Software: Come programmare il robot
 
-[1-Uso dei LED](http://www.hotblackrobotics.com/blog/posts/2017-01-17-hb-cloud-tutorial-1-uso-dei-led)
+Per imparare le basi della programmazione del robot, segui questi link.
 
-[2-Uso dei bottoni](http://www.hotblackrobotics.com/blog/posts/2017-01-20-hb-cloud-tutorial-2-uso-dei-bottoni)
+ - [Uso dei LED](http://www.hotblackrobotics.com/blog/posts/2017-01-17-hb-cloud-tutorial-1-uso-dei-led)
+ - [Uso dei bottoni](http://www.hotblackrobotics.com/blog/posts/2017-01-20-hb-cloud-tutorial-2-uso-dei-bottoni)
+ - [I motori](http://www.hotblackrobotics.com/blog/posts/2017-01-20-hb-cloud-tutorial-3-i-motori)
+ - [Utilizzo della RaspiCam](http://www.hotblackrobotics.com/blog/posts/2017-04-10-utilizzare-la-raspicam-in-streaming-con-la-piattaforma-cloud)
 
-[3-I motori] (http://www.hotblackrobotics.com/blog/posts/2017-01-20-hb-cloud-tutorial-3-i-motori)
 
-[4-Utilizzo della RaspiCam](http://www.hotblackrobotics.com/blog/posts/2017-04-10-utilizzare-la-raspicam-in-streaming-con-la-piattaforma-cloud)
-
-
-## Pillole ##
+## Pillole
 
 [Webapp per il controllo del robot via frecce su WebApp](http://www.hotblackrobotics.com/blog/posts/2017-06-23-webapp-per-il-controllo-del-robot-via-frecce-su-webapp)
 
@@ -73,7 +78,7 @@ description: ""
 
 [Kit compatibile con la piattaforma cloud](http://www.hotblackrobotics.com/blog/posts/2017-03-16-kit-robot-compatibile-con-la-piattaforma-cloud)
 
-## Post ##
+## Post
 
 [Nasce l'associazione Rokers - Robot Makers per promuovere le attività di robotica](http://www.hotblackrobotics.com/blog/posts/2017-05-08-nasce-rokers-la-community-di-robot-makers)
 

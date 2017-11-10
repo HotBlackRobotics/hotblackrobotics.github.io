@@ -8,7 +8,7 @@ tag:
  - Shop
 category: blog
 redirect_from: /blog/post/2017-01-12-kit-completo-dotbot
-author: Gabriele Ermacora
+author: sgabello
 description: "DotBot - Kit"
 ---
 

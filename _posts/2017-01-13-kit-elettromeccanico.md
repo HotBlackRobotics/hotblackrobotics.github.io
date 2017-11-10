@@ -8,7 +8,7 @@ tag:
  - Shop
 category: blog
 redirect_from: /blog/post/2017-01-13-kit-elettromeccanico
-author: Gabriele Ermacora
+author: sgabello
 description: "I componenti elettronici ed elettromeccanici"
 ---
 

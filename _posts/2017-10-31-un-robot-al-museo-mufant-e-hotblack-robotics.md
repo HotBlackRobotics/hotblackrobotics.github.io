@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-10-31-un-robot-al-museo-mufant-e-hotblack-robotics
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

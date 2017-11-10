@@ -8,7 +8,7 @@ tag:
  - Shop
 category: blog
 redirect_from: /blog/post/2017-01-13-hbrain-raspberry-pi-3-55-euro
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-10-01-ros-robotic-operating-system-coseperche-e-cosi-importante
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

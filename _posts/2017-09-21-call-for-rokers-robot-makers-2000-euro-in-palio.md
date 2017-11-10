@@ -8,7 +8,7 @@ tag:
  - Callforrokers
 category: blog
 redirect_from: /blog/post/2017-09-21-call-for-rokers-robot-makers-2000-euro-in-palio
-author: Gabriele Ermacora
+author: sgabello
 description: "Call For ROKERS: robot + makers - 2000 Euro in palio!!"
 ---
 

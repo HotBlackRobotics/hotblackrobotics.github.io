@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-03-16-spiderbot-cloud-con-controllo-vocale
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

@@ -9,7 +9,7 @@ tag:
  - Meccanica
 category: blog
 redirect_from: /blog/post/2017-02-08-dotbot-tutorial-hardware
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

@@ -7,7 +7,7 @@ headerImage: false
 tag: 
 category: blog
 redirect_from: /blog/post/2017-03-27-pycon-2017-links-info
-author: Gabriele Ermacora
+author: sgabello
 description: ""
 ---
 

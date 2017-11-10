@@ -12,7 +12,7 @@ tag:
  - Trend
 category: blog
 redirect_from: /blog/post/2017-01-12-introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot
-author: Gabriele Ermacora
+author: sgabello
 description: "Introduzione e visione tecnologica, Cloud Robotics e Internet delle Cose: l' Internet dei Robot"
 ---
 

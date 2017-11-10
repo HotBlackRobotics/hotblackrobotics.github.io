@@ -1,6 +1,6 @@
 # main text of home
 name: "HotBlack Robotics"
-bio: "Un maker, un robotico, un Roker!"
+bio: "HotBlack Robotics è una startup che lavora nel mondo della Cloud Robotics"
 description: "HotBlack Robotics powering the Cloud Robotics"
 
 # if it's an external image, update below for true
@@ -14,7 +14,7 @@ picture: assets/images/profile.jpg
 # resume-external: true
 # resume-url: https://google.com/?q=my+resume
 
-title: Ludus Russo
+title: HotBlack Robotics
 
 lang: it_IT
 
@@ -30,9 +30,9 @@ analytics-google: 'UA-89221021-1'
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: ludusrusso-cc # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+# disqus:
+#  shortname: ludusrusso-cc # enter this from your disqus account
+#  categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 facebook: ludusrusso.cc
@@ -51,15 +51,21 @@ github: ludusrusso
 # medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: ludus.russo@gmail.com
+email: info@hotblackrobotics.com
 
 authors:
     ludusrusso:
         name: Ludus Russo
         bio: Un maker, un robotico, un Roker!
         external-image: false
-        picture: assets/images/profile.jpg
+        picture: assets/images/ludus.jpg
         twitter: Ludus89
+    sgabello:
+        name: Gabriele Ermacora
+        bio: Imprenditore Seriale
+        external-image: false
+        picture: assets/images/sgabello.jpg
+        twitter: sGErmacora
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
