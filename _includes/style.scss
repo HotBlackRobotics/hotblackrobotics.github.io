@@ -4,8 +4,10 @@ $theme-colors: (
    "default": $hbr-main-color
 );
 
+@import "bootstrap/bootstrap.scss";
+
+
 @import "base/general";
 @import "base/nav";
 
-@import "bootstrap/bootstrap.scss";
-@import "fonts-awesome/font-awesome"
+@import "fonts-awesome/font-awesome";

@@ -4,30 +4,31 @@ layout: post
 date: 2017-01-12 14:26:29
 image: https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudcomputing-01.jpg
 headerImage: false
-tag: 
+tag:
  - Robotics
  - Cloud
  - Vision
  - Iot
  - Trend
 category: blog
-redirect_from: /blog/post/2017-01-12-introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot
+redirect_from:
+ - /blog/post/2017-01-12-introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot
 author: sgabello
 description: "Introduzione e visione tecnologica, Cloud Robotics e Internet delle Cose: l' Internet dei Robot"
 ---
 
- L'internet delle cose è quella visione tecnologica che vede "oggetti" interconnessi comunicare e processare dati tramite Internet. Fino a poco tempo fa gli unici oggetti collegati alla rete erano i computer, le stampanti e gli smartphone. Oggi iniziano a vedersi i primi oggetti "smart" collegati alla rete: ad esempio la smartTV o le console di videogame moderne. 
-In futuro avremo tutti gli oggetti di casa nostra "smart": ci sarà il frigorifero connesso alla rete domotica della casa insieme a tutti gli elettrodomestici. Tutti questi dispositivi in casa integrati in una sola rete ottimizzeranno le risorse per sprecare meno elettricità e gas a seconda delle nostre necessità. 
+ L'internet delle cose è quella visione tecnologica che vede "oggetti" interconnessi comunicare e processare dati tramite Internet. Fino a poco tempo fa gli unici oggetti collegati alla rete erano i computer, le stampanti e gli smartphone. Oggi iniziano a vedersi i primi oggetti "smart" collegati alla rete: ad esempio la smartTV o le console di videogame moderne.
+In futuro avremo tutti gli oggetti di casa nostra "smart": ci sarà il frigorifero connesso alla rete domotica della casa insieme a tutti gli elettrodomestici. Tutti questi dispositivi in casa integrati in una sola rete ottimizzeranno le risorse per sprecare meno elettricità e gas a seconda delle nostre necessità.
 
-Fuori dall' ambiente domestico troveremo, ad esempio, reti di sensori nella città per monitorare lo stato dei i parcheggi che ti informeranno su dove è meglio parcheggiare; telecamere smart che sorveglieranno la città; sensori per il monitoraggio della temperatura e umidità nelle coltivazioni agricole. 
+Fuori dall' ambiente domestico troveremo, ad esempio, reti di sensori nella città per monitorare lo stato dei i parcheggi che ti informeranno su dove è meglio parcheggiare; telecamere smart che sorveglieranno la città; sensori per il monitoraggio della temperatura e umidità nelle coltivazioni agricole.
 
-Un esempio concreto di IoT domestico (già in vendita) è  [Nest] (https://nest.com/): un termostato per la casa intelligente che si collega ad Internet e tramite il cellulare studia l'utilizzatore e si adatta alle abitudini delle persone regolando così la temperatura a seconda che la persona sia in casa o meno. 
+Un esempio concreto di IoT domestico (già in vendita) è  [Nest] (https://nest.com/): un termostato per la casa intelligente che si collega ad Internet e tramite il cellulare studia l'utilizzatore e si adatta alle abitudini delle persone regolando così la temperatura a seconda che la persona sia in casa o meno.
 Internet delle cose quindi, perchè stiamo vivendo in questo periodo tecnologico il passaggio da *Internet "digitale"*, ovvero le pagine web, i server, i computer, gli smartphone o le stampanti, a *Internet degli oggetti*, ovvero la diffusione di Internet a rendere "smart" tutti gli oggetti che ci circondano.
 
 ![Smart Home IoT] (http://itersnews.com/wp-content/uploads/2014/08/Smartthings-Living-Room.png)
 
 
-La **Cloud Robotics* si pone all'interno della visione dell'Internet delle cose ma estesa anche ad "oggetti" che operano nell'ambiente fisico oltre che quello digitale: i robot. Nel futuro imminente avremmo robot interconnessi tra loro e agli oggetti "smart" che oltre a comunicare tramite Internet, effettueranno anche delle azioni nel mondo fisico. Immaginiamo ad esempio la self driving car di Google interconnessa a tutte le altre autonomibili autonome ottimizzare il traffico e risolvere tutte le nostre necessità legate alla mobilità. 
+La **Cloud Robotics* si pone all'interno della visione dell'Internet delle cose ma estesa anche ad "oggetti" che operano nell'ambiente fisico oltre che quello digitale: i robot. Nel futuro imminente avremmo robot interconnessi tra loro e agli oggetti "smart" che oltre a comunicare tramite Internet, effettueranno anche delle azioni nel mondo fisico. Immaginiamo ad esempio la self driving car di Google interconnessa a tutte le altre autonomibili autonome ottimizzare il traffico e risolvere tutte le nostre necessità legate alla mobilità.
 Un esempio già molto attuale è [Roomba] (http://www.irobot.it/roomba/): robot aspirapolvere connesso con gli altri dispositivi smart della casa. Altri esempi più fantascientifici sono già in mostra alle fiere di robotica, come il braccio robotico che cucina in casa apprendendo dalla rete dai migliori chef al mondo, flotte di droni per il trasporto di merci o per il monitoraggio intelligente della citta senza il bisogno di infrastrutture.
 
 ![Visione Cloud Robotics] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudcomputing-01.jpg)

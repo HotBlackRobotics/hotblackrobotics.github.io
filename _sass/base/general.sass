@@ -3,8 +3,21 @@
   padding: 50px
   text-align: center
 
-  .col
-    padding-top: 40px
+
+@include media-breakpoint-up(sm)
+  .left-info
+    position: fixed
+    width: 30%
+    .col
+      padding-top: 40px
+
+
+
+@include media-breakpoint-down(sm)
+  .left-info
+    position: relative
+    width: 100%
+
 
 .author
   .share
@@ -28,3 +41,9 @@
   li
     display: inline-block
     padding: 10px
+
+.post-preview
+  h4
+    font-size: 1.1rem
+  p
+    font-size: 0.8rem

@@ -1,11 +1,16 @@
 ---
 layout: doubled
 title: Home
+redirect_from:
+ - /blog/ 
 ---
 <section>
 	<div class="container-fluid">
 		<div class="row">
-
+			{% for post in site.posts %}
+        {% include blog-post.html %}
+			{% endfor %}
+		<!-- Content here -->
 		</div>
 	</div>
 </section>

@@ -23,7 +23,7 @@ url: https://hotblackrobotics.github.io
 permalink: /:year/:month/:day/:title/
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-89221021-1'
+analytics-google: 'UA-109606520-1'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
@@ -35,15 +35,15 @@ permalink: /:year/:month/:day/:title/
 #  categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: ludusrusso.cc
-twitter: Ludus89
+facebook: hotblackrobotics
+twitter: HotBlackRobot
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-linkedin: ludovicorusso
+# linkedin: hotblackrobotics
 # youtube: myyoutube
 # spotify: myspotify
-github: ludusrusso
+github: robotrokers
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
@@ -60,6 +60,7 @@ authors:
         external-image: false
         picture: assets/images/ludus.jpg
         twitter: Ludus89
+        site: https://ludusrusso.cc/
     sgabello:
         name: Gabriele Ermacora
         bio: Imprenditore Seriale
