@@ -36,4 +36,7 @@ layout: doubled
       {% if site.disqus.categories contains page.category %}
           {% include disqus.html %}
       {% endif %}
-      {% include footer.html %}
+
+      {% if site.mailinglist %}
+        {% include footer.html %}
+      {% endif %}

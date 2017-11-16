@@ -31,8 +31,8 @@ analytics-google: 'UA-109606520-1'
 
 # if you don't want comments in your posts, leave categories empty
 # disqus:
-#  shortname: ludusrusso-cc # enter this from your disqus account
-#  categories: [blog, project] # only show disqus for posts that have these categories
+shortname: hotblackrobotics-com # enter this from your disqus account
+categories: [blog, robodev] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 facebook: hotblackrobotics

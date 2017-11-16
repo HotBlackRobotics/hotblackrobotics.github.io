@@ -23,8 +23,17 @@
   .share
     padding-top: 20px
 
+.main-row
+  @include media-breakpoint-up(sm)
+    min-height: calc(100vh - 56px)
+
 .post
-  padding: 60px !important
+  @include media-breakpoint-up(sm)
+    padding: 60px !important
+
+  @include media-breakpoint-down(sm)
+    padding: 50px 5px !important
+
   img
     max-width: 100%
   a.card
@@ -34,6 +43,14 @@
   div.date
     padding-bottom: 20px
     font-style: italic
+
+  .quote
+    font-size: 120%
+    font-style: italic
+    border-left-width: 1px
+    border-left-style: solid
+    padding-left: 10px
+
 
 .soc
   padding: 0
