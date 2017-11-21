@@ -13,7 +13,7 @@ redirect_from:
  - /blog/post/2017-05-09-slide-del-nostro-intervento-al-politecnico-di-torino-su-ros
  - /2017/05/09/slide-del-nostro-intervento-al-politecnico-di-torino-su-ros/
 author: ludusrusso
-description: "Scarica le slide su ROS presentate al Politecnico di Torino"
+description: "Scarica le slide e il Video della lezione su ROS tenuta al Politecnico di Torino"
 ---
 
 Come sapete, io e Gabriele siamo stati Ph.D. presso il Politecnico di Torino, sotto la
@@ -30,7 +30,12 @@ Sotto la nostra ottica di diffondere e raccontare ROS in Italia, abbiamo deciso 
 regalarvi le slide che abbiamo mostrato nella nostra ultima lezione al Politecnico
 di Torino, che si è svolta a Maggio!
 
-Per ricevere le slide, lasciateci la vostra mail qui sotto!
+Dato le tante richieste avute, ho anche deciso di creare una video lezione ad hoc,
+che commenta le slide seguendo la traccia dell'ultima lezione tenuta al Politecnico di Torino.
+Questa video lezione sarà introduttiva la corso pratico di ROS che stiamo per
+lanciare.
+
+Per ricevere le slide e il video, lasciateci la vostra mail qui sotto!
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
