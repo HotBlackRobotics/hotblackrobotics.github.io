@@ -6,7 +6,7 @@ image:
 headerImage: false
 tag:
 category: blog
-redirect_from: /blog/post/2017-10-01-ros-robotic-operating-system-coseperche-e-cosi-importante
+redirect_from: /blog/posts/2017-10-01-ros-robotic-operating-system-coseperche-e-cosi-importante
 author: sgabello
 description: ""
 ---

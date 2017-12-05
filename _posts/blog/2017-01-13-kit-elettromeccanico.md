@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Shop
 category: blog
-redirect_from: /blog/post/2017-01-13-kit-elettromeccanico
+redirect_from: /blog/posts/2017-01-13-kit-elettromeccanico
 author: sgabello
 description: "I componenti elettronici ed elettromeccanici"
 ---

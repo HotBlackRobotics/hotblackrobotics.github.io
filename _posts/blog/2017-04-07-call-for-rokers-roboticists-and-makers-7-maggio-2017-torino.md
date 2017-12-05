@@ -7,7 +7,7 @@ headerImage: false
 tag:
  - Rokers
 category: blog
-redirect_from: /blog/post/2017-04-07-call-for-rokers-roboticists-and-makers-7-maggio-2017-torino
+redirect_from: /blog/posts/2017-04-07-call-for-rokers-roboticists-and-makers-7-maggio-2017-torino
 author: sgabello
 description: ""
 ---

@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Kit
 category: blog
-redirect_from: /blog/post/2017-03-16-kit-robot-compatibile-con-la-piattaforma-cloud
+redirect_from: /blog/posts/2017-03-16-kit-robot-compatibile-con-la-piattaforma-cloud
 author: sgabello
 description: ""
 ---

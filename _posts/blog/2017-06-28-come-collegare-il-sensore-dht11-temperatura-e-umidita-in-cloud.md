@@ -6,7 +6,7 @@ image: http://i.imgur.com/az3Qd96.png
 headerImage: false
 tag: 
 category: blog
-redirect_from: /blog/post/2017-06-28-come-collegare-il-sensore-dht11-temperatura-e-umidita-in-cloud
+redirect_from: /blog/posts/2017-06-28-come-collegare-il-sensore-dht11-temperatura-e-umidita-in-cloud
 author: Ruslan
 description: ""
 ---

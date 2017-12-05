@@ -10,7 +10,7 @@ tag:
  - Politecnico di Torino
 category: blog
 redirect_from:
- - /blog/post/2017-05-09-slide-del-nostro-intervento-al-politecnico-di-torino-su-ros
+ - /blog/posts/2017-05-09-slide-del-nostro-intervento-al-politecnico-di-torino-su-ros
  - /2017/05/09/slide-del-nostro-intervento-al-politecnico-di-torino-su-ros/
 author: ludusrusso
 description: "Scarica le slide e il Video della lezione su ROS tenuta al Politecnico di Torino"

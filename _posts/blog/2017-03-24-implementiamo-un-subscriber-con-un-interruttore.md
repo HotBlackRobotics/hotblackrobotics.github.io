@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Tutorial
 category: blog
-redirect_from: /blog/post/2017-03-24-implementiamo-un-subscriber-con-un-interruttore
+redirect_from: /blog/posts/2017-03-24-implementiamo-un-subscriber-con-un-interruttore
 author: sgabello
 description: ""
 ---

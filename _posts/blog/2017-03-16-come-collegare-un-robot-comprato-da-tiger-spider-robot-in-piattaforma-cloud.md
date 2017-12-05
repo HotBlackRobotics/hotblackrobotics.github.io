@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Hacking
 category: blog
-redirect_from: /blog/post/2017-03-16-come-collegare-un-robot-comprato-da-tiger-spider-robot-in-piattaforma-cloud
+redirect_from: /blog/posts/2017-03-16-come-collegare-un-robot-comprato-da-tiger-spider-robot-in-piattaforma-cloud
 author: sgabello
 description: ""
 ---

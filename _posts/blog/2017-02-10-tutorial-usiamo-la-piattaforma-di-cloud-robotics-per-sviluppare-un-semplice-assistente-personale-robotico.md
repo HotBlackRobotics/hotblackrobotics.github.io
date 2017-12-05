@@ -12,7 +12,7 @@ tag:
  - Recognition
  - Text
 category: blog
-redirect_from: /blog/post/2017-02-10-tutorial-usiamo-la-piattaforma-di-cloud-robotics-per-sviluppare-un-semplice-assistente-personale-robotico
+redirect_from: /blog/posts/2017-02-10-tutorial-usiamo-la-piattaforma-di-cloud-robotics-per-sviluppare-un-semplice-assistente-personale-robotico
 author: sgabello
 description: "Usiamo la piattaforma di Cloud Robotics per sviluppare un semplice assistente personale Robotico"
 ---

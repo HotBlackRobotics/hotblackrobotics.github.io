@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - News
 category: blog
-redirect_from: /blog/post/2017-03-24-romecup-links-info
+redirect_from: /blog/posts/2017-03-24-romecup-links-info
 author: sgabello
 description: ""
 ---

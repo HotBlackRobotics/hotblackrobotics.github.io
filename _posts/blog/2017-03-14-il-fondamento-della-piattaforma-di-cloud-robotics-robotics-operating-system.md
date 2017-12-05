@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Ros
 category: blog
-redirect_from: /blog/post/2017-03-14-il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system
+redirect_from: /blog/posts/2017-03-14-il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system
 author: ludusrusso
 description: ""
 ---

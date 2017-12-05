@@ -9,7 +9,7 @@ tag:
  - Ros
  - Telegram
 category: blog
-redirect_from: /blog/post/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros
+redirect_from: /blog/posts/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros
 author: ludusrusso
 description: ""
 ---

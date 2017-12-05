@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Lego
 category: blog
-redirect_from: /blog/post/2017-06-16-collegare-in-cloud-i-lego-nxt-ed-estenderne-le-funzionalita
+redirect_from: /blog/posts/2017-06-16-collegare-in-cloud-i-lego-nxt-ed-estenderne-le-funzionalita
 author: Pietro Chirio
 description: ""
 ---

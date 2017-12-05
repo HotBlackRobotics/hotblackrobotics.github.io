@@ -8,7 +8,7 @@ tag:
  - News
  - Rokers
 category: blog
-redirect_from: /blog/post/2017-05-08-nasce-rokers-la-community-di-robot-makers
+redirect_from: /blog/posts/2017-05-08-nasce-rokers-la-community-di-robot-makers
 author: ludusrusso
 description: ""
 ---

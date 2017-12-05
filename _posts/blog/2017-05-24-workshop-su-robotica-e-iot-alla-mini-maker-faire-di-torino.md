@@ -8,7 +8,7 @@ tag:
  - Workshop
  - Makerfaire
 category: blog
-redirect_from: /blog/post/2017-05-24-workshop-su-robotica-e-iot-alla-mini-maker-faire-di-torino
+redirect_from: /blog/posts/2017-05-24-workshop-su-robotica-e-iot-alla-mini-maker-faire-di-torino
 author: ludusrusso
 description: ""
 ---

@@ -12,7 +12,7 @@ tag:
  - Python
  - Ros
 category: blog
-redirect_from: /blog/post/2017-01-20-hb-cloud-tutorial-2-uso-dei-bottoni
+redirect_from: /blog/posts/2017-01-20-hb-cloud-tutorial-2-uso-dei-bottoni
 author: ludusrusso
 description: "Rieccomi con il secondo tutorial legato all'uso dei bottoni per il robot **DotBot-ROS**. In questo tutorial, vedremo come configurare ed utilizzare in Python un bottone attaccato ad un pin GPIO del Raspberry Pi 3."
 ---

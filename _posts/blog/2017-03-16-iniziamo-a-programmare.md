@@ -8,7 +8,7 @@ tag:
  - Tutorial
  - Base
 category: blog
-redirect_from: /blog/post/2017-03-16-iniziamo-a-programmare
+redirect_from: /blog/posts/2017-03-16-iniziamo-a-programmare
 author: sgabello
 description: ""
 ---

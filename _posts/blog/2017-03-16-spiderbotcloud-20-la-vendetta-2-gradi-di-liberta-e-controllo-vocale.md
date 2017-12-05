@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Hacking
 category: blog
-redirect_from: /blog/post/2017-03-16-spiderbotcloud-20-la-vendetta-2-gradi-di-liberta-e-controllo-vocale
+redirect_from: /blog/posts/2017-03-16-spiderbotcloud-20-la-vendetta-2-gradi-di-liberta-e-controllo-vocale
 author: sgabello
 description: ""
 ---

@@ -4,14 +4,14 @@ layout: post
 date: 2017-01-13 14:22:09
 image: https://cdn.instructables.com/FPN/U31F/HBNXVG6G/FPNU31FHBNXVG6G.MEDIUM.jpg
 headerImage: false
-tag: 
+tag:
  - Ros
  - Tutorial
  - Turtlesim
  - Raspberry
  - Robotica
 category: blog
-redirect_from: /blog/post/2017-01-13-installiamo-ros-su-raspberry-pi
+redirect_from: /blog/posts/2017-01-13-installiamo-ros-su-raspberry-pi
 author: ludusrusso
 description: ""
 ---
@@ -65,7 +65,7 @@ Lo scopo del tutorial è quello di installare ROS e iniziare ad utilizzarlo!
 
 ##Installiamo ROS
 
-Accediamo al Raspberry ed apriamo il terminale. 
+Accediamo al Raspberry ed apriamo il terminale.
 
 Per prima cosa, è importante aggiornare tutti i pacchetti all'ultima versione, la procedura potrebbe richiedere un po' di tempo, nella mia prova ci ha messo più di 30 minuti per completare l'installazione!
 
@@ -84,7 +84,7 @@ sudo apt-get update
 sudo apt-get install ros-indigo-ros-base
 ```
 
-Inseriamo la password quando serve e procediamo selezionando sempre `Y` (yes) durante la fasi di installazione. 
+Inseriamo la password quando serve e procediamo selezionando sempre `Y` (yes) durante la fasi di installazione.
 Anche questa procedura è un po' lenta, dovuta al fatto che sono tantissimi i moduli da installare e la poca potenza del raspberry!
 
 Una volta installato, dobbiamo abilitare ROS all'avvio di ogni shell, in modo da avere tutti i comandi principali attivi. Si fa con il seguente comando
@@ -159,7 +159,7 @@ Lasciate questa shell aperta e, in una seconda shell, lanciamo il simulatore del
 rosrun turtlesim turtlesim_node
 ```
 
-che aprirà una finestra grafica in cui viene visualizzata una tartaruga stilizzata in grafica 2D. In realtà la tartaruga è un robot ROS simulato, a cui possiamo mandare comandi di velocità tramite ROS 
+che aprirà una finestra grafica in cui viene visualizzata una tartaruga stilizzata in grafica 2D. In realtà la tartaruga è un robot ROS simulato, a cui possiamo mandare comandi di velocità tramite ROS
 
 ![ROS TurtleSim Finestra](https://raw.githubusercontent.com/ludusrusso/images/master/ros_tutorial/turtlesim.png)
 

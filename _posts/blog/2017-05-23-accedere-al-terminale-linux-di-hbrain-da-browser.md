@@ -6,7 +6,7 @@ image: https://github.com/ludusrusso/images/blob/master/hbr/tutorial/terminal/sh
 headerImage: false
 tag: 
 category: blog
-redirect_from: /blog/post/2017-05-23-accedere-al-terminale-linux-di-hbrain-da-browser
+redirect_from: /blog/posts/2017-05-23-accedere-al-terminale-linux-di-hbrain-da-browser
 author: ludusrusso
 description: ""
 ---

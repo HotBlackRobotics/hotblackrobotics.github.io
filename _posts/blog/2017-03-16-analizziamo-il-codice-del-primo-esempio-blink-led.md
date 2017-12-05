@@ -7,7 +7,7 @@ headerImage: false
 tag: 
  - Tutorial
 category: blog
-redirect_from: /blog/post/2017-03-16-analizziamo-il-codice-del-primo-esempio-blink-led
+redirect_from: /blog/posts/2017-03-16-analizziamo-il-codice-del-primo-esempio-blink-led
 author: sgabello
 description: ""
 ---

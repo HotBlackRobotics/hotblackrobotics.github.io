@@ -9,7 +9,7 @@ tag:
  - Cloud
  - Robotics
 category: blog
-redirect_from: /blog/post/2017-02-08-cosa-si-puo-fare-con-la-nostra-piattaforma-di-cloud-robotics
+redirect_from: /blog/posts/2017-02-08-cosa-si-puo-fare-con-la-nostra-piattaforma-di-cloud-robotics
 author: ludusrusso
 description: "Ecco alcune cosa che è possibile fare con la nostra piattaforma di Cloud Robotics"
 ---

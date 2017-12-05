@@ -6,7 +6,7 @@ image:
 headerImage: false
 tag: 
 category: blog
-redirect_from: /blog/post/2017-06-23-webapp-per-il-controllo-del-robot-via-frecce-su-webapp
+redirect_from: /blog/posts/2017-06-23-webapp-per-il-controllo-del-robot-via-frecce-su-webapp
 author: Ruslan
 description: ""
 ---

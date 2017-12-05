@@ -10,7 +10,7 @@ tag:
  - Tutorial
  - Raspicam
 category: blog
-redirect_from: /blog/post/2017-04-10-utilizzare-la-raspicam-in-streaming-con-la-piattaforma-cloud
+redirect_from: /blog/posts/2017-04-10-utilizzare-la-raspicam-in-streaming-con-la-piattaforma-cloud
 author: ludusrusso
 description: "Breve tutorial che spiega come abilitare la RaspiCam su ROS e la piattaforma di Cloud Robotics"
 ---
