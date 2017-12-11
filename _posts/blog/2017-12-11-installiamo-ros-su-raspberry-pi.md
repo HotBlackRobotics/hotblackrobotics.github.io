@@ -1,7 +1,7 @@
 ---
 title: "Installiamo ROS su Raspberry Pi"
 layout: post
-date: 2017-01-13 14:22:09
+date: 2017-12-11
 image: https://cdn.instructables.com/FPN/U31F/HBNXVG6G/FPNU31FHBNXVG6G.MEDIUM.jpg
 headerImage: false
 tag:
@@ -11,9 +11,11 @@ tag:
  - Raspberry
  - Robotica
 category: blog
-redirect_from: /blog/posts/2017-01-13-installiamo-ros-su-raspberry-pi
+redirect_from:
+ - /blog/posts/2017-01-13-installiamo-ros-su-raspberry-pi
+ - /2017/01/13/installiamo-ros-su-raspberry-pi/
 author: ludusrusso
-description: ""
+description: "Un breve tutorial su come utilizzare ROS sul Raspberry Pi"
 ---
 
 ![ROS+Raspberry Logo](https://cdn.instructables.com/FPN/U31F/HBNXVG6G/FPNU31FHBNXVG6G.MEDIUM.jpg)
@@ -22,15 +24,15 @@ description: ""
 Ciao a tutti, torniamo con questo primo tutorial per installare ed utilizzare [ROS](http://www.ros.org/) (the Robot Operating System) su Raspberry Pi.
 
 
-##ROS: Il Sistema Operativo dei robot
+## ROS: Il Sistema Operativo dei robot
 
 Prima di installarlo ed utilizzarlo, cerchiamo di capire cosa è, quali sono le sue finalità e perchè è diventato un standard di fatto a livello accademico e perchè molte aziende lo stanno iniziando ad adottare.
 
-###Cosa è ROS?
+### Cosa è ROS?
 
 Secondo il sito ufficiale, ROS è un framework per la programmazione Robot orientato alla creazione di Sistemi Robotici distribuiti che interagiscono con l'ambiente umano. È quindi un framework per lo sviluppo di applicazione Robotiche di servizio. È chiamato *OS*, in modo leggermente improprio, perchè offre le stesse funzionalità che normalmente offre un sistema operativo, ma in ambiente multi macchina e multi robot.
 
-###Perchè ROS?
+### Perchè ROS?
 
 Perchè sviluppare applicazioni robotiche di servizio è difficile! ROS è quindi nato per essere modulare e per favorire la collaborazione tra gruppi di ricerca interessati a temi diversi. Facciamo un esempio del sistema di complessità di un'applicazione robotica reale.
 
@@ -38,11 +40,11 @@ Usando ROS, diveri gruppi di ricerca posso creare moduli sulla loro expertize te
 
 Questa caratteristica ha fatto si che ROS sia diventato in poco tempo uno standard utilizzato da praticamente tutti i gruppi di ricerca accademici che si interessano alla robotica di servizio. E ultimamente anche molte aziende si sono avvicinate a questa tecnologica. In italia citiamo **TIM** che dal 2013 si interessa di queste tematiche.
 
-###ROS e HotBlack Robotics
+### ROS e HotBlack Robotics
 
 Noi di **HBRobotics** siamo esperti di ROS, in quanto lo abbiamo utilizzato per anni durante il nostro percorso di Ph.D. al Politecnico di Torino. Quando abbiamo fondato questa società abbiamo deciso di fondare su ROS tutta la nostra tecnologica, e dato che ROS ci ha dato tanto, vogliamo anche contribuire al suo sviluppo e alla sua diffusione anche sul suolo Italiano.
 
-##ROS su Raspberry Pi
+## ROS su Raspberry Pi
 
 Quando è stato presentato il primo **Raspberry PI**, molti utilizzatori di ROS (tra cui il sottoscritto, *maker* da prima di conoscere la parola "*maker*") hanno capito le potenzialità di questo piccolo computer nell'ambito della robotica di servizio. Finalmente esisteva un piccolo computer a bassissimo costo in grado di supportare ROS e quindi di alimentarne la diffusione non solo in ambito accademico e industriale ma anche a livello hobbistico. Purtroppo le prime procedure per l'installazione di ROS su questa macchina erano molto complicate e lente, in quanto era necessario compilare l'intero sistema operativo su Debian, che non supportava ufficialmente. Ricordo ancora la prima volta che riuscii ad installare ROS sul primo Raspberry Pi Model B dopo un mese di tentativi (ammetto che quell'esperienza fu altamente istruttiva in quanto, a fuoria di risolvere errori e dipendenze, imparai tantissimo di Linux).
 
@@ -50,7 +52,7 @@ Ai tempi spuntavano online varie SD già pronte con ROS installato sopra. Il pro
 
 Ad ogni modo, i tempi sono cambiati e adesso è molto facile, con qualche trucchetto, installare ROS su un Raspberry Pi senza troppi problemi.
 
-###Cosa Serve?
+### Cosa Serve?
 
 Ecco i materiali che servono:
 
@@ -58,12 +60,12 @@ Ecco i materiali che servono:
 - Una SD con sopra Raspbian. Trovate l'ultima versione [qui](https://www.raspberrypi.org/downloads/raspbian/).
 - Un po' di pazienza :D
 
-### Cosa Faremo?
+### Cosa Faremo?
 
 Lo scopo del tutorial è quello di installare ROS e iniziare ad utilizzarlo!
 
 
-##Installiamo ROS
+## Installiamo ROS
 
 Accediamo al Raspberry ed apriamo il terminale.
 
@@ -93,11 +95,11 @@ Una volta installato, dobbiamo abilitare ROS all'avvio di ogni shell, in modo da
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 ```
 
-##Utilizzo di TurtleSim
+## Utilizzo di TurtleSim
 
 Turtle Sim è un modulo ROS sviluppato per imparare ad utilizzarlo. È in particolare una suite di sperimentazione che permette di controllare tramite ROS una tartaruga virtuale Robotica.
 
-###Installazione di TurtleSim
+### Installazione di TurtleSim
 
 Per installare il modulo, utilizziamo il comando
 
@@ -107,7 +109,7 @@ sudo apt-get install ros-indigo-turtlesim
 
 A questo punto siamo pronti a muovere i primi passi. Ma prima di tutto è necessario **Chiudere la Shell**.
 
-###Utilizzo di TurtleSim
+### Utilizzo di TurtleSim
 
 A questo punto iniziamo a divertirci. È importante, prima di tutto, dobbiamo aprire un po' di shell contemporaneamente (è la prassi quando si utilizza ROS, quindi abitutevi al disordine).
 
@@ -176,6 +178,6 @@ Questa è lo screen sul mio Raspberry Pi quando tutto è in funzione.
 
 ![Screen ROS Raspberry Pi](https://raw.githubusercontent.com/ludusrusso/images/master/ros_tutorial/screen_rasp.jpg)
 
-##Conclusioni
+## Conclusioni
 
 In questo tutorial abbiamo visto come installare ed utilizzare ROS su Raspberry Pi. Seguiranno altri tutorial per approfondire l'argomento!
