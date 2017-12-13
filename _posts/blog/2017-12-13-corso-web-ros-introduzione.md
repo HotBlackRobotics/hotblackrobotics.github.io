@@ -2,7 +2,7 @@
 title: "Video Corso ROS Rokers - Completati i video di Introduzione"
 layout: post
 date: 2017-12-13
-image: https://cdn.instructables.com/FPN/U31F/HBNXVG6G/FPNU31FHBNXVG6G.MEDIUM.jpg
+image: /assets/imgs/2017-12-13-corso-web-ros-introduzione.md/main.png
 headerImage: false
 tag:
  - Ros
@@ -24,7 +24,10 @@ da vedere completamente.
 
 Qui sotto, trovate la parte introduttiva del corso, ormai completa, in cui spieghiamo
 quali sono gli scopi e le finalità di ROS, e forniamo una veloce panoramica
-delle funzioni base. 
+delle funzioni base.
+
+Se volete ricevere informazioni sulla pubblicazione dei video, e discuterne,
+potete iscrivervi al gruppo facebook [Robot Developers Italiani](https://www.facebook.com/groups/493163691070528/)
 
 ### Introduzione a ROS e alla Robotica di Servizio
 
