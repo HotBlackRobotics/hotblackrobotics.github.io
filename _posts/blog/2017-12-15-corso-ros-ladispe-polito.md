@@ -75,4 +75,5 @@ incontri, ecco cosa fare).
 
 ### Dove trovare informazioni
 
-Se volete
+- Gruppo Telegram [Robot Secret Lab](https://t.me/joinchat/AXbBRBH-FYXqeLiFGz54bA)
+- Gruppo Facebook [Robot Developers Italiani](https://www.facebook.com/groups/493163691070528)
