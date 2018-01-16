@@ -67,6 +67,12 @@ authors:
         external-image: false
         picture: assets/images/sgabello.jpg
         twitter: sGErmacora
+    fiorellazza:
+        name: Fiorella Sibona
+        bio: Roboticist Wannabe
+        external-image: false
+        picture: assets/images/fiorella.jpg
+        twitter: fiorellasibona
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
