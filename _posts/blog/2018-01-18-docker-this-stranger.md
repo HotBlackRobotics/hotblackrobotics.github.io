@@ -22,7 +22,7 @@ description: "Why you should use Docker and my experience"
 [> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-18-docker-questo-sconosciuto %})
 
 Hello everybody!
-Today I'd like to talk about a technologu that is gathering more and more attention, both in the developers' world and the companies one: [Docker](https://www.docker.com).
+Today I'd like to talk about a technology that is gathering more and more attention, both in the developers' world and the companies one: [Docker](https://www.docker.com).
 
 #### Index:
 1. [What is a container?](#1-what-is-a-container)<br>
@@ -38,22 +38,23 @@ Today I'd like to talk about a technologu that is gathering more and more attent
 4. [Why Docker?](#4-why-docker)
 
 ## 1. What is a container?
-Some of you will think " Well, easy! It is a box, something where to put something else, to move it in a compact way". Well, I'll be honest with you, your reasoning make sense, let's see why: the concept of container first appeared with the Linux Containers [LXC]( https://linuxcontainers.org/it/http://assemble.io) technology, which is an Operating System level virtualization method allowing to execute multiple Linux systems, called, *containers*,  that are isolated and sharing the same Linux Kernel.  In 2008, the Linux Kernel 2.6.24 version was released: it permitted, for the very first time, resources isolation upon shared hardware without the need for Virtual Machines, the most used virtualization method at that time.
+Some of you will think " Well, easy! It is a box, something where to put something else, to move it in a compact way". Well, I'll be honest with you, your reasoning make sense, let's see why: the concept of container first appeared with the Linux Containers [LXC]( https://linuxcontainers.org/it/http://assemble.io) technology, which is an Operating System level virtualization method allowing to execute multiple Linux systems, called, *containers*,  that are isolated and sharing the same Linux Kernel. In 2008, the Linux Kernel 2.6.24 version was released: it permitted, for the very first time, resources isolation upon shared hardware without the need for Virtual Machines, the most used virtualization method at that time.
 
 [**<<Back to Index**](#index)
 ### 1.1. Linux Containers vs. Virtual Machines
  - *Virtualization*:  as anticipated, Linux Containers (LCs) provide OS level virtualization, whilst VMs offer hardware virtualization.
- - *Guest OS*: LCs don't need further layers upon the host OS; instead, VMs, in order to be execute, require a complete guest OS copy installation. Most of Docker Containers examples, for applications' development, consist in the installation of new software on, e.g., Ubuntu which is not really intstalled but it is represented by the Filesystem contents necessary for the application execution.
-• *Prestazioni e peso*: considering the above observations, LCs are lightweight and fast while VMs present a significant overhead at boot time, due to all the steps that a complete OS boot requires.
+ - *Guest OS*: LCs don't need further layers upon the host OS; instead, VMs, in order to be execute, require a complete guest OS copy installation. Most of Docker Containers examples, for applications' development, consist in the installation of new software on, e.g., Ubuntu which is not really installed but it is represented by the Filesystem contents necessary for the application execution.
+• *Performances and weight*: considering the above observations, LCs are lightweight and fast while VMs present a significant overhead at boot time, due to all the steps that a complete OS boot requires.
 • *Hypervisor* : LCs can be executed simultaneously having resources isolation guaranteed by the OS system resources decomposition in separated groups. On the contrary, so that several VMs can run concurrently, an Hypervisor (also known as Virtual Machine Monitor, VMM) is needed, representing a further layer upone the host OS.
-The following Figures highlight differences between LCs and VMs at a layer Le seguenti immagini riportano le differenze a livello di layers tra i LCs e le VMs.
+The following Figures highlight differences between LCs and VMs at a layer level.
+
 ![dockervsVM1](/assets/imgs/2018-01-18-docker/4_dockerVM1.png)
 
 ![dockervsVM2](/assets/imgs/2018-01-18-docker/4_dockerVM2.png)
 
 [**<<Back to Index**](#index)
 ### 1.2. Docker Container
- Containers became populat when Docker came into the picture, thanks to its ease of use guaranteed by the provided high level API. Docker allows developers to permette ai developers di  *wrap* and isolate thir own apps, nurturing their *modularity* and *portability*. Indeed, the "*containerized*" software will always execute in the same way, independently of the environment, with the only requirement of a Docker compliant host Operating System. Containers' weakness is that they are *less safe* than VMs since the latter isolation is robust and real while in containers isolation can be violated due to resources sharing.
+ Containers became popular when Docker came into the picture, thanks to its ease of use guaranteed by the provided high level API. Docker allows developers to *wrap* and isolate their own apps, nurturing their *modularity* and *portability*. Indeed, the "*containerized*" software will always execute in the same way, independently of the environment, with the only requirement of a Docker compliant host Operating System. Containers' weakness is that they are *less safe* than VMs since the latter isolation is robust and real while in containers isolation can be violated due to resources sharing.
  For this reason Cloud and IoT applications are containerized and installed on VMs.
 *Containerization* technology, together with some provided standard procedures, make up the *Docker Engine*, a client-server applications with the following components:
  
