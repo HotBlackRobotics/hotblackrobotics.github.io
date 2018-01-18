@@ -17,9 +17,12 @@ category: blog
 author: fiorellazza
 description: "Perchè utilizzare Docker e la mia esperienza"
 ---
+![docker logo](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
+
+[> Switch to the English version]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-18-docker-this-stranger %})
+
 Ciao a tutti!
 Oggi vorrei parlarvi di una tecnologia che sta acquistando sempre più importanza, nel mondo dei developers ed anche in quello aziendale: [Docker](https://www.docker.com).
-![docker logo](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
 
 #### Indice:
  1. [Cos'è un contenitore?](#1-cosè-un-contenitore)<br>
