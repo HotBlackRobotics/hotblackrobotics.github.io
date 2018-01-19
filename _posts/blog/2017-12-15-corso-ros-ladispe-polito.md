@@ -11,6 +11,7 @@ tag:
  - Politecnico di Torino
 category: blog
 author: ludusrusso
+lang: it
 description: "Un laboratorio di ROS a cui possono partecipare gli studenti del Politecnico di Torino"
 ---
 

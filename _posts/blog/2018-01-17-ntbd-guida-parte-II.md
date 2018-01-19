@@ -4,6 +4,7 @@ layout: post
 date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-parte2.png
 headerImage: true
+lang: it
 tag:
  - Robotics
  - NTBD
@@ -39,11 +40,11 @@ Ci serviranno:
 - 1 Breadboard
 - Jumper q.b.
 
-**Nota:** 
+**Nota:**
 sto lavorando anche all'immagine buildata *per Raspberry PI 3, i file presenti su github e docker hub sono ancora in via di sviluppo*.
 
 #### Indice
-- [1. Stampare il Braccio Robotico](#stampare-il-braccio-robotico) 
+- [1. Stampare il Braccio Robotico](#stampare-il-braccio-robotico)
 - [2. Scaricare lo sketch per Arduino](#scaricare-lo-sketch-per-arduino)
 - [3. Scaricare Docker](#scaricare-docker)
 - [4. Scaricare le Immagini Docker](#scaricare-le-immagini-docker)
@@ -53,7 +54,7 @@ sto lavorando anche all'immagine buildata *per Raspberry PI 3, i file presenti s
 - [8.  Giocare con le WebApps](#giocare-con-le-webapps)
 
 ### 1. Stampare il Braccio Robotico
-Il braccio robotico da me scelto è [EEZYbotARM MK2](http://www.eezyrobots.it/eba_mk2.html), progetto open source italiano di Carlo Franciscone, Design Engineer e Maker. 
+Il braccio robotico da me scelto è [EEZYbotARM MK2](http://www.eezyrobots.it/eba_mk2.html), progetto open source italiano di Carlo Franciscone, Design Engineer e Maker.
 
 Seguendo le istruzioni presenti su [*Thingiverse*](https://www.thingiverse.com/thing:1454048) ed [*Instructables*](http://www.instructables.com/id/EEZYbotARM-Mk2-3D-Printed-Robot/) relativi a questo progetto, ho completato con successo la stampa 3D ed il montaggio del braccio robotico.
 Il software per la stampa che ho utilizzato è [Cura](https://ultimaker.com/en/products/ultimaker-cura-software) con parametri configurati per stampare con una [DeltaWASP](http://www.wasproject.it/w/stampa-3d/).
@@ -62,8 +63,8 @@ Per la stampante DeltaWASP scaricate il seguente [profilo](http://www.personalfa
 
 Di seguito i parametri più significativi utilizzati per stampare i pezzi, per migliorarne la definizione:
 
-|Parametro        |  Valore     | 
-|:--------------|:---------------------:| 
+|Parametro        |  Valore     |
+|:--------------|:---------------------:|
 | Infill | 30-100%. Vi consiglierei di stampare con infill del 30% le parti del braccio sottoposte a poco sforzo mentre le parti meccaniche più piccole sono state stampate con il 100% di infill. |
 | Printing Temperature | 200-210°C|
 | Build Plate Temperature| 40°C|
@@ -103,12 +104,12 @@ docker pull hbrobotics/ntbd_manipulator:intel
 [**<<Torna all'indice**](#indice)
 
 ### 5. Collegamenti
- Come possibile vedere dallo sketch, i servomotori, numerati come in figura, sono collegati all'Arduino come riportato in tabella. 
- 
+ Come possibile vedere dallo sketch, i servomotori, numerati come in figura, sono collegati all'Arduino come riportato in tabella.
+
  ![servo](/assets/imgs/2018-01-17-ntbd/5_eezybotfrontservo.jpg)
- 
-| Servo         |  Pin Arduino     | 
-|:--------------:|:---------------------:| 
+
+| Servo         |  Pin Arduino     |
+|:--------------:|:---------------------:|
 | 1 | 2|
 | 2 | 3|
 | 3 | 4|
@@ -116,7 +117,7 @@ docker pull hbrobotics/ntbd_manipulator:intel
 
 <br>
 Per muovere tutti i servomotori contemporaneamente senza sovraccaricare la scheda, colleghiamola ad un alimentatore esterno a 2 A e 7.5 V.![arduino](https://www.modmypi.com/image/data/tutorials/how-to-power-my/6.jpg)
-Colleghiamo su una breadboard i mini-servo con V+ collegato al pin *Vin* di Arduino e V- collegato ad uno qualsiasi dei pin *GND* (ground) della scheda. 
+Colleghiamo su una breadboard i mini-servo con V+ collegato al pin *Vin* di Arduino e V- collegato ad uno qualsiasi dei pin *GND* (ground) della scheda.
 
 Per evitare di surriscaldare il micro-servo, lo colleghiamo il suo V+ al pin da 5V dell'Arduino e V- ad un pin GND.
 
@@ -130,7 +131,7 @@ Per installare correttamente i driver per Leap Motion su Ubuntu 16.04, seguite q
 
 [**<<Torna all'indice**](#indice)
 
-### 6. Avviare il Container Docker 
+### 6. Avviare il Container Docker
 Adesso che tutti i dispositivi esterni sono collegati, scaricate il [file .yaml](https://github.com/HotBlackRobotics/ntbd/blob/devel/docker-compose.hbr_ntbd_intel.yml) per l'immagine ntbd_manipulator:intel, che è quella che vogliamo avviare. Per avviare il container (dove è presente l'applicazione Web), basta eseguire il seguente comando nella cartella contenente il file .yaml, sfruttando il tool [Docker Compose](https://docs.docker.com/compose/overview/):
 ```
 docker-compose -f docker-compose.hbr_ntbd_intel.yml up
@@ -152,8 +153,8 @@ Una volta che il contenitore è stato avviato, apriamo una pagina Browser e conn
 A questo punto avrete a disposizione l'applicazione, dalla quale potete impostare una posizione desiderata nello spazio, muovendo gli sliders per le coordinate Cartesiane; Premendo il bottone **Execute** vedrete il modello del braccio muoversi insieme al braccio fisico.
 
 **Nota**: i valori di input inseriti dall'utente tramite la WebApp NTBD - Visualizer, sono utilizzati per il controllo sia del modello in simulatione che del braccio fisico.
- 
-#### Controllo con Leap Motion 
+
+#### Controllo con Leap Motion
 Nel caso si volesse utilizzare la seconda applicazione sviluppata, basterà premere sul link "*NTBD Leap Motion WebApp*" il quale aprirà una nuova pagina. Tenendo selezionata questa nuova finestra/scheda, vedremo che, posizionando la mano davanti al dispositivo Leap Motion, le posizioni nello spazio vengono interpretate ed inviate al robot fisico che riprodurrà i movimenti della mano.
 ![leapspace](/assets/imgs/2018-01-17-ntbd/5_leapref.png)
 

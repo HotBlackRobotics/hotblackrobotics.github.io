@@ -2,9 +2,10 @@
 title: "Come collegare un robot comprato da Tiger (Spider Robot) in piattaforma cloud !!"
 layout: post
 date: 2017-03-16 22:09:28
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Hacking
 category: blog
 redirect_from: /blog/posts/2017-03-16-come-collegare-un-robot-comprato-da-tiger-spider-robot-in-piattaforma-cloud
@@ -23,18 +24,18 @@ Oltre questo avrete anche bisogno di:
 * un Raspberry PI 3
 * cavetti con connettori femmina-femmina
 * fascette da idraulico
-* un pezzo di cartone ;) 
-* un cavetto USB a microUSB da cellulare Android. 
+* un pezzo di cartone ;)
+* un cavetto USB a microUSB da cellulare Android.
 
 E otterrete SpiderBot in cloud!
 
 ![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/SpiderBotCloud2.jpeg)
 
-Una volta montato lo Spider Bot come dalle istruzioni di Tiger, prendete un pezzo di materiale rigido  (io ho usato un cartone) e ne ritagliate un rettangolo per farci stare il Raspberry. Poi tagliate la parte inferiore in modo da creare una linguetta centrale che andrete a far passare dentro l'appiglio di plastica del robot. Lo ripiegate dentro e lo fissate, io ho usato una spillatrice. 
+Una volta montato lo Spider Bot come dalle istruzioni di Tiger, prendete un pezzo di materiale rigido  (io ho usato un cartone) e ne ritagliate un rettangolo per farci stare il Raspberry. Poi tagliate la parte inferiore in modo da creare una linguetta centrale che andrete a far passare dentro l'appiglio di plastica del robot. Lo ripiegate dentro e lo fissate, io ho usato una spillatrice.
 
 Poi come si vede in figura fissate il ponte ad H (hg7881) con una fascetta sul davanti del robot.  
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/Cartone.jpeg) 
+![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/Cartone.jpeg)
 
 Effettuate i collegamenti. Il filo rosso (+) lo inserite nel mammut del Motor A di destra nel ponte ad H e il nero (terra) nel mammut di sinistra. Con un cacciavite chiudete i mammut per far bene contatto. A questo punto prendete dei cavetti femmina-femmina e, due di questi (il mio rosso e marrone) li usate come alimentazione del ponte ad H e altri due li mettete nei pin di controllo del Motor A.
 
@@ -48,7 +49,7 @@ Ora facciamo i collegamenti. Secondo questo scema dei pin del raspberry collegat
 
 ![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/RP2_Pinout%20(1).png)
 
-Per farlo muovere collegatevi in piattaforma e usate l'app Test Hardware ( http://www.hotblackrobotics.com/cloud/webgui/hwtest ). Impostate il valore 100, 100 sui motori (anche se di fatto ne controllate solo uno) e premete set motor. Vedrete che lo spider bot inizierà a muoversi! Ovviamente mettendo valori diversi si muoverà più o meno veloce e cambiando segno al valore impostato si muoverà al contrario. Prossimo tutorial con due Spiderbot costruiremo uno Spider Bot in grado di andare avanti, indietro e pure girare! 
+Per farlo muovere collegatevi in piattaforma e usate l'app Test Hardware ( http://www.hotblackrobotics.com/cloud/webgui/hwtest ). Impostate il valore 100, 100 sui motori (anche se di fatto ne controllate solo uno) e premete set motor. Vedrete che lo spider bot inizierà a muoversi! Ovviamente mettendo valori diversi si muoverà più o meno veloce e cambiando segno al valore impostato si muoverà al contrario. Prossimo tutorial con due Spiderbot costruiremo uno Spider Bot in grado di andare avanti, indietro e pure girare!
 
-Per informazioni **info@hotblackrobotics.com** 
+Per informazioni **info@hotblackrobotics.com**
 Per la licenza da beta tester gratis registratevi qui [http://www.hotblackrobotics.com/register](http://www.hotblackrobotics.com/register).

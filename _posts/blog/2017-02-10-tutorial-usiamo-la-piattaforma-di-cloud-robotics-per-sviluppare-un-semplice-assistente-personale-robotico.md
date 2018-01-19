@@ -4,7 +4,8 @@ layout: post
 date: 2017-02-10 17:48:31
 image: http://www.cups.it/wp-content/uploads/2017/01/robot-assistant.jpg
 headerImage: false
-tag: 
+lang: it
+tag:
  - Cloud
  - Speech
  - To
@@ -21,7 +22,7 @@ Ciao a tutti, iniziamo con questo post una serie di tutorial più completi per l
 
 ##Cosa serve?
 
-Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale (tramite la cloud)](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o). 
+Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale (tramite la cloud)](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
 
 In questo tutorial, per semplicità, useremo un robot virtuale ma ovviamente si può benissimo utilizzare il robot reale!
 
@@ -52,7 +53,7 @@ Una volta cliccato "Cerca Robot", se tutto va bene, otterremo il seguente messag
 
 Una volta connesso il robot, siamo pronti ad iniziare a sviluppare il programma! A questo punto andiamo sul tab *sketches*.
 
-![iniziamo a programmare](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486746986/Schermata_2017-02-10_alle_18.15.58_chnyyy.png) 
+![iniziamo a programmare](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486746986/Schermata_2017-02-10_alle_18.15.58_chnyyy.png)
 
 Creiamo un nuovo programma chiamato "assistente robotico" e successivamente premiamo il bottone "new".
 
@@ -66,7 +67,7 @@ from std_msgs.msg import String
 
 class Node(dotbot_ros.DotbotNode):
     node_name = 'speech_bot_example'
-    
+
     def setup(self):
         self.pub_speech = dotbot_ros.Publisher('to_speech', String)
         dotbot_ros.Subscriber('speech', String, self.on_speech)
@@ -84,6 +85,6 @@ Nel programma stiamo definendo un *Publisher* di nome ```pub_speech``` che pubbl
 
 NB: ovviamente dovrete inserire nella casella "inserisci" le parole "ciao" e "mondo" altrimenti il robot non riconoscerà le parole!
 
-![](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486748553/Schermata_2017-02-10_alle_18.41.50_ury16w.png) 
+![](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486748553/Schermata_2017-02-10_alle_18.41.50_ury16w.png)
 
 Provate ad inserire altre parole e personalizzate il vostro assistente robotico!

@@ -2,12 +2,13 @@
 title: "Schede Motori - Recap"
 layout: post
 date: 2017-03-02 15:20:42
-image: 
+image:
 headerImage: false
-tag: 
+tag:
 category: blog
 redirect_from: /blog/posts/2017-03-02-schede-motori-recap
 author: sgabello
+lang: it
 description: ""
 ---
 

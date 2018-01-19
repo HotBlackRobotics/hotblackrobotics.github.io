@@ -4,6 +4,7 @@ layout: post
 date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-parte3.png
 headerImage: true
+lang: it
 tag:
  - Robotics
  - NTBD
@@ -29,9 +30,9 @@ description: "Cos'è e come utilizzare NTBD step by step, terzo articolo della s
 
 ## Parte III: integrazione con altri manipolatori
 Per adattare l'archiettura NTBD ad un manipolatore diverso da EEZYBOT, è necessario ridefinire i componenti astratti dell'archiettura.  Inoltre assumiamo che la scheda utilizzata per il controllo dei motori sia una scheda Arduino.
-I componenti astratti sono implementati nell'Immagine Docker *ntbd_manipulator* e, come spiegato nel post ["Parte I: una panoramica"]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %}), dipendono dal braccio robotico scelto e vanno quindi modificati conformemente alla struttura scelta. 
+I componenti astratti sono implementati nell'Immagine Docker *ntbd_manipulator* e, come spiegato nel post ["Parte I: una panoramica"]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %}), dipendono dal braccio robotico scelto e vanno quindi modificati conformemente alla struttura scelta.
 
-**Note**: 
+**Note**:
 - Consiglio la lettura dei post [Parte I]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %}) e [Parte II]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-II %}) per capire cosa modificare per integrare il vostro braccio robotico all'architettura NTBD e come vanno collegati i dispositivi esterni per il controllo e per le WebApp.
 - Per poter fare il build delle Immagini Docker è necessario [installare Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions). In questo tutorial assumo che il lettore abbia delle conoscenze su come sviluppare applicazioni in Docker. Per consigli sulla fase development, leggere l'[appendice](#appendice-docker-prod-vs-docker-devel).
 
@@ -49,10 +50,10 @@ Sarà necessario scaricare il [progetto NTBD da github](https://github.com/HotBl
  - [siBOT_noEE.urdf](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf/urdf/siBOT_noEE.urdf): questo file deve contenere la definizione [URDF](http://sdk.rethinkrobotics.com/wiki/URDF) del nuovo manipolatore; può quindi essere rinominato a piacere con l'unico accorgimento di cambiare il nome anche nel launch file [NTBD_launch.launch](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch).
  - [index.html](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/web/index.html) e [ntbd_lm.html](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/web/ntbd_lm.html) definiscono le applicazioni Web e devono essere modificati a seconda della nuova configurazione (per esempio, con i nuovi limiti).
  - [IK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/IK), [FK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/FK), [motor_values](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/motors_values) e [physical_2_visual](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/physical_2_visual): questi file sono tutti dipendenti dalla scelta del braccio robotico; per ulteriori informazioni riguardo al loro ruolo [>>vai al Post Parte I: una panoramica]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %}).
-- [*NTBD_launch.launch*](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch): questo file deve essere modificato per modificare i parametri ROS dei limiti per le [coordinate della posizione](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L16) e per i [motori](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L24). 
+- [*NTBD_launch.launch*](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch): questo file deve essere modificato per modificare i parametri ROS dei limiti per le [coordinate della posizione](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L16) e per i [motori](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L24).
 - [myServoControl_ntbd.ino](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/myServoControl_ntbd.ino): ovviamente, cambiando  il manipolatore,  cambia la configurazione fisica del braccio (numero e tipo di motori) e di conseguenza lo sketch caricato sulla scheda Arduino.
 
-**Nota**: 
+**Nota**:
 - il package ROS [*manipulator_urdf*](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf), che contiene tutte le info necessarie per utilizzare la definizione URDF del robot, può essere prodotto automaticamente partendo dall'assembly del robot, utilizzando il tool [SolidWorks to URDF Exporter](http://wiki.ros.org/sw_urdf_exporter/Tutorials/Export%20an%20Assembly).
 - Nel caso si voglia modificare il nome di un file bisogna tener sempre conto del fatto che questo file potrebbe essere "chiamato" in qualche altro file e quindi quest'ultimo dovrebbe essere modificato di conseguenza. Il consiglio è quindi quello di *evitare di rinominare i file* affinchè non ci siano intoppi.
 
@@ -112,7 +113,7 @@ cp /src/NTBD_viz.html /var/www/html/NTBD_viz.html
 
 cp /src/ntbd_lm.html /var/www/html/ntbd_lm.html
 
-cp -rf /src/ros3djs/roswebconsole/ /var/www/html/roswebconsole/ 
+cp -rf /src/ros3djs/roswebconsole/ /var/www/html/roswebconsole/
 
 source /catkin_ws/devel/setup.bash
 cd /catkin_ws/ && catkin_make
@@ -120,7 +121,7 @@ cd /catkin_ws/ && catkin_make
 # setup ros environment
  source /opt/ros/kinetic/setup.bash
  source /catkin_ws/devel/setup.bash
- 
+
 # start nginx
 service nginx start
 

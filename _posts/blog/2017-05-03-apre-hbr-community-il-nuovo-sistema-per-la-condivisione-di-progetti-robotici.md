@@ -4,7 +4,8 @@ layout: post
 date: 2017-05-03 07:09:39
 image: http://res.cloudinary.com/hbr/image/upload/v1493831729/Schermata_2017-05-03_alle_19.14.29_ibixnv.png
 headerImage: false
-tag: 
+lang: it
+tag:
  - Community
 category: blog
 redirect_from: /blog/posts/2017-05-03-apre-hbr-community-il-nuovo-sistema-per-la-condivisione-di-progetti-robotici
@@ -36,7 +37,7 @@ Per abilitare la condivisione dei progetti, un utente deve rendere pubblico il p
 
 Ogni sketch che stiamo sviluppando può diventare pubblico in modo semplice e veloce. Tuttavia, è importante scrivere della documentazione per permettere agli utenti di comprenderne lo scopo e il funzionamento e di realizzarlo.
 
-Per far questo, scegliamo uno sketch che vogliamo rendere pubblico, apriamolo e premiamo il pulsante *Edit Info*. Compiliamo i campi richiesti. 
+Per far questo, scegliamo uno sketch che vogliamo rendere pubblico, apriamolo e premiamo il pulsante *Edit Info*. Compiliamo i campi richiesti.
 
 ![](http://res.cloudinary.com/hbr/image/upload/v1493831728/Schermata_2017-05-02_alle_20.32.57_lbnbtc.png)
 
@@ -53,4 +54,3 @@ Una volta compilati i cambi, spuntiamo il flag **is public** e salviamo.
 Noterete subito che lo sketch non è più modificabile. Se ora profate ad eccedere al vostro profilo pubblico, vedrete che il vostro sketch è presenta all'interno del vostro profilo.
 
 ![Profilo Pubblico](http://res.cloudinary.com/hbr/image/upload/v1493831729/Schermata_2017-05-03_alle_19.14.29_ibixnv.png)
-

@@ -2,9 +2,10 @@
 title: "SpiderBot Cloud con controllo vocale! "
 layout: post
 date: 2017-03-16 22:05:00
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
 category: blog
 redirect_from: /blog/posts/2017-03-16-spiderbot-cloud-con-controllo-vocale
 author: sgabello
@@ -48,10 +49,10 @@ class Node(dotbot_ros.DotbotNode):
 
 Salvate e avviate il programma! Se non ci sono errori andate sul menù in alto dove c'è la voce "Apps" e aprite l'app di controllo vocale [http://www.hotblackrobotics.com/cloud/webgui/speech](http://www.hotblackrobotics.com/cloud/webgui/speech). Arriverrete su una pagina così (vi consigliamo di usare Chrome).
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/voiceRecognition.png) 
+![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/voiceRecognition.png)
 
-Connettete la web app con il tasto "connect" e premete il tasto centrale a forma di microfono per abilitare il controllo vocale. A questo punto dite ad alta voce " Avanti"  e il robot andrà avanti e "Dietro" e il robot andrà indietro! :) 
+Connettete la web app con il tasto "connect" e premete il tasto centrale a forma di microfono per abilitare il controllo vocale. A questo punto dite ad alta voce " Avanti"  e il robot andrà avanti e "Dietro" e il robot andrà indietro! :)
 Potete provare ad aprire il sito della Web App anche da cellulare e farlo funzionare su mobile!
 
-Per informazioni **info@hotblackrobotics.com** 
+Per informazioni **info@hotblackrobotics.com**
 Per la licenza da beta tester gratis registratevi qui [http://www.hotblackrobotics.com/register](http://www.hotblackrobotics.com/register).

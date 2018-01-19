@@ -2,13 +2,14 @@
 title: "Come creare una semplice Web App per interagire con il vostro robot"
 layout: post
 date: 2017-02-20 18:03:13
-image: 
+image:
 headerImage: false
-tag: 
+tag:
 category: blog
 redirect_from: /blog/posts/2017-02-20-come-creare-una-semplice-web-app-per-interagire-con-il-vostro-robot
 author: sgabello
 description: ""
+lang: it
 ---
 
 Ecco un semplice tutorial per spiegare un po' meglio come funzionano le Web App. Innanzitutto con il termine Web App intendiamo le applicazioni web che potete trovare nella tendina "Apps" in piattaforma. Queste Web App sono fatte da noi come esempio, ma ovviamente il codice è open source e in questo tutorial vi spiegheremo come potrete scrivere le vostre Web App. Attenzione però le Web App che andrete a scrivere (per motivi di sicurezza) saranno utilizzabili solo in locale sul vostro computer!
@@ -30,7 +31,7 @@ Iniziamo a vedere il codice per una Web App di un publisher e subscriber in ROS.
 
 start_ros('192.168.0.104', 'hotbot', '192.168.0.104:9090', 'None');
 
-  
+
 </script>
 <script type="text/javascript" type="text/javascript">
 
@@ -84,7 +85,7 @@ start_ros('192.168.0.104', 'hotbot', '192.168.0.104:9090', 'None');
 
 Dovete modificare l'indirizzo IP del robot quando usate questa funzione ```start_ros('192.168.0.104', 'hotbot', '192.168.0.104:9090', 'None');
 ``` .
-Una volta connesso, nel mio caso ho ricevuto l'indirizzo IP 192.168.0.104 e il robot si chiama "hotbot". Poi andiamo a dichirare un publisher, che pubbblica sul topic relativo al nome del vostro robot ```/<nome del vostro robot>/command_velocity``` un tipo di messaggio geometry_msgs/Twist. 
+Una volta connesso, nel mio caso ho ricevuto l'indirizzo IP 192.168.0.104 e il robot si chiama "hotbot". Poi andiamo a dichirare un publisher, che pubbblica sul topic relativo al nome del vostro robot ```/<nome del vostro robot>/command_velocity``` un tipo di messaggio geometry_msgs/Twist.
 
 ```
  var cmdVel = new ROSLIB.Topic({
@@ -93,7 +94,7 @@ Una volta connesso, nel mio caso ho ricevuto l'indirizzo IP 192.168.0.104 e il r
     messageType : 'geometry_msgs/Twist'
   });
 ```
-Riempiamo il messaggio così 
+Riempiamo il messaggio così
 
 ```
 var twist = new ROSLIB.Message({
@@ -109,19 +110,19 @@ var twist = new ROSLIB.Message({
     }
   });
 ```
-  
+
  e lo pubblichiamo
- 
- ``` 
-  cmdVel.publish(twist); 
+
  ```
- Per quanto riguara il subscriber, lo dichiariamo che rimanga in ascolto sul topic ``` '/<nome del vostro robot>/listener' ``` (messaggio std_msgs/String). 
- E la funzione di call back: 
- 
+  cmdVel.publish(twist);
+ ```
+ Per quanto riguara il subscriber, lo dichiariamo che rimanga in ascolto sul topic ``` '/<nome del vostro robot>/listener' ``` (messaggio std_msgs/String).
+ E la funzione di call back:
+
  ```
   listener.subscribe(function(message) {
     console.log('Received message on ' + listener.name + ': ' + message.data);
   });
  ```
  Vederete il risultato della funzione call back sul browser premendo col tasto destro del mouse e andando su console.
- Facile no? ;) 
+ Facile no? ;)

@@ -11,6 +11,7 @@ tag:
  - Politecnico di Torino
 category: blog
 author: ludusrusso
+lang: it
 description: "Il primo incontro del laboratorio ci permetterà di iniziare a prendere confidenza con ROS"
 ---
 

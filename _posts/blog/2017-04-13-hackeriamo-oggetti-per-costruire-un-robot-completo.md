@@ -2,9 +2,10 @@
 title: "Hackeriamo oggetti per costruire un robot completo"
 layout: post
 date: 2017-04-13 06:59:40
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
 category: blog
 redirect_from: /blog/posts/2017-04-13-hackeriamo-oggetti-per-costruire-un-robot-completo
 author: ludusrusso

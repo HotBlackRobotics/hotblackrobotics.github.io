@@ -11,6 +11,7 @@ tag:
  - Robotica
 category: blog
 author: ludusrusso
+lang: it
 description: "Sono disponibili online i video tutorial del corso di ROS partito dalla community Rokers"
 ---
 

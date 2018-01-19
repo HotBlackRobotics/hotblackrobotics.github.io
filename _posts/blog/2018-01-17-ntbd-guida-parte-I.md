@@ -4,6 +4,7 @@ layout: post
 date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-parte1.png
 headerImage: true
+lang: it
 tag:
  - Robotics
  - NTBD
@@ -40,13 +41,13 @@ In questa prima parte vi presento l'architettura proposta così come la troveret
 
 ### Motivazioni
 L'idea della mia tesi è nata dall'osservazione che nell'ambito della prototipazione rapida, l'hardware ha sempre avuto dei validi rappresentanti, per esempio le schede Open-Source [Arduino](http://www.arduino.org/) e [RaspBerry Pi](https://www.raspberrypi.org/); per quanto riguarda la Robotica, esistono innumerevoli progetti Open-Source per la costruzione di robot, muniti di istruzioni, indicazioni sull'opportuno hardware per il controllo, pezzi necessari alla costruzione (i quali possono essere stampati in 3D) e lista di minuteria necessaria.
-Per quanto riguarda invece il software, non c'è a disposizione un'architettura standard su cui costruire in modo semplice la propria applicazione robotica. Ecco che entra in scena **NTBD**, pensata per lo sviluppo di applicazioni con bracci robotici. 
+Per quanto riguarda invece il software, non c'è a disposizione un'architettura standard su cui costruire in modo semplice la propria applicazione robotica. Ecco che entra in scena **NTBD**, pensata per lo sviluppo di applicazioni con bracci robotici.
 
 [**<<Torna all'indice**](#indice)
 
 ### NTBD: Name To Be Decided
 Ebbene sì, ecco il nome tanto ricercato in tutta la sua gloria! Dopo pomeriggi passati a scegliere un nome che fosse accattivante e cool questo è il risultato...
-<!-- gif*Not so impressive*--> 
+<!-- gif*Not so impressive*-->
 ![enter image description here](https://media.giphy.com/media/rwedxv8kWXBaU/giphy.gif)
 
 Sono però dell'idea che l'importante sia il contenuto.
@@ -63,14 +64,14 @@ L'architettura è composta da vari elementi tra cui troviamo dei componenti astr
  - **P2V**: qui vengono convertiti ed adattati gli angoli dei giunti del braccio per ottenere i valori corrispondenti per muovere conformemente il modello in simulazione.
  - **Motor Values**: in questo elemento vengono uniti, in un unico array, i valori dei giunti e della pinza del braccio, se presente.
  - **HW**: questo componente rappresenta l'hardware utilizzato per il controllo del manipolatore, in questo caso una scheda Arduino.
- 
+
  I seguenti sono invece i componenti che sono indipendenti dalla struttura del manipolatore scelto:
  - **Position Limiter**:  questo elemento serve a limitare la posizione che si desidera raggiungere determinata dai limiti inferiori e superiori della coordinate Cartesiane x,y,z.
- - **Path Planner**: ho scelto, per questioni di semplicità, di pianificare il percorso dell'end effector in modo lineare, assumendo che non ci siano ostacoli. 
+ - **Path Planner**: ho scelto, per questioni di semplicità, di pianificare il percorso dell'end effector in modo lineare, assumendo che non ci siano ostacoli.
  - **Values Limiter**: anche i valori dei motori devono essere limitati per evitare danni o comportamenti inattesi.
  - **Rosserial**: questo elemento rappresenta l'importanza del tool [Rosserial](http://wiki.ros.org/rosserial) necessario per stabilire una connessione seriale con la scheda di prototipazione rapida scelta per il controllo.
  - **Rosbridge**: questo componente rappresenta il tool di ROS [Rosbridge](http://wiki.ros.org/rosbridge_suite), che permette di simulare il nostro braccio robotico tramite l'integrazione di ROS con il mondo Web utilizzando una libreria JavaScript, [roslibjs](http://wiki.ros.org/roslibjs).
- 
+
 [**<<Torna all'indice**](#indice)
 
 ### NTBD - Livello Docker
@@ -81,23 +82,23 @@ Chi ha qualche concetto base di Docker, saprà bene che un'applicazione Docker v
 
 ### NTBD - Livello ROS
 I componenti presentati precedentemente sono stati implementati in [ROS](http://www.ros.org/), Robot Operating System, come nodi Python. Assumo che il lettore conosca le dinamiche base del framework ROS così da non dilungarmi in spiegazioni ulteriori e procedere all'elenco e relativa spiegazione di [nodi](http://wiki.ros.org/Nodes) e [topics](http://wiki.ros.org/Topics) di questa architettura.
- 
+
  In Figura vediamo i nodi e i topics coinvolti nelle dinamiche di NTBD.
 ![ntbd-ros](/assets/imgs/2018-01-17-ntbd/4_archrosgraph.png)
 <!--Per meglio individuare il ruolo di ogni nodo e topic, li suddividerò in categorie di attinenza.
  Nodi e Topic per il controllo del robot -->
-La tabella riportata qui sotto presenta i topics e i relativi tipi di [messaggi ROS](http://wiki.ros.org/Messages). 
+La tabella riportata qui sotto presenta i topics e i relativi tipi di [messaggi ROS](http://wiki.ros.org/Messages).
 
 **Note**:
 - Motors_Array è un tipo custom, creato per rendere più chiaro il contenuto del messaggio stesso ed avere una struttura semplice.
 - il tipo di messaggio di */girpper_value* dipende dall'implementazione dell'utente.
 
-| Topic         |  ROS Message Type     | 
-|:--------------|:---------------------| 
+| Topic         |  ROS Message Type     |
+|:--------------|:---------------------|
 | /desired_position_nolim | [geometry_msgs/Point](http://docs.ros.org/api/geometry_msgs/html/msg/Point.html)|
 | /desired_position_nointerp |geometry_msgs/Point|
 | /desired_position | geometry\_msgs/Point|
-| /motors_nogripper | Motors\_Array| 
+| /motors_nogripper | Motors\_Array|
 | /gripper_value | [std_msgs/String](http://docs.ros.org/api/std_msgs/html/msg/String.html)|
 | /motors_nolim | Motors_Array|
 | /motors | Motors_Array|
@@ -106,19 +107,19 @@ La tabella riportata qui sotto presenta i topics e i relativi tipi di [messaggi 
 
 <br>
  - Topic **desired_position_nolim**: la posizione desiderata viene pubblicata su questo topic come messaggio di tipo Point.
- - Nodo  **/position_limiter**: qui i valori che cadono al di fuori dei limiti (che sono definiti come [parametri ROS](http://wiki.ros.org/Parameter%20Server#Parameters)), vengono saturati in modo tale da evitare errori dovuti a posizioni non raggiungibili. 
+ - Nodo  **/position_limiter**: qui i valori che cadono al di fuori dei limiti (che sono definiti come [parametri ROS](http://wiki.ros.org/Parameter%20Server#Parameters)), vengono saturati in modo tale da evitare errori dovuti a posizioni non raggiungibili.
  - Topic **/desired_position_nointerp**: le posizioni "filtrate" dal nodo */position_limiter* vengono pubblicate su questo topic.
  - Nodo  **/path_planner**: lo scopo di questo nodo è quello di calcolare l'interpolazione lineare tra due posizioni consecutive pubblicate su */desired_position_nointerp*.
  - Topic **/desired_position**: qui viene pubblicata la sequenza di punti nello spazio calcolata dal nodo di path planning.
  - Nodo **/IK**: la posizione desiderata viene qui convertita in valori per i motori (angoli , nel caso dei servo-motori).
  - Topic **/motors_nogripper**: i valori ottenuti in */IK* sono pubblicati qui.
  - Topic **/gripper_value**: fornisce in output il valore desiderato per la pinza del braccio, in questo caso la pinza può essere aperta o chiusa.
- - Nodo **/motors\_values**: qui i valori dei motori e della pinza vengono uniti in un unico vettore di dati. 
+ - Nodo **/motors\_values**: qui i valori dei motori e della pinza vengono uniti in un unico vettore di dati.
  - Topic **/motors\_nolim**: l'insieme di tutti i valori desiderati viene pubblicato su questo topic.
  - Nodo **/motors\_limiter**: questo nodo legge i valori dei motori e, se necessario li limita confrontandoli con i valori limite definiti come parametri ROS. Questo nodo è fondamentale nel caso che l'utente voglia comandare il robot direttamente nello spazio dei giunti.
  -  Topic **/motors**: i valori limitati sono finalmente disponibili su questo topic.
  - Nodo Rosserial **/init\_serial\_node**: questo nodo, che corrisponde al nodo [*/serial_node*](http://wiki.ros.org/rosserial_python#serial_node.py), consente di stabilire una connessione tra il nodo seriale caricato sull'hardware (in questo caso Arduino) e il sistema ROS sul computer. Infatti i valori dei motori vengono letti dall'apposito topic e processati dalla scheda per muovere i servo.
- - Nodo **/FK**: i valori dei motori possono essere utilizzati per il calcolo della cinematica diretta per ottenere la posizione reale, che può essere diversa da quella desiderata a causa dei limiti fisici. 
+ - Nodo **/FK**: i valori dei motori possono essere utilizzati per il calcolo della cinematica diretta per ottenere la posizione reale, che può essere diversa da quella desiderata a causa dei limiti fisici.
  - Topic **/actual\_position** la posizione raggiunta viene pubblicata su questo topic.
 
 Per quanto riguarda la simulazione del robot su una pagina web, ho dovuto rendere disponibili su un server il file URDF del braccio e il file HTML dell'applicazione. La soluzione è stata quella di tirare su un server, all'interno dell'ambiente containerizzato, utilizzando [*nginx*](https://www.nginx.com/resources/glossary/nginx/), un web server Open-Source che può essere utilizzato per fornire sulla rete contenuti HTTP. Per visualizzare la simulazione sul browser del sistema operativo host è bastato mappare la porta 80 del contenitore su una porta a scelta, per esempio 1234 dell'host (nella versione definitiva la porta 80 è mappata alla porta standard dell'host ovvero la porta 80).
@@ -128,7 +129,7 @@ La cartella root di default di nginx (/var/www/html) contiene il documento HTML,
 
 Ripartendo da dove eravamo rimasti per la descrizione a livello ROS, i seguenti sono i nodi e topics coinvolti nella simulazione del nostro braccio:
 
- -  Nodo **/physical_2_visual** :  questo nodo fa parte dei componenti astratti, dipendente quindi dal braccio scelto. Si tratta di un nodo di conversione che mappa i valori fisici forniti dal topic */motors* ai valori corrispondenti in visualizzazione. 
+ -  Nodo **/physical_2_visual** :  questo nodo fa parte dei componenti astratti, dipendente quindi dal braccio scelto. Si tratta di un nodo di conversione che mappa i valori fisici forniti dal topic */motors* ai valori corrispondenti in visualizzazione.
  - Topic **/joint\_states**: qui vengono pubblicati i valori dei joint in visualizzazione.
 Da qui in avanti, la gestione dei messaggi su topic ed i nodi è quella tipica di ROS per i dati 3D: i valori dei joint sono passati al topic [**/robot\_state\_publisher**](http://wiki.ros.org/robot_state_publisher) che fornisce in output messagi di tipo [*geometry_msgs/Transform*](http://docs.ros.org/jade/api/geometry_msgs/html/msg/Transform.html) sfruttando il package [*tf2*](http://wiki.ros.org/tf2) di ROS, il quale consente all'utente di tener traccia dei sistemi di coordinate nel tempo.  A questo punto, queste informazioni vengono rese note a Rosbridge; dal momento che i nodi e topic coinvolti in questa parte sono abbastanza standard, non mi dilungherò oltre.
 ![graph-simulation](/assets/imgs/2018-01-17-ntbd/5_rosbr.png)

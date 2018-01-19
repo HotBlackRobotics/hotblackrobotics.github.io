@@ -4,6 +4,7 @@ layout: post
 date: 2017-02-03 17:58:13
 image: http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486136271/istanza_cloud_1_tdt5ho.jpg
 headerImage: false
+lang: it
 tag:
  - Robotics
  - Cloud

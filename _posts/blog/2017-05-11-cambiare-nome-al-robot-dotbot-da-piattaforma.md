@@ -4,7 +4,8 @@ layout: post
 date: 2017-05-11 15:09:55
 image: https://github.com/ludusrusso/images/blob/master/hbr/tutorial/hostname/change.png?raw=true
 headerImage: false
-tag: 
+lang: it
+tag:
  - Tutorial
  - Dotbot
  - Hostname
@@ -27,5 +28,3 @@ Questo tutorial prevede una versione del sistema operativo HBrain > 0.5
  - Inserire il nome che vogliamo al robot nell'apposito form e premere **Set Hostname**. **Attenzione: il nome del robot deve essere tutto minuscolo e non contenere spazi o caratteri speciali)**
  - Riavviare il robot dal pulsante **Reboot**.
 ![](https://github.com/ludusrusso/images/blob/master/hbr/tutorial/hostname/change.png?raw=true)
-
-

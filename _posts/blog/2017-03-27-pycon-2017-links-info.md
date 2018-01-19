@@ -2,9 +2,10 @@
 title: "Pycon 2017 - Links & Info"
 layout: post
 date: 2017-03-27 15:01:39
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
 category: blog
 redirect_from: /blog/posts/2017-03-27-pycon-2017-links-info
 author: sgabello

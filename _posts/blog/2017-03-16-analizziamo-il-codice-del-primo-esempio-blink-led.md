@@ -2,9 +2,10 @@
 title: "Analizziamo il codice del primo esempio - blink LED"
 layout: post
 date: 2017-03-16 22:01:37
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Tutorial
 category: blog
 redirect_from: /blog/posts/2017-03-16-analizziamo-il-codice-del-primo-esempio-blink-led
@@ -51,4 +52,3 @@ Con la funzione `self.led_pub = dotbot_ros.Publisher('led', Led)` definiamo un P
 
 Nella funzione loop invece istanziamo il messaggio msg di tipo Led con `msg = Led()`, gli assegniamo un valore che alterna tra True e False. Incrementiamo all'inizio del loop la variabile `self.cnt += 1`. Poi entriamo nel if e calcoliamo il resto di self.cnt diviso per 2 con l'operatore %. Se il resto è uguale a 0 allora riempiamo il messaggio msg con True e il led si accenderà altrimenti il contrario.
 Infine pubblichiamo il messaggio con `self.led_pub.publish(msg)` scriviamo a schermo il valore di cnt. La funzione sys.stdout.flush() serve  a scrivere a schermo.
-

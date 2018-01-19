@@ -4,7 +4,8 @@ layout: post
 date: 2017-06-28 09:33:04
 image: http://i.imgur.com/az3Qd96.png
 headerImage: false
-tag: 
+lang: it
+tag:
 category: blog
 redirect_from: /blog/posts/2017-06-28-come-collegare-il-sensore-dht11-temperatura-e-umidita-in-cloud
 author: Ruslan
@@ -18,19 +19,19 @@ In questo tutorial vedremo:
  - come sviluppare lo sketch in ROS per pubblicare dati sulla  
    WebApp - Python
  - sviluppare la WebApp - Html/Javascript
-   
+
 
 Di cosa abbiamo bisogno
 -----------------------
  1. Un Raspberry Pi 3 oppure un Pi 2
  2. Tre cavi GPIO femmina/femmina
  2. Un sensore DHT11
- 
+
 ![enter image description here](http://i.imgur.com/SgzBq3p.jpg)
 
 Collegamenti
 ------------
-Come prima cosa prendete il  Raspberry Pi 3 e accendetelo collegandola alla corrente. Una volta collegato in cloud, colleghiamo il sensore. 
+Come prima cosa prendete il  Raspberry Pi 3 e accendetelo collegandola alla corrente. Una volta collegato in cloud, colleghiamo il sensore.
 
 ![enter image description here](http://i.imgur.com/XGvFqya.jpg)
 
@@ -43,7 +44,7 @@ In questa figura potete vedere come collegare i PIN del sensore sul Raspberry
 Ora che abbiamo connesso il sensore , procediamo con l'installazione delle librerie necessarie.
 Per installare le librerie dobbiamo usare un programma client SSH  (Per esempio: Putty oppure la shell sul browser).
 
-**Eseguiamo questi commandi:** 
+**Eseguiamo questi commandi:**
 Installa alcune dipendenze sul Raspberry:
 
     sudo apt-get update
@@ -52,7 +53,7 @@ Installa alcune dipendenze sul Raspberry:
 
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git
     cd Adafruit_Python_DHT
-  Ora, per installare la libreria eseguire: 
+  Ora, per installare la libreria eseguire:
 
       sudo python setup.py install
 
@@ -61,20 +62,20 @@ Sketch ROS
 Scriviamo ora un semplice sketch in ROS che ci stampa la temperatura e l'umidità.
 Importiamo ora le librerie:
 
-    import dotbot_ros #libreria di default ROS 
+    import dotbot_ros #libreria di default ROS
     import Adafruit_DHT #libreria per il funzionamento del sensore
     import sys #libreria per forzare la stampa sulla shell
-  
+
  **Codice Completo**
- 
+
 
     import dotbot_ros
     import Adafruit_DHT
     import sys
-    
+
     class Node(dotbot_ros.DotbotNode):
         node_name = 'node'
-    
+
         def setup(self):
             sensor = 11
             pin = 4
@@ -96,7 +97,7 @@ Successivamente per visualizzare la temperatura e l'umidità , stampiamo questi 
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
     sys.stdout.flush()
 
-    
+
 **Lanciamo il codice:**
 Se tutto è andato a buon fine, dobbiamo visualizzare questo output:
 ![enter image description here](http://i.imgur.com/8aKlYVM.jpg)
@@ -145,9 +146,9 @@ Importiamo le librerie
     import dotbot_ros #libreria ROS
     import Adafruit_DHT #libreria necessaria per il funzionamento del sensore
     from std_msgs.msg import Float32 #serve per pubblicare dati di tipo Float32 sul topic
-   
+
    Nella funzione principale **setup** , inizializziamo il sensore e il pin , ed creiamo 2 Publisher.
-   
+
 
     self.sensor = 11
             self.pin = 4
@@ -166,32 +167,25 @@ La funzione loop riceve i dati dai sensori e successivamente li pubblica sui Top
 Codice Completo:
 ----------------
 Ecco il codice completo del nostro programma:
-  
+
 
       import dotbot_ros
         import Adafruit_DHT
         from std_msgs.msg import Float32
-        
+
         class Node(dotbot_ros.DotbotNode):
             node_name = 'node'
-        
+
             def setup(self):
                 self.sensor = 11
                 self.pin = 4
                 self.loop_rate = dotbot_ros.Rate(5)
                 self.umedita = dotbot_ros.Publisher('humidity_status', Float32)
                 self.temperatura = dotbot_ros.Publisher('temperature_status', Float32)
-            
-        
-            
+
+
+
             def loop(self):
                 humidity, temperature = Adafruit_DHT.read_retry(self.sensor, self.pin)
                 self.umedita.publish(humidity)
                 self.temperatura.publish(temperature)
-
-   
-    
-
-
-
-

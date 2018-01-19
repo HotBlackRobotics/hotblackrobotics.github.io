@@ -4,6 +4,7 @@ layout: post
 date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-part2.png
 headerImage: true
+lang: en
 tag:
  - Robotics
  - NTBD
@@ -42,7 +43,7 @@ We'll need:
 **Nota:** I am currently also working  on an image built for *Raspberry PI 3: the files on github and docker hub are still in development*.
 
 #### Index
-- [1. Print the Robot Arm](#print-the-robot-arm) 
+- [1. Print the Robot Arm](#print-the-robot-arm)
 - [2. Download the Arduino Sketch
 ](#download-the-arduino-sketch)
 - [3. Download Docker](#download-docker)
@@ -53,7 +54,7 @@ We'll need:
 - [8.  Play with the WebApps](#play-with-the-webapps)
 
 ### 1. Print the Robot Arm
-The robot arm which I have chosed is [EEZYbotARM MK2](http://www.eezyrobots.it/eba_mk2.html), an Italian Open-Source project by Carlo Franciscone, Design Engineer e Maker. 
+The robot arm which I have chosed is [EEZYbotARM MK2](http://www.eezyrobots.it/eba_mk2.html), an Italian Open-Source project by Carlo Franciscone, Design Engineer e Maker.
 
 Following the instructions available on [*Thingiverse*](https://www.thingiverse.com/thing:1454048) and [*Instructables*](http://www.instructables.com/id/EEZYbotARM-Mk2-3D-Printed-Robot/) for this project, I successfully completed the 3D printing and mounting of the manipulator.
 I have used the [Cura](https://ultimaker.com/en/products/ultimaker-cura-software) software with parameters configured for a [DeltaWASP](http://www.wasproject.it/w/stampa-3d/) printer.
@@ -62,8 +63,8 @@ For the DeltaWASP printer, download the following [profile](http://www.personalf
 
 Following are reported the most significant parameter for printing the neceassary pieces and to improve their definition:
 
-|Parameter       |  Value    | 
-|:--------------|:---------------------:| 
+|Parameter       |  Value    |
+|:--------------|:---------------------:|
 | Infill | 30-100%. I'd recommend printing with 30% infill only the robot part which are undergoing few stress whereas the small mechanical parts should be printed with 100% infill. |
 | Printing Temperature | 200-210°C|
 | Build Plate Temperature| 40°C|
@@ -104,11 +105,11 @@ docker pull hbrobotics/ntbd_manipulator:intel
 
 ### 5. Connections
 As you can see from the sketch, the servomotors, numbered as in Figure, are connected to the Arduino as reported in the table below.
- 
+
  ![arduino](https://drive.google.com/uc?id=14FckU-3X92ctl0lBV2TV1LyZg3t6n894)
 
-| Servo         |  Arduino Pin  | 
-|:--------------:|:---------------------:| 
+| Servo         |  Arduino Pin  |
+|:--------------:|:---------------------:|
 | 1 | 2|
 | 2 | 3|
 | 3 | 4|
@@ -154,7 +155,7 @@ Now you are provided with the simulation application from which you can impose a
 **Remark**: the input values inserted by the user through the NTBD - Visualizer WebApp, are used to control both the simulation model and the physical arm.
 
 #### Leap Motion Application
-If you want to try out the second developed application, just click on the "*NTBD Leap Motion WebApp*" link which will open a new web page. By keeping this window/tab selected, you can see that positioning your hand above the Leap Motion controller, the space positions are interpreted and sent to the physical robot that will emulate your hand movements. 
+If you want to try out the second developed application, just click on the "*NTBD Leap Motion WebApp*" link which will open a new web page. By keeping this window/tab selected, you can see that positioning your hand above the Leap Motion controller, the space positions are interpreted and sent to the physical robot that will emulate your hand movements.
 ![leapspace](/assets/imgs/2018-01-17-ntbd/5_leapref.png)
 
 **Remark**: to open and close the gripper simply open and close your hand!

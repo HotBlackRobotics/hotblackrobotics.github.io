@@ -2,8 +2,9 @@
 title: "Call For Rokers (Roboticists and Makers) - 7 Maggio 2017, Torino"
 layout: post
 date: 2017-04-07 10:04:38
-image: 
+image:
 headerImage: false
+lang: it
 tag:
  - Rokers
 category: blog

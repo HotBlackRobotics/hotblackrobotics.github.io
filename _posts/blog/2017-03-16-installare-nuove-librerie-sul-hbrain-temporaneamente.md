@@ -2,9 +2,10 @@
 title: "Installare nuove librerie sul HBRain (temporaneamente)"
 layout: post
 date: 2017-03-16 17:04:59
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Tutorial
  - Raspberry
  - Hbrain
@@ -20,7 +21,7 @@ Un breve post per informarci su come installare nuove librerie Python sul robot 
 
 ## Accedere al Raspberry via SSH
 
-Per prima cosa, è necessario accedere via SSH al Raspberry su cui si vuole installare la nuova libreria. 
+Per prima cosa, è necessario accedere via SSH al Raspberry su cui si vuole installare la nuova libreria.
 
 Per farlo, da mac o linux si può semplicemente eseguire la seguente linea di comando dal terminale
 

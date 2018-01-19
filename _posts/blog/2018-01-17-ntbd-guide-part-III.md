@@ -4,6 +4,7 @@ layout: post
 date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-part3.png
 headerImage: true
+lang: en
 tag:
  - Robotics
  - NTBD
@@ -15,7 +16,7 @@ tag:
  - 3D printing
  - 3D
  - stampa 3D
- - manipulator 
+ - manipulator
 category: blog
 author: fiorellazza
 description: "What is and how to use NTBD: step by step guide, third article of the series"
@@ -29,7 +30,7 @@ description: "What is and how to use NTBD: step by step guide, third article of 
 ## Parte III: integration with other manipulators
 In order to adapt the NTBD architecture to a another manipulator, different from EEZYBOT, it is necessary to re-define the architecture abstract components. Furthermore I assume that the control platform is an Arduino board.
 The abstract components are implemented in the *ntbd_manipulator* Docker Image and, as explained in post ["Part I: an overview"]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %}), they depend on the chosen robot arm and thus require editing according to the new structure.
-**Remarks**: 
+**Remarks**:
 - I suggest reading posts [Part I]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %}) and [Part II]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %}) in order to understand what has to be modified to integrate your manipulator with NTBD and how to connect external devices for the control and the WebApps.
 - To build the Docker Images it is necessary to [install Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions). In this tutorial I assume that the reader has knowledge about developing apps with Docker. For some pieces of advice, read the [Appendix](#appendix-docker-prod-vs-docker-devel).
 
@@ -47,10 +48,10 @@ It is necessary to download the [NTBD project from github](https://github.com/Ho
  - [siBOT_noEE.urdf](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf/urdf/siBOT_noEE.urdf): this file contains the [URDF](http://sdk.rethinkrobotics.com/wiki/URDF) definition for the new robot armd; it can thus be renamed with the only precaution of changing the file name in the launch file [NTBD_launch.launch](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch).
  - [index.html](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/web/index.html) and [ntbd_lm.html](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/web/ntbd_lm.html) define the Web Applications and must be modified depending on the new configuration (e.g., with new limits).
  - [IK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/IK), [FK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/FK), [motor_values](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/motors_values) and [physical_2_visual](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/physical_2_visual): these files are all manipulator dependent; for further information about their role, [>> go to Post Part I: an overview]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %}).
-- [*NTBD_launch.launch*](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch): this file must be edited to update the [end effector position coordinates limits](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L16) and [motors limits](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L24). 
+- [*NTBD_launch.launch*](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch): this file must be edited to update the [end effector position coordinates limits](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L16) and [motors limits](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L24).
 - [myServoControl_ntbd.ino](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/myServoControl_ntbd.ino): obviously, changing the manipulator, also the physical configuration will most likely change (number and type of motors) and consequently the Arduino sketch must be edited.
 
-**Remark**: 
+**Remark**:
 - the ROS package [*manipulator_urdf*](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf), which contains all the info needed for using URDF definition, can be automatically generated starting from the robot assembly file, exploiting the [SolidWorks to URDF Exporter](http://wiki.ros.org/sw_urdf_exporter/Tutorials/Export%20an%20Assembly) tool.
 - In the event that a file name must be modified, it must be taken into account that such file could be "called" within another file and the latter should be edited accordingly. My advice is to *avoid re-naming file* in order to prevent errors.
 
@@ -113,7 +114,7 @@ cp /src/NTBD_viz.html /var/www/html/NTBD_viz.html
 
 cp /src/ntbd_lm.html /var/www/html/ntbd_lm.html
 
-cp -rf /src/ros3djs/roswebconsole/ /var/www/html/roswebconsole/ 
+cp -rf /src/ros3djs/roswebconsole/ /var/www/html/roswebconsole/
 
 source /catkin_ws/devel/setup.bash
 cd /catkin_ws/ && catkin_make
@@ -121,7 +122,7 @@ cd /catkin_ws/ && catkin_make
 # setup ros environment
  source /opt/ros/kinetic/setup.bash
  source /catkin_ws/devel/setup.bash
- 
+
 # start nginx
 service nginx start
 

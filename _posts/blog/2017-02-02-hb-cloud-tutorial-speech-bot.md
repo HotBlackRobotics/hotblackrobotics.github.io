@@ -4,6 +4,7 @@ layout: post
 date: 2017-02-02 15:59:55
 image: https://thumbs.dreamstime.com/z/talking-robot-cartoon-38038488.jpg
 headerImage: false
+lang: it
 tag:
  - Speech
  - Cloud

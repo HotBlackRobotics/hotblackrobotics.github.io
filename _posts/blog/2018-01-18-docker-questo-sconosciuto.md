@@ -4,6 +4,7 @@ layout: post
 date: 2018-01-18
 image: https://logz.io/wp-content/uploads/2016/01/docker-facebook.png
 headerImage: true
+lang: it
 tag:
  - Docker
  - Containers
@@ -37,13 +38,13 @@ Oggi vorrei parlarvi di una tecnologia che sta acquistando sempre più importanz
  3. [Comandi utili](#3-comandi-utili)
  4. [Perchè Docker?](#4-perchè-docker)
 
-## 1. Cos'è un contenitore? 
+## 1. Cos'è un contenitore?
 Alcuni di voi penseranno "Bhè chiaro! Una scatola, dove mettere qualcosa, per trasportarlo in modo compatto". Vi dirò che questo vostro pensiero ha senso, andiamo a vedere perchè: il concetto di contenitore è apparso per la prima volta con la tecnologia dei Linux Containers [LXC]( https://linuxcontainers.org/it/http://assemble.io), cioè un metodo di virtualizzazione a livello di sistema operativo che permette di  eseguire molteplici  sistemi Linux, chiamati *containers*,  i quali sono isolati e condividono lo stesso Kernel Linux.  Nel 2008 è stata rilasciata la versione 2.6.24 del Kernel Linux, la quale permetteva, per la prima volta, l'isolamento di risorse su hardware condiviso senza il bisogno delle Virtual Machines, il metodo di virtualizzazione più utilizzato fino ad allora.
 
 [**<< Torna all'indice**](#indice)
 ### 1.1. Contenitori Linux vs. Macchine Virtuali
  - *Virtualizzazione*:  come anticipato, i Linux Containers (LCs) forniscono virtualizzazione a livello di sistema operativo, mentre le Virtual Machines offrono la virtualizzazione dell'hardware.
- - *Guest OS*: i LCs non necessitano di ulteriori layers al di sopra del sistema operativo Host. Invece, le VMs, per poter essere eseguite, richiedono che la copia completa di un sistema operativo Guest venga installata. 
+ - *Guest OS*: i LCs non necessitano di ulteriori layers al di sopra del sistema operativo Host. Invece, le VMs, per poter essere eseguite, richiedono che la copia completa di un sistema operativo Guest venga installata.
 La maggior parte degli esempi di Docker Container, per lo sviluppo di applicazioni, sono basati sull'installazione di nuovo software su, per esempio, Ubuntu, il quale non è realmente installato ma è rappresentato da contenuti del Filesystem necessari affinchè l'applicazione possa essere eseguita.
 • *Prestazioni e peso*: considerate le osservazioni di cui sopra, i LCs sono leggeri e veloci mentre le VMs presentano un considerevole overhead all'avvio dovuto a tutti gli step che l'avvio di un sistema operativo completo comporta.
 • *Hypervisor* : i LCs possono essere eseguiti contemporaneamente e l'isolamento tra le risorse di ognuno è garantinto dalla divisione delle risorse del sistema operativo in gruppi separati. Al contrario, affinchè diverse macchine virtuali possano essere eseguite contemporaneament, è necessario un Hypervisor (conosciuto anche come Virtual Machine Monitor, VMM), ulteriore strato sopra il sistema operativo Host.
@@ -56,11 +57,11 @@ Le seguenti immagini riportano le differenze a livello di layers tra i LCs e le 
 ### 1.2. Container Docker
  I contenitori sono diventati popolari con la nascita di Docker, grazie alla facilità di utilizzo fornita dalla API ad alto livello. Docker permette ai developers di  *impacchettare* ed isolare le proprie applicazioni, favorendo la *modularità* e la *portabilità* di queste ultime. Infatti, il software "*containerizzato*" eseguirà sempre nello stesso modo, indipendentemente dall'ambiente in cui si trova, con l'unico requisito che il sistema operativo Host sia compatibile con Docker. L'unica pecca dei container è che sono *meno sicuri* delle VMs poichè l'isolamento in queste ultime è reale e robusto mentre nei containers l'isolamento può essere violato a causa delle condivisione di risorse. Per questo motivo le applicazioni Cloud e IoT, per adesso, sono containerizzate ed installate su VMs.
  La tecnologia di *containereizzazione* insieme alle procedure standard fornite, definiscono il *Docker Engine*, un'applicazione client-server con i seguenti componenti:
- 
+
  - Un processo persistente o daemon, chiamato *dockerd*, il quale gestisce containers ed immagini;
  - una API [REST](https://spring.io/understanding/REST) che specifica le interfacce utilizzate dai programmi per comunicare col daemon, per dirgli cosa fare;
  - una interfaccia da linea di comando, usata dall'utente per interagire con il Docker Engine per eseguire e gestire in generale containers ed immagini.
- 
+
 [**<< Torna all'indice**](#indice)
 ## 2. Concetti chiave per lavorare con Docker
 Dopo avervi annoiato con un po' di concetti teorici, passiamo alla parte divertente: qualche pillola utile per utilizzare Docker, lavorarci e capire cosa succede!
@@ -70,7 +71,7 @@ I concetti di Docker Image e Docker Container, per un nuovo utente, possono esse
 
 [**<< Torna all'indice**](#indice)
 ### 2.2. Dockerfile
-Una Immagine Docker viene costruita a partire da una "pila" di strati definiti in un file chiamato *Dockerfile*. La tipica Immagine è definita partendo dall'immagine di un sistema operativo di base su cui viene installato software e vengono eseguite operazioni, che possono essere definite utilizzando linguaggio BASH e seguendo un certa [sintassi](https://docs.docker.com/engine/reference/builder/). 
+Una Immagine Docker viene costruita a partire da una "pila" di strati definiti in un file chiamato *Dockerfile*. La tipica Immagine è definita partendo dall'immagine di un sistema operativo di base su cui viene installato software e vengono eseguite operazioni, che possono essere definite utilizzando linguaggio BASH e seguendo un certa [sintassi](https://docs.docker.com/engine/reference/builder/).
 Vediamo un esempio breve di Dockerfile:
 ```
 # Pull dell'immagine di base
@@ -107,11 +108,11 @@ exec "$@"
 Docker fa il *build* delle immagini sfruttando un utilissimo sistema di caching che permette di velocizzare questo processo ogni qualvolta i layer non siano stati modificati.
 Per "*buildare*" un'Immagine, bisogna usare il comando:
 ```
- docker build -t nometag . 
+ docker build -t nometag .
 ```
 
  Questo comando cercherà (di default) il file chiamato Dockerfile nel path specificato, nell'esempio '' . '', ovvero la cartella corrente. E' possibile dare un nome identificativo alla Immagine creata (opzione -t) oppure definire un altro file per il build (opzione  -f, per esempio, docker build -f ./mioDockerfile).
- 
+
  [**<< Torna all'indice**](#indice)
 ### 2.3. Build context, cos'è?
 Il build context è la cartella contenente il Dockerfile per la creazione di un'Immagine. Quando si deve copiare un file dall'Host al container il path relativo deve riferirsi a questa cartella, per esempio:
@@ -123,14 +124,14 @@ In questo caso il file si trova nella cartella *src* contenuta nella cartella co
 
 [**<< Torna all'indice**](#indice)
 ### 2.4. COPY: usare con cautela!
-Mi raccomando usate COPY nel Dockerfile solo nel momento in cui il file che volete copiare è alla sua versione finale: infatti il comando COPY creerà uno dei "layers" che compone la vostra immagine, quindi, nel caso che il file venisse modificato, il build dell'immagine Docker ripartirebbe da quel layer, senza sfruttare l'uso della cache dell'immagine già "*buildata*". 
+Mi raccomando usate COPY nel Dockerfile solo nel momento in cui il file che volete copiare è alla sua versione finale: infatti il comando COPY creerà uno dei "layers" che compone la vostra immagine, quindi, nel caso che il file venisse modificato, il build dell'immagine Docker ripartirebbe da quel layer, senza sfruttare l'uso della cache dell'immagine già "*buildata*".
 
 ![docker-rebuild](/assets/imgs/2018-01-18-docker/4_dockerdev.png)
 
  Quando la vostra applicazione è ancora in fase di sviluppo, il consiglio è quindi quello di eseguire la copia dei file necessari (programmi in development) all'interno del file di entrypoint in modo tale che l'Immagine non venga re-buildata ogni volta che i file cambiano. Ovviamente, essendo eseguito all'avvio del contenitore, il tempo di boot sarà maggiore.
 
  Per ulteriori informazioni, consultare l'Appendice di questo [post]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-III %}).
- 
+
  [**<< Torna all'indice**](#indice)
 ### 2.5. Docker Compose
 [Docker Compose](https://docs.docker.com/compose/overview/) è un tool per definire e *runnare* applicazioni multi-container tramite la configurazione definita in un file [YAML](http://yaml.org/). Trovo, però, che l'utilizzo di questo tool sia molto utile anche solo per eseguire un solo container perchè ti permette di usare un semplice comando, i.e.,
@@ -152,14 +153,14 @@ service_name:
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix:ro
   environment:
-    - DISPLAY=$DISPLAY 
+    - DISPLAY=$DISPLAY
 ```
 
 [**<< Torna all'indice**](#indice)
 ## 3. Comandi utili
 Vi lascio alla sperimentazione con Docker con alcuni comandi da command line, utili per la gestione di Immagini e Contenitori:
 
-- Visualizzare i contenitori che sono attualmente eseguiti o *stoppati*: 
+- Visualizzare i contenitori che sono attualmente eseguiti o *stoppati*:
 ```
  docker ps -a -q
 ```
@@ -200,7 +201,7 @@ Sicuramente Docker ha molti altri vantaggi che scoprirò e scoprirete, ma mi sen
   1. **Portabilità**: le vostre applicazioni potranno essere *dockerizzate* ed eseguite su ogni macchina su cui ci sia installato Docker perchè avranno tutto ciò che serve per essere eseguite senza problemi. Un contenitore è proprio una scatola per portare le vostre applicazioni dove volete!
 
   **Nota**: *un'Immagine buildata con una macchina che ha un certo processore potrà essere eseguita su macchine con lo stesso processore (per esempio, Intel su Intel, ARM su ARM)*.
-  2. **Sperimentazione**: a me Docker ha dato la possibilità di provare ad installare o eseguire qualsiasi cosa, senza avere il pensiero di corrompere l'intero sistema. Una volta che il contenitore è eseguito, tutte le modifiche fatte al run-time verranno eliminate allo stop del contenitore stesso, senza lasciare traccia delle modifiche apportate al sistema. Questo è, secondo me, utilissimo anche per chi è alle prese con nuovi sistemi operativi e vuole provare, per capire come funziona! 
+  2. **Sperimentazione**: a me Docker ha dato la possibilità di provare ad installare o eseguire qualsiasi cosa, senza avere il pensiero di corrompere l'intero sistema. Una volta che il contenitore è eseguito, tutte le modifiche fatte al run-time verranno eliminate allo stop del contenitore stesso, senza lasciare traccia delle modifiche apportate al sistema. Questo è, secondo me, utilissimo anche per chi è alle prese con nuovi sistemi operativi e vuole provare, per capire come funziona!
   3. **Tracking del lavoro fatto**:  il sistema Docker di definire l'immagine uno strato alla volta, permette di avere un file che ci dice tutto su come l'immagine è stata costruita e ci permette di eliminare uno strato nel caso che non ci soddisfi. La consultazione del Dockerfile permette di trovare subito eventuali errori o step fondamentali dimenticati (per esempio, il download di un pacchetto) ed avere un quadro generale dei vari step implementati.
 
 [**<< Torna all'indice**](#indice)

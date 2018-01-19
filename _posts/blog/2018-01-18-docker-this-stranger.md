@@ -4,6 +4,7 @@ layout: post
 date: 2018-01-18
 image: https://logz.io/wp-content/uploads/2016/01/docker-facebook.png
 headerImage: true
+lang: en
 tag:
  - Docker
  - Containers
@@ -57,11 +58,11 @@ The following Figures highlight differences between LCs and VMs at a layer level
  Containers became popular when Docker came into the picture, thanks to its ease of use guaranteed by the provided high level API. Docker allows developers to *wrap* and isolate their own apps, nurturing their *modularity* and *portability*. Indeed, the "*containerized*" software will always execute in the same way, independently of the environment, with the only requirement of a Docker compliant host Operating System. Containers' weakness is that they are *less safe* than VMs since the latter isolation is robust and real while in containers isolation can be violated due to resources sharing.
  For this reason Cloud and IoT applications are containerized and installed on VMs.
 *Containerization* technology, together with some provided standard procedures, make up the *Docker Engine*, a client-server applications with the following components:
- 
+
  - A persistent process or daemon, called *dockerd*, which manages containers and images;
  - a  [REST](https://spring.io/understanding/REST) API specifying the interfaces used by programs for communicating with and instructing the daemon;
  - a command line interface, used by the user to interact with the Docker Engine in order to execute and manage containers and images.
- 
+
 [**<<Back to Index**](#index)
 ## 2. Key concepts for working with Docker
 After the boring theoretical concept part, let's go to the fun part: some useful nuggets for using Docker, working with it and understanding what's happening!
@@ -107,10 +108,10 @@ Docker performs the Images *build* exploiting a useful caching system which allo
 
 In order to build an Image, the following command must be used:
 ```
- docker build -t tagname . 
+ docker build -t tagname .
 ```
  This command will try to find, by default, the file called Dockerfile in the specified path, '' . '' in the example, ie. the current folder. It is possible to name as desired the created Image (-t option) or defined another build file(option -f, for example,  docker build -f ./myDockerfile).
- 
+
 
 [**<<Back to Index**](#index)
 ### 2.3. What is the Build context?
@@ -123,14 +124,14 @@ In this case, the file is in the *src* folder, in the same folder where the *Doc
 [**<<Back to Index**](#index)
 
 ### 2.4. COPY: use with caution!
-Guys, be sure to use COPY in your Dockerfile only when files you want to copy are at their final version: indeed the COPY command will add a new layer to the ones making up your Image, thus, in the event that such file is modified, the Docker Image building process would start over from that layer on, without expoliting the already-built Image cache. 
+Guys, be sure to use COPY in your Dockerfile only when files you want to copy are at their final version: indeed the COPY command will add a new layer to the ones making up your Image, thus, in the event that such file is modified, the Docker Image building process would start over from that layer on, without expoliting the already-built Image cache.
 
 ![docker-rebuild](/assets/imgs/2018-01-18-docker/4_dockerdev.png)
 
  When your applications are still in development phase, my advice is to perform the copy operation within the entrypoint file, such that the Image is not re-built over and over again. Obviously, being executed at the container boot, the boot time will increase.
- 
+
 For more information see the Appendix of this [post]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-III %}).
- 
+
 [**<<Back to Index**](#index)
 ### 2.5. Docker Compose
 [Docker Compose](https://docs.docker.com/compose/overview/) is tool for defining and run multi-containers applications with configuration specified in a [YAML](http://yaml.org/) file. I thingh, though, that this tool is very useful also for single container execution since it permits to use the simple command
@@ -151,7 +152,7 @@ service_name:
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix:ro
   environment:
-    - DISPLAY=$DISPLAY 
+    - DISPLAY=$DISPLAY
 ```
 
 [**<<Back to Index**](#index)

@@ -2,9 +2,10 @@
 title: "Webapp per il controllo del robot via frecce su WebApp"
 layout: post
 date: 2017-06-23 14:31:31
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
 category: blog
 redirect_from: /blog/posts/2017-06-23-webapp-per-il-controllo-del-robot-via-frecce-su-webapp
 author: Ruslan
@@ -19,7 +20,7 @@ In questo tutorial vedremo come creare una WebApp in grado di gestire il robot a
  - come gestire la velocità del robot attraverso uno slider
  - come sviluppare lo sketch in ROS per sottoscriversi al topic della   
    WebApp
-   
+
 
 La webapp
 ---------
@@ -38,26 +39,26 @@ La seconda parte di questo file JavaScript si occupa di gestire la velocità (ri
 
     <script>
     $(document).ready(function(){
-    
+
                 function update() {
-    
-    
+
+
                     var cmdJoy = new ROSLIB.Topic({
       		ros : ros,
       		name : '/' + robot.name +'/velocita',
       		messageType : 'std_msgs/Float32'
     		});
-    
-    
+
+
                     var tasks_time = $('#tasks_time').slider('value');
-     
-                    
+
+
     	var joy = new ROSLIB.Message({
     	"data": tasks_time
     	});
     	cmdJoy.publish(joy);
      }
-    
+
                $( "#tasks_time" ).slider({
                     range: "max",
                     step: 0.1,
@@ -65,19 +66,19 @@ La seconda parte di questo file JavaScript si occupa di gestire la velocità (ri
                     max: 1,
                     stop: function() {
                         update();
-    
+
                     }
                 });
-    
-    
+
+
             });
-            
-    
-    
+
+
+
     </script>
 
 La funzione *update()*  è un  nodo publisher  che si sottoscrive al topic */velocita*  ed invia i dati ogni volta che lo slider viene trascinato.
-La velocità deve essere espressa nel range tra 0 e 1 quindi utilizziamo il formato *std_msgs/Float32* 
+La velocità deve essere espressa nel range tra 0 e 1 quindi utilizziamo il formato *std_msgs/Float32*
 
 La terza funzione è *myFunction* (riga 209) , questa funzione viene chiamata ogni volta che l'utente fa click su uno dei pulsanti. Come parametro la funzione riceve la posizione di tipo String.
 Ogni volta che la funzione viene chiamata , il nodo si sottoscrive al topic */comando* ed invia la direzione.
@@ -93,7 +94,7 @@ Il primo passo è quello di importare le librerie:
     from std_msgs.msg import String
     from std_msgs.msg import Float32
     from gpiozero import Robot
-   
+
    La prima libreria è ovviamente quella di ROS, la seconda è *stdout* che ha il compito di forzare la stampa effettiva sulla shell. Le librerie successive sono quelle che ci servono per estrarre i valori, cioè String per la direzione e Float32 per la velocità.  Importiamo l'oggetto Robot dalla libreria gpiozero per gestirne il movimento del robot.
 
 Come al solito, il nostro programma è composto da un nodo ROS, la funzione principale è la funzione setup, che si occupa di inizializzare il robot e creare una callback di gestione.
@@ -120,28 +121,28 @@ La funzione che mette insieme la direzione e la velocità è:
     def controller(self,speed,posizione):
             if self.posizione == 'avanti':
                 self.robot.forward(self.speed)
-            
+
             elif self.posizione == 'indietro':
                 self.robot.backward(self.speed)
-            
+
             elif self.posizione == 'destra':
                 self.robot.right(self.speed)
-            
+
             elif self.posizione == 'sinistra':
                 self.robot.left(self.speed)
-            
+
             elif self.posizione == 'stop':
-                self.robot.stop() 
+                self.robot.stop()
 Questa funzione riceve come parametro  *self* (rappresenta il nodo), *speed* (la velocità) e *posizione*.
  La funzione *controller* viene chiamata in 2 casi:
 
- 1. 
+ 1.
 
-    def speedy(self, msg): 
+    def speedy(self, msg):
                 self.speed = msg.data
                 self.controller(self.speed,self.posizione)
 
-Quando viene eseguita la funzione di callback "speedy" . 
+Quando viene eseguita la funzione di callback "speedy" .
 
  2.  
 
@@ -162,46 +163,43 @@ Ecco il codice completo del nostro programma
     from std_msgs.msg import String
     from std_msgs.msg import Float32
     from gpiozero import Robot
-    
-    
+
+
     class Node(dotbot_ros.DotbotNode):
         node_name = 'webapp'
-        
-    
+
+
         def setup(self):  
             self.speed = 0
             self.posizione = 'none'
             self.robot = Robot(left=(9, 10), right=(7, 8))
             dotbot_ros.Subscriber('comando', String, self.direzione)
             dotbot_ros.Subscriber('velocita', Float32, self.speedy)
-        
+
         def controller(self,speed,posizione):
             if self.posizione == 'avanti':
                 self.robot.forward(self.speed)
-            
+
             elif self.posizione == 'indietro':
                 self.robot.backward(self.speed)
-            
+
             elif self.posizione == 'destra':
                 self.robot.right(self.speed)
-            
+
             elif self.posizione == 'sinistra':
                 self.robot.left(self.speed)
-            
+
             elif self.posizione == 'stop':
-                self.robot.stop() 
-        
-        
-        def speedy(self, msg): 
+                self.robot.stop()
+
+
+        def speedy(self, msg):
             self.speed = msg.data
             self.controller(self.speed,self.posizione)
-            
-           
-        
-        
+
+
+
+
         def direzione(self, msg):
             self.posizione = msg.data
             self.controller(self.speed,self.posizione)
-            
-        
-    

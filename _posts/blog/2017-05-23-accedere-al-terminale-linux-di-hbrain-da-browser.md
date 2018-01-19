@@ -4,7 +4,8 @@ layout: post
 date: 2017-05-23 13:37:19
 image: https://github.com/ludusrusso/images/blob/master/hbr/tutorial/terminal/shell.png?raw=true
 headerImage: false
-tag: 
+lang: it
+tag:
 category: blog
 redirect_from: /blog/posts/2017-05-23-accedere-al-terminale-linux-di-hbrain-da-browser
 author: ludusrusso
@@ -33,6 +34,6 @@ Premiamo il pulsante *Open Terminal*
 
 ![Robot User Password](https://github.com/ludusrusso/images/blob/master/hbr/tutorial/terminal/tty.png?raw=true)
 
-E quindi potremmo accedere al terminale shell linux di HBrain. 
+E quindi potremmo accedere al terminale shell linux di HBrain.
 
 ![Shell](https://github.com/ludusrusso/images/blob/master/hbr/tutorial/terminal/shell.png?raw=true)

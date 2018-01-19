@@ -4,7 +4,8 @@ layout: post
 date: 2017-02-03 17:59:59
 image: http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486136271/istanza_cloud_1_tdt5ho.jpg
 headerImage: false
-tag: 
+lang: it
+tag:
  - Robotics
  - Ros
  - Iot
@@ -15,7 +16,7 @@ author: sgabello
 description: "Non avete un robot? C'è il robot in cloud accessibile da remoto tramite il vostro PC o cellulare"
 ---
 
-Molti di voi vorrebbero iniziare subito a programmare in ROS tramite la piattaforma cloud ma sono bloccati (purtroppo) da rognosi problemi hardware. Probabilmente la scheda motori non funziona correttamente o state aspettando ancora il Raspberry Pi o un componente da qualche fornitore. 
+Molti di voi vorrebbero iniziare subito a programmare in ROS tramite la piattaforma cloud ma sono bloccati (purtroppo) da rognosi problemi hardware. Probabilmente la scheda motori non funziona correttamente o state aspettando ancora il Raspberry Pi o un componente da qualche fornitore.
 
 Perchè quindi non saltate questo passaggio e iniziate a programmare subito in ROS con un robot remotizzato in cloud? Cosa significa esattamente lo affronteremo in questo post. In pratica potete iniziare ad usare la piattaforma soltanto con il vostro pc e una qualsiasi connessione internet (senza Raspberry Pi e altri dispositivi)! E... tutto ciò che abbiamo visto su come configurare una rete per Dotbot? Beh, ora abbiamo accesso ad un Dotbot in cloud!
 
@@ -23,7 +24,7 @@ In pratica tutto quello che avete visto funzionare su Dotbot è da oggi disponib
 
 ![cloud robotics amazon](https://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486575187/istanza_cloud_1_tdt5ho.jpg)
 
-Lo schema sopra riassume questi concetti e vi mostra come i due mondi si interfacciano tramite la piattaforma. La cosa che più mi affascina della filosofia cloud è che si confonde la differenza tra mondo "fisico", ovvero ciò che possiamo "toccare", con quello cloud. Infatti a qualcuno verrebbe da pensare che in sostanza abbiamo creato soltanto un sofisticato simulatore.. no, niente di più sbagliato! Il robot in cloud, DotbotCloud, esiste davvero ed è esattamente come Dotbot. L'unica differenza è che il computer Linux di DotbotCloud è una macchina virtuale remotizzata da Amazon e nessuno con certezza può sapere fisicamente dove si trovi. Inoltre ovviamente non può avere nessun tipo di interazione con il mondo fisico. In pratica è come se DotbotCloud vivesse in un mondo parallelo. Quello che possiamo fare è usarlo come fosse un robot normale per poi riportare il nostro software su un robot "concreto" e il funzionamento sarà lo stesso! Vediamo subito cosa ci possiamo fare. 
+Lo schema sopra riassume questi concetti e vi mostra come i due mondi si interfacciano tramite la piattaforma. La cosa che più mi affascina della filosofia cloud è che si confonde la differenza tra mondo "fisico", ovvero ciò che possiamo "toccare", con quello cloud. Infatti a qualcuno verrebbe da pensare che in sostanza abbiamo creato soltanto un sofisticato simulatore.. no, niente di più sbagliato! Il robot in cloud, DotbotCloud, esiste davvero ed è esattamente come Dotbot. L'unica differenza è che il computer Linux di DotbotCloud è una macchina virtuale remotizzata da Amazon e nessuno con certezza può sapere fisicamente dove si trovi. Inoltre ovviamente non può avere nessun tipo di interazione con il mondo fisico. In pratica è come se DotbotCloud vivesse in un mondo parallelo. Quello che possiamo fare è usarlo come fosse un robot normale per poi riportare il nostro software su un robot "concreto" e il funzionamento sarà lo stesso! Vediamo subito cosa ci possiamo fare.
 
 ## Primi passi con Dotbot in cloud ##
 
@@ -40,7 +41,7 @@ Poi se apriamo la Web App in un altro tab [http://www.hotblackrobotics.com/cloud
 
 ![] (http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486566503/Schermata_2017-02-08_alle_16.07.55_othgq2.png)
 
-Ovviamente non potendo "vedere" un robot in cloud abbiamo implementato una Web App, ereditata da ROS che si chiama Turtlesim, per visualizzare i movimenti del robot in tempo reale. Il robot prende la forma di una tartaruga su uno sfondo blu. 
+Ovviamente non potendo "vedere" un robot in cloud abbiamo implementato una Web App, ereditata da ROS che si chiama Turtlesim, per visualizzare i movimenti del robot in tempo reale. Il robot prende la forma di una tartaruga su uno sfondo blu.
 
 ![cloud robotics]( https://res.cloudinary.com/www-hotblackrobotics-com/image/upload/c_scale,w_996/v1486575030/Schermata_2017-02-08_alle_15.54.17_jo2ge9.png )
 
@@ -56,7 +57,7 @@ import rospy
 
 class Node(dotbot_ros.DotbotNode):
     node_name = 'cloud_robot_pub'
-    
+
     def setup(self):
         self.loop_rate = dotbot_ros.Rate(10)
         self.pub_position = dotbot_ros.Publisher('command_velocity', Twist)
@@ -83,7 +84,7 @@ Vector3  linear
 Vector3  angular
 
 ```
-dove *linear*  e *angular* sono lo spostamento e la rotazione sui relativi assi x,y,z. L' asse z esce dal piano del computer (in questa visualizzazione), x va da destra a sinistra e y dall'alto in basso. 
+dove *linear*  e *angular* sono lo spostamento e la rotazione sui relativi assi x,y,z. L' asse z esce dal piano del computer (in questa visualizzazione), x va da destra a sinistra e y dall'alto in basso.
 
 ```
 float64 x
