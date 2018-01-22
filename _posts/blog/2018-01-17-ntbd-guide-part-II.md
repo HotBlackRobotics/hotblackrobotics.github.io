@@ -43,15 +43,14 @@ We'll need:
 **Nota:** I am currently also working  on an image built for *Raspberry PI 3: the files on github and docker hub are still in development*.
 
 #### Index
-- [1. Print the Robot Arm](#print-the-robot-arm)
-- [2. Download the Arduino Sketch
-](#download-the-arduino-sketch)
-- [3. Download Docker](#download-docker)
-- [4. Download the Docker Images](#download-the-docker-images)
-- [5. Connections](#connections)
-- [6. Run the Docker Container](#run-the-docker-container)
-- [7. WebApps for NTBD and siBOT](#webapps-for-ntbd-and-sibot)
-- [8.  Play with the WebApps](#play-with-the-webapps)
+1. [Print the Robot Arm](#1-print-the-robot-arm)
+2. [Download the Arduino Sketch](#2-download-the-arduino-sketch)
+3. [Download Docker](#3-download-docker)
+4. [Download the Docker Images](#4-download-the-docker-images)
+5. [Connections](#5-connections)
+6. [Run the Docker Container](#6-run-the-docker-container)
+7. [WebApps for NTBD and siBOT](#7-webapps-for-ntbd-and-sibot)
+8. [Play with the WebApps](#8-play-with-the-webapps)
 
 ### 1. Print the Robot Arm
 The robot arm which I have chosed is [EEZYbotARM MK2](http://www.eezyrobots.it/eba_mk2.html), an Italian Open-Source project by Carlo Franciscone, Design Engineer e Maker.
@@ -148,7 +147,7 @@ Once the container has been run, open a browser page and connect to the loopback
 
 [**<<Back to Index**](#index)
 
-### 8.  Play with the WebApps
+### 8. Play with the WebApps
 #### Simulation and control using NTBD - Visualizer Application
 Now you are provided with the simulation application from which you can impose a desired end effector position, moving the Cartesian coordinates sliders; clicking on the **Execute** button you will see the arm model moving together with the phisical arm.
 
