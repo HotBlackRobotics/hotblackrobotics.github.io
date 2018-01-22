@@ -5,7 +5,7 @@ date: 2018-01-18
 image: https://logz.io/wp-content/uploads/2016/01/docker-facebook.png
 headerImage: true
 lang: it
-otherlanglink: /en/blog/
+otherlanglink: /2018/01/18/docker-this-stranger/
 tag:
  - Docker
  - Containers

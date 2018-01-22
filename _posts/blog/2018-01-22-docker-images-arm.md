@@ -5,8 +5,7 @@ date: 2018-01-22
 image: /assets/imgs/2018-01-22-docker-arm/Processor_ARM_anteprima.png
 headerImage: true
 lang: en
-otherlanglink: /it/blog/
-tag:
+otherlanglink: /2018/01/22/docker-immagini-arm/
  - Docker
  - ARM
  - build
