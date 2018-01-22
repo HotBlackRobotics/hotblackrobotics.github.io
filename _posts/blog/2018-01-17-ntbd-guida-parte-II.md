@@ -40,18 +40,17 @@ Ci serviranno:
 - 1 Breadboard
 - Jumper q.b.
 
-**Nota:**
-sto lavorando anche all'immagine buildata *per Raspberry PI 3, i file presenti su github e docker hub sono ancora in via di sviluppo*.
+**Nota:** Questo tutorial si riferisce all'Immagine Docker per host Intel ma è disponibile anche l'**Immagine ARM** (può essere eseguita su Raspberry 3). Per ottenere la versione ARM, quando un comando è necessario o un documento è citato, è sufficiente *sostituire la parola **intel** con **rpi3***.
 
 #### Indice
-- [1. Stampare il Braccio Robotico](#stampare-il-braccio-robotico)
-- [2. Scaricare lo sketch per Arduino](#scaricare-lo-sketch-per-arduino)
-- [3. Scaricare Docker](#scaricare-docker)
-- [4. Scaricare le Immagini Docker](#scaricare-le-immagini-docker)
-- [5. Collegamenti](#collegamenti)
-- [6. Avviare il Container Docker](#avviare-il-container-docker)
-- [7. WebApp per NTBD e siBOT](#webapp-per-ntbd-e-sibot)
-- [8.  Giocare con le WebApps](#giocare-con-le-webapps)
+ 1. [Stampare il Braccio Robotico](#1-stampare-il-braccio-robotico)
+ 2. [Scaricare lo sketch per Arduino](#2-scaricare-lo-sketch-per-arduino)
+ 3. [Scaricare Docker](#3-scaricare-docker)
+ 4. [Scaricare le Immagini Docker](#4-scaricare-le-immagini-docker)
+ 5. [Collegamenti](#5-collegamenti)
+ 6. [Avviare il Container Docker](#6-avviare-il-container-docker)
+ 7. [WebApp per NTBD e siBOT](#7-webapp-per-ntbd-e-sibot)
+ 8. [Giocare con le WebApps](#8-giocare-con-le-webapps)
 
 ### 1. Stampare il Braccio Robotico
 Il braccio robotico da me scelto è [EEZYbotARM MK2](http://www.eezyrobots.it/eba_mk2.html), progetto open source italiano di Carlo Franciscone, Design Engineer e Maker.
@@ -148,7 +147,7 @@ Una volta che il contenitore è stato avviato, apriamo una pagina Browser e conn
 
 [**<<Torna all'indice**](#indice)
 
-### 8.  Giocare con le WebApps
+### 8. Giocare con le WebApps
 #### Simulazione con NTBD - Visualizer
 A questo punto avrete a disposizione l'applicazione, dalla quale potete impostare una posizione desiderata nello spazio, muovendo gli sliders per le coordinate Cartesiane; Premendo il bottone **Execute** vedrete il modello del braccio muoversi insieme al braccio fisico.
 

@@ -35,9 +35,9 @@ The abstract components are implemented in the *ntbd_manipulator* Docker Image a
 - To build the Docker Images it is necessary to [install Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions). In this tutorial I assume that the reader has knowledge about developing apps with Docker. For some pieces of advice, read the [Appendix](#appendix-docker-prod-vs-docker-devel).
 
 ### Index
-1. [Edit the NTBD abstract components](#edit-the-ntbd-abstract-components)
-2. [Building the new Image](#building-the-new-image)
-3. [ Run the new Container](#run-the-new-container)
+1. [Edit the NTBD abstract components](#1-edit-the-ntbd-abstract-components)
+2. [Building the new Image](#2-building-the-new-image)
+3. [ Run the new Container](#3-run-the-new-container)
 4. [Appendix: Docker prod vs Docker devel](#appendix-docker-prod-vs-docker-devel)
 
 ### 1. Edit the NTBD abstract components

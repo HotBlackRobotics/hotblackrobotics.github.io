@@ -37,9 +37,9 @@ I componenti astratti sono implementati nell'Immagine Docker *ntbd_manipulator* 
 - Per poter fare il build delle Immagini Docker è necessario [installare Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions). In questo tutorial assumo che il lettore abbia delle conoscenze su come sviluppare applicazioni in Docker. Per consigli sulla fase development, leggere l'[appendice](#appendice-docker-prod-vs-docker-devel).
 
 ### Indice
-1. [Modificare i componenti astratti di NTBD](#modificare-i-componenti-astratti-di-ntbd)
-2. [Fare il build della nuova immagine](#fare-il-build-della-nuova-immagine)
-3. [Avviare il nuovo contenitore](#avviare-il-nuovo-contenitore)
+1. [Modificare i componenti astratti di NTBD](#1-modificare-i-componenti-astratti-di-ntbd)
+2. [Fare il build della nuova immagine](#2-fare-il-build-della-nuova-immagine)
+3. [Avviare il nuovo contenitore](#3-avviare-il-nuovo-contenitore)
 4. [Appendice: Docker Prod vs Docker Devel](#appendice-docker-prod-vs-docker-devel)
 
 ### 1. Modificare i componenti astratti di NTBD
@@ -65,6 +65,8 @@ Una volta modificati i file necessari, è ora di "buildare" la nuova immagine. E
 docker build -t ntbd/manipulator:intel .
 ```
 
+[**<<Torna all'indice**](#indice)
+
 ### 3. Avviare il nuovo contenitore
 Dopo aver collegato tutti i dispositivi esterni, basterà quindi avviare il contenitore eseguendo:
 ```
@@ -73,6 +75,8 @@ docker-compose -f docker-compose.intel.yml up
 che sfrutta il tool [Docker Compose](https://docs.docker.com/compose/overview/) con configurazione specificata nel file [docker-compose.intel.yml](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/docker-compose.intel.yml).
 
 L'integrazione di un nuovo braccio finisce qua, per informazioni a proposito dell'utilizzo delle WebApp implementate, vedi il [Post Parte II: un tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-II %}).
+
+[**<<Torna all'indice**](#indice)
 
 ### Appendice: Docker prod vs Docker devel
 Quando si lavora con Docker conviene, per motivi di organizzazione e ordine, usare un'Immagine per lo sviluppo (Development Image) ed una per la produzione (Production Image). Quest'ultima è la versione finale dell'applicazioe Docker, pronta per la distribuzione, mentre la prima è usata durante lo sviluppo dell'applicazione. Viene "buildata" un'immagine comune sulla quale si vanno a sviluppare la versione Prod e la versione Dev e, con qualche accorgimento, si può sfruttare al meglio il sistema di caching per la fase di *build* dell'immagine. Infatti, se i file modificati sono ancora in fase di debug, ad ogni build i layer, anche se già buildati in precedenza, vengono ri-buildati.
