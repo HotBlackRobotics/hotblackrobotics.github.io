@@ -30,7 +30,7 @@ description: "Cos'è e come utilizzare NTBD step by step, primo articolo della s
 Ciao a tutti! Sono di nuovo io, Fiorella e, con questa *trilogia* di post, vorrei presentarvi il lavoro svolto per la mia Tesi di Laurea Magistrale in Ingegneria Meccatronica conseguita al Politecnico di Torino, "*Development of a Standard Architecture
 to enable Fast Software Prototyping
 for Robot Arms*",  e fornirvi una guida step by step il più possibile chiara (si spera!) per poter utilizzare e ri-utilizzare l'architettura sviluppata, chiamata NTBD.
-In questa prima parte vi presento l'architettura proposta così come la troverete esplorando il [progetto su github](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c). Nel secondo post invece ci sarà un tutorial su come utilizzare l'architettura integrata ad un braccio robotico Open-Source da me scelto, avendo a disposizione un PC con processore Intel. Infine nel terzo articolo spiegherò come poter sfruttare NTBD utilizzando un braccio a scelta diverso da quello presentato, evidenziandone i limiti.
+In questa prima parte vi presento l'architettura proposta così come la troverete esplorando il [progetto su github](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c). Nel secondo post invece ci sarà un tutorial su come utilizzare l'architettura integrata ad un braccio robotico Open-Source da me scelto, avendo a disposizione un PC con processore Intel (oppure un host con processore ARM). Infine nel terzo articolo spiegherò come poter sfruttare NTBD utilizzando un braccio a scelta diverso da quello presentato, evidenziandone i limiti.
 
 #### Indice:
  1. [Motivazioni](#motivazioni)

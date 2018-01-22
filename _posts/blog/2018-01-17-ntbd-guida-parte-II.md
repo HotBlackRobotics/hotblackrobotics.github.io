@@ -40,8 +40,7 @@ Ci serviranno:
 - 1 Breadboard
 - Jumper q.b.
 
-**Nota:**
-sto lavorando anche all'immagine buildata *per Raspberry PI 3, i file presenti su github e docker hub sono ancora in via di sviluppo*.
+**Nota:** Questo tutorial si riferisce all'Immagine Docker per host Intel ma è disponibile anche l'**Immagine ARM** (può essere eseguita su Raspberry 3). Per ottenere la versione ARM, quando un comando è necessario o un documento è citato, è sufficiente *sostituire la parola **intel** con **rpi3***.
 
 #### Indice
  1. [Stampare il Braccio Robotico](#1-stampare-il-braccio-robotico)

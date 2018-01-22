@@ -30,7 +30,7 @@ description: "What is and how to use NTBD: step by step guide, first article of 
 Hi everyone! It's me again, Fiorella and, with this post *trilogy*, I'd like to present my Master Thesis work for the M.Sc. in Mechatronic Engineering degree at Politecnico di Torino, "*Development of a Standard Architecture
 to enable Fast Software Prototyping
 for Robot Arms*",  and provide a step by step guide as clearly as possible (hopefully!) for using and re-using the developed architecture, called NTBD.
-In this first part I present the proposed architecture as you will find it browsing the [github project](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c).  In the second post, instead, there will be a tutorial on how to use the architecture integrated with the chosen Open-Source robot arm, having a PC with Intel processor. Finally in the third article I'll explain how to exploit NTBD using another manipulator different from the one I've presented, highlighting the limits.
+In this first part I present the proposed architecture as you will find it browsing the [github project](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c).  In the second post, instead, there will be a tutorial on how to use the architecture integrated with the chosen Open-Source robot arm, having a PC with Intel processor (or an ARM-processor host). Finally in the third article I'll explain how to exploit NTBD using another manipulator different from the one I've presented, highlighting the limits.
 
 #### Index:
  1. [Motivations](#motivations)

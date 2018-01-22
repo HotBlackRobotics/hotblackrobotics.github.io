@@ -40,7 +40,7 @@ We'll need:
 - 1 Breadboard
 - Jumpers to taste
 
-**Nota:** I am currently also working  on an image built for *Raspberry PI 3: the files on github and docker hub are still in development*.
+**Remark:** This tutorial refers to the Docker Image for Intel hosts but also the **ARM Image** is available (can be deployed on Raspberry 3). To obtain the ARM version, when a command is required or a document is reffered to, it is sufficient to *replace the word **intel** with **rpi3***.
 
 #### Index
 1. [Print the Robot Arm](#1-print-the-robot-arm)
