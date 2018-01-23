@@ -48,18 +48,18 @@ Le parti si possono stampare con una stampante 3D (noi abbiamo usato una ShareBo
 *  18 bulloni M3
 *  4 bulloni M2
 *  2 biglie di vetro
-*  2 motorini CC e  2 ruote ![link per acquistarli](http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
+*  2 motorini CC e  2 ruote [link per acquistarli](http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
 
 
-*  1 scheda driver motori ![link per acquistarli]( http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
+*  1 scheda driver motori [link per acquistarli]( http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
 
-*  1 batteria power bank ![link per acquistarli](https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
+*  1 batteria power bank [link per acquistarli](https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
 
-*  2 motorini CC e  2 ruote ![link per acquistarli](http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
+*  2 motorini CC e  2 ruote [link per acquistarli](http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
 
-*  1 scheda driver motori ![link per acquistarli](http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
+*  1 scheda driver motori [link per acquistarli](http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
 
-*  1 batteria power bank ![link per acquistarli](https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
+*  1 batteria power bank [link per acquistarli](https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
 
 *  1 breadboard da 400 fori
 
