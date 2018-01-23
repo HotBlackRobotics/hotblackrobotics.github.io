@@ -5,7 +5,6 @@ date: 2017-02-08 13:28:57
 image: https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2010.21.55.jpeg
 headerImage: false
 lang: it
->>>>>>> 8af8b4afb5c68e2ac56c1322eaf36375926eea89
 tag:
  - Tutorial
  - Meccanica
