@@ -4,8 +4,6 @@ layout: post
 date: 2017-02-08 13:28:57
 image: https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2010.21.55.jpeg
 headerImage: false
-<<<<<<< HEAD
-=======
 lang: it
 >>>>>>> 8af8b4afb5c68e2ac56c1322eaf36375926eea89
 tag:
@@ -26,15 +24,19 @@ Le parti si possono stampare con una stampante 3D (noi abbiamo usato una ShareBo
 
 * 1 X [db-bottom.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-bottom.stl)
 * 1 X [db-breadboard.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-breadboard.stl)
-<<<<<<< HEAD
+
 * 1 X [db-supports.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-supports.stl ) [ **il file è unico ma i supporti per il motori da stampare sono 4**]
+
 * 1 X [db-top.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-top.stl)
+
 * 8 x supporti rettangolari [db-rect.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/v04-db-dist-25-mm.stl)
-=======
-* 1 X [db-supports.stl] (https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-supports.stl ) [ **il file è unico ma i supporti per il motori da stampare sono 4**]
-* 1 X [db-top.stl] (https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-top.stl)
-* 8 x supporti rettangolari [db-rect.stl] (https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/v04-db-dist-25-mm.stl)
->>>>>>> 8af8b4afb5c68e2ac56c1322eaf36375926eea89
+
+* 1 X [db-supports.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-supports.stl ) [ **il file è unico ma i supporti per il motori da stampare sono 4**]
+
+* 1 X [db-top.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-top.stl)
+
+* 8 x supporti rettangolari [db-rect.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/v04-db-dist-25-mm.stl)
+
 * 4 x bulloncini di supporto al Raspberry
 
 ## La lista dei componenti ##
@@ -46,17 +48,23 @@ Le parti si possono stampare con una stampante 3D (noi abbiamo usato una ShareBo
 *  18 bulloni M3
 *  4 bulloni M2
 *  2 biglie di vetro
-<<<<<<< HEAD
-*  2 motorini CC e  2 ruote [link per acquistarli](http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
-*  1 scheda driver motori [link per acquistarli]( http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
-*  1 batteria power bank [link per acquistarli](https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
-=======
-*  2 motorini CC e  2 ruote [link per acquistarli] (http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
-*  1 scheda driver motori [link per acquistarli] ( http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
-*  1 batteria power bank [link per acquistarli] (https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
->>>>>>> 8af8b4afb5c68e2ac56c1322eaf36375926eea89
+*  2 motorini CC e  2 ruote ![link per acquistarli](http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
+
+
+*  1 scheda driver motori ![link per acquistarli]( http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
+
+*  1 batteria power bank ![link per acquistarli](https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
+
+*  2 motorini CC e  2 ruote ![link per acquistarli](http://www.volumerate.com/product/3-7-2v-dual-axis-tt-gear-motor-65mm-blue-rubber-wheel-for-smart-car-844443000)
+
+*  1 scheda driver motori ![link per acquistarli](http://www.volumerate.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060 )
+
+*  1 batteria power bank ![link per acquistarli](https://www.amazon.it/RAVPower-Caricabatterie-Tecnologia-Universale-Smartphone/dp/B00YA01MC6/ref=sr_1_22?ie=UTF8&qid=1479834997&sr=8-22&keywords=batteria+esterna)
+
 *  1 breadboard da 400 fori
+
 *  1 una batteria alcalina da 9 Volt (opzionale - per alimentare i motori in parallelo al Raspberry)
+
 *   LED, interruttori, resistenze, fili per i collegamenti sulla breadboard
 
 Il kit smontato e con tutti i suoi componenti sarà più o meno così:
@@ -89,14 +97,13 @@ Con le viti M3X30.
 Iniziamo a montare le ruote omnidirezionali.
 
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05.jpeg)
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05_1.jpeg )
-=======
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05.jpeg)
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05%20(1).jpeg )
->>>>>>> 8af8b4afb5c68e2ac56c1322eaf36375926eea89
+
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05.jpeg)
+
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05_1.jpeg )
 
 Poi montiamo i supporti con le viti M3X16, dalla parte della ruota omnidirezionale e M3X10 dalla parte della flangia.
 
@@ -106,11 +113,10 @@ Poi montiamo i supporti con le viti M3X16, dalla parte della ruota omnidireziona
 
 E infine otteremo questo.
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.37.35.jpeg )
-=======
-![] ( https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.37.35.jpeg )
->>>>>>> 8af8b4afb5c68e2ac56c1322eaf36375926eea89
+
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.37.35.jpeg )
+
 
 ## 3 - Montaggio batterie - Inserimento driver motori - Inserimento giunti stampati in 3d per secondo livello##
 
