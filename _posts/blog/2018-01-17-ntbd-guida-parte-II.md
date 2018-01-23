@@ -5,6 +5,7 @@ date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-parte2.png
 headerImage: true
 lang: it
+otherlanglink: /2018/01/17/ntbd-guide-part-II/
 tag:
  - Robotics
  - NTBD
