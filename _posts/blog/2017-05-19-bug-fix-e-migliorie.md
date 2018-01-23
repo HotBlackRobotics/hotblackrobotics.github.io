@@ -2,9 +2,10 @@
 title: "Bug Fix e Migliorie"
 layout: post
 date: 2017-05-19 17:03:22
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
 category: blog
 redirect_from: /blog/posts/2017-05-19-bug-fix-e-migliorie
 author: ludusrusso

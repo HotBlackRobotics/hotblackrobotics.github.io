@@ -4,7 +4,8 @@ layout: post
 date: 2017-04-04 19:00:39
 image: http://res.cloudinary.com/hbr/image/upload/v1491332116/17796381_1036841159750472_6301133680329694750_n_edokgm.jpg
 headerImage: false
-tag: 
+lang: it
+tag:
  - Orobot101
 category: blog
 redirect_from: /blog/posts/2017-04-04-tradizionalmente-innovativi

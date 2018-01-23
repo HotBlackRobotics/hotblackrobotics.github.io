@@ -2,9 +2,10 @@
 title: "Collegare un Arduino in parallelo al raspberry"
 layout: post
 date: 2017-06-16 09:54:19
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Arduino
  - Raspberry
 category: blog
@@ -20,7 +21,7 @@ In questo tutorial vedremo come come collegare un Arduino UNO al nostro Raspberr
 Per far funzionare questo tutorial, prima di tutto è necessario accedere al terminale, utilizzando [questa guida](http://www.hotblackrobotics.com/blog/posts/2017-05-23-accedere-al-terminale-linux-di-hbrain-da-browser), ed eseguire il seguente comando (basta fare copia incolla). Una volta fatto questo, riavviare il robot!
 
 ```bash
-curl https://gist.githubusercontent.com/ludusrusso/a3533daae7a03c07ce55b90019f2a0ba/raw/c20b544de544f0c13577c31a3bc0322718c884d8/arduino_patch_hbrain | bash 
+curl https://gist.githubusercontent.com/ludusrusso/a3533daae7a03c07ce55b90019f2a0ba/raw/c20b544de544f0c13577c31a3bc0322718c884d8/arduino_patch_hbrain | bash
 ```
 
 Includiamo le librerie di ROS su Arduino
@@ -45,18 +46,18 @@ In questo modo sarà sufficiente collegare l'Arduino al Raspberry attraverso una
 
 Scrittura di un semplice publisher per Arduino
 ----
-Procediamo ora a scrivere il codice di un semplice pulisher per pubblicare una stringa testuale sulla console ROS. Apriamo quindi l'Arduino IDE e iniziamo un nuovo progetto. Andiamo ad includere immediatamente le librerie che utilizzeremo e la stringa `ros: :NodeHandle  nh;` che permetterà al nostro programma di creare publisher e subscriber: 
+Procediamo ora a scrivere il codice di un semplice pulisher per pubblicare una stringa testuale sulla console ROS. Apriamo quindi l'Arduino IDE e iniziamo un nuovo progetto. Andiamo ad includere immediatamente le librerie che utilizzeremo e la stringa `ros: :NodeHandle  nh;` che permetterà al nostro programma di creare publisher e subscriber:
 
 ```arduino
 #include <ros.h>
 #include <std_msgs/String.h>
 
-ros::NodeHandle nh; 
+ros::NodeHandle nh;
 ```
-Ora dobbiamo definire il nostro publisher/subscriber. In questo caso lavoriamo su un publisher chiamato **chatter** che pubblicherà un messaggio di tipo **&str_msg** 
+Ora dobbiamo definire il nostro publisher/subscriber. In questo caso lavoriamo su un publisher chiamato **chatter** che pubblicherà un messaggio di tipo **&str_msg**
 ```arduino
 std_msgs::String str_msg;
-ros::Publisher chatter("chatter", &str_msg); 
+ros::Publisher chatter("chatter", &str_msg);
 ```
 Nel **setup** inizializziamo il nostro nodo ROS e definiamo i topic a cui vogliamo sottoscriverci utilizzando la stinga `nh.subscribe(nomedeltopic)` e quelli che vogliamo pubblicare, come nel nostro caso, con la stringa `nh.advertise(nomedeltopic)`
 ```arduino
@@ -105,4 +106,4 @@ void loop()
 }
 ```
 
-Per avere altre informazioni e tutorial più approfonditi potete visitare la pagina dedicata a [rosserial_arduino](http://wiki.ros.org/rosserial_arduino/Tutorials) del sito Ros.org 
+Per avere altre informazioni e tutorial più approfonditi potete visitare la pagina dedicata a [rosserial_arduino](http://wiki.ros.org/rosserial_arduino/Tutorials) del sito Ros.org

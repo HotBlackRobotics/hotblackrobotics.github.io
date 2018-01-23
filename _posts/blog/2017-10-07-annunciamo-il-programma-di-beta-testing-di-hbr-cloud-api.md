@@ -4,13 +4,14 @@ layout: post
 date: 2017-10-07 08:13:27
 image: https://raw.githubusercontent.com/ludusrusso/images/master/hbropenapi/betasting.png
 headerImage: false
-tag: 
+tag:
  - Api
  - Hbr
  - Cloud
 category: blog
 redirect_from: /blog/posts/2017-10-07-annunciamo-il-programma-di-beta-testing-di-hbr-cloud-api
 author: ludusrusso
+lang: it
 description: ""
 ---
 
@@ -26,7 +27,7 @@ Oggi annunciamo ufficialmente che un altro tassello di Robot@CED rientra ufficia
 
 ### HBR Cloud API
 
-Le nostre API sono le stesse utilizzate all'interno di Robot@CED, migliorate dopo due anni di esperienza di Cloud e messe a disposizione degli utenti. Essenzialmente, esse erano alla base del sistema di raccolta dati del robot: infatti permettono di salvare in Cloud e organizzare una mole di dati ambientali in base alla loro posizione ed al loro instante di cattura. In futuro, queste **API** si evolveranno includendo sempre di più funzionalità legate al mondo della navigazione autonoma, come il **calcolo automatico della traiettoria**, il **mapping** ecc. 
+Le nostre API sono le stesse utilizzate all'interno di Robot@CED, migliorate dopo due anni di esperienza di Cloud e messe a disposizione degli utenti. Essenzialmente, esse erano alla base del sistema di raccolta dati del robot: infatti permettono di salvare in Cloud e organizzare una mole di dati ambientali in base alla loro posizione ed al loro instante di cattura. In futuro, queste **API** si evolveranno includendo sempre di più funzionalità legate al mondo della navigazione autonoma, come il **calcolo automatico della traiettoria**, il **mapping** ecc.
 
 ### Accedi al programma di Beta Testing
 
@@ -51,4 +52,3 @@ Al raggiungimento di ogni Way Point, il robot esegue le misure di temperatura e 
 Il risultato è una serie di misure geolocalizzate, o una serie storica di misure per ogni way point. In figura, i plot di temperature e umidità su 3 giorni dei dati raccolti per due waypoint specifici.
 
 ![Time Plot](https://raw.githubusercontent.com/ludusrusso/images/master/hbropenapi/plot.png)
-

@@ -2,14 +2,15 @@
 title: "Il fondamento della piattaforma di Cloud Robotics: Robotics Operating System "
 layout: post
 date: 2017-03-14 22:54:50
-image: 
+image:
 headerImage: false
-tag: 
+tag:
  - Ros
 category: blog
 redirect_from: /blog/posts/2017-03-14-il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system
 author: ludusrusso
 description: ""
+lang: it
 ---
 
 La base tecnologica su cui si basa la piattaforma di cloud robotics è [ROS (Robotic Operating System)] (http://wiki.ros.org/it). ROS è un framework software open source che permette lo sviluppo e la programmazione di robot. Fornisce le stesse funzioni di un sistema operativo come: astrazione dell'hardware, controllo dei dispositivi tramite driver, comunicazione tra processi, gestione delle applicazioni e altre funzioni di uso comune. Si presta particolarmente bene alle nostre esigenze legate all'internet delle cose poichè è un **sistema distribuito**, il che significa che diversi programmi sono distribuiti su robot differenti e comunicano tutti tramite la piattaforma.
@@ -33,11 +34,11 @@ Rivediamo ora meglio i vari attori in piattaforma!
 ## Effettuate l'accesso alla piattaforma
 Andate sul sito di Hotblack Robotics (http://www.hotblackrobotics.com/) ed entrate nella piataforma http://www.hotblackrobotics.com/login?next=%2Fcloud%2F . Inserite le vostre credenziali e siete in cloud!
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudplatform.PNG) 
+![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudplatform.PNG)
 
-La parte relativa la spiegazione di ROS la trovate nel menù in alto a sinistra sotto la voce "ROS". 
+La parte relativa la spiegazione di ROS la trovate nel menù in alto a sinistra sotto la voce "ROS".
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/Entratiincloud.PNG) 
+![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/Entratiincloud.PNG)
 
 ## Nodi ##
 Un nodo è un processo (un programma in esecuzione) all’interno della rete ROS che esegue calcoli.
@@ -46,8 +47,8 @@ Un nodo è un processo (un programma in esecuzione) all’interno della rete ROS
 * Ad ogni nodo è associato un compito. Due categorie
     - Driver (controlla un sensore o attuatore
     - Elaborazione (esegue calcoli)
-    
-In piattaforma trovate sempre sotto la voce "ROS" (http://www.hotblackrobotics.com/cloud/webgui/console) sotto la voce "Nodes List" la lista dei nodi attivi. 
+
+In piattaforma trovate sempre sotto la voce "ROS" (http://www.hotblackrobotics.com/cloud/webgui/console) sotto la voce "Nodes List" la lista dei nodi attivi.
 
 ![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/nodi.PNG )
 

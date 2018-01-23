@@ -4,7 +4,8 @@ layout: post
 date: 2017-06-09 09:57:40
 image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdu75D9NQxLgTcN9Iv2UkHenAJrbK2aQjovA37vbijPucqILYhBDVr5SC2
 headerImage: false
-tag: 
+lang: it
+tag:
  - Robot
  - Controllo
  - Remoto
@@ -22,7 +23,7 @@ In questo tutorial vedremo come controllare un robot attraverso i tasti **wasd**
 
 La webapp
 -----
-Come prima cosa andiamo a sviluppare l'applicazione web che ci permetterà di controllare il robot tramite la tastiera.  [Da qui](https://github.com/sgabello1/WebApp) scaricate (pemendo sul pulsante **clone or download**) la cartella ed estraetela in un luogo facilmente raggiungibile. 
+Come prima cosa andiamo a sviluppare l'applicazione web che ci permetterà di controllare il robot tramite la tastiera.  [Da qui](https://github.com/sgabello1/WebApp) scaricate (pemendo sul pulsante **clone or download**) la cartella ed estraetela in un luogo facilmente raggiungibile.
 
 ![](https://user-images.githubusercontent.com/29255795/26967384-5320d1c2-4cfe-11e7-8e7f-1ca7de8dcf1b.png)
 
@@ -52,32 +53,32 @@ Scriviamo ora lo sketch in Ros che farà comunicare il nostro robot con la webap
 self.robot = Robot(left=(16, 19), right=(20, 26))
 ```
 ##Sottoscriviamoci ad un Topic ROS e usiamo le Callback
- 
+
  Andiamo ad implementare una funzione di callback, chiamata `keyb_wasd`. Questa funzione (come tutte le funzioni di callback) avrà la seguente forma:
- 
+
 ```python
 def keyb_wasd(self, msg):
     pass
 ```
- 
+
 I due parametri che la funzione sfrutta sono `self` (che rappresenta il nodo) e `msg`, che conterrà il messaggio scambiato dal topic.
- 
+
 Il messaggio `geometry_msgs/Twist` contiene 2 valori a noi utili:
 
  - `linear.x` che varia nell'intervallo `+20` e `-20`
  -  `linear.z` che varia nell'intervallo `+1` e `-1`
- 
+
 La classe `Robot` funziona in modo simile, ma i valori di velocità delle ruote possono variare tra `-1.0` (massima velocit‡ all'indietro) e `1.0` (massima velocità in avanti). La prima cosa che dovrà fare la funzione, quindi, è convertire questi valori e controllare che i valori finali siano nell'intervallo `[-1, 1]`.
- 
+
 ```python
 def on_speed(self, msg):
     v_dx = (msg.linear.x/20) - msg.linear.z
     v_sx = (msg.linear.x/20) + msg.linear.z
-   
+
 ```
- 
+
 Una volta generati i due comandi di velocità (`v_dx` e `v_sx`), aggiungiamo una stringa per stamparne a video i valori finali utilizzando la funzione `print`:
- 
+
 ```python
 def on_speed(self, msg):
        #...
@@ -86,50 +87,50 @@ def on_speed(self, msg):
        stdout.flush()
        #...
 ```
- 
+
 Ricordate di aggiungere sempre la linea di codice `stdout.flush()` (ed importare il modulo `flush` con la stringa `from sys import flush` per forzare la stampa effettiva sulla shell.
 Ora non ci resta che settare questi valori per far muovere le ruote. Per farlo, utilizziamo il prametro `Robot.value`dell'oggetto `Robot`
- 
+
 ```python
 self.robot.value = (v_sx, v_dx)
 ```
 
- 
+
 La funzione `keyb_wasd`, quindi, verrà completata in questo modo:
- 
+
 ```python
 def keyb_wasd(self, msg):
    v_dx = (msg.linear.x/20) - msg.linear.z
    v_sx = (msg.linear.x/20) + msg.linear.z
-    
+
     #stampo a video i valori di v_dx e v_sx
     print 'v_dx', v_dx
     print 'v_sx', v_sx
     stdout.flush()
- 
-    
+
+
     #controllo del robot  
     self.robot.value = (v_dx, v_sx)
 ```
- 
- 
+
+
 ###Sottoscrizione al topic
- 
+
 Una volta implementata la funzione di callback, non ci resta che sottoscriverci al topic `keyboard` per poterla correttamente utilizzare. Per farlo, nella funzione `setup`, aggiungiamo la seguente linea di codice:
- 
+
 ```python
  dotbot_ros.Subscriber('keyboard', Twist, self.keyb_wasd)
 ```
- 
+
 ricordandoci di importare l'oggetto `Twist` da `geometry_msgs.msg`
 ```python
 from geometry_msgs.msg import Twist
 ```
- 
+
 ###Codice completo
- 
+
 Ecco il codice completo del nostro programma
- 
+
 ```python
 import dotbot_ros
 from sys import stdout
@@ -143,28 +144,25 @@ class Node(dotbot_ros.DotbotNode):
     def setup(self):  
         self.robot = Robot(left=(16, 19), right=(20, 26))
         dotbot_ros.Subscriber('keyboard', Twist, self.keyb_wasd)
-        
+
     def keyb_wasd(self, msg):
         print msg.linear.x
         stdout.flush()
-        
+
         v_dx = (msg.linear.x/20) - msg.linear.z
         v_sx = (msg.linear.x/20) + msg.linear.z
-        
+
         print v_dx
         print v_sx
         stdout.flush()
-            
-            
+
+
         self.robot.value = (v_dx, v_sx)
         stdout.flush()
 ```
- 
-Per inviare i comandi dobbiamo aprire la nostra webapp, la console ROS e lanciare il nostro nodo. A questo punto refreshando la webapp dovrebbe comparire sulla console il topic  `nomerobot/keyboard`. Premendo sul pulsante `echo` ci comparirà una schermata che mostrerà il variare dei valori del messaggio pubblicato come topic dalla webapp. 
+
+Per inviare i comandi dobbiamo aprire la nostra webapp, la console ROS e lanciare il nostro nodo. A questo punto refreshando la webapp dovrebbe comparire sulla console il topic  `nomerobot/keyboard`. Premendo sul pulsante `echo` ci comparirà una schermata che mostrerà il variare dei valori del messaggio pubblicato come topic dalla webapp.
 
 ![](https://user-images.githubusercontent.com/29255795/26968915-1d9efcee-4d04-11e7-9b28-75660dccf4f5.png)
 
 Refreshiamo un'ultima volta la pagina della webapp e siamo pronti a comandare il nostro robot dalla tastiera!
-
-
- 

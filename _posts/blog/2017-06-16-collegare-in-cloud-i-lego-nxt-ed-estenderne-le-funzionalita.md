@@ -2,9 +2,10 @@
 title: "Collegare in cloud i LEGO NXT ed estenderne le funzionalità"
 layout: post
 date: 2017-06-16 13:32:57
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Lego
 category: blog
 redirect_from: /blog/posts/2017-06-16-collegare-in-cloud-i-lego-nxt-ed-estenderne-le-funzionalita
@@ -12,7 +13,7 @@ author: Pietro Chirio
 description: ""
 ---
 
-In questo tutorial vedremo come collegare un braccio a 3 gradi di libertà costruito con la piattaforma Lego NXT al cloud utilizzando il Raspberry pi3 e l'interfaccia Hbrain. Successivamente vedremo come scrivere una webapp che ci permetta di sfruttare le potenzialità del cloud per controllarlo. 
+In questo tutorial vedremo come collegare un braccio a 3 gradi di libertà costruito con la piattaforma Lego NXT al cloud utilizzando il Raspberry pi3 e l'interfaccia Hbrain. Successivamente vedremo come scrivere una webapp che ci permetta di sfruttare le potenzialità del cloud per controllarlo.
 
 ![](https://user-images.githubusercontent.com/29255795/27220202-9fdf2db6-5284-11e7-9fd3-85c078f423ce.jpg)
 
@@ -22,7 +23,7 @@ Come prima cosa prendete la scheda Raspberry e accendetela collegandola alla cor
 
 La webapp
 ----
-Ora che abbiamo connesso l'NXT al cloud procediamo a creare una webapp che ci permetterà di controllarlo attraverso la tastiera del nostro computer. Come prima cosa scaricate, premendo sul pulsante **clone or download** i file che potete trovare [qui](https://github.com/cynicalzero4/raspnxt). 
+Ora che abbiamo connesso l'NXT al cloud procediamo a creare una webapp che ci permetterà di controllarlo attraverso la tastiera del nostro computer. Come prima cosa scaricate, premendo sul pulsante **clone or download** i file che potete trovare [qui](https://github.com/cynicalzero4/raspnxt).
 
 ![](https://user-images.githubusercontent.com/29255795/27223586-5bc4c21e-5291-11e7-8767-43ec9775e773.png)
 
@@ -54,9 +55,9 @@ from time import sleep
 Ora nel `setup` andiamo a includere la stringa `self.NXT = nxt.locator.find_one_brick()` per far sì che il programma cerchi il lego NXT attraverso la connessione usb e inizializziamolo:
 
 ```python
-print 'starting'   #stampa starting al lancio del programma 
+print 'starting'   #stampa starting al lancio del programma
 sys.stdout.flush() #forza la stampa sulla shell ROS
-       
+
 self.NXT = nxt.locator.find_one_brick()
 self.m1 = Motor(self.NXT, PORT_A) #motore della porta A
 self.m2 = Motor(self.NXT, PORT_B) #motore dell porta B
@@ -93,17 +94,17 @@ Per far sì che il nostro braccio si muova sfrutteremo l'attributo **turn** dell
 
 - **timeout**: numero di secondi dopo il quale viene mostrato un messaggio di errore nel caso il motore non si muova
 
-- **emulate**: da definire sempre come False 
+- **emulate**: da definire sempre come False
 
 Per far sì che il giunto del nostro braccio si muova solamente nel caso in cui il messaggio proveniente dal topic sia diverso da 0 utilizziamo il costrutto `if-else`. in particolare il simbolo **!=** significa **diverso** e la stringa `self .m1.idle()` dice semplicemente al motore definito dalla funzione **m1** di non fare alcunchè:
 
 ```python
 def xyz(self, msg):
 
-    if msg.linear.x != 0: 
+    if msg.linear.x != 0:
         self.m.turn(msg.linear.x*100, 5, True, 1, False)
-            
-    else: 
+
+    else:
         self.m1.idle()
 ```
 A questo punto abbiamo creato la struttura per far muovere il primo giunto quando riceve un messaggio dal topic. Non ci resta che aggiungere il codice per fa muovere gli altri due, copiando il codice già scritto modificando semplicemente il tipo di messaggio del quale verificare la differenza da 0 e il motore da muovere:
@@ -111,24 +112,24 @@ A questo punto abbiamo creato la struttura per far muovere il primo giunto quand
 ```python
 def xyz(self, msg):
 
-    if msg.linear.x != 0: 
+    if msg.linear.x != 0:
         self.m1.turn(msg.linear.x*100, 5, True, 1, False)
-            
-    else: 
+
+    else:
         self.m1.idle()
 
 
-    if msg.linear.y != 0: 
+    if msg.linear.y != 0:
         self.m2.turn(msg.linear.x*100, 5, True, 1, False)
-            
-    else: 
+
+    else:
         self.m2.idle()
 
 
-    if msg.linear.z != 0: 
+    if msg.linear.z != 0:
         self.m3.turn(msg.linear.x*100, 5, True, 1, False)
-            
-    else: 
+
+    else:
         self.m3.idle()
 ```
 
@@ -150,35 +151,35 @@ class Node(dotbot_ros.DotbotNode):
     def setup(self):
         print 'starting'
         sys.stdout.flush()
-        
+
         self.NXT = nxt.locator.find_one_brick()
         self.m1 = Motor(self.NXT, PORT_A) #motore della porta A
         self.m2 = Motor(self.NXT, PORT_B) #motore della porta B
         self.m3 = Motor(self.NXT, PORT_C) #motore della porta C
         self.cnt = -1  
-        
+
         dotbot_ros.Subscriber("/keyboard", Twist, self.xyz)
 
     def xyz(self, msg):
-        
-        if msg.linear.x != 0: 
+
+        if msg.linear.x != 0:
             self.m1.turn(msg.linear.x*100, 5, True, 1, False)
-            
-        else: 
+
+        else:
             self.m1.idle()
-        
-        
-        if msg.linear.y != 0: 
+
+
+        if msg.linear.y != 0:
             self.m2.turn(msg.linear.y*100, 5, True, 1, False)
-            
-        else: 
+
+        else:
             self.m2.idle()
-            
-        
+
+
         if msg.linear.z != 0:
             self.m3.turn(msg.linear.z*100, 5, True, 1, False)
-            
+
         else:
             self.m3.idle()
-        
+
 ```

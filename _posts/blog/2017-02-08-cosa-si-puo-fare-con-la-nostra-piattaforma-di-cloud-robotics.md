@@ -4,6 +4,7 @@ layout: post
 date: 2017-02-08 16:52:09
 image: https://www.roboticsbusinessreview.com/wp-content/uploads/2011/07/Roboter-beziehen-Wissen-aus-der-Cloud.jpg
 headerImage: false
+lang: it
 tag:
  - Domande
  - Cloud

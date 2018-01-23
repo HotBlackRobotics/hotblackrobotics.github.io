@@ -1,11 +1,16 @@
 ---
 layout: doubled
 title: Home
+lang: it
+redirect_from: /blog/
+permalink: /it/blog/
+otherlanglink: /en/blog/
 ---
 <section>
 	<div class="container">
+		{% assign posts=site.posts | where:"lang", page.lang %}
 		<div class="row">
-			{% for post in site.posts %}
+			{% for post in posts %}
         {% include blog-post.html %}
 			{% endfor %}
 		<!-- Content here -->

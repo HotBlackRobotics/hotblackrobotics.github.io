@@ -8,6 +8,7 @@ tag:
 category: blog
 redirect_from: /blog/posts/2017-10-31-un-robot-al-museo-mufant-e-hotblack-robotics
 author: sgabello
+lang: it
 description: ""
 ---
 

@@ -2,9 +2,10 @@
 title: "RomeCup - Links & Info"
 layout: post
 date: 2017-03-24 14:10:01
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - News
 category: blog
 redirect_from: /blog/posts/2017-03-24-romecup-links-info

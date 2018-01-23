@@ -4,7 +4,8 @@ layout: post
 date: 2017-05-08 06:46:05
 image: https://github.com/ludusrusso/images/blob/master/WhatsApp%20Image%202017-05-08%20at%2007.49.12.jpeg?raw=true
 headerImage: false
-tag: 
+lang: it
+tag:
  - News
  - Rokers
 category: blog
@@ -20,4 +21,3 @@ Ieri, durante la prima Cloud Roker Faire, abbiamo annunciato la volontà, nostra
 ### Ma cosa farà Rokers
 
 Al momento stiamo raccogliendo interessi. Nel breve periodo, lo scopo principale della community sarà quello di fare networking organizzando incontri informali a cadenza periodica. Se sei interessato alla nascita di Rokers, compila il [form cliccando qui](https://docs.google.com/forms/d/e/1FAIpQLSdacsFXWljnXINhFau6-zZgNw94zj0sfapZpmC0Xd5YJ02gbw/viewform?usp=sf_link).
-

@@ -2,9 +2,10 @@
 title: "Immagine SD per la cloud e configurazione"
 layout: post
 date: 2017-03-24 14:11:39
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Tutorial
  - Sd
  - Immagine
@@ -24,7 +25,7 @@ Scaricate qui l'immagine.
 
 Scaricate da Internet **Win32DiskImager**.
 
-![] (https://www.pcrestore.it/images/jdownloads/screenshots/Win32-Disk-Imager-1.png) 
+![] (https://www.pcrestore.it/images/jdownloads/screenshots/Win32-Disk-Imager-1.png)
 
 Inserite l'SD dentro il PC e vi comparirà come nuovo dispositivo. A me prende il nome "G:".
 

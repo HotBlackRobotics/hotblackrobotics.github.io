@@ -2,9 +2,10 @@
 title: "SpiderBotCloud 2.0 la vendetta - 2 gradi di libertà e controllo vocale"
 layout: post
 date: 2017-03-16 22:03:56
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Hacking
 category: blog
 redirect_from: /blog/posts/2017-03-16-spiderbotcloud-20-la-vendetta-2-gradi-di-liberta-e-controllo-vocale
@@ -18,10 +19,10 @@ Il materiale utilizzato è lo stesso del tutorial precedente ma con una batteria
 Lista:
 
 * 2 spider robot comprati da Tiger
-* 2 power bank per cellulare da 5 Volt [http://www.dx.com/p/cylinder-shaped-external-6000mah-emergency-power-battery-charger-for-iphone-cell-phone-silver-206652#.WFpnUrbhB-V](http://www.dx.com/p/cylinder-shaped-external-6000mah-emergency-power-battery-charger-for-iphone-cell-phone-silver-206652#.WFpnUrbhB-V) 
+* 2 power bank per cellulare da 5 Volt [http://www.dx.com/p/cylinder-shaped-external-6000mah-emergency-power-battery-charger-for-iphone-cell-phone-silver-206652#.WFpnUrbhB-V](http://www.dx.com/p/cylinder-shaped-external-6000mah-emergency-power-battery-charger-for-iphone-cell-phone-silver-206652#.WFpnUrbhB-V)
 * un ponte ad H. Io ho usato questo [http://eud.dx.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060](http://eud.dx.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060) ma anche in questo caso potete scegliere quello che volete. Qualcuno li costruisce anche a mano mettendo insieme 4 transistor!
 * un Raspberry PI 3
-* cavetti 
+* cavetti
 * fascette da idraulico
 * un pezzo di cartone ;)
 * 2 cavetti USB a microUSB (alimentatore per cellulare Android)
@@ -39,7 +40,7 @@ Poi pinzate le linguette in modo da fissarle.
 
 ![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/3.jpeg)
 
-A questo punto fissate con delle fascette da idraulico tutto il sistema composto da Raspberry pi + ponte ad H + le 2 batterie. 
+A questo punto fissate con delle fascette da idraulico tutto il sistema composto da Raspberry pi + ponte ad H + le 2 batterie.
 
 Così:
 ![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/4.jpeg)
@@ -53,7 +54,7 @@ I pin del Raspberry sono:
 
 Il ponte ad H:
 
-![] (https://i.ytimg.com/vi/mKfTi3iD518/maxresdefault.jpg) 
+![] (https://i.ytimg.com/vi/mKfTi3iD518/maxresdefault.jpg)
 
 Ora collegate ogni alimentazione dei motori (motere A e motore B) ai rispettivi mammut del ponte ad H. Poi collegate il controllo dei motori (A-1A, A-1B e B-1A, B-1B) con i GPIO 9,25 (pin 21,22 o contando 10 dal basso) e GPIO 22,23 (pin 15,16 o contando 13 dal basso)del Raspberry. Infine l'alimentazione la collegate a una delle due batterie (fate attenzione solo che abbia almeno 1 o 2 Ampere altrimenti i motori non hanno abbastanza potenza e non si muovono).
 

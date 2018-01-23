@@ -4,7 +4,8 @@ layout: post
 date: 2017-06-16 07:59:40
 image: ![enter image description here](http://i.imgur.com/1iDEl1P.jpg)
 headerImage: false
-tag: 
+lang: it
+tag:
  - Intelligenza
  - Artificiale
 category: blog
@@ -13,25 +14,25 @@ author: Ruslan
 description: ""
 ---
 
-**In questo tutorial vedremo come implementare l'intelligenza artificiale sul proprio dotbot.** 
+**In questo tutorial vedremo come implementare l'intelligenza artificiale sul proprio dotbot.**
 Navigando su internet ho trovato un servizio che mette insieme diverse API tra cui wikipedia, wolframalpha e google assistant. Si tratta del sito [https://willbeddow.com](https://willbeddow.com/) il quale unisce tutti questi servizi, e ne crea uno completamente gratuito ed ovviamente senza limiti di richieste.
 Come primo passo dobbiamo registrarci [qui](https://willbeddow.com/signup)
 ![enter image description here](http://i.imgur.com/SLdu1tn.jpg)
 
 Una volta registrati possiamo iniziare a scrivere il codice:
 
-   
+
 
     import dotbot_ros
     import requests
     import json
     import sys
-    
+
     class Node(dotbot_ros.DotbotNode):
         node_name = 'node'
-    
+
         def setup(self):
-            server_url = "https://willbeddow.com" 
+            server_url = "https://willbeddow.com"
             payload = dict(username="USER", password="PASS")
             response = requests.post(url="{0}/api/start_session".format(server_url), data=payload).json()
             session_id = response["data"]["session_id"]
@@ -40,7 +41,7 @@ Una volta registrati possiamo iniziare a scrivere il codice:
             print answer["text"]
             sys.stdout.flush()
             requests.post(url="{0}/api/end_session".format(server_url), data={"session_id": session_id})
- 
+
 *IMPORTANTE: ricordate di modificare il campo username e password inserendoli tra i doppi apici.*
 
 **Analizziamo il codice**
@@ -65,20 +66,20 @@ Come al solito, il nostro programma è composto da un nodo ROS, la funzione prin
 
 Fine della sessione e disabilitazione del token session.
 
-Una volta implementato il programma, lanciamo il codice! 
+Una volta implementato il programma, lanciamo il codice!
 ![enter image description here](http://i.imgur.com/e4eQ1OT.jpg)
 
 Come vedete il bot ha risposto alla domanda "What is the meaning of life?".    
 
-A questo punto, se il bot ha risposto correttamente, implementiamo la lingua italiana attraverso [Yandex.Translate.](https://tech.yandex.com/translate/) 
+A questo punto, se il bot ha risposto correttamente, implementiamo la lingua italiana attraverso [Yandex.Translate.](https://tech.yandex.com/translate/)
 ![enter image description here](http://i.imgur.com/Hs5P4Ep.jpg)
 Per sviluppare questo progetto ho scelto di usare il traduttore di Yandex e non quello di Google.
 *Non c'è nessuna differenza tra i due, per quanto riguarda la traduzione, entrambi i traduttori utilizzato lo stesso sistema di traduzione automatica.*
 
-Una volta registrati , otteniamo la nostra API. 
+Una volta registrati , otteniamo la nostra API.
 ![enter image description here](http://i.imgur.com/IrGdSI6.jpg)
 
-Dopo aver ottenuto la nostra API , installiamo la libreria **yandex_translate** sul nostro RaspBerry. 
+Dopo aver ottenuto la nostra API , installiamo la libreria **yandex_translate** sul nostro RaspBerry.
 Per installarla, basta andare sull'IP del bot e successivamente fare click su Terminal.
 ![enter image description here](http://i.imgur.com/nYAIDVq.jpg)
 
@@ -91,7 +92,7 @@ Adesso apriamo il terminale, facendo click su **Open Terminal**
 
 A questo punto possiamo installare la libreria necessaria.
 ![enter image description here](http://i.imgur.com/UsHMEGi.jpg)
-Per installarla dobbiamo usare il comando **apt-get install *"nome libreria"*** , nel nostro caso è apt-get install yandex_translate. 
+Per installarla dobbiamo usare il comando **apt-get install *"nome libreria"*** , nel nostro caso è apt-get install yandex_translate.
 
 Possiamo iniziare finalmente a programmare :)
 
@@ -102,11 +103,11 @@ Implementiamo il traduttore nel nostro programma:
     import json
     import sys
     from yandex_translate import YandexTranslate
-    
+
     class Node(dotbot_ros.DotbotNode):
         node_name = 'node'
         YATOKEN = "trnsl.1.1.20170523T140049Z.89213c48771026d1.7b307aff21507ba6c5251b57d13d7181f5658c34"
-    
+
         def setup(self):
             translate = YandexTranslate(self.YATOKEN)
             server_url = "https://willbeddow.com"
@@ -126,7 +127,7 @@ Implementiamo il traduttore nel nostro programma:
             sys.stdout.flush()
             requests.post(url="{0}/api/end_session".format(server_url), data={"session_id": session_id})
 
-Come avete visto ci sono servite solo qualche righe di codice per tradurre la domanda dall'italiano in inglese. 
+Come avete visto ci sono servite solo qualche righe di codice per tradurre la domanda dall'italiano in inglese.
 
     YATOKEN = "IL TUO YANDEX TOKEN"
    Nella funzione setup il token viene chiamato da:
@@ -144,7 +145,7 @@ La stessa cosa è uguale per la risposta:
     risposta = risp['text']
 La risposta viene tradotta dal inglese in italiano e viene trasformata in una stringa.
 
-           
+
  Una volta eseguito il codice abbiamo in output questa finestra:
  ![enter image description here](http://i.imgur.com/P3afWcn.jpg)
 
@@ -159,21 +160,21 @@ A questo punto, ottenuto il Token , implementiamolo nel nostro codice.
     from yandex_translate import YandexTranslate
     import requests
     import json
-    
+
     class Node(dotbot_ros.DotbotNode):
         node_name = 'bot'
         TOKEN = "INSERISCI QUI IL TUO TOKEN TELEGRAM"
         YATOKEN = "trnsl.1.1.20170523T140049Z.89213c48771026d1.7b307aff21507ba6c5251b57d13d7181f5658c34"
-    
-        
+
+
         def setup(self):
             self.bot = telepot.Bot(self.TOKEN)
             self.bot.message_loop(self.handle)
             self.server_url = "https://willbeddow.com"
             self.payload = dict(username="USER", password="PASS")
             self.translate = YandexTranslate(self.YATOKEN)
-    
-    
+
+
         def handle(self, msg):
             content_type, chat_type, chat_id = telepot.glance(msg)
             nome = msg['from']['first_name']
@@ -182,8 +183,8 @@ A questo punto, ottenuto il Token , implementiamolo nel nostro codice.
             question = domand['text']  #decodifico le api
             response = requests.post(url="{0}/api/start_session".format(self.server_url), data=self.payload).json()  #viene creata una nuova sessione
             session_id = response["data"]["session_id"] #viene creata la session id
-            command_data = dict(session_id=session_id, command=question) 
-            answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json() 
+            command_data = dict(session_id=session_id, command=question)
+            answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json()
             answ = answer["text"]
             risp = self.translate.translate(answ, 'en-it')
             risposta = risp['text']
@@ -196,13 +197,13 @@ A questo punto, ottenuto il Token , implementiamolo nel nostro codice.
 **Analizziamo il codice:**
 
     self.bot = telepot.Bot(self.TOKEN)
-    
+
  Crea il bot utilizzando il token inizializzato
- 
+
 
     self.bot.message_loop(self.handle)
    Ogni volta che il bot riceve un messaggio , viene chiamata la funzione handle
-   
+
 Alla funzione *handle* viene passato il parametro msg.
 
     def handle(self, msg):
@@ -213,8 +214,8 @@ Alla funzione *handle* viene passato il parametro msg.
             question = domand['text']  #decodifico le api
             response = requests.post(url="{0}/api/start_session".format(self.server_url), data=self.payload).json()  #viene creata una nuova sessione
             session_id = response["data"]["session_id"] #viene creata la session id
-            command_data = dict(session_id=session_id, command=question) 
-            answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json() 
+            command_data = dict(session_id=session_id, command=question)
+            answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json()
             answ = answer["text"]
             risp = self.translate.translate(answ, 'en-it')
             risposta = risp['text']
@@ -223,10 +224,10 @@ Alla funzione *handle* viene passato il parametro msg.
             self.bot.sendMessage(chat_id, text) #viene inviata la risposta
             print msg
             sys.stdout.flush()
- 
+
 
      content_type, chat_type, chat_id = telepot.glance(msg)
-   Questa riga si occupa di estrarre il chat_id che si occupa di gestire più chat contemporaneamente e content_type: il tipo di dati contenuti nell'messaggio. 
+   Questa riga si occupa di estrarre il chat_id che si occupa di gestire più chat contemporaneamente e content_type: il tipo di dati contenuti nell'messaggio.
 
     nome = msg['from']['first_name']
     domanda = msg['text']
@@ -251,13 +252,13 @@ Il nuovo codice implementato è il seguete:
     import json
     import time
     from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
-    
+
     class Node(dotbot_ros.DotbotNode):
         node_name = 'bot'
         TOKEN = "INSERISCI QUI IL TUO TOKEN TELEGRAM"
         YATOKEN = "trnsl.1.1.20170523T140049Z.89213c48771026d1.7b307aff21507ba6c5251b57d13d7181f5658c34"
-    
-        
+
+
         def setup(self):
             self.bot = telepot.Bot(self.TOKEN)
             self.bot.message_loop(self.handle)
@@ -265,7 +266,7 @@ Il nuovo codice implementato è il seguete:
             self.payload = dict(username="USER", password="PASS")
             self.translate = YandexTranslate(self.YATOKEN)
             self.robot = Robot(left=(9,10), right=(7,8))
-     
+
         def handle(self, msg):
             content_type, chat_type, chat_id = telepot.glance(msg)
             nome = msg['from']['first_name']
@@ -304,21 +305,21 @@ Il nuovo codice implementato è il seguete:
                     self.robot.stop()
                 else:
                     self.bot.sendMessage(chat_id, "scusa, non capisco questo comando")
-    
+
             else:
                 domand = self.translate.translate(domanda.encode('utf-8'), 'it-en') #traduzione da italiano in inglese
                 question = domand['text']  #decodifico le api
                 response = requests.post(url="{0}/api/start_session".format(self.server_url), data=self.payload).json()  #viene creata una nuova sessione
                 session_id = response["data"]["session_id"] #viene creata la session id
-                command_data = dict(session_id=session_id, command=question) 
-                answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json() 
+                command_data = dict(session_id=session_id, command=question)
+                answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json()
                 answ = answer["text"]
                 risp = self.translate.translate(answ, 'en-it')
                 risposta = risp['text']
                 text = risposta[0].encode('utf-8') #decode da unicode in utf8
                 requests.post(url="{0}/api/end_session".format(self.server_url), data={"session_id": session_id}) #la sessione viene chiusa
                 self.bot.sendMessage(chat_id, text) #viene inviata la risposta
-                
+
             print msg
             sys.stdout.flush()
 
@@ -327,7 +328,7 @@ Il nuovo codice implementato è il seguete:
 Nella funzione setup abbiamo:
 
     self.robot = Robot(left=(9,10), right=(7,8))
-  
+
 Qui si crea un oggetto Robot, il quale permette di gestire i motori e quindi farli muovere.
 IMPORTANTE: ricordate di modificare i campi "(left=(9,10), right=(7,8))" con i vostri PIN dei motori.
 
@@ -367,11 +368,11 @@ Si occupa di dare i suggerimenti all'utente dei comandi disponibili.
                     self.bot.sendMessage(chat_id, "scusa, non capisco questo comando")
 Questa parte permette di muovere il bot nelle 4 direzioni.
 
-    time.sleep(0.25) 
+    time.sleep(0.25)
     Gestisce il tempo dell'esecuzione del comando.
-    
 
-              
+
+
 Se avete la **picam** e volete fare pure le foto attraverso il Raspberry , allora implementate questo piccolo codice:
 
     elif domanda == '/image':
@@ -395,14 +396,14 @@ Vediamo a questo punto il codice finale:
     import requests
     import json
     from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
-    
-    
+
+
     class Node(dotbot_ros.DotbotNode):
         node_name = 'bot'
         TOKEN = "INSERISCI QUI IL TUO TOKEN TELEGRAM"
         YATOKEN = "trnsl.1.1.20170523T140049Z.89213c48771026d1.7b307aff21507ba6c5251b57d13d7181f5658c34"
-    
-        
+
+
         def setup(self):
             self.bot = telepot.Bot(self.TOKEN)
             self.bot.message_loop(self.handle)
@@ -415,10 +416,10 @@ Vediamo a questo punto il codice finale:
             self.payload = dict(username="USER", password="PASS")
             self.translate = YandexTranslate(self.YATOKEN)
             self.robot = Robot(left=(9,10), right=(7,8))
-    
+
         def callback(self,data):
             self.img = self.bridge.imgmsg_to_cv2(data, "bgr8")
-        
+
         def handle(self, msg):
             content_type, chat_type, chat_id = telepot.glance(msg)
             nome = msg['from']['first_name']
@@ -460,21 +461,21 @@ Vediamo a questo punto il codice finale:
                     self.robot.stop()
                 else:
                     self.bot.sendMessage(chat_id, "scusa, non capisco questo comando")
-    
+
             else:
                 domand = self.translate.translate(domanda.encode('utf-8'), 'it-en') #traduzione da italiano in inglese
                 question = domand['text']  #decodifico le api
                 response = requests.post(url="{0}/api/start_session".format(self.server_url), data=self.payload).json()  #viene creata una nuova sessione
                 session_id = response["data"]["session_id"] #viene creata la session id
-                command_data = dict(session_id=session_id, command=question) 
-                answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json() 
+                command_data = dict(session_id=session_id, command=question)
+                answer = requests.post(url="{0}/api/command".format(self.server_url), data=command_data).json()
                 answ = answer["text"]
                 risp = self.translate.translate(answ, 'en-it')
                 risposta = risp['text']
                 text = risposta[0].encode('utf-8') #decode da unicode in utf8
                 requests.post(url="{0}/api/end_session".format(self.server_url), data={"session_id": session_id}) #la sessione viene chiusa
                 self.bot.sendMessage(chat_id, text) #viene inviata la risposta
-                
+
             print msg
             sys.stdout.flush()
   *Adesso il nostro bot riesce a rispondere a qualsiasi domanda, muoversi e infine fare foto.*

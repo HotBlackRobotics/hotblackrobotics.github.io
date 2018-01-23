@@ -2,9 +2,10 @@
 title: "Rilascio HBrain v0.5.2"
 layout: post
 date: 2017-05-23 11:32:38
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Updates
  - Hbrain
 category: blog

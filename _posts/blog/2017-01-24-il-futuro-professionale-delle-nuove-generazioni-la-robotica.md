@@ -2,9 +2,10 @@
 title: "La robotica di servizio creerà nuovi posti di lavoro grazie all' Internet delle Cose: "
 layout: post
 date: 2017-01-24 16:27:59
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Robotics
  - Developer
  - Vision
@@ -22,14 +23,14 @@ I robot usciranno dal tradizionale mondo industriale, nel quale siamo abituati a
 L'obiettivo è far si che il robot svolga operazioni ripetitive ma nel modo più efficiente possibile. Quindi quasi mai il codice viene cambiato se le operazioni vengono svolte in modo soddisfacente. In [questo video](https://www.youtube.com/watch?v=mTE6mgqBnsk), vedrete un robot che "disegna" su una superficie la cui posizione non è perfettamente conosciuta al robot... e il risultato lascia infatti molto a desiderare.
 
 Nel mondo "umano", invece, il robot non può conoscere a priori l'ambiente in cui si trova. In gergo tecnico, questo si dice "ambiente non strutturato". Per questo motivo, il lavoro nel mondo non industriale per un robot è enormemente più complicato, e richiede l'utilizzo di algoritmi molto più complessi.
-Con la cloud robotics, ovvero l'unione della robotica e l'Internet delle Cose, i robot potranno riconfigurarsi in automatico e velocemente, scaricando applicazioni  e facendosi supportare da del software in rete, per svolgere qualsiasi tipo di servizio in modo versatile. Creando così la robotica di servizio. 
+Con la cloud robotics, ovvero l'unione della robotica e l'Internet delle Cose, i robot potranno riconfigurarsi in automatico e velocemente, scaricando applicazioni  e facendosi supportare da del software in rete, per svolgere qualsiasi tipo di servizio in modo versatile. Creando così la robotica di servizio.
 
 ![Esempio Robotica di Servizio](http://images.milano.corriereobjects.it/methode_image/socialshare/2015/08/20/e1026e32-4752-11e5-aa5e-2130add6a46c.jpg)
 
 Figura 1: Barista robotico, un esempio di robotica di servizio come progetto visionario del Professor Carlo Ratti
 
 
-In analogia a quanto successo con gli smartphone, quando nacquero nuove figure professionali come lo sviluppatore di applicazioni, così la robotica di servizio creerà nuove figure lavorative. Lo sviluppatore di applicazioni robotiche potrà diventare quindi il lavoro del futuro. 
+In analogia a quanto successo con gli smartphone, quando nacquero nuove figure professionali come lo sviluppatore di applicazioni, così la robotica di servizio creerà nuove figure lavorative. Lo sviluppatore di applicazioni robotiche potrà diventare quindi il lavoro del futuro.
 
 ## ROS il nuovo Android #
 
@@ -46,7 +47,7 @@ In questa visione noi crediamo fermamente. Dopo un dottorato in robotica al Poli
 Il nostro primo esperimento, quindi, è stato quello di fornire un percorso di alternanza scuola-lavoro all'ITIS Avogadro di Torino, dove abbiamo coinvolto 3 classi di quarta per un totale di 90 ragazzi (una classe di Elettrotecnici e due di Informatici).
 Il programma prevede una parte iniziale di costruzione e configurazione del robot DotBot (grazie al supporto di un insegnante e nostro amico [Michele Maffucci](http://www.maffucci.it/)), una parte di programmazione in ROS per poi finire con progetti personali per stimolare la creatività.
 
-![DotBot] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-18%20at%2012.34.06%20(4).jpeg) 
+![DotBot] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-18%20at%2012.34.06%20(4).jpeg)
 
 Figura 3: Il robot DotBot
 

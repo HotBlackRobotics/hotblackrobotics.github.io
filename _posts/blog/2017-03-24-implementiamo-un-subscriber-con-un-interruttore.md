@@ -2,9 +2,10 @@
 title: "Implementiamo un subscriber con un interruttore"
 layout: post
 date: 2017-03-24 14:14:36
-image: 
+image:
 headerImage: false
-tag: 
+lang: it
+tag:
  - Tutorial
 category: blog
 redirect_from: /blog/posts/2017-03-24-implementiamo-un-subscriber-con-un-interruttore

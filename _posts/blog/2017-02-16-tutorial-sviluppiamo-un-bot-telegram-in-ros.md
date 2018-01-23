@@ -4,7 +4,8 @@ layout: post
 date: 2017-02-16 14:02:45
 image: http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487253704/Schermata_2017-02-16_alle_15.01.01_k4kh7s.png
 headerImage: false
-tag: 
+lang: it
+tag:
  - Tutorial
  - Ros
  - Telegram
@@ -18,7 +19,7 @@ In questo tutorial vedremo come creare un semplice bot telegram in grado di cont
 
 ##Cosa serve?
 
-Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o). 
+Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
 
 Questa volta, useremo un robot reale per dialogare con il robot! Ad ogni modo, potrete comunque richiedere il vostro robot virtuale per fare prove!
 Se volete utilizzare un robot virtuale scriveteci a info@hotblackrobotics.com!
@@ -40,7 +41,7 @@ Per creare un nuovo bot, inviamo il comando `/newbot`, a cui il **BotFather** ri
 Una volta scelto il nome (**BotFather** ci informa se il nome è già stato preso), verrà creato il nostro bot e ci verranno fornite due informazioni essenziali:
 
 - l'URL del bot, grazia al quale potremmo aprire la chat
-- il Token del bot (**da mantenere segreto**) che servirà per sviluppare il codice. 
+- il Token del bot (**da mantenere segreto**) che servirà per sviluppare il codice.
 
 ![Bot Creato](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487249723/Schermata_2017-02-16_alle_13.50.19_zvxpdf.png)
 
@@ -74,7 +75,7 @@ import sys
 class Node(dotbot_ros.DotbotNode):
     node_name = 'bot'
     TOKEN = "INSERISCI QUI IL TUO TOKEN"
-    
+
     def setup(self):
         self.bot = telepot.Bot(self.TOKEN)
         self.bot.message_loop(self.handle)
@@ -106,7 +107,7 @@ Una volta implementato il programma, salviamo e lanciamo il codice! A questo pun
 
 ##Analizziamo il codice
 
-Come al solito, il nostro programma è composto da un nodo ROS, la funzione princiapale è la funzione `setup`, che si occupa di inizializzare il bot e creare una callback di gestione. 
+Come al solito, il nostro programma è composto da un nodo ROS, la funzione princiapale è la funzione `setup`, che si occupa di inizializzare il bot e creare una callback di gestione.
 
 ```python
     def setup(self):
@@ -138,7 +139,7 @@ La funzione `handle`, quindi, viene chiamata quando un nuovo messaggi è mandato
 Alla funzione viene passato come parametro il messaggio mandato alla chat, contenuto nella variabile `msg`.
 
 Per prima cosa, è necessario estrarre informaizoni utili dalla chat, in particolare il `chat_id` (che identifica univocamente la chat aperta, in modo che il bot possa gestire più chat contemporaneamente), e il `content_type`, cioè il tipo di dati contenuti nel messaggio.
-Questa operazione viene fatta dalla riga `content_type, chat_type, chat_id = telepot.glance(msg)`. 
+Questa operazione viene fatta dalla riga `content_type, chat_type, chat_id = telepot.glance(msg)`.
 
 A questo punto, dobbiamo verificare che il messaggio sia di tipo testuale (il bot al momento non sa gestire immagini, video o file). Facciamo quindi il check `if content_type == 'text':`.
 
@@ -174,7 +175,7 @@ import sys
 class Node(dotbot_ros.DotbotNode):
     node_name = 'bot'
     TOKEN = "INSERISCI QUI IL TUO TOKEN"
-    
+
     def setup(self):
         self.bot = telepot.Bot(self.TOKEN)
         self.bot.message_loop(self.handle)

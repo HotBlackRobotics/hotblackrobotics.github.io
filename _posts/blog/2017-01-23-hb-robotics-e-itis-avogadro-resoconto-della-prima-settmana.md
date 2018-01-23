@@ -4,6 +4,7 @@ layout: post
 date: 2017-01-23 14:24:24
 image: http://res.cloudinary.com/hbr/image/upload/v1485173582/IMG_20170118_114658-PANO_ye4xbh.jpg
 headerImage: false
+lang: it
 tag:
  - Scuola
  - Ros

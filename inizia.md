@@ -9,6 +9,7 @@ category: blog
 redirect_from: /blog/posts/supporto-tecnico
 author: ludusrusso
 description: ""
+lang: it
 ---
 
 Ciao, la nostra piattaforma è ancora un prototipo, ed alcune funzionalità sono

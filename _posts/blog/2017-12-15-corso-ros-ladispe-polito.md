@@ -2,7 +2,7 @@
 title: "Laboratori ROS LADISPE Politecnico di Torino"
 layout: post
 date: 2017-12-15
-image: /assets/imgs/2017-12-13-corso-web-ros-introduzione.md/main.png
+image: /assets/imgs/2017-12-15-corso-ros-ladispe-polito.md/lab.png
 headerImage: false
 tag:
  - Ros
@@ -11,6 +11,7 @@ tag:
  - Politecnico di Torino
 category: blog
 author: ludusrusso
+lang: it
 description: "Un laboratorio di ROS a cui possono partecipare gli studenti del Politecnico di Torino"
 ---
 
@@ -46,7 +47,7 @@ Stiamo pensando di attrezzare il laboratorio con una stampante 3D.
 
 ## Primo incontro
 
-Il primo incontro sarà orientato all'installazione di ROS (Kinetic) sul un Raspberry Pi 3
+Il primo incontro sarà basato su ROS (Kinetic) sul un Raspberry Pi 3
 ed in particolare sul sistema operativo [Ubuntu Mate 16.04](https://ubuntu-mate.org/download/).
 Il tutorial per l'installazione è disponibile al seguente link:
 
@@ -71,3 +72,9 @@ incontri, ecco cosa fare).
  1. Installare [Ubuntu 16.04](https://www.ubuntu-it.org/download) (si faccia attenzione alla versione) sul proprio computer o su macchina virtuale con VirtualBox
  2. configurare il SO
  3. Installare [Installazione ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Debian)
+
+
+### Dove trovare informazioni
+
+- Gruppo Telegram [Robot Secret Lab](https://t.me/joinchat/AXbBRBH-FYXqeLiFGz54bA)
+- Gruppo Facebook [Robot Developers Italiani](https://www.facebook.com/groups/493163691070528)

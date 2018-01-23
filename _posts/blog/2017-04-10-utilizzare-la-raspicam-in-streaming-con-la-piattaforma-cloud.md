@@ -4,7 +4,8 @@ layout: post
 date: 2017-04-10 17:01:19
 image: https://github.com/ludusrusso/images/blob/master/hbr/tutorial/raspicam/streaming.png?raw=true
 headerImage: false
-tag: 
+lang: it
+tag:
  - Cloud
  - Robotics
  - Tutorial
@@ -74,7 +75,7 @@ Per stoppare la telecamera, a questo punto, basta premere il pulsante **stop cam
 
 ## RapiCam da ROS Console
 
-Una volta lanciato il nodo ros-camera e lanciato lo streaming, sarà possibile accedere al topic della telecamera da ROS, e quindi sviluppare applicazioni di Computer Vision. 
+Una volta lanciato il nodo ros-camera e lanciato lo streaming, sarà possibile accedere al topic della telecamera da ROS, e quindi sviluppare applicazioni di Computer Vision.
 
 Lo streaming video della camera sarà anche visibile dalla ROS console, abilitando il topic `/camera/image`.
 

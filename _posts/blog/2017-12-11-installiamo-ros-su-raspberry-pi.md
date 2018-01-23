@@ -15,6 +15,7 @@ redirect_from:
  - /blog/posts/2017-01-13-installiamo-ros-su-raspberry-pi
  - /2017/01/13/installiamo-ros-su-raspberry-pi/
 author: ludusrusso
+lang: it
 description: "Un breve tutorial su come utilizzare ROS sul Raspberry Pi"
 ---
 
