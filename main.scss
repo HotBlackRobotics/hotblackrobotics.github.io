@@ -1,20 +1,13 @@
-
+---
+---
 @import "base/variables";
-@import "base/normalize";
-@import "base/syntax";
 @import "base/general";
 @import "base/helpers";
-
-@import "pages/home-blog-projects";
-@import "pages/page";
-@import "pages/post";
-@import "pages/tags";
-
+@import "base/normalize";
 @import "components/author";
 @import "components/disqus";
 @import "components/footer";
 @import "components/header";
-@import "components/nav";
 @import "components/others";
 @import "components/pagination";
 @import "components/related";
@@ -22,3 +15,9 @@
 @import "components/side-by-side";
 @import "components/social-links";
 @import "components/spoiler";
+@import "components/hbr";
+@import "components/post-preview";
+
+@import "pages/post";
+@import "pages/page";
+@import "pages/tags";

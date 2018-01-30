@@ -1,16 +1,51 @@
 ---
-layout: doubled
+layout: mainpage
 title: Home
-redirect_from:
- - /blog/ 
 ---
-<section>
+<section class="list">
 	<div class="container-fluid">
+
+		<h1> I miei ultimi post </h1>
+		<p> Ecco di cosa mi sono occupato recentemente </p>
+		<div class="row">
+			{% for post in site.posts limit:6 %}
+				{% if post.category == 'blog' %}
+					{% if post.hidden != true %}
+						{% include blog-post.html %}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div>
+
+		<h1> I miei migliori post </h1>
 		<div class="row">
 			{% for post in site.posts %}
-        {% include blog-post.html %}
+				{% if post.category == 'blog' %}
+					{% if post.hidden != true %}
+						{% if post.starred == true %}
+							{% include blog-post.html type="starred"%}
+						{% endif %}
+					{% endif %}
+				{% endif %}
 			{% endfor %}
-		<!-- Content here -->
 		</div>
+
+
+		{% for maintag in site.data.tags %}
+		<h1> {{ maintag.name }} </h1>
+		<div class="row">
+			{% for post in site.posts %}
+				{% if post.category == 'blog' %}
+					{% if post.tags contains maintag.name %}
+						{% if post.hidden != true %}
+							{% include blog-post.html %}
+						{% endif %}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div>
+		{% endfor %}
+
+
 	</div>
 </section>

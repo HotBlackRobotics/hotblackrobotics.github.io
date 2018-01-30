@@ -1,0 +1,16 @@
+- name: Python
+  img: /assets/images/tags/python.png
+- name: Arduino
+  img: /assets/images/tags/arduino.png
+- name: Raspberry
+  img: /assets/images/tags/raspberry.png
+- name: ROS
+  img: /assets/images/tags/ros.png
+- name: Flask
+  img: /assets/images/tags/flask.png
+- name: Telegram
+  img: /assets/images/tags/telegram.png
+- name: fabacademy
+  img: /assets/images/tags/fabacademy.png
+- name: jekyll
+  img: /assets/images/tags/jekyll.png
