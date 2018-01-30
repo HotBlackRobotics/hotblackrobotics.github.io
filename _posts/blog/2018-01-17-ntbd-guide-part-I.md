@@ -21,11 +21,11 @@ category: blog
 author: fiorellazza
 description: "What is and how to use NTBD: step by step guide, first article of the series"
 ---
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %})
+[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-I %})
 
-[>> Go to Post Part II: tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %})
+[>> Go to Post Part II: tutorial]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-II %})
 
-[>>Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-III %})
+[>>Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-III %})
 
 ## Part I: an overview
 Hi everyone! It's me again, Fiorella and, with this post *trilogy*, I'd like to present my Master Thesis work for the M.Sc. in Mechatronic Engineering degree at Politecnico di Torino, "*Development of a Standard Architecture
@@ -136,6 +136,6 @@ Connecting to "ourselves" from the browser, on the defined port, we can see the 
 
 ## END OF PART I
 
-[>> Go to Post Part II: tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %})
+[>> Go to Post Part II: tutorial]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-II %})
 
-[>>Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-III %})
+[>>Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-III %})

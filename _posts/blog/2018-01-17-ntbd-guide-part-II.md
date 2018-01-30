@@ -22,14 +22,14 @@ category: blog
 author: fiorellazza
 description: "What is and how to use NTBD: step by step guide, second article of the series"
 ---
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-II %})
+[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-II %})
 
-[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %})
+[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %})
 
-[>> Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-III %})
+[>> Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-III %})
 
 ## Part II: tutorial
-In this article I will explain how to reproduce the project, complete of robot arm integrated to the NTBD architecture, introduced in post [Part I: an overview]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %}).
+In this article I will explain how to reproduce the project, complete of robot arm integrated to the NTBD architecture, introduced in post [Part I: an overview]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %}).
 
 ### Ingredients
 We'll need:
@@ -164,6 +164,6 @@ If you want to try out the second developed application, just click on the "*NTB
 
 ## END OF PART II
 
-[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %})
+[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %})
 
-[>> Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-III %})
+[>> Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-III %})

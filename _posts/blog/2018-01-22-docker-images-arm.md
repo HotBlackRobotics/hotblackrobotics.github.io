@@ -21,15 +21,15 @@ description: "Build Docker Images for ARM hosts on Intel"
 ---
 ![docker_arm_intel](/assets/imgs/2018-01-22-docker-arm/Processor_ARM.png)
 
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-22-docker-immagini-arm %})
+[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-22-docker-immagini-arm %})
 
 Hiya everyone!
 
-Ever wondered how to build ARM [Docker](https://www.docker.com/) Images directly on you PC? I had to struggle finding out how to do so, in order to build up the ARM version for my Docker-based M.Sc. thesis work architecture, NTBD (trilogy post 'bout that [here]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %})).
+Ever wondered how to build ARM [Docker](https://www.docker.com/) Images directly on you PC? I had to struggle finding out how to do so, in order to build up the ARM version for my Docker-based M.Sc. thesis work architecture, NTBD (trilogy post 'bout that [here]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %})).
 
 The following is a quick guide to how to setup your Intel host to build Docker Images that can be run on an ARM-processor-based host, exploiting [QEMU](https://www.qemu.org/).
 
-**Remark**: in this tutorial I will assume that the reader has knowledge about Docker. For a quick overview about Docker see my post, "[Docker, this stranger!]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-18-docker-this-stranger %})". This guide will give advices for building a Docker Image for a **Raspberry Pi** board on a **Ubuntu host**.
+**Remark**: in this tutorial I will assume that the reader has knowledge about Docker. For a quick overview about Docker see my post, "[Docker, this stranger!]({{ site.baseurl }}{% post_url /blog/2018-01-18-docker-this-stranger %})". This guide will give advices for building a Docker Image for a **Raspberry Pi** board on a **Ubuntu host**.
 
 #### Index:
 1. [What is QEMU and QEMU installation](#1-what-is-qemu-and-qemu-installation)

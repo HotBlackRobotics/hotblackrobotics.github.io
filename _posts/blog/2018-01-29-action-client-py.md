@@ -19,7 +19,7 @@ category: blog
 author: fiorellazza
 description: "Sending a goal to the ROS navigation stack using a Python node"
 ---
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-action-client-py-ita %})
+[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py-ita %})
 
 Hi there!
 
@@ -146,6 +146,6 @@ if __name__ == '__main__':
 
 [**<<Back to Index**](#index)
 
-We are done! This is a simple Python node to send a pose goal to the navigation stack to move a mobile base. As you can see, for sake of simplicity, being this a basic tutorial, the feedback mechanisms which characterize Actions are not exploited and the result is not a clear indication of the goal actual status. In order to get a further more complete example, I suggest you to read my post ["Sending a sequence of Goals to ROS NavStack with Python"]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-seq-goals-py %}).
+We are done! This is a simple Python node to send a pose goal to the navigation stack to move a mobile base. As you can see, for sake of simplicity, being this a basic tutorial, the feedback mechanisms which characterize Actions are not exploited and the result is not a clear indication of the goal actual status. In order to get a further more complete example, I suggest you to read my post ["Sending a sequence of Goals to ROS NavStack with Python"]({{ site.baseurl }}{% post_url /blog/2018-01-29-seq-goals-py %}).
 
 ## Thanks for the attention, See ya! :hibiscus:

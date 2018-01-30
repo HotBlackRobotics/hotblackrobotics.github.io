@@ -22,15 +22,15 @@ description: "Buildare Immagini Docker per host ARM su Intel"
 ---
 ![docker_arm_intel](/assets/imgs/2018-01-22-docker-arm/Processor_ARM.png)
 
-[> Switch to the English version]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-22-docker-images-arm %})
+[> Switch to the English version]({{ site.baseurl }}{% post_url /blog/2018-01-22-docker-images-arm %})
 
 Ciao a tutti!
 
-Mai avuto il dubbio su come compilare Immagini [Docker](https://www.docker.com/) per ARM direttamente sul vostro PC? Io ho dovuto faticare per scoprire come farlo, per buildare la versione ARM dell'architettura sviluppata per il mio lavoro di tesi, NTBD (trilogia di post a proposito [qui]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %})).
+Mai avuto il dubbio su come compilare Immagini [Docker](https://www.docker.com/) per ARM direttamente sul vostro PC? Io ho dovuto faticare per scoprire come farlo, per buildare la versione ARM dell'architettura sviluppata per il mio lavoro di tesi, NTBD (trilogia di post a proposito [qui]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-I %})).
 
 La seguente è una guida veloce su come configurare la vostra macchina Intel per poter compilare Immagini Docker eseguibili su host con processori ARM, sfruttando [QEMU](https://www.qemu.org/).
 
-**Nota**: in questo tutorial assumerò che il lettore conosca Docker. Per una panoramica a proposito di Docker date un'occhiata al mio post, "[Docker, questo sconosciuto!]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-18-docker-questo-sconosciuto %})". Questa guida darà consigli su come compilare l'Immagine Docker per una **Raspberry Pi** su un **host Ubuntu**.
+**Nota**: in questo tutorial assumerò che il lettore conosca Docker. Per una panoramica a proposito di Docker date un'occhiata al mio post, "[Docker, questo sconosciuto!]({{ site.baseurl }}{% post_url /blog/2018-01-18-docker-questo-sconosciuto %})". Questa guida darà consigli su come compilare l'Immagine Docker per una **Raspberry Pi** su un **host Ubuntu**.
 
 #### Indice:
 1. [Cos'è QEMU ed installazione di QEMU](#1-cosè-qemu-ed-installazione-di-qemu)

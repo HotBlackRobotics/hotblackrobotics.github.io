@@ -21,7 +21,7 @@ description: "Perchè utilizzare Docker e la mia esperienza"
 ---
 ![docker logo](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
 
-[> Switch to the English version]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-18-docker-this-stranger %})
+[> Switch to the English version]({{ site.baseurl }}{% post_url /blog/2018-01-18-docker-this-stranger %})
 
 Ciao a tutti!
 Oggi vorrei parlarvi di una tecnologia che sta acquistando sempre più importanza, nel mondo dei developers ed anche in quello aziendale: [Docker](https://www.docker.com).
@@ -131,7 +131,7 @@ Mi raccomando usate COPY nel Dockerfile solo nel momento in cui il file che vole
 
  Quando la vostra applicazione è ancora in fase di sviluppo, il consiglio è quindi quello di eseguire la copia dei file necessari (programmi in development) all'interno del file di entrypoint in modo tale che l'Immagine non venga re-buildata ogni volta che i file cambiano. Ovviamente, essendo eseguito all'avvio del contenitore, il tempo di boot sarà maggiore.
 
- Per ulteriori informazioni, consultare l'Appendice di questo [post]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-III %}).
+ Per ulteriori informazioni, consultare l'Appendice di questo [post]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-III %}).
 
  [**<< Torna all'indice**](#indice)
 ### 2.5. Docker Compose

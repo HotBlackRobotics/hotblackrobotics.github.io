@@ -21,11 +21,11 @@ category: blog
 author: fiorellazza
 description: "Cos'è e come utilizzare NTBD step by step, primo articolo della serie"
 ---
-[> Switch to the English version]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %})
+[> Switch to the English version]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %})
 
-[>> Vai a Post Parte II: tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-II %})
+[>> Vai a Post Parte II: tutorial]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-II %})
 
-[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-III %})
+[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-III %})
 
 ## Parte I: una panoramica
 Ciao a tutti! Sono di nuovo io, Fiorella e, con questa *trilogia* di post, vorrei presentarvi il lavoro svolto per la mia Tesi di Laurea Magistrale in Ingegneria Meccatronica conseguita al Politecnico di Torino, "*Development of a Standard Architecture
@@ -142,6 +142,6 @@ La connessione Rosbridge viene iniziata sulla porta di default 9090 sulla quale 
 
 ## FINE PARTE I
 
-[>> Vai a Post Parte II: tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-II %})
+[>> Vai a Post Parte II: tutorial]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-II %})
 
-[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-III %})
+[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-III %})

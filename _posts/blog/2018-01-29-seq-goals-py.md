@@ -21,13 +21,13 @@ description: "Sending a sequence of desired poses to the ROS navigation stack us
 ---
 ![cover](/assets/imgs/2018-01-29-goal/coverpost.png)
 
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-seq-goals-py-ita %})
+[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-29-seq-goals-py-ita %})
 
 Hi everyone!
 
-If you have read my post, ["Sending Goals to the Navigation Stack - Python ROS node version"]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-action-client-py %}) you should now be able to send a single goal to you mobile base using a python node. What about sending a sequence of desired poses? In this post I will provide an example code for sending several desired poses (cartesian positions + orientations expressed with quaternions) to the [ROS Navigation Stack](http://wiki.ros.org/navigation). This tutorial is developed choosing the TurtleBot 3 simulated robot as a mobile base, but the Python node is valid for any chosen robot. I will first give some overview about the chosen solution then the code will be explained.
+If you have read my post, ["Sending Goals to the Navigation Stack - Python ROS node version"]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py %}) you should now be able to send a single goal to you mobile base using a python node. What about sending a sequence of desired poses? In this post I will provide an example code for sending several desired poses (cartesian positions + orientations expressed with quaternions) to the [ROS Navigation Stack](http://wiki.ros.org/navigation). This tutorial is developed choosing the TurtleBot 3 simulated robot as a mobile base, but the Python node is valid for any chosen robot. I will first give some overview about the chosen solution then the code will be explained.
 
-**Remark**: I am using ROS Kinetic. I will assume that the reader has knowledge about ROS [Packages](http://wiki.ros.org/Packages), [Nodes](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messages](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) and [ROS Parameters](http://wiki.ros.org/Parameter%20Server). Reading the above cited [post]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-action-client-py %}) and related ROS documentation is suggested.
+**Remark**: I am using ROS Kinetic. I will assume that the reader has knowledge about ROS [Packages](http://wiki.ros.org/Packages), [Nodes](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messages](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) and [ROS Parameters](http://wiki.ros.org/Parameter%20Server). Reading the above cited [post]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py %}) and related ROS documentation is suggested.
 
 #### Index:
 1. [Github project and turtlebot3 package download](#1-github-project-and-turtlebot3-package-download)

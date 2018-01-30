@@ -21,7 +21,7 @@ description: "Why you should use Docker and my experience"
 ---
 ![docker logo](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
 
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-18-docker-questo-sconosciuto %})
+[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-18-docker-questo-sconosciuto %})
 
 Hello everybody!
 Today I'd like to talk about a technology that is gathering more and more attention, both in the developers' world and the companies one: [Docker](https://www.docker.com).
@@ -131,7 +131,7 @@ Guys, be sure to use COPY in your Dockerfile only when files you want to copy ar
 
  When your applications are still in development phase, my advice is to perform the copy operation within the entrypoint file, such that the Image is not re-built over and over again. Obviously, being executed at the container boot, the boot time will increase.
 
-For more information see the Appendix of this [post]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-III %}).
+For more information see the Appendix of this [post]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-III %}).
 
 [**<<Back to Index**](#index)
 ### 2.5. Docker Compose

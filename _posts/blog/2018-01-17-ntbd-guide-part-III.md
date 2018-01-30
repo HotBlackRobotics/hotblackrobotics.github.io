@@ -22,17 +22,17 @@ category: blog
 author: fiorellazza
 description: "What is and how to use NTBD: step by step guide, third article of the series"
 ---
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-III %})
+[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-III %})
 
-[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %})
+[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %})
 
-[>> Go back to Post Part II: tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %})
+[>> Go back to Post Part II: tutorial]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-II %})
 
 ## Parte III: integration with other manipulators
 In order to adapt the NTBD architecture to a another manipulator, different from EEZYBOT, it is necessary to re-define the architecture abstract components. Furthermore I assume that the control platform is an Arduino board.
-The abstract components are implemented in the *ntbd_manipulator* Docker Image and, as explained in post ["Part I: an overview"]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %}), they depend on the chosen robot arm and thus require editing according to the new structure.
+The abstract components are implemented in the *ntbd_manipulator* Docker Image and, as explained in post ["Part I: an overview"]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %}), they depend on the chosen robot arm and thus require editing according to the new structure.
 **Remarks**:
-- I suggest reading posts [Part I]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %}) and [Part II]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %}) in order to understand what has to be modified to integrate your manipulator with NTBD and how to connect external devices for the control and the WebApps.
+- I suggest reading posts [Part I]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %}) and [Part II]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-II %}) in order to understand what has to be modified to integrate your manipulator with NTBD and how to connect external devices for the control and the WebApps.
 - To build the Docker Images it is necessary to [install Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions). In this tutorial I assume that the reader has knowledge about developing apps with Docker. For some pieces of advice, read the [Appendix](#appendix-docker-prod-vs-docker-devel).
 
 ### Index
@@ -48,7 +48,7 @@ It is necessary to download the [NTBD project from github](https://github.com/Ho
 - [*/meshes/*](https://github.com/HotBlackRobotics/ntbd/tree/devel/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf/meshes): this folder containes the [meshes](https://it.wikipedia.org/wiki/Mesh_poligonale) needed for the manipulator visualization, in [*STL*](https://it.wikipedia.org/wiki/STL_(formato_di_file) format.
  - [siBOT_noEE.urdf](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf/urdf/siBOT_noEE.urdf): this file contains the [URDF](http://sdk.rethinkrobotics.com/wiki/URDF) definition for the new robot armd; it can thus be renamed with the only precaution of changing the file name in the launch file [NTBD_launch.launch](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch).
  - [index.html](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/web/index.html) and [ntbd_lm.html](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/web/ntbd_lm.html) define the Web Applications and must be modified depending on the new configuration (e.g., with new limits).
- - [IK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/IK), [FK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/FK), [motor_values](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/motors_values) and [physical_2_visual](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/physical_2_visual): these files are all manipulator dependent; for further information about their role, [>> go to Post Part I: an overview]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %}).
+ - [IK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/IK), [FK](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/FK), [motor_values](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/motors_values) and [physical_2_visual](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/physical_2_visual): these files are all manipulator dependent; for further information about their role, [>> go to Post Part I: an overview]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %}).
 - [*NTBD_launch.launch*](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/launch/NTBD_launch.launch): this file must be edited to update the [end effector position coordinates limits](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L16) and [motors limits](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/launch/NTBD_launch.launch#L24).
 - [myServoControl_ntbd.ino](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/myServoControl_ntbd.ino): obviously, changing the manipulator, also the physical configuration will most likely change (number and type of motors) and consequently the Arduino sketch must be edited.
 
@@ -73,7 +73,7 @@ docker-compose -f docker-compose.intel.yml up
 ```
 which exploits the [Docker Compose](https://docs.docker.com/compose/overview/) tool with configuration specified in the [docker-compose.intel.yml](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/docker-compose.intel.yml) file.
 
-The NTBD integration with a new robot arm ends here, for further information about the WebApp usage, see [Post Part II: tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %}).
+The NTBD integration with a new robot arm ends here, for further information about the WebApp usage, see [Post Part II: tutorial]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-II %}).
 
 [**<<Back to Index**](#index)
 
@@ -136,6 +136,6 @@ exec "$@"
 
 ## END OF NTBD TRILOGY
 
-[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-I %})
+[>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-I %})
 
-[>> Go back to Post Part II: tutorial]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %})
+[>> Go back to Post Part II: tutorial]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-II %})

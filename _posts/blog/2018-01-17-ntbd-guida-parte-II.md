@@ -22,14 +22,14 @@ category: blog
 author: fiorellazza
 description: "Cos'è e come utilizzare NTBD step by step, secondo articolo della serie"
 ---
-[> Switch to the English version]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guide-part-II %})
+[> Switch to the English version]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guide-part-II %})
 
-[<< Torna a Post Parte I: una panoramica]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %})
+[<< Torna a Post Parte I: una panoramica]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-I %})
 
-[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-III %})
+[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-III %})
 
 ## Parte II: tutorial
-In questo articolo vi spiegherò come riprodurre il progetto, completo di braccio robotico integrato all'architettura NTBD, introdotta nel post [Parte I: una panoramica]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %}).
+In questo articolo vi spiegherò come riprodurre il progetto, completo di braccio robotico integrato all'architettura NTBD, introdotta nel post [Parte I: una panoramica]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-I %}).
 
 ### Ingredienti
 Ci serviranno:
@@ -164,6 +164,6 @@ Nel caso si volesse utilizzare la seconda applicazione sviluppata, basterà prem
 
 ## FINE PARTE II
 
-[<< Torna a Post Parte I: una panoramica]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-I %})
+[<< Torna a Post Parte I: una panoramica]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-I %})
 
-[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-17-ntbd-guida-parte-III %})
+[>> Vai a Post Parte III: integrazione con altri manipolatori]({{ site.baseurl }}{% post_url /blog/2018-01-17-ntbd-guida-parte-III %})

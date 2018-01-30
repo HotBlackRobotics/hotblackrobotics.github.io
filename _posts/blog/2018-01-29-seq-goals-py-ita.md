@@ -21,13 +21,13 @@ description: "Inviare una sequenza di pose desiderate alla ROS Navigation Stack 
 ---
 ![cover](/assets/imgs/2018-01-29-goal/coverpost.png)
 
-[> Switch to the English version]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-seq-goals-py %})
+[> Switch to the English version]({{ site.baseurl }}{% post_url /blog/2018-01-29-seq-goals-py %})
 
 Ciao a tutti!
 
-Se avete letto il mio post, ["Inviare Goals alla Navigation Stack - versione nodo ROS Python"]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-action-client-py-ita %}), adesso dovreste essere in grado di inviare un singlo goal ad un robot mobile usando un nodo python. Che ne dite, invece, di inviare una *sequenza* di pose desiderate? In questo post vi fornirò un esempio per inviare diverse pose desiderate (posizioni cartesiane + orientamento espresso con i quaternioni) per una base mobile alla [ROS Navigation Stack](http://wiki.ros.org/navigation). Questo tutorial è sviluppato scegliendo come base mobile il robot TurtleBot 3 simulato, ma il nodo python è valido per qualunque robot scelto. Prima farò una panoramica sulla soluzione adattata e poi verrà spiegato il codice.
+Se avete letto il mio post, ["Inviare Goals alla Navigation Stack - versione nodo ROS Python"]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py-ita %}), adesso dovreste essere in grado di inviare un singlo goal ad un robot mobile usando un nodo python. Che ne dite, invece, di inviare una *sequenza* di pose desiderate? In questo post vi fornirò un esempio per inviare diverse pose desiderate (posizioni cartesiane + orientamento espresso con i quaternioni) per una base mobile alla [ROS Navigation Stack](http://wiki.ros.org/navigation). Questo tutorial è sviluppato scegliendo come base mobile il robot TurtleBot 3 simulato, ma il nodo python è valido per qualunque robot scelto. Prima farò una panoramica sulla soluzione adattata e poi verrà spiegato il codice.
 
-**Nota**: Uso ROS Kinetic. Assumerò che il lettore abbia conoscenze a proposito di [Nodi ROS](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messaggi](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) e Parametri ROS [ROS Parameters](http://wiki.ros.org/Parameter%20Server). La lettura del [post]({{ site.baseurl }}{% post_url /_posts/blog/2018-01-29-action-client-py-ita %}) citato prima e relativa documentazione ROS è consigliata.
+**Nota**: Uso ROS Kinetic. Assumerò che il lettore abbia conoscenze a proposito di [Nodi ROS](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messaggi](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) e Parametri ROS [ROS Parameters](http://wiki.ros.org/Parameter%20Server). La lettura del [post]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py-ita %}) citato prima e relativa documentazione ROS è consigliata.
 
 
 #### Indice:
