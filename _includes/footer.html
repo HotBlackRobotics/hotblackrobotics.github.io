@@ -1,5 +1,35 @@
 <footer class="footer-main">
+  {% if site.mailchimp %}
     {% include mailchimp.html %}
+  {% endif %}
+
+    <p>{{ site.name }} © {{ site.time | date: '%Y' }}</p>
 
 
+    <p>
+      <a href="//www.iubenda.com/privacy-policy/7882850" class="iubenda-black no-brand iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>    </p>
 </footer>
+
+
+{% comment %}
+
+<footer class="black-sec">
+  <div class="container left-info">
+  <div class="row justify-content-md-center">
+    <div class="col">
+      <ul class="soc">
+        <li><a class="soc" href="https://twitter.com/HotBlackRobot"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a class="soc" href="https://www.facebook.com/hotblackrobotics"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a class="soc" href="https://www.youtube.com/channel/UCiZCsOJbWIFCY8x6XrYSgoQ"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+        <li><a class="soc" href="https://www.linkedin.com/company/hotblack-robotics"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center" style="color:white">
+    <div class="col">
+    </div>
+  </div>
+</footer>
+
+{% endcomment %}

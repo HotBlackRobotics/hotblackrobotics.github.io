@@ -1,17 +1,24 @@
 ---
 ---
-
-
-$hbr-main-color: #F05A2E;
-
-$theme-colors: (
-   "default": $hbr-main-color
-);
-
-@import "bootstrap/bootstrap.scss";
-
+@import "base/variables";
 @import "base/general";
-@import "base/home";
-@import "base/nav";
+@import "base/helpers";
+@import "base/normalize";
+@import "components/author";
+@import "components/disqus";
+@import "components/footer";
+@import "components/header";
+@import "components/others";
+@import "components/pagination";
+@import "components/related";
+@import "components/share";
+@import "components/side-by-side";
+@import "components/social-links";
+@import "components/spoiler";
+@import "components/hbr";
+@import "components/post-preview";
 
-@import "fonts-awesome/font-awesome";
+@import "pages/post";
+@import "pages/page";
+@import "pages/tags";
+@import "pages/index";

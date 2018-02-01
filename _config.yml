@@ -1,6 +1,6 @@
 # main text of home
 name: "HotBlack Robotics"
-bio: "HotBlack Robotics è una startup che lavora nel mondo della Cloud Robotics"
+bio: "Powering the Cloud Robotics"
 description: "HotBlack Robotics powering the Cloud Robotics"
 
 # if it's an external image, update below for true
@@ -52,6 +52,8 @@ github: robotrokers
 # vimeo: myvimeo
 # lanyrd: mylanyrd
 email: info@hotblackrobotics.com
+
+mailchimp: https://hotblackrobotics.us14.list-manage.com/subscribe/post?u=15b48561735f3f13dffd7eeff&amp;id=f19b3177d4
 
 authors:
     ludusrusso:
@@ -108,12 +110,15 @@ show-author: true
 # do you want some animations?
 animation: true
 
+collections:
+  - it_posts
+  - en_posts
+
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-redirect-from
-
-jekyll-mentions:
-    base_url: https://github.com
+  - jekyll-sitemap

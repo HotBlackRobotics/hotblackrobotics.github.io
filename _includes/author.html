@@ -1,32 +1,25 @@
-<section class="author{% if site.disqus == false %} no-disqus{% endif %}">
-  <hr>
-    <div class="row">
-      <div class="col-4">
-        <img class="img-fluid" src="{% if site.authors[page.author].external-image == true %}{{ site.authors[page.author].picture }}{% else %}{{ site.url }}/{{ site.authors[page.author].picture }}{% endif %}" alt="{{ site.authors[page.author].name }}" alt="author selfie">
+
+<section class="author{% if site.disqus == false %} no-disqus{% endif %} {{ include.class }}">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="selfie-col">
+        <img class="selfie" src="{% if site.authors[page.author].external-image == true %}{{ site.authors[page.author].picture }}{% else %}{{ site.url }}/{{ site.authors[page.author].picture }}{% endif %}" alt="{{ site.authors[page.author].name }}" alt="author selfie">
       </div>
-      <div class="col-8">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col">
-              <h4 class="name">{{ site.authors[page.author].name }}</h4>
-              <p class="bio">{{ site.authors[page.author].bio }}</p>
-              {% if site.authors[page.author].site %}
-                <a href="{{site.authors[page.author].site}}"> {{ site.authors[page.author].site }}</a>
-              {% endif %}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-                <a role="button" class="btn btn-sm btn-default" href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }} - {{ page.title }} by @{{ site.authors[page.author].twitter }}">
-                    Twitta <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a role="button" class="btn btn-sm btn-default" href="javascript:void(0)" onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">
-                    Condividi <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-            </div>
-          </div>
+      <div class="col">
+        <h4 class="name">{{ site.authors[page.author].name }}</h4>
+        <p class="bio">{{ site.authors[page.author].bio }}</p>
+        <div class="share">
+          <a class="twitter" href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }} - {{ page.title }} by @{{ site.authors[page.author].twitter }}">
+            <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg><span class="icon-twitter">Tweet</span>
+          </a>
+          <a class="facebook" href="javascript:void(0)" onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">
+            <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg><span class="icon-facebook-rect">Share</span>
+          </a>
+          <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source={{ site.url }}" target="_blank">
+            <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
+          </a>
         </div>
       </div>
     </div>
-  <hr>
+  </div>
 </section>

@@ -1,0 +1,11 @@
+<div class="left-element facebook-follow">
+  <h1> Seguici su Facebook </h1>
+  <p> Se vuoi rimanere in contatto con cnoi e riceveve aggiornamenti, seguici anche su Facebook </p>
+  <a href="https://www.facebook.com/hotblackrobotics/" role="button" class="btn" target="_blank"> Seguici su Facebook</a>
+</div>
+
+{% if site.mailchimp %}
+  <div class="left-element mailchimp">
+    {% include mailchimp.html %}
+  </div>
+{% endif %}
