@@ -3,19 +3,13 @@ title: "Inviare Goals alla Navigation Stack - versione nodo ROS Python"
 layout: post
 date: 2018-01-29
 image: /assets/imgs/2018-01-29-goal/cover.png
-headerImage: true
-lang: it
-otherlanglink: /2018/01/29/action-client-py/
 tag:
  - ROS
  - navigation
  - Python
-
 author: fiorellazza
 description: "Inviare un goal all ROS navigation stack utilizzando un nodo Python"
 ---
-[> Switch to the English version]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py %})
-
 Ehilà!
 
 Questo post ha l'obbiettivo di fornire un esempio in codice Python per inviare una posa *goal* (posizione ed orientamento desiderati) ad un robot, nel mio caso un robot [TurtleBot3](http://wiki.ros.org/Robots/TurtleBot) simulato, sfruttando la [ROS Navigation Stack](http://wiki.ros.org/navigation). Solitamente, ad un robot autonomo mobile viene richiesto di raggiungere un'ubicazione desiderata. Per fare ciò, deve avere alcune informazioni e combinarle tra loro: avere una mappa dell'ambiente in cui si trova, percepire ciò che lo circonda, localizzare se' stesso e pianificare i propri movimenti. La ROS Navigation Stack assume il ruolo di "guidare" la base mobile a muoversi verso quell'obbiettivo, evitando eventuali ostacoli e mettendo insieme tutte le informazioni a disposizione.
@@ -23,29 +17,26 @@ Usando codice, l'utente può inviare alla navigation stack una posa desiderata d
 
 **Nota**: Uso ROS Kinetic. Assumerò che il lettore abbia conoscenze a proposito di [Nodi ROS](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messaggi](http://wiki.ros.org/msg) e [Actions](http://wiki.ros.org/actionlib#Overview). Alcune informazioni a proposito di queste ultime verranno date durante la descrizione delle librerie.
 
-#### Indice:
-1. [La libreria actionlib](#1-la-libreria-actionlib)
-2. [Il nodo MoveBase](#2-il-nodo-movebase)
-3. [Creazione del Nodo - Codice](#3-creazione-del-nodo---codice)
-4. [Creazione del Nodo - Codice e commenti](#4-creazione-del-nodo---codice-e-commenti)
+### Indice:
+* TOC
+{:toc}
 
-## 1. La libreria ***actionlib***
+# 1. La libreria ***actionlib***
 La ROS navigation stack è basata sulle ROS Actions: infatti le Actions sono la scelta migliore nei casi in cui un nodo voglia inviare una richiesta ad un altro nodo e riceverà una risposta dopo un tempo relativamente lungo. Per evitare che l'utente si chieda che cosa stia succedendo e se tutto stia andando come desiderato o meno, le Actions implementano un meccanismo di *feedback*, il quale permette all'utente di ricevere informazioni di tanto in tanto. Le Actions sono basate sul paradigma Client-Server: la [libreria **actionlib**](http://wiki.ros.org/actionlib#Client-Server_Interaction) fornisce gli strumenti e un'interfaccia per creare un Action Server che esegua le richieste di goal inviate dal Client. Gli elementi principali del meccanismo delle ROS actions sono: *goal*, *result*, e *feedback*. Ognuno di essi è specificato da un tipo di Messaggio ROS, contenuto in un *action definition file*, con estensione "*.action*".
 
 Per maggiori informazioni fate riferimento alla [descrizione dettagliata di actionlib](http://wiki.ros.org/actionlib/DetailedDescription).
 
-[**<< Torna all'indice**](#indice)
-## 2. Il nodo MoveBase
+# 2. Il nodo MoveBase
 Il [nodo ROS move_base](http://wiki.ros.org/move_base), è il componente più importante della navigation stack il quale permette di configurare, runnare ed interagire con quest'ultima. Il nodo move_base implementa un *SimpleActionServer*, un action server con la restrizione di ricevere un solo goal alla volta, che riceve goals in messaggi di tipo [*geometry_msgs/PoseStamped*](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html). Per comunicare con questo nodo, viene usata l'interfaccia SimpleActionClient. Il nodo move_base cerca di raggiungere la posa desiderata combinando un motion planner globale ed uno locale per portare a termine il task di navigazione il quale include evitare ostacoli.
+
 <p align="center">
-    <image src="/assets/imgs/2018-01-29-goal/movebase.png" />
+    <image src="/assets/imgs/2018-01-29-goal/movebase.png"/>
 </p>
 <br>
-[**<< Torna all'indice**](#indice)
-## 3. Creazione del Nodo - Codice
+# 3. Creazione del Nodo - Codice
 Ecco qui il codice dell'intero nodo senza commenti. Per i commenti andate alla [Sezione 4](#4-creazione-del-nodo---codice-e-commenti).
 
-```
+```python
 #!/usr/bin/env python
 # license removed for brevity
 
@@ -82,11 +73,10 @@ if __name__ == '__main__':
         rospy.loginfo("Navigation test finished.")
 ```
 
-[**<< Torna all'indice**](#indice)
-## 4. Creazione del Nodo - Codice e commenti
+# 4. Creazione del Nodo - Codice e commenti
 Ecco qui il codice completo di commenti. L'intero codice del nodo senza commenti è dato nella  [Sezione 3](#3-creazione-del-nodo---codice).
 
-```
+```python
 #!/usr/bin/env python
 # license removed for brevity
 
@@ -137,8 +127,6 @@ if __name__ == '__main__':
         rospy.loginfo("Navigation test finished.")
 ```
 
-[**<< Torna all'indice**](#indice)
+Abbiamo finito! Questo è un semplice esempio di nodo Python per inviare una posa desideata alla navigation stack per muovere un robot mobile. Come potete notare, per motivi di semplicità, essendo questo un tutorial base, non vengono sfruttati i meccanismi di feedback propri delle Actions ed il risultato non è indicativo del reale status del goal. Per avere un esempio più completo, vi consiglio la lettura del post ["Inviare una sequenza di Goals alla ROS NavStack usando Python"]().
 
-Abbiamo finito! Questo è un semplice esempio di nodo Python per inviare una posa desideata alla navigation stack per muovere un robot mobile. Come potete notare, per motivi di semplicità, essendo questo un tutorial base, non vengono sfruttati i meccanismi di feedback propri delle Actions ed il risultato non è indicativo del reale status del goal. Per avere un esempio più completo, vi consiglio la lettura del post ["Inviare una sequenza di Goals alla ROS NavStack usando Python"]({{ site.baseurl }}{% post_url /blog/2018-01-29-seq-goals-py-ita %}).
-
-## Grazie per l'attenzione e a presto! :hibiscus:
+**Grazie per l'attenzione e a presto!** :hibiscus:
