@@ -10,6 +10,10 @@ tag:
  - 3D Printing
 author: fiorellazza
 description: "Cos'è e come utilizzare NTBD step by step, primo articolo della serie"
+redirect_from:
+ - /2018/01/17/ntbd-guida-parte-I/
+ - /2018/01/17/ntbd-guida-parte-II/
+ - /2018/01/17/ntbd-guida-parte-III/
 ---
 
 ### Indice
