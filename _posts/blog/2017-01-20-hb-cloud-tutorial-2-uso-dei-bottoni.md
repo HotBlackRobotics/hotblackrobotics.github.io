@@ -24,7 +24,7 @@ Rieccomi con il secondo tutorial legato all'uso dei bottoni per il robot **DotBo
 
 Come al solito, scrivo questo tutorial come materiale di supporto per il corso che stiamo facendo presso l'ITIS Avogadro di Torino.
 
-##Scopo del Tutorial
+## Scopo del Tutorial
 Alla fine di questo tutorial, sapremo configurare ed utilizzare un bottone utilizzando le librerie **gpiozero** e **dotbot_ros**. In particolare, affronteremo i seguenti argomenti:
 
 - Uso della libreria **gpiozero** per interfacciarsi con un bottone e leggerne lo stato
@@ -32,7 +32,7 @@ Alla fine di questo tutorial, sapremo configurare ed utilizzare un bottone utili
 - Uso della libreria **dotbot_ros** per pubblicare su un topic
 - Uso delle Callback
 
-##Il circuito elettronico
+## Il circuito elettronico
 
 Come al solito, prima di iniziare a sviluppare il codice è importante configurare il circuito. Per il momento, utilizzeremo un semplice circuito, molto semplice, basato su un Led e un Bottone. Il led collegato al pin **GPIO05**, mentre il bottone, al pin **GPIO02**. Trovate un'immagine che mostra la numerazione dei pin in questa figura:
 
@@ -54,7 +54,7 @@ Colleghiamo una delle due fasi dell'interruttore al Pin **GPIO02** e l'altra fas
 ![Circuito elettronico](http://res.cloudinary.com/hbr/image/upload/v1484936413/tutorial2_bb_rsp6yo.png)
 
 
-##Scriviamo il codice!
+## Scriviamo il codice!
 
 Come al solito, partiamo dallo scheletro di un'applicazione, in cui impostiamo il nome del nodo come `button_example`
 
@@ -77,7 +77,7 @@ Importiamo i due oggetti che andremo ad utilizzare dalla libreria **gpiozero**: 
 from gpiozero import Button, LED
 ```
 
-###Utilizzo del bottone
+### Utilizzo del bottone
 
 Per il momento, utilizziamo solamente il bottone per visualizzare il suo stato (se chiuso o aperto) sfruttando la shell di **DotBot-ROS** e la funzione `print` di Python.
 
@@ -89,7 +89,7 @@ Per prima cosa, dobbiamo inilizzare il bottone e settare la frequenza di iterazi
         self.loop_rate = dotbot_ros.Rate(10)
 ```
 
-Con la riga `self.btn = Button(3)` abbiamo creato un attributo chiamato `btn` al nostro nodo che gestisce un bottone collegato al pin `GPIO02` del raspberry.
+Con la riga `self.btn = Button(2)` abbiamo creato un attributo chiamato `btn` al nostro nodo che gestisce un bottone collegato al pin `GPIO02` del raspberry.
 
 Invece, come già spiegato nel tutorial precedente, la riga `self.loop_rate = dotbot_ros.Rate(10)` setta a 10Hz la frequenza di iterazione di `loop`.
 
@@ -115,7 +115,7 @@ Proviamo ad eseguire il codice e vedere cosa succede. Dovreste vedere un output 
 ![Shell Bottone Status](http://res.cloudinary.com/hbr/image/upload/v1484936416/Schermata_2017-01-20_alle_18.08.05_sshqv4.png)
 
 
-###Pubblichiamo lo stato del bottone su un topic ROS
+### Pubblichiamo lo stato del bottone su un topic ROS
 
 Se il programma precedente funziona, siamo pronti ad utilizzare una delle funzione principali di ROS: i **Topic**.
 
@@ -129,7 +129,7 @@ In questo semplice esempio, chiameremo il topic `button_status` e manderemo mess
 from std_msgs.msg import Bool
 ```
 
-Possiamo quindi creare l'oggetto pubblisher nella funzione setup
+Possiamo quindi creare l'oggetto publisher nella funzione setup
 
 ```python
     def setup(self):
@@ -160,7 +160,7 @@ A questo punto possiamo nuovamente testare il programma, per vedere se il topic 
 Proviamo a premere il bottone e vediamo se i valori inviati cambiano di conseguenza!!
 
 
-###Controllo del LED
+### Controllo del LED
 
 A questo punto, siamo pronti a completare la nostra applicazione utilizzando un Led. Voglio, in particolare, far si che ogni volta che il bottone venga premuto, il led cambi stato (utilizzando la funzione `toggle` vista nel tutorial precedente).
 
@@ -179,7 +179,7 @@ Si noti che noi non andiamo a chiamare esplicitamente la funzione `self.led.togg
 
 Possiamo a questo punto lanciare il programma e testare che tutto funzioni!
 
-###Codice completo
+### Codice completo
 
 Qui trovate il codice completo appena realizzato
 
@@ -211,17 +211,17 @@ class Node(dotbot_ros.DotbotNode):
         sys.stdout.flush()
 ```
 
-##Esercizi
+## Esercizi
 
 Provate a migliorare il programma come segue.
 
-####1. Aggiungere un secondo pulsante
+#### 1. Aggiungere un secondo pulsante
 Aggiungete un nuovo pulsante su un pin GPIO a piacere e stampate a video gli stati di entrambi i pulsanti ad ogni iterazione.
 
-####2. Controllo del led con entrambi i pulsanti
+#### 2. Controllo del led con entrambi i pulsanti
 Controllate il led utilizzando i due pulsanti. In particolare, fate in modo che il led si spenga premendo il primo pulsante, e si accenda premendo il secondo pulsante. Utilizzate le funzioni `led.on` e `led.off`.
 
-####3. Topic `btn1_and_btn2`
+#### 3. Topic `btn1_and_btn2`
 Create un secondo topic di tipo `Bool` chiamato `btn1_and_btn2`. Su questo topic, inviate l'informazione ottenuta dall'`AND` logico del valore dei due pulsanti.
 
 Ricordo che in Pyton, l'`AND` logico tra due variabili `a` e `b` booleane si implementa con la seguente sintassi

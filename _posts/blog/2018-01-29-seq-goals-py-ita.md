@@ -30,7 +30,10 @@ Se avete letto il mio post, ["Inviare Goals alla Navigation Stack - versione nod
 **Nota**: Uso ROS Kinetic. Assumerò che il lettore abbia conoscenze a proposito di [Nodi ROS](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messaggi](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) e Parametri ROS [ROS Parameters](http://wiki.ros.org/Parameter%20Server). La lettura del [post]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py-ita %}) citato prima e relativa documentazione ROS è consigliata.
 
 
-#### Indice:
+#### Indice
+* TOC
+{:toc}
+<!-- 
 1. [Download del progetto Github e del pacchetto turtlebot3](#1-download-del-progetto-github-e-del-pacchetto-turtlebot3)
 2. [Goals come parametri ROS](#2-goals-come-parametri-ros)
 3. [Launch files](#3-launch-files)
@@ -41,7 +44,7 @@ Se avete letto il mio post, ["Inviare Goals alla Navigation Stack - versione nod
     6.2. [Lanciare Gazebo e Rviz](#62-lanciare-gazebo-e-rviz)<br>
     6.3. [Settare la posa corrente di Turtlebot](#63-settare-la-posa-corrente-di-turtlebot)<br>
     6.4. [Lanciare il nodo movebase_seq e caricare i parametri](#64-lanciare-il-nodo-movebase_seq-e-caricare-i-parametri)
-
+-->
 
 ## 1. Download del progetto Github e del pacchetto turtlebot3
  Per poter lavorare con il mio esempio, clonate il progetto github, che potete trovare [qui](https://github.com/FiorellaSibona/turtlebot3_nav), nella vostra location preferita.
@@ -354,4 +357,4 @@ Sul terminale dovreste vedere alcune informazioni a proposito di come sta proced
 
 Adesso dovreste avere un esempio funzionante per inviare una sequenza di pose alla navigation stack sul vostro robot.
 
-## A presto! :hibiscus:
+A presto! :hibiscus:

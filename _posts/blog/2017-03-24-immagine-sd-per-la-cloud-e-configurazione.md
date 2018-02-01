@@ -25,7 +25,7 @@ Scaricate qui l'immagine.
 
 Scaricate da Internet **Win32DiskImager**.
 
-![] (https://www.pcrestore.it/images/jdownloads/screenshots/Win32-Disk-Imager-1.png)
+![](https://www.pcrestore.it/images/jdownloads/screenshots/Win32-Disk-Imager-1.png)
 
 Inserite l'SD dentro il PC e vi comparirà come nuovo dispositivo. A me prende il nome "G:".
 

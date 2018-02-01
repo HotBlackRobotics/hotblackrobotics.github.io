@@ -26,7 +26,7 @@ Ecco nel dettaglio cosa vedremo:
 - Come gestire una coppia di motori in **gpiozero**.
 - Come sottoscriversi ad un topic ROS sfruttando le **callback**.
 
-##Circuito
+## Circuito
 
 Colleghiamo i motori al driver. L'alimentazione del driver va collegata alla batteria da 9V, ricordandoci di mettere in comune la massa della batteria con quella del raspberry.
 
@@ -36,15 +36,15 @@ Le due fasi dei motori, vanno collegate, rispettivamente, ai GPIO 16,19 (sinistr
 
 ![schema motori raspberry](http://res.cloudinary.com/hbr/image/upload/v1485196535/motori_bb_fdxui2.png)
 
-##Scriviamo il Codice
+## Scriviamo il Codice
 
 Per utilizzare i motori, useremo l'oggetto `Robot` della libreria **gpiozero**, che è in grado di gestire il movimento di un semplice robot a due ruote.
 
-##Programma di test
+## Programma di test
 Per prima cosa, testiamo che i motori funzionino lanciando un semplice programma di test. Questo programma sfrutta solo la funzione Setup
 Scriviamo un brevissimo programma che controlla il robot facendogli fare semplici movimenti.
 
-Per creare l'oggetto `Robot` dobbiamo passare al costruttore le coppie di PIN GPIO a cui sono collegate i due motori, sfruttando i parametri `left` e `right`:
+Per creare l'oggetto `Robot` dobbiamo passare al costruttore le coppie di PIN GPIO a cui sono collegati i due motori, sfruttando i parametri `left` e `right`:
 
 ```python
 self.robot = Robot(left=(16, 19), right=(20, 26))
@@ -84,18 +84,18 @@ class Node(dotbot_ros.DotbotNode):
 Una volta lanciato questo programma, il robot dovrebbe iniziare a muoversi prima avanti e poi indietro, per poi girare a destra e a sinistra.
 Se qualcosa non funziona, controllate che i motori siano alimentati e che le masse siano messe in comune.
 
-##Sottoscriviamo ad un Topic ROS e usiamo le Callback
+## Sottoscriviamo ad un Topic ROS e usiamo le Callback
 
 Controllare il robot in questo modo non gli permette di essere nè più nè meno di un semplice giocattolo. Proviamo quindi a fare qualcosa di più interessante: controllare il robot attraverso un topic.
 
 Per farlo, sottoscriviamoci ad un topic chiamato `speed` di tipo ` std_msgs/Int16MultiArray`. Per farlo, per prima cosa, dobbiamo capire cos’è e come si usa una funzione di callback.
 
-###Funzioni di Callback
+### Funzioni di Callback
 Come già spiegato in precedenza, una funzione di **callback** è una funzione che non viene esplicitamente chiamata dal nostro programma, ma è automaticamente eseguita al verificarsi di un certo evento *asincrono* (cioè un evento che è generato al di fuori del nostro programma).
 
 ROS sfrutta la callback come meccanismo per intercettare i messaggi inviati da su topic al quale il nodo è sottoscritto, e per processare i dati in modo immediato e istantaneo. In particolare, ROS chiede al programmatore di implementare una funzione di callback per ogni topic a cui il nodo è sottoscritto, e chiama automaticamente questa funzione ogni qualvolta un messaggio è invitato sul topic.
 
-###Implementiamo la funzione di callback per il topic `speed`
+### Implementiamo la funzione di callback per il topic `speed`
 Ricapitolando: il nostro nodo si deve sottoscrivere al topic Speed, in cui vengono mandati comandi di velocità per il robot. Ogni volta che un messaggio viene inviato sul topic, il nodo deve processare il messaggio e controllare i motori di conseguenza.
 
 Andiamo quindi ad implementare una funzione di callback, chiamata `on_speed`. Questa funzione (come tutte le funzioni di callback) avrà la seguente forma:
@@ -153,7 +153,7 @@ La funzione `on_speed`, quindi, verrà completata in questo modo:
 
 ```python
 def on_speed(self, msg):
-    v_dx = msg.data[0]255.0
+    v_dx = msg.data[0]/255.0
     v_sx = msg.data[1]/255.0
 
     #stampo a video i valori di v_dx e v_sx
@@ -178,7 +178,7 @@ def on_speed(self, msg):
 ```
 
 
-###Sottoscrizione al topic
+### Sottoscrizione al topic
 
 Una volta implementata la funzione di callback, non ci resta che sottoscriverci al topic `speed` per poterla correttamente utilizzare. Per farlo, nella funzione `setup`, aggiungiamo la seguente linea di codice:
 
@@ -191,7 +191,7 @@ ricordandoci di importare l'oggetto `Int16MultiArray` da `std_msgs.msg`
 from std_msgs.msg import Int16MultiArray
 ```
 
-###Codice completo
+### Codice completo
 
 Ecco il codice completo del nostro programma
 
@@ -230,15 +230,15 @@ class Node(dotbot_ros.DotbotNode):
 
 Per inviare comandi di velocità, possiamo utilizzare l'app di test della nostra piattaforma.
 
-##Esercizi
+## Esercizi
 
 Vi suggerisco alcuni esercizi per migliorare il codice.
 
-###Esercizio 1: Robot Joystick
+### Esercizio 1: Robot Joystick
 
 La webapp joystic manda messaggi di tipo `geometry_msgs/Vector3` sul topic `joy` contenenti due variabili `msg.x` e `msg.y` che contengolo la posizione del joystick in coordinate cartesiane. Si modifichi il programma in modo da intercettare questo messaggio e far muovere il robot in base alla posizione del joystick.
 
-###Esercizio 2: Stop del robot dopo N secondi
+### Esercizio 2: Stop del robot dopo N secondi
 
 Un problema che (in base alle preferenze) potrebbe essere risolto o no, rigurda il fatto che se viene impostato un comando di velocità, il robot continuerà a muoversi finchè non gli viene impostato il comando di velocità `(0,0)`.
 
