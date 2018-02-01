@@ -2,21 +2,17 @@
 layout: mainpage
 ---
 
-{% assign posts = site.posts | where: "categories",page.lang %}
+{% assign posts = site.posts | where: "categories",page.lang | where: "categories", "blog"%}
 
 <section class="list">
 	<div class="container-fluid">
-
-
 		<h1>
       {% if page.lang == 'it' %} Ultimi Post {% else %} Latest Posts {% endif %}
     </h1>
 		<div class="row">
 			{% for post in posts limit:6 %}
-				{% if post.category == 'blog' %}
-					{% if post.hidden != true %}
-						{% include blog-post.html %}
-					{% endif %}
+				{% if post.hidden != true %}
+					{% include blog-post.html %}
 				{% endif %}
 			{% endfor %}
 		</div>
@@ -24,11 +20,9 @@ layout: mainpage
 		<h1> {% if page.lang == 'it' %} Post in Evidenza {% else %} Starred Posts {% endif %} </h1>
 		<div class="row">
 			{% for post in posts %}
-				{% if post.category == 'blog' %}
-					{% if post.hidden != true %}
-						{% if post.starred == true %}
-							{% include blog-post.html type="starred"%}
-						{% endif %}
+				{% if post.hidden != true %}
+					{% if post.starred == true %}
+						{% include blog-post.html type="starred"%}
 					{% endif %}
 				{% endif %}
 			{% endfor %}
@@ -41,11 +35,9 @@ layout: mainpage
 			<h1> {% if page.lang == 'it' %} Post su {% else %} Post on {% endif %} {{ maintag.name }} </h1>
 			<div class="row">
 				{% for post in posts %}
-					{% if post.category == 'blog' %}
-						{% if post.tags contains maintag.name %}
-							{% if post.hidden != true %}
-								{% include blog-post.html %}
-							{% endif %}
+					{% if post.tags contains maintag.name %}
+						{% if post.hidden != true %}
+							{% include blog-post.html %}
 						{% endif %}
 					{% endif %}
 				{% endfor %}

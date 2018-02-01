@@ -5,7 +5,7 @@ date: 2017-03-24 13:36:10
 image:
 headerImage: false
 tag:
-category: blog
+
 redirect_from: /blog/posts/supporto-tecnico
 author: ludusrusso
 description: ""
