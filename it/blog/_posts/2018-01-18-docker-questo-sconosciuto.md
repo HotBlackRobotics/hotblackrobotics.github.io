@@ -1,24 +1,16 @@
-﻿---
+---
 title: "Docker, questo sconosciuto!"
 layout: post
 date: 2018-01-18
 image: https://logz.io/wp-content/uploads/2016/01/docker-facebook.png
-headerImage: true
 lang: it
 otherlanglink: /2018/01/18/docker-this-stranger/
 tag:
  - Docker
- - Containers
- - container
- - VM
- - contenitore
- - LC
- - linux container
- - immagine docker
-
 author: fiorellazza
 description: "Perchè utilizzare Docker e la mia esperienza"
 ---
+
 ![docker logo](https://logz.io/wp-content/uploads/2016/01/docker-facebook.png)
 
 [> Switch to the English version]({{ site.baseurl }}{% post_url /en/2018-01-18-docker-this-stranger %})
@@ -74,7 +66,8 @@ I concetti di Docker Image e Docker Container, per un nuovo utente, possono esse
 ### 2.2. Dockerfile
 Una Immagine Docker viene costruita a partire da una "pila" di strati definiti in un file chiamato *Dockerfile*. La tipica Immagine è definita partendo dall'immagine di un sistema operativo di base su cui viene installato software e vengono eseguite operazioni, che possono essere definite utilizzando linguaggio BASH e seguendo un certa [sintassi](https://docs.docker.com/engine/reference/builder/).
 Vediamo un esempio breve di Dockerfile:
-```
+
+```Dockerfile
 # Pull dell'immagine di base
 FROM ubuntu:16.04
 SHELL ["/bin/bash","-c"]
@@ -90,7 +83,8 @@ ENTRYPOINT ["/entrypoint.sh"]
 ```
 
 Il file che viene eseguito all'avvio può contenere operazioni di copia dall'Host al container, escuzione di altri script BASH ecc. Nel seguente file di esempio, utilizzato per un contenitore su cui è installato ROS, vengono eseguiti dei file di setup, viene avviato un server [nginx](https://nginx.org/en/) e un launch file ROS.
-```
+
+```Python
 !/usr/bin/env bash
 set -e
 echo "export TERM=xterm" >> ~/.bashrc
@@ -108,7 +102,8 @@ exec "$@"
 
 Docker fa il *build* delle immagini sfruttando un utilissimo sistema di caching che permette di velocizzare questo processo ogni qualvolta i layer non siano stati modificati.
 Per "*buildare*" un'Immagine, bisogna usare il comando:
-```
+
+```bash
  docker build -t nometag .
 ```
 
@@ -131,7 +126,7 @@ Mi raccomando usate COPY nel Dockerfile solo nel momento in cui il file che vole
 
  Quando la vostra applicazione è ancora in fase di sviluppo, il consiglio è quindi quello di eseguire la copia dei file necessari (programmi in development) all'interno del file di entrypoint in modo tale che l'Immagine non venga re-buildata ogni volta che i file cambiano. Ovviamente, essendo eseguito all'avvio del contenitore, il tempo di boot sarà maggiore.
 
- Per ulteriori informazioni, consultare l'Appendice di questo [post]({{ site.baseurl }}{% post_url /it/2018-01-17-ntbd-guida-parte-III %}).
+ Per ulteriori informazioni, consultare l'Appendice di questo [post]().
 
  [**<< Torna all'indice**](#indice)
 ### 2.5. Docker Compose

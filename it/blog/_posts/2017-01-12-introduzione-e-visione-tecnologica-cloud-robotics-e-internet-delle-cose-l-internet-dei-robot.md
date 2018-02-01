@@ -4,7 +4,6 @@ layout: post
 date: 2017-01-12 14:26:29
 image: https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudcomputing-01.jpg
 headerImage: false
-lang: it
 tag:
  - Robotics
  - Cloud

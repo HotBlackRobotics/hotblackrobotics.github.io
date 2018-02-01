@@ -22,8 +22,6 @@ tag:
 author: fiorellazza
 description: "What is and how to use NTBD: step by step guide, second article of the series"
 ---
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /it/2018-01-17-ntbd-guida-parte-II %})
-
 [>> Go back to Post Part I: an overview]({{ site.baseurl }}{% post_url /en/2018-01-17-ntbd-guide-part-I %})
 
 [>> Go to Post Part III: integration with other manipulators]({{ site.baseurl }}{% post_url /en/2018-01-17-ntbd-guide-part-III %})

@@ -2,16 +2,13 @@
 title: "HB Robotics all'alternanza scuola-lavoro nell'ITIS Avogadro"
 layout: post
 date: 2017-01-16 16:38:04
-image:
-headerImage: false
-lang: it
 tag:
  - Avogadro
  - Hbrain
  - ROS
  - Scuola
-
-redirect_from: /blog/posts/2017-01-16-hb-robotics-allalternanza-scuola-lavoro-nellitis-avogadro
+redirect_from:
+ - /blog/posts/2017-01-16-hb-robotics-allalternanza-scuola-lavoro-nellitis-avogadro
 author: ludusrusso
 description: ""
 ---

@@ -8,13 +8,8 @@ lang: it
 otherlanglink: /2018/01/29/action-client-py/
 tag:
  - ROS
- - actionclient
- - action client
- - navigation stack
- - actionlib
- - python ROS
- - rospy
- - actionserver
+ - navigation
+ - Python
 
 author: fiorellazza
 description: "Inviare un goal all ROS navigation stack utilizzando un nodo Python"
@@ -42,8 +37,8 @@ Per maggiori informazioni fate riferimento alla [descrizione dettagliata di acti
 [**<< Torna all'indice**](#indice)
 ## 2. Il nodo MoveBase
 Il [nodo ROS move_base](http://wiki.ros.org/move_base), è il componente più importante della navigation stack il quale permette di configurare, runnare ed interagire con quest'ultima. Il nodo move_base implementa un *SimpleActionServer*, un action server con la restrizione di ricevere un solo goal alla volta, che riceve goals in messaggi di tipo [*geometry_msgs/PoseStamped*](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html). Per comunicare con questo nodo, viene usata l'interfaccia SimpleActionClient. Il nodo move_base cerca di raggiungere la posa desiderata combinando un motion planner globale ed uno locale per portare a termine il task di navigazione il quale include evitare ostacoli.
-<p align="center"> 
-    <image src="/assets/imgs/2018-01-29-goal/movebase.png" /> 
+<p align="center">
+    <image src="/assets/imgs/2018-01-29-goal/movebase.png" />
 </p>
 <br>
 [**<< Torna all'indice**](#indice)
@@ -106,14 +101,14 @@ def movebase_client():
 
    # Crea un action client chiamato "move_base" con action definition file "MoveBaseAction"
     client = actionlib.SimpleActionClient('move_base',MoveBaseAction)
- 
+
    # Aspetta che l'action si sia avviato ed abbia iniziato ad essere ricettivo per i goal
     client.wait_for_server()
 
    # Crea un nuovo goal con il costruttore MoveBaseGoal
     goal = MoveBaseGoal()
     goal.target_pose.header.frame_id = "map"
-    goal.target_pose.header.stamp = rospy.Time.now() 
+    goal.target_pose.header.stamp = rospy.Time.now()
    # Muovere di 0.5 metri avanti lungo l'asse x del sistema di riferimento della mappa
     goal.target_pose.pose.position.x = 0.5
     goal.target_pose.pose.orientation.w = 1.0
