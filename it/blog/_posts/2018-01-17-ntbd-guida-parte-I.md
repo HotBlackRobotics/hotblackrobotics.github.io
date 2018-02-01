@@ -1,42 +1,32 @@
 ---
-title: "NTBD: guida step by step I"
+title: "NTBD: guida step by step"
 layout: post
 date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-parte1.png
-headerImage: true
-lang: it
-otherlanglink: /2018/01/17/ntbd-guide-part-I/
 tag:
  - NTBD
  - Docker
  - ROS
  - 3D Printing
-
 author: fiorellazza
 description: "Cos'è e come utilizzare NTBD step by step, primo articolo della serie"
 ---
 
+### Indice
 * TOC
 {:toc}
 
-# Parte I: una panoramica
-Ciao a tutti! Sono di nuovo io, Fiorella e, con questa *trilogia* di post, vorrei presentarvi il lavoro svolto per la mia Tesi di Laurea Magistrale in Ingegneria Meccatronica conseguita al Politecnico di Torino, "*Development of a Standard Architecture
+Ciao a tutti! Sono di nuovo io, Fiorella e, con questo post, vorrei presentarvi il lavoro svolto per la mia Tesi di Laurea Magistrale in Ingegneria Meccatronica conseguita al Politecnico di Torino, "*Development of a Standard Architecture
 to enable Fast Software Prototyping
-for Robot Arms*",  e fornirvi una guida step by step il più possibile chiara (si spera!) per poter utilizzare e ri-utilizzare l'architettura sviluppata, chiamata NTBD.
-In questa prima parte vi presento l'architettura proposta così come la troverete esplorando il [progetto su github](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c). Nel secondo post invece ci sarà un tutorial su come utilizzare l'architettura integrata ad un braccio robotico Open-Source da me scelto, avendo a disposizione un PC con processore Intel (oppure un host con processore ARM). Infine nel terzo articolo spiegherò come poter sfruttare NTBD utilizzando un braccio a scelta diverso da quello presentato, evidenziandone i limiti.
+for Robot Arms*", e fornirvi una guida step by step il più possibile chiara (si spera!) per poter utilizzare e ri-utilizzare l'architettura sviluppata, chiamata NTBD.
+Nella prima parte vi presento l'architettura proposta così come la troverete esplorando il [progetto su github](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c). Nel secondo post invece ci sarà un tutorial su come utilizzare l'architettura integrata ad un braccio robotico Open-Source da me scelto, avendo a disposizione un PC con processore Intel (oppure un host con processore ARM). Infine nel terzo articolo spiegherò come poter sfruttare NTBD utilizzando un braccio a scelta diverso da quello presentato, evidenziandone i limiti.
 
-#### Indice:
- 1. [Motivazioni](#motivazioni)
- 2. [NTBD: Name To Be Decided](#ntbd-name-to-be-decided)
- 3. [NTBD - Livello Concettuale](#ntbd---livello-concettuale)
- 4. [NTBD - Livello Docker](#ntbd---livello-docker)
- 5. [NTBD - Livello ROS](#ntbd---livello-ros)
-
-### Motivazioni
+# Parte I: una panoramica
+## Motivazioni
 L'idea della mia tesi è nata dall'osservazione che nell'ambito della prototipazione rapida, l'hardware ha sempre avuto dei validi rappresentanti, per esempio le schede Open-Source [Arduino](http://www.arduino.org/) e [RaspBerry Pi](https://www.raspberrypi.org/); per quanto riguarda la Robotica, esistono innumerevoli progetti Open-Source per la costruzione di robot, muniti di istruzioni, indicazioni sull'opportuno hardware per il controllo, pezzi necessari alla costruzione (i quali possono essere stampati in 3D) e lista di minuteria necessaria.
 Per quanto riguarda invece il software, non c'è a disposizione un'architettura standard su cui costruire in modo semplice la propria applicazione robotica. Ecco che entra in scena **NTBD**, pensata per lo sviluppo di applicazioni con bracci robotici.
 
-### NTBD: Name To Be Decided
+## NTBD: Name To Be Decided
 Ebbene sì, ecco il nome tanto ricercato in tutta la sua gloria! Dopo pomeriggi passati a scegliere un nome che fosse accattivante e cool questo è il risultato...
 <!-- gif*Not so impressive*-->
 ![enter image description here](https://media.giphy.com/media/rwedxv8kWXBaU/giphy.gif)
@@ -44,7 +34,7 @@ Ebbene sì, ecco il nome tanto ricercato in tutta la sua gloria! Dopo pomeriggi 
 Sono però dell'idea che l'importante sia il contenuto.
 A proposito di contenuto, adesso procederò a darvi una veloce panoramica top-down su NTBD.
 
-### NTBD - Livello Concettuale
+## NTBD - Livello Concettuale
 ![ntbd-conceptual](/assets/imgs/2018-01-17-ntbd/4_architect.png)
 
 L'architettura è composta da vari elementi tra cui troviamo dei componenti astratti, ovvero componenti generici che possono essere implementati dall'utente. Ecco il significato di ogni componente astratto:
@@ -61,15 +51,11 @@ L'architettura è composta da vari elementi tra cui troviamo dei componenti astr
  - **Rosserial**: questo elemento rappresenta l'importanza del tool [Rosserial](http://wiki.ros.org/rosserial) necessario per stabilire una connessione seriale con la scheda di prototipazione rapida scelta per il controllo.
  - **Rosbridge**: questo componente rappresenta il tool di ROS [Rosbridge](http://wiki.ros.org/rosbridge_suite), che permette di simulare il nostro braccio robotico tramite l'integrazione di ROS con il mondo Web utilizzando una libreria JavaScript, [roslibjs](http://wiki.ros.org/roslibjs).
 
-[**<<Torna all'indice**](#indice)
-
-### NTBD - Livello Docker
+## NTBD - Livello Docker
 L'architettura è portabile grazie alla sua definizione all'interno di un contenitore [Docker](https://www.docker.com/) il quale ne consente l'esecuzione dei componenti sempre uguale a se' stessa, con l'unico requisito di un sistema compatibile con Docker.
 Chi ha qualche concetto base di Docker, saprà bene che un'applicazione Docker viene sviluppata partendo da un'immagine base che solitamente corrisponde all'immagine di un sistema operativo. Nel mio caso l'immagine di partenza è Ubuntu 16.04 su cui è pre-installato ROS Kinetic Kame (decima distribuzione di ROS, 2016) ottenuti dal [github di HotBlack Robotics](https://github.com/HotBlackRobotics/docker-ros-base). Come possibile vedere dalla [repository NTBD](https://hub.docker.com/u/hbrobotics/) su [Docker Hub](https://docs.docker.com/docker-hub/) ci sono due *layer* che compongono l'archiettura, *base* e *manipulator*. La prima contiene gli elementi dell'architettura comuni a tutti i bracci robotici (Position Limiter, Path Planner, Values Limiter, Rosserial e Rosbridge); su quest'ultima è costruita la seconda immagine in cui vengono implementati i componenti astratti, analizzati prima.
 
-[**<<Torna all'indice**](#indice)
-
-### NTBD - Livello ROS
+## NTBD - Livello ROS
 I componenti presentati precedentemente sono stati implementati in [ROS](http://www.ros.org/), Robot Operating System, come nodi Python. Assumo che il lettore conosca le dinamiche base del framework ROS così da non dilungarmi in spiegazioni ulteriori e procedere all'elenco e relativa spiegazione di [nodi](http://wiki.ros.org/Nodes) e [topics](http://wiki.ros.org/Topics) di questa architettura.
 
  In Figura vediamo i nodi e i topics coinvolti nelle dinamiche di NTBD.
@@ -126,10 +112,10 @@ Da qui in avanti, la gestione dei messaggi su topic ed i nodi è quella tipica d
 Collegandoci quindi "a noi stessi" dal browser, sulla porta definita potremo vedere il modello del braccio muoversi insieme al braccio fisico.
 La connessione Rosbridge viene iniziata sulla porta di default 9090 sulla quale un altro computer può interagire con il sistema ROS pubblicando sui topics e iscrivendosi ad essi.
 
-[**<<Torna all'indice**](#indice)
+# Parte II: tutorial
+Inquesta parte spiegherò come riprodurre il progetto, completo di integrazione del braccio robotico con l'architettura NTBD, introdotta nella [Parte I](#parte-i-una-panoramica).
 
-
-### Ingredienti
+## Ingredienti
 Ci serviranno:
 - 1 braccio EEZYBOT MK2 stampato in 3D, completo di servo-motori (3 mini-servo, 1 micro-servo)
 - 1 scheda Arduino (nel mio caso ho usato una Mega ADK 2560)
@@ -141,17 +127,7 @@ Ci serviranno:
 
 **Nota:** Questo tutorial si riferisce all'Immagine Docker per host Intel ma è disponibile anche l'**Immagine ARM** (può essere eseguita su Raspberry 3). Per ottenere la versione ARM, quando un comando è necessario o un documento è citato, è sufficiente *sostituire la parola **intel** con **rpi3***.
 
-#### Indice
- 1. [Stampare il Braccio Robotico](#1-stampare-il-braccio-robotico)
- 2. [Scaricare lo sketch per Arduino](#2-scaricare-lo-sketch-per-arduino)
- 3. [Scaricare Docker](#3-scaricare-docker)
- 4. [Scaricare le Immagini Docker](#4-scaricare-le-immagini-docker)
- 5. [Collegamenti](#5-collegamenti)
- 6. [Avviare il Container Docker](#6-avviare-il-container-docker)
- 7. [WebApp per NTBD e siBOT](#7-webapp-per-ntbd-e-sibot)
- 8. [Giocare con le WebApps](#8-giocare-con-le-webapps)
-
-### 1. Stampare il Braccio Robotico
+## 1. Stampare il Braccio Robotico
 Il braccio robotico da me scelto è [EEZYbotARM MK2](http://www.eezyrobots.it/eba_mk2.html), progetto open source italiano di Carlo Franciscone, Design Engineer e Maker.
 
 Seguendo le istruzioni presenti su [*Thingiverse*](https://www.thingiverse.com/thing:1454048) ed [*Instructables*](http://www.instructables.com/id/EEZYbotARM-Mk2-3D-Printed-Robot/) relativi a questo progetto, ho completato con successo la stampa 3D ed il montaggio del braccio robotico.
@@ -178,20 +154,14 @@ Questo è il risultato:
 
 ![eezybot lateral](/assets/imgs/2018-01-17-ntbd/5_eezybotlateral.jpg)
 
-[**<<Torna all'indice**](#indice)
-
-### 2. Scaricare lo sketch per Arduino
+## 2. Scaricare lo sketch per Arduino
 Sulla pagina github di NTBD troverete lo sketch [myServoControl_ntbd.ino](https://github.com/HotBlackRobotics/ntbd/blob/devel/myServoControl_ntbd.ino) da caricare sulla scheda Arduino. Nel mio caso ho usato una Arduino Mega ADK 2560.
 ![arduino](/assets/imgs/2018-01-17-ntbd/5_mega.jpeg)
 
-[**<<Torna all'indice**](#indice)
-
-### 3. Scaricare Docker
+## 3. Scaricare Docker
 Per Ubuntu usare questo [link](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions).
 
-[**<<Torna all'indice**](#indice)
-
-### 4. Scaricare le Immagini Docker
+## 4. Scaricare le Immagini Docker
 A questo punto per scaricare le immagini di NBTD basterà eseguire i seguenti comandi nella vostra *command line*, per ottenerle da [Docker Hub](https://docs.docker.com/docker-hub/), usando il comando [*docker pull*](https://docs.docker.com/engine/reference/commandline/pull/):
 ```
 docker pull hbrobotics/ntbd_base:intel
@@ -199,9 +169,8 @@ docker pull hbrobotics/ntbd_base:intel
 ```
 docker pull hbrobotics/ntbd_manipulator:intel
 ```
-[**<<Torna all'indice**](#indice)
 
-### 5. Collegamenti
+## 5. Collegamenti
  Come possibile vedere dallo sketch, i servomotori, numerati come in figura, sono collegati all'Arduino come riportato in tabella.
 
  ![servo](/assets/imgs/2018-01-17-ntbd/5_eezybotfrontservo.jpg)
@@ -227,16 +196,14 @@ Colleghiamo l'Arduino e il controller Leap Motion al computer tramite USB.
 
 Per installare correttamente i driver per Leap Motion su Ubuntu 16.04, seguite questa [guida](https://support.leapmotion.com/hc/en-us/articles/223782608-Linux-Installation) insieme a questa piccola [modifica](https://forums.leapmotion.com/t/tip-ubuntu-systemd-and-leapd/2118).
 
-[**<<Torna all'indice**](#indice)
-
-### 6. Avviare il Container Docker
+## 6. Avviare il Container Docker
 Adesso che tutti i dispositivi esterni sono collegati, scaricate il [file .yaml](https://github.com/HotBlackRobotics/ntbd/blob/devel/docker-compose.hbr_ntbd_intel.yml) per l'immagine ntbd_manipulator:intel, che è quella che vogliamo avviare. Per avviare il container (dove è presente l'applicazione Web), basta eseguire il seguente comando nella cartella contenente il file .yaml, sfruttando il tool [Docker Compose](https://docs.docker.com/compose/overview/):
+
 ```
 docker-compose -f docker-compose.hbr_ntbd_intel.yml up
 ```
-[**<<Torna all'indice**](#indice)
 
-### 7. WebApp per NTBD e siBOT
+## 7. WebApp per NTBD e siBOT
 L'insieme di NTBD e il braccio EEZYBOT controllato da ROS è quello che ho voluto chiamare **siBOT**.
 ![sibot](/assets/imgs/2018-01-17-ntbd/sibot.png)
 
@@ -244,37 +211,26 @@ Una volta che il contenitore è stato avviato, apriamo una pagina Browser e conn
 
 ![webapp](/assets/imgs/2018-01-17-ntbd/5_ntbdviz.png)
 
-[**<<Torna all'indice**](#indice)
-
-### 8. Giocare con le WebApps
-#### Simulazione con NTBD - Visualizer
+## 8. Giocare con le WebApps
+### Simulazione con NTBD - Visualizer
 A questo punto avrete a disposizione l'applicazione, dalla quale potete impostare una posizione desiderata nello spazio, muovendo gli sliders per le coordinate Cartesiane; Premendo il bottone **Execute** vedrete il modello del braccio muoversi insieme al braccio fisico.
 
 **Nota**: i valori di input inseriti dall'utente tramite la WebApp NTBD - Visualizer, sono utilizzati per il controllo sia del modello in simulatione che del braccio fisico.
 
-#### Controllo con Leap Motion
+### Controllo con Leap Motion
 Nel caso si volesse utilizzare la seconda applicazione sviluppata, basterà premere sul link "*NTBD Leap Motion WebApp*" il quale aprirà una nuova pagina. Tenendo selezionata questa nuova finestra/scheda, vedremo che, posizionando la mano davanti al dispositivo Leap Motion, le posizioni nello spazio vengono interpretate ed inviate al robot fisico che riprodurrà i movimenti della mano.
 ![leapspace](/assets/imgs/2018-01-17-ntbd/5_leapref.png)
 
 **Nota**: per aprire e chiudere la pinza, semplicemente aprite e chiudete la mano!
 
-[**<<Torna all'indice**](#indice)
-
-
-## Parte III: integrazione con altri manipolatori
+# Parte III: integrazione con altri manipolatori
 Per adattare l'archiettura NTBD ad un manipolatore diverso da EEZYBOT, è necessario ridefinire i componenti astratti dell'archiettura.  Inoltre assumiamo che la scheda utilizzata per il controllo dei motori sia una scheda Arduino.
-I componenti astratti sono implementati nell'Immagine Docker *ntbd_manipulator* e, come spiegato nel post ["Parte I: una panoramica"](), dipendono dal braccio robotico scelto e vanno quindi modificati conformemente alla struttura scelta.
+I componenti astratti sono implementati nell'Immagine Docker *ntbd_manipulator* e, come spiegato nella ["Parte I: una panoramica"](#parte-i-una-panoramica), dipendono dal braccio robotico scelto e vanno quindi modificati conformemente alla struttura scelta.
 
 **Note**:
 - Per poter fare il build delle Immagini Docker è necessario [installare Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions). In questo tutorial assumo che il lettore abbia delle conoscenze su come sviluppare applicazioni in Docker. Per consigli sulla fase development, leggere l'[appendice](#appendice-docker-prod-vs-docker-devel).
 
-### Indice
-1. [Modificare i componenti astratti di NTBD](#1-modificare-i-componenti-astratti-di-ntbd)
-2. [Fare il build della nuova immagine](#2-fare-il-build-della-nuova-immagine)
-3. [Avviare il nuovo contenitore](#3-avviare-il-nuovo-contenitore)
-4. [Appendice: Docker Prod vs Docker Devel](#appendice-docker-prod-vs-docker-devel)
-
-### 1. Modificare i componenti astratti di NTBD
+## 1. Modificare i componenti astratti di NTBD
 Sarà necessario scaricare il [progetto NTBD da github](https://github.com/HotBlackRobotics/ntbd) in modo tale da modificare i seguenti file prima di fare il build della nuova Immagine *ntbd_manipulator*:
 
 - [*joint_names_sibot_urdf.yaml*](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf/config/joint_names_sibot_urdf.yaml): in questo file sono definiti i nomi dei joint del braccio robotico, utili per lo scambio di messaggi ROS. Questa definizione è utile, per esempio, nel nodo [physical_2_visual](https://github.com/HotBlackRobotics/ntbd/blob/devel/NTBD_manipulator/NTBD_abstract_nodes/physical_2_visual), che deve quindi essere modificato di conseguenza.
@@ -289,17 +245,13 @@ Sarà necessario scaricare il [progetto NTBD da github](https://github.com/HotBl
 - il package ROS [*manipulator_urdf*](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/NTBD_abstract_nodes/manipulator_urdf), che contiene tutte le info necessarie per utilizzare la definizione URDF del robot, può essere prodotto automaticamente partendo dall'assembly del robot, utilizzando il tool [SolidWorks to URDF Exporter](http://wiki.ros.org/sw_urdf_exporter/Tutorials/Export%20an%20Assembly).
 - Nel caso si voglia modificare il nome di un file bisogna tener sempre conto del fatto che questo file potrebbe essere "chiamato" in qualche altro file e quindi quest'ultimo dovrebbe essere modificato di conseguenza. Il consiglio è quindi quello di *evitare di rinominare i file* affinchè non ci siano intoppi.
 
-[**<<Torna all'indice**](#indice)
-
-### 2. Fare il build della nuova immagine
+## 2. Fare il build della nuova immagine
 Una volta modificati i file necessari, è ora di "buildare" la nuova immagine. Entrare nella cartella [NTBD_manipulator](https://github.com/HotBlackRobotics/ntbd/tree/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator) in cui è contenuto il file [Dockerfile.intel](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/Dockerfile.intel) ed eseguire il seguente comando.
 ```
 docker build -t ntbd/manipulator:intel .
 ```
 
-[**<<Torna all'indice**](#indice)
-
-### 3. Avviare il nuovo contenitore
+## 3. Avviare il nuovo contenitore
 Dopo aver collegato tutti i dispositivi esterni, basterà quindi avviare il contenitore eseguendo:
 ```
 docker-compose -f docker-compose.intel.yml up
@@ -308,9 +260,7 @@ che sfrutta il tool [Docker Compose](https://docs.docker.com/compose/overview/) 
 
 L'integrazione di un nuovo braccio finisce qua, per informazioni a proposito dell'utilizzo delle WebApp implementate, vedi il [Post Parte II: un tutorial]().
 
-[**<<Torna all'indice**](#indice)
-
-### Appendice: Docker prod vs Docker devel
+## Appendice: Docker prod vs Docker devel
 Quando si lavora con Docker conviene, per motivi di organizzazione e ordine, usare un'Immagine per lo sviluppo (Development Image) ed una per la produzione (Production Image). Quest'ultima è la versione finale dell'applicazioe Docker, pronta per la distribuzione, mentre la prima è usata durante lo sviluppo dell'applicazione. Viene "buildata" un'immagine comune sulla quale si vanno a sviluppare la versione Prod e la versione Dev e, con qualche accorgimento, si può sfruttare al meglio il sistema di caching per la fase di *build* dell'immagine. Infatti, se i file modificati sono ancora in fase di debug, ad ogni build i layer, anche se già buildati in precedenza, vengono ri-buildati.
 
 ![docker](/assets/imgs/2018-01-17-ntbd/4_dockerdev.png)
@@ -367,4 +317,3 @@ roslaunch ntbd_core NTBD_launch.launch
 
 exec "$@"
 ```
-[**<<Torna all'indice**](#indice)

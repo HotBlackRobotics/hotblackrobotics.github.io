@@ -3,68 +3,50 @@ title: "Sending a sequence of Goals to ROS NavStack with Python"
 layout: post
 date: 2018-01-29
 image: /assets/imgs/2018-01-29-goal/cover_seq.png
-headerImage: true
-lang: en
-otherlanglink: /2018/01/29/seq-goals-py-ita/
 tag:
  - ROS
- - actionclient
- - action client
- - navigation stack
- - actionlib
- - python ROS
- - rospy
- - actionserver
-
+ - navigation
+ - python
 author: fiorellazza
 description: "Sending a sequence of desired poses to the ROS navigation stack using a Python node"
 ---
 ![cover](/assets/imgs/2018-01-29-goal/coverpost.png)
 
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-29-seq-goals-py-ita %})
-
 Hi everyone!
 
-If you have read my post, ["Sending Goals to the Navigation Stack - Python ROS node version"]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py %}) you should now be able to send a single goal to you mobile base using a python node. What about sending a sequence of desired poses? In this post I will provide an example code for sending several desired poses (cartesian positions + orientations expressed with quaternions) to the [ROS Navigation Stack](http://wiki.ros.org/navigation). This tutorial is developed choosing the TurtleBot 3 simulated robot as a mobile base, but the Python node is valid for any chosen robot. I will first give some overview about the chosen solution then the code will be explained.
+If you have read my post, ["Sending Goals to the Navigation Stack - Python ROS node version"]() you should now be able to send a single goal to you mobile base using a python node. What about sending a sequence of desired poses? In this post I will provide an example code for sending several desired poses (cartesian positions + orientations expressed with quaternions) to the [ROS Navigation Stack](http://wiki.ros.org/navigation). This tutorial is developed choosing the TurtleBot 3 simulated robot as a mobile base, but the Python node is valid for any chosen robot. I will first give some overview about the chosen solution then the code will be explained.
 
-**Remark**: I am using ROS Kinetic. I will assume that the reader has knowledge about ROS [Packages](http://wiki.ros.org/Packages), [Nodes](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messages](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) and [ROS Parameters](http://wiki.ros.org/Parameter%20Server). Reading the above cited [post]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py %}) and related ROS documentation is suggested.
+**Remark**: I am using ROS Kinetic. I will assume that the reader has knowledge about ROS [Packages](http://wiki.ros.org/Packages), [Nodes](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messages](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) and [ROS Parameters](http://wiki.ros.org/Parameter%20Server). Reading the above cited [post]() and related ROS documentation is suggested.
 
-#### Index:
-1. [Github project and turtlebot3 package download](#1-github-project-and-turtlebot3-package-download)
-2. [Goals as ROS parameters](#2-goals-as-ros-parameters)
-3. [Launch files](#3-launch-files)
-4. [Python Node - Code](#4-python-node---code)
-5. [Python Node - Code and comments](#5-python-node---code-and-comments)
-6. [Setup and simulation](#6-setup-and-simulation)<br>
-    6.1. [Setting the model for your turtlebot](#61-setting-the-model-for-your-turtlebot)<br>
-    6.2. [Launching Gazebo and Rviz](#62-launching-gazebo-and-rviz)<br>
-    6.3. [Set the current pose of turtlebot](#63-set-the-current-pose-of-turtlebot)<br>
-    6.4. [Launching the movebase_seq node and load parameters](#64-launching-the-movebase_seq-node-and-load-parameters)
+### Index:
+* TOC
+{:toc}
 
-## 1. Github project and turtlebot3 package download
+# 1. Github project and turtlebot3 package download
  In order to work with my example, clone the github project, which you can find [here](https://github.com/FiorellaSibona/turtlebot3_nav), in your preferred location.
 
  Moreover the ROS turtlebot3 package is needed to run the simulation. For ROS kinetic:
 
- ```
+```bash
  sudo apt-get install ros-kinetic-turtlebot3-*
- ```
+```
 
-[**<<Back to Index**](#index)
-## 2. Goals as ROS parameters
+# 2. Goals as ROS parameters
 The idea is to save as ROS parameters the sequence of desired poses we want the Action Server to process and execute on our mobile robot. Once these data are saved on the ROS Parameter Server, they can be easily accessed and successively stuffed in pre-determined Goal ROS messages through the Python node, in order to be correctly interpreted and executed by the Action Server.
 
 Saving the goals as parameters, lets the user to just edit the launch file, in which parameters are set, without any change to the node code.
 
-[**<<Back to Index**](#index)
-## 3. Launch files
+# 3. Launch files
 The [**movebase_seq.launch**](https://github.com/FiorellaSibona/turtlebot3_nav/blob/devel/catkin_ws/src/simple_navigation_goals/launch/movebase_seq.launch) launch file is very simple and, as anticipated, has the role of setting the desired position and orientation for the mobile base to assume. As you can see, the node, contained in the package called "simple_navigation_goals" and with file name specified in the *type* argument, is launched with some [*private ROS parameters*](http://wiki.ros.org/Parameter%20Server#Private_Parameters) specified within the [<*rosparam*> tag](http://wiki.ros.org/rosparam). Note that private parameters will have to be referenced as *node_name/param_name*.
 
 First the desired sequence of point in the Cartesian coordinate frame is defined. The *p_seq* list, e.g. having *n* points, must be interpreted as follows:
+
 ```
 p_seq = [x1,y1,z1,x2,y2,z2,...xn,yn,zn] 
 ```
+
 Afterwards the sequence of desired yaw angles, expressed in degrees, must be specified. Indeed, being the motion of a mobile robot on the xy plane, we can have a orientation variation only around the map Reference Frame z-axis. Of course our robot cannot rotate going inside the floor!
+
 <p align="center"> 
     <image src="/assets/imgs/2018-01-29-goal/rpy.png" /> 
 </p>
@@ -75,12 +57,12 @@ The [**gazebo_navigation_rviz.launch**](https://github.com/FiorellaSibona/turtle
 
 The launch folder contains also a copy of some files we would launch as they are from the turtlebot3 package, but I needed to make some editing for specifying my map and my rviz configuration (files contained in the [/config](https://github.com/FiorellaSibona/turtlebot3_nav/tree/devel/catkin_ws/src/simple_navigation_goals/config) folder), to provide you with a working and already set-up example.
 
-[**<<Back to Index**](#index)
-## 4. Python Node - Code
+# 4. Python Node - Code
 I've used [this code](https://github.com/pirobot/ros-by-example/blob/master/rbx_vol_1/rbx1_nav/nodes/move_base_square.py) as reference.
 
 Here is the whole node code without comments. For comments see [Section 5](#5-python-node---code-and-comments).
-```
+
+```python
 #!/usr/bin/env python
 # license removed for brevity
 __author__ = 'fiorellasibona'
@@ -178,10 +160,10 @@ if __name__ == '__main__':
 
 ```
 
-[**<<Back to Index**](#index)
-## 5. Python Node - Code and comments
+# 5. Python Node - Code and comments
 Here is the whole node code with comments. The whole node code without comments is provided in [Section 4](#4-python-node---code).
-```
+
+```python
 #!/usr/bin/env python
 # license removed for brevity
 __author__ = 'fiorellasibona'
@@ -295,30 +277,30 @@ if __name__ == '__main__':
 
 - Note that the Python node has been defined as a class in order to simplify code in future usage.
 
-[**<<Back to Index**](#index)
-## 6. Setup and simulation
+# 6. Setup and simulation
 Now that you have understood everything about my solution (I hope so!), you just have to launch files and you will see the turtlebot moving to the desired poses!
-### 6.1. Setting the model for your turtlebot
+## 6.1. Setting the model for your turtlebot
 To avoid having the model error at each turtlebot3 package node launch, I suggest you to run the following command:
-```
+
+```bash
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc 
 ```
 
-[**<<Back to Index**](#index)
-### 6.2. Launching Gazebo and Rviz
+## 6.2. Launching Gazebo and Rviz
 Always remember to run the setup files for ROS and catkin. 
 Then run:
-```
+
+```bash
 roslaunch simple_navigation_goals gazebo_navigation_rviz.launch
 ```
+
 The [gazebo_navigation_rviz.launch](https://github.com/FiorellaSibona/turtlebot3_nav/blob/devel/catkin_ws/src/simple_navigation_goals/launch/gazebo_navigation_rviz.launch) launch file brings up the Gazebo and Rviz environments together with the navigation nodes.
 <p align="center"> 
     <image src="/assets/imgs/2018-01-29-goal/6.2.0.png"  height="250"/>
     <image src="/assets/imgs/2018-01-29-goal/6.2.1.png"  height="250" /> 
 </p>
 
-[**<<Back to Index**](#index)
-### 6.3. Set the current pose of turtlebot
+## 6.3. Set the current pose of turtlebot
 In order to perform all the needed steps for navigating to the goal pose, the turtlebot needs to know (at least more or less) where it is in the map. To do so, in Rviz, press on the **2D Pose Estimate** button, click in the approximate position where the turtlebot is visulized in the Gazebo view and, before releasing the click, set also its orientation.
 <p align="center"> 
     <image src="/assets/imgs/2018-01-29-goal/6.3.2.png"  height="30"/>
@@ -332,10 +314,10 @@ In order to perform all the needed steps for navigating to the goal pose, the tu
     <image src="/assets/imgs/2018-01-29-goal/6.3.1.png"  height="250"/> 
 </p>
 
-[**<<Back to Index**](#index)
-### 6.4. Launching the movebase_seq node and load parameters
+## 6.4. Launching the movebase_seq node and load parameters
 In a new terminal run the following command:
-```
+
+```bash
 roslaunch simple_navigation_goals movebase_seq.launch
 ```
 
@@ -349,8 +331,6 @@ The *green* path is the global planner path while the *blue* one is the path of 
 
 On the terminal you should receive some information about how the current goal execution is proceeding.
 
-[**<<Back to Index**](#index)
-
 You should now have a working example of sending a sequence of poses to the navigation stack on the robot.
 
-## See ya! :hibiscus:
+**See ya!** :hibiscus:

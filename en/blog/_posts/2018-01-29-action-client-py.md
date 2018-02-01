@@ -3,24 +3,13 @@ title: "Sending Goals to the Navigation Stack - Python ROS node version"
 layout: post
 date: 2018-01-29
 image: /assets/imgs/2018-01-29-goal/cover.png
-headerImage: true
-lang: en
-otherlanglink: /2018/01/29/action-client-py-ita/
 tag:
  - ROS
- - actionclient
- - action client
- - navigation stack
- - actionlib
- - python ROS
- - rospy
- - actionserver
-
+ - navigation
+ - Python
 author: fiorellazza
 description: "Sending a goal to the ROS navigation stack using a Python node"
 ---
-[> Passa all versione Italiana]({{ site.baseurl }}{% post_url /blog/2018-01-29-action-client-py-ita %})
-
 Hi there!
 
 This post aim is to provide you with an example Python code for sending a goal pose (desired position and orientation) to a robot, in my case a simulated [TurtleBot3](http://wiki.ros.org/Robots/TurtleBot), exploiting the [ROS Navigation Stack](http://wiki.ros.org/navigation). 
@@ -29,29 +18,26 @@ Using code, the user can send to the navigation stack a desired pose for the rob
 
 **Remark**: I am using ROS Kinetic. I will assume that the reader has knowledge about ROS [Packages](http://wiki.ros.org/Packages), [Nodes](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messages](http://wiki.ros.org/msg) and [Actions](http://wiki.ros.org/actionlib#Overview). Some information about the latter will be provided during libraries description.
 
-#### Index:
-1. [The actionlib Library](#1-the-actionlib-library)
-2. [The MoveBase node](#2-the-movebase-node)
-3. [Creating the Node - Code](#3-creating-the-node---code)
-4. [Creating the Node - Code and comments](#4-creating-the-node---code-and-comments)
+### Index:
+* TOC
+{:toc}
 
-## 1. The ***actionlib*** Library
+# 1. The ***actionlib*** Library
 The ROS navigation stack is based on ROS Actions: indeed Actions are the best choice for cases when a node wants to send a request to another node and will receive a response after a relatively long time. To avoid leaving the user wondering what's happening and if all is going as desired, Actions implement a *feedback* mechanism, which let the user receive information every now and then. Actions are Client-Server-based: the [**actionlib** library](http://wiki.ros.org/actionlib#Client-Server_Interaction) provides the tools and interface to set up an Action Server to execute the requested goals sent by the Client. The main elements of an action mechanisms are: *goal*, *result*, and *feedback*. Each one of them is specified by a ROS Message type, contained in an action definition file, with "*.action*" extension.
 
 For further details see the [actionlib detailed description](http://wiki.ros.org/actionlib/DetailedDescription).
 
-[**<<Back to Index**](#index)
-## 2. The ***MoveBase*** node 
+# 2. The ***MoveBase*** node 
 The [move_base ROS Node](http://wiki.ros.org/move_base), is a major component of the navigation stack which allows to configure, run and interact with the latter. The move_base node implements a SimpleActionServer, an action server with a single goal policy, taking in goals of [*geometry_msgs/PoseStamped*](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html) message type. To communicate with this node, the SimpleActionClient interface is used. The move_base node tries to achieve a desired pose by combining a global and a local motion planners to accomplish a navigation task which includes obstacle avoidance. 
+
 <p align="center"> 
     <image src="/assets/imgs/2018-01-29-goal/movebase.png" /> 
 </p>
 <br>
-[**<<Back to Index**](#index)
-## 3. Creating the Node - Code
+# 3. Creating the Node - Code
 Here is the whole node code without comments. For comments see [Section 4](#4-creating-the-node---code-and-comments).
 
-```
+```python
 #!/usr/bin/env python
 # license removed for brevity
 
@@ -88,11 +74,10 @@ if __name__ == '__main__':
         rospy.loginfo("Navigation test finished.")
 ```
 
-[**<<Back to Index**](#index)
-## 4. Creating the Node - Code and comments
+# 4. Creating the Node - Code and comments
 Here is the whole node code with comments. The whole node code without comments is provided in [Section 3](#3-creating-the-node---code).
 
-```
+```python
 #!/usr/bin/env python
 # license removed for brevity
 
@@ -144,8 +129,6 @@ if __name__ == '__main__':
         rospy.loginfo("Navigation test finished.")
 ```
 
-[**<<Back to Index**](#index)
+We are done! This is a simple Python node to send a pose goal to the navigation stack to move a mobile base. As you can see, for sake of simplicity, being this a basic tutorial, the feedback mechanisms which characterize Actions are not exploited and the result is not a clear indication of the goal actual status. In order to get a further more complete example, I suggest you to read my post ["Sending a sequence of Goals to ROS NavStack with Python"]().
 
-We are done! This is a simple Python node to send a pose goal to the navigation stack to move a mobile base. As you can see, for sake of simplicity, being this a basic tutorial, the feedback mechanisms which characterize Actions are not exploited and the result is not a clear indication of the goal actual status. In order to get a further more complete example, I suggest you to read my post ["Sending a sequence of Goals to ROS NavStack with Python"]({{ site.baseurl }}{% post_url /blog/2018-01-29-seq-goals-py %}).
-
-## Thanks for the attention, See ya! :hibiscus:
+**Thanks for the attention, See ya!** :hibiscus:
