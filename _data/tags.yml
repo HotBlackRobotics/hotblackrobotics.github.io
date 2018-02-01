@@ -10,7 +10,5 @@
   img: /assets/images/tags/flask.png
 - name: Telegram
   img: /assets/images/tags/telegram.png
-- name: fabacademy
-  img: /assets/images/tags/fabacademy.png
-- name: jekyll
-  img: /assets/images/tags/jekyll.png
+- name: Docker
+  img: /assets/images/tags/docker.png

@@ -1,34 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
-  <div class="container info">
-    <div class="title-image container-fluid">
-      <div class="row align-items-center">
-        <div class="">
-            <img class="rounded-circle" src="/assets/hbr_logo.png" alt="{{site.title}}">
-        </div>
-        <div class="">
-          <h1>{{site.title}}</h1>
-          <h2>{{site.bio}}</h2>
-        </div>
-      </div>
-    </div>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000">
+  <a class="navbar-brand" href="/{{page.lang | 'it'}}/"><strong>HotBlack</strong> Robotics</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <ul class="container navbar-nav mr-auto">
-      <li class="nav-item {% if page.title == 'Home' %} active {% endif %}">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item {% if page.title == 'Blog' %} active {% endif %}">
-        <a class="nav-link" href="/blog/">Blog</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/{{page.lang}}/blog">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {% if page.title == 'Progetti' %} active {% endif %}" href="/progetti/">Progetti</a>
+        <a class="nav-link" href="/it/inizia">Sei Nuovo? Inizia da qui</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav  justify-content-end">
+      <li class="nav-item">
+        {% if page.lang == 'en' %}
+          <a class="nav-link" href="{% if page.otherlanglink %}{{page.otherlanglink}}{% else %}/it/{% endif %}">Italiano</a>
+        {% else %}
+          <a class="nav-link" href="{% if page.otherlanglink %}{{page.otherlanglink}}{% else %}/en/{% endif %}">English</a>
+        {% endif %}
       </li>
       <li class="nav-item">
-        <a class="nav-link {% if page.title == 'About' %} active {% endif %}" href="/about/">About</a>
+        <a class="nav-link" href="http://cloud.hotblackrobotics.com/cloud/index">Accedi</a>
       </li>
     </ul>
   </div>

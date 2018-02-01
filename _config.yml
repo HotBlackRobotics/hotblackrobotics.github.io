@@ -1,6 +1,6 @@
 # main text of home
 name: "HotBlack Robotics"
-bio: "HotBlack Robotics è una startup che lavora nel mondo della Cloud Robotics"
+bio: "Powering the Cloud Robotics"
 description: "HotBlack Robotics powering the Cloud Robotics"
 
 # if it's an external image, update below for true
@@ -16,9 +16,9 @@ picture: assets/images/profile.jpg
 
 title: HotBlack Robotics
 
-lang: it_IT
+lang: it
 
-url: https://hotblackrobotics.github.io
+url: http://www.hotblackrobotics.com
 
 permalink: /:year/:month/:day/:title/
 
@@ -30,9 +30,9 @@ analytics-google: 'UA-109606520-1'
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-# disqus:
-shortname: hotblackrobotics-com # enter this from your disqus account
-categories: [blog, robodev] # only show disqus for posts that have these categories
+disqus:
+  shortname: hotblackrobotics-com # enter this from your disqus account
+  categories: [blog, robodev] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 facebook: hotblackrobotics
@@ -53,6 +53,8 @@ github: robotrokers
 # lanyrd: mylanyrd
 email: info@hotblackrobotics.com
 
+mailchimp: https://hotblackrobotics.us14.list-manage.com/subscribe/post?u=15b48561735f3f13dffd7eeff&amp;id=f19b3177d4
+
 authors:
     ludusrusso:
         name: Ludus Russo
@@ -67,6 +69,12 @@ authors:
         external-image: false
         picture: assets/images/sgabello.jpg
         twitter: sGErmacora
+    fiorellazza:
+        name: Fiorella Sibona
+        bio: Roboticist Wannabe
+        external-image: false
+        picture: assets/images/fiorella.jpg
+        twitter: fiorellasibona
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -102,12 +110,15 @@ show-author: true
 # do you want some animations?
 animation: true
 
+collections:
+  - it_posts
+  - en_posts
+
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-redirect-from
-
-jekyll-mentions:
-    base_url: https://github.com
+  - jekyll-sitemap
