@@ -26,7 +26,7 @@ Un’applicazione ROS è una rete di processi che scambiano dati in una rete di 
 * Messaggio: struttura dati con cui usata per lo scambio di informazioni. Un messaggio può essere di diversi formati sia standard che custom. Ad esempio un messaggio che contiene un semplice intero sarà fatto così { int32 x }
 * Topic: canale all’interno del quale due o più nodi si scambiano messaggi. Immaginate un topic come un canale di comunicazione dove i messaggi vengono trasmessi. Ogni topic usa il carattere *slash* prima del nome del topic (/nome_del_topic) ad esempio /chatter il topic dove due nodi si scambiano un semplice messaggio {String s}. La caratteristica importante e la potenzialità dei topic è che qualunque nodo può ascoltare (subscribe) o inviare messaggi (publish) sullo stesso topic in modo asincrono.
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/ROScomm.png)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/ROScomm.png)
 
 Nell'immagine sopra un esempio di comunicazione tra nodi attraverso i diversi topic. I nodi sono le figure ovali e i topic le frecce.
 Rivediamo ora meglio i vari attori in piattaforma!
@@ -34,11 +34,11 @@ Rivediamo ora meglio i vari attori in piattaforma!
 ## Effettuate l'accesso alla piattaforma
 Andate sul sito di Hotblack Robotics (http://www.hotblackrobotics.com/) ed entrate nella piataforma http://www.hotblackrobotics.com/login?next=%2Fcloud%2F . Inserite le vostre credenziali e siete in cloud!
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudplatform.PNG)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudplatform.PNG)
 
 La parte relativa la spiegazione di ROS la trovate nel menù in alto a sinistra sotto la voce "ROS".
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/Entratiincloud.PNG)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/Entratiincloud.PNG)
 
 ## Nodi ##
 Un nodo è un processo (un programma in esecuzione) all’interno della rete ROS che esegue calcoli.
@@ -50,7 +50,7 @@ Un nodo è un processo (un programma in esecuzione) all’interno della rete ROS
 
 In piattaforma trovate sempre sotto la voce "ROS" (http://www.hotblackrobotics.com/cloud/webgui/console) sotto la voce "Nodes List" la lista dei nodi attivi.
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/nodi.PNG )
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/nodi.PNG )
 
 ## Topic ##
 I topic sono i canali attraverso i quali i nodi comunicano nella rete.
@@ -60,7 +60,7 @@ I topic sono i canali attraverso i quali i nodi comunicano nella rete.
 
 Sotto alla sezione "Nodes List" trovate la lista dei topic ("Topics List").
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/topics.PNG)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/topics.PNG)
 
 ## I messaggi ##
 I messaggi sono i tipi di dati che vengono inviati attraverso il topic

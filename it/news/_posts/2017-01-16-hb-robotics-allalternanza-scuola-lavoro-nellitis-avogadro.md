@@ -20,7 +20,7 @@ Questa mattina io e Gabriele abbiamo iniziato i lavori presso l'ITIS Avogadro di
 
 Il progetto ci vedrà impegnati da qui fino alla fine di Maggio, e permetterà agli studenti di avvicinarsi alle tecnologie cardine della quarta rivoluzione industriale.
 
-##Programma
+## Programma
 
 Cosa andranno a fare i ragazzi? Il programma prevede lezioni e laboratori per far avvicinare gli studenti a queste tecnologie, ed è articolato come segue:
 
@@ -31,7 +31,7 @@ Cosa andranno a fare i ragazzi? Il programma prevede lezioni e laboratori per fa
 
 Alla fine del percorso, gli studenti saranno in grado di programmare un DotBot dotato di Raspberry PI controllato dal sistema operativo **HBrain**, connesso in piattaforma robotica e controllabile da remoto!
 
-##Anche noi impariamo!
+## Anche noi impariamo!
 
 Questo progetto non è solo utile agli studenti, ma io e Gabriele lo consideriamo un ottimo campo di prova per risolvere bug e trovare nuove idee di sviluppo per migliorare sempre di più la nostra piattaforma!
 

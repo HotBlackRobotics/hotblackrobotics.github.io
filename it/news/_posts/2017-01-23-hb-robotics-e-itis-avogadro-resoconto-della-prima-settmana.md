@@ -22,30 +22,30 @@ Come sapete, settimana scorsa abbiamo iniziato un progetto con l'istituto ITIS A
 
 Due giorni fa, abbiamo concluso la prima settimana di lavoro con i ragazzi, ed in particolare abbiamo concluso la prima parte del corso che prevedeva la costruzione e il test dei 21 robot **DotBot-ROS** che abbiamo fornito alla scuola. Dopo una domenica di riposo (ci voleva) sono pronto a raccontarvi come sono andati questi giorni.
 
-##Costruzione del Robot
+## Costruzione del Robot
 
 La costruzione del robot è stata certamente la fase che ha più di tutte impegnato i ragazzi in questi giorni. I gruppo di lavoro (composti da 3/4 studenti ciascuono) hanno impiegato circa 4 ore per completare la struttura meccanica del robot. Abbiamo verificato che alcuni passaggi del montaggio possono essere semplificati non poco con alcuni accorgimenti nella meccanica del robot, che andremo ad implementare nei prossimi mesi.
 Aspettatevi quindi una versione 2.0 di DotBot!
 
 ![Costruzione Robot](http://res.cloudinary.com/hbr/image/upload/v1485174212/collage-2017-01-23_xpguwt.png)
 
-##Inizializzazione del Robot
+## Inizializzazione del Robot
 
 L'inizializzazione del robot è stata sicuramente la parte meno interessante del percorso fatto fino ad adesso. Ci ha però permesso di venire a capo di alcuni problemi non previsti del nostro progetto.
 
-###Copia della SD
+### Copia della SD
 Fortunatamente, dopo un piccolo intoppo che siamo riusciti a risolvere in fretta, la procedura di copia dell'immagine SD sulle SD reali è andata a buon fine su tutti i robot.
 
-###Dare un nome ai Robot
+### Dare un nome ai Robot
 Il dare un nome al robot è stata certamente la parte più divertente di tutto. Per distinguere i 21 robot connessi alla stessa rete, abbiamo deciso di dare la possibilità ai ragazzi di dare un nome ai robot per poterli univocamente distinguere tra loro. Il problema è che di default, i robot hanno tutti lo stesso nome `hotbot`. In fase di configurazione, quindi, è successo un bel po' di volte che i ragazzi si sono messi a lavorare su robot di un altro gruppo senza rendersene subito conto. I risultati sono stati molto divertente, ovviamente al momento stiamo indagando sul modo migliore per riconoscere i robot appena configurati! :D
 
-##Programmazione dei robot
+## Programmazione dei robot
 
 La programmazione in ROS è iniziata subito dopo la fase di configurazione. Per il momento, non abbiamo avuto troppo tempo per far lavorare i ragazzi (il tempo rimasto era molto poco), ma ho trovato il tempo per dargli un'infarinatura generale di ROS e della piattaforma.
 
 I ragazzi erano super interessati, e di questo sono molto contento. Temevo tantissimo che trovassero il tutto troppo complicato per padroneggiarlo nel poco tempo disponibile, però in poco più di mezzora ogni gruppo già smanettava per programmare i robot in modo da accendere led e leggere i valori di pulsanti.
 
-##OpenDay: un evento inaspettato
+## OpenDay: un evento inaspettato
 
 Durante la giornata di sabato, si è svolto l'OpenDay della scuola. Questo evento serve per aprire le porte a potenziali studenti, per far capire ai nuovi studenti se la scuola fa per loro. La classe con cui lavoriamo è stata coinvolta attivamente in questo evento. Durante la lezione, quindi, molti ragazzi erano preoccupati per la presentazione dei progetti che sarebbe avvenuta nel pomeriggio.
 In accordo con loro, quindi, abbiamo deciso di lasciarli un po' più liberi nell'ultimazione dei loro progetti.
