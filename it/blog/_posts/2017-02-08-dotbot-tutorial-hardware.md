@@ -9,15 +9,9 @@ tag:
  - Tutorial
  - Meccanica
 category: blog
-<<<<<<< HEAD
 redirect_from: 
  - /2017/02/08/dotbot-tutorial-hardware/
  - /blog/posts/2017-02-08-dotbot-tutorial-hardware
-=======
-redirect_from:
- - /blog/posts/2017-02-08-dotbot-tutorial-hardware
- - /2017/02/08/dotbot-tutorial-hardware/
->>>>>>> 11aa8f1d0342da4ab760c5e951037ebca9b9ac3a
 author: sgabello
 description: ""
 ---
