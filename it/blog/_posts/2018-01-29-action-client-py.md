@@ -1,5 +1,7 @@
 ---
 title: "Inviare Goals alla Navigation Stack - versione nodo ROS Python"
+redirect_from:
+ - /2018/01/29/action-client-py-ita/
 layout: post
 date: 2018-01-29
 image: /assets/imgs/2018-01-29-goal/cover.png
@@ -127,6 +129,6 @@ if __name__ == '__main__':
         rospy.loginfo("Navigation test finished.")
 ```
 
-Abbiamo finito! Questo è un semplice esempio di nodo Python per inviare una posa desideata alla navigation stack per muovere un robot mobile. Come potete notare, per motivi di semplicità, essendo questo un tutorial base, non vengono sfruttati i meccanismi di feedback propri delle Actions ed il risultato non è indicativo del reale status del goal. Per avere un esempio più completo, vi consiglio la lettura del post ["Inviare una sequenza di Goals alla ROS NavStack usando Python"]().
+Abbiamo finito! Questo è un semplice esempio di nodo Python per inviare una posa desideata alla navigation stack per muovere un robot mobile. Come potete notare, per motivi di semplicità, essendo questo un tutorial base, non vengono sfruttati i meccanismi di feedback propri delle Actions ed il risultato non è indicativo del reale status del goal. Per avere un esempio più completo, vi consiglio la lettura del post ["Inviare una sequenza di Goals alla ROS NavStack usando Python"]({{ site.baseurl }}{% post_url /it/blog/2018-01-29-seq-goals-py %}).
 
 **Grazie per l'attenzione e a presto!** :hibiscus:

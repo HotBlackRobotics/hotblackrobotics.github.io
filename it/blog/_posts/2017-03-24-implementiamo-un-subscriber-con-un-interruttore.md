@@ -8,7 +8,9 @@ lang: it
 tag:
  - Tutorial
 
-redirect_from: /blog/posts/2017-03-24-implementiamo-un-subscriber-con-un-interruttore
+redirect_from: 
+ - /2017/03/24/implementiamo-un-subscriber-con-un-interruttore/
+ - /blog/posts/2017-03-24-implementiamo-un-subscriber-con-un-interruttore
 author: sgabello
 description: ""
 ---

@@ -9,7 +9,9 @@ tag:
  - Tutorial
  - Dotbot
 
-redirect_from: /blog/posts/2017-03-24-configurare-il-robot-dotbot
+redirect_from: 
+ - /2017/03/24/configurare-il-robot-dotbot/
+ - /blog/posts/2017-03-24-configurare-il-robot-dotbot
 author: sgabello
 description: ""
 ---

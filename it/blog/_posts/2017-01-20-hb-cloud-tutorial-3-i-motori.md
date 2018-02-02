@@ -12,7 +12,9 @@ tag:
  - Gpiozero
  - Hbr
 category: blog
-redirect_from: /blog/posts/2017-01-20-hb-cloud-tutorial-3-i-motori
+redirect_from: 
+ - /2017/01/20/hb-cloud-tutorial-3-i-motori/
+ - /blog/posts/2017-01-20-hb-cloud-tutorial-3-i-motori
 author: ludusrusso
 description: "I Motori sono una delle parti essenziali dei robot. In questo tutorial, vederemo come è possibile in modo semplice ed intuitivo implementare un programma in Python che controlla i motori in base a comandi inviati via Wifi al Robot."
 ---

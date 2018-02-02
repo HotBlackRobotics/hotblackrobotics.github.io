@@ -9,7 +9,9 @@ tag:
  - Intelligenza
  - Artificiale
 
-redirect_from: /blog/posts/2017-06-16-implementare-un-motore-dintelligenza-artificale-sul-vostro-bot
+redirect_from: 
+ - /2017/06/16/implementare-un-motore-dintelligenza-artificale-sul-vostro-bot/
+ - /blog/posts/2017-06-16-implementare-un-motore-dintelligenza-artificale-sul-vostro-bot
 author: Ruslan
 description: ""
 ---

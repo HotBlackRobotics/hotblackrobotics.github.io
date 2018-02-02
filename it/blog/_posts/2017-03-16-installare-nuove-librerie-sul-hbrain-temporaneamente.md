@@ -10,7 +10,9 @@ tag:
  - Raspberry
  - Hbrain
 
-redirect_from: /blog/posts/2017-03-16-installare-nuove-librerie-sul-hbrain-temporaneamente
+redirect_from: 
+ - /2017/03/16/installare-nuove-librerie-sul-hbrain-temporaneamente/
+ - /blog/posts/2017-03-16-installare-nuove-librerie-sul-hbrain-temporaneamente
 author: ludusrusso
 description: ""
 ---

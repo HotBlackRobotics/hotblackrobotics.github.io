@@ -7,7 +7,9 @@ headerImage: false
 lang: it
 tag:
 
-redirect_from: /blog/posts/2017-04-13-hackeriamo-oggetti-per-costruire-un-robot-completo
+redirect_from: 
+ - /2017/04/13/hackeriamo-oggetti-per-costruire-un-robot-completo/
+ - /blog/posts/2017-04-13-hackeriamo-oggetti-per-costruire-un-robot-completo
 author: ludusrusso
 description: ""
 ---

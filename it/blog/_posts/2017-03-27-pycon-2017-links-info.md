@@ -7,7 +7,9 @@ headerImage: false
 lang: it
 tag:
 
-redirect_from: /blog/posts/2017-03-27-pycon-2017-links-info
+redirect_from: 
+ - /2017/03/27/pycon-2017-links-info/
+ - /blog/posts/2017-03-27-pycon-2017-links-info
 author: sgabello
 description: ""
 ---

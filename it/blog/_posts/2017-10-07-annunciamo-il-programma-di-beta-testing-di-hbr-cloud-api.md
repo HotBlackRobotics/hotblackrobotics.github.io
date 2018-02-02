@@ -9,7 +9,9 @@ tag:
  - Hbr
  - Cloud
 
-redirect_from: /blog/posts/2017-10-07-annunciamo-il-programma-di-beta-testing-di-hbr-cloud-api
+redirect_from: 
+ - /2017/10/07/annunciamo-il-programma-di-beta-testing-di-hbr-cloud-api/
+ - /blog/posts/2017-10-07-annunciamo-il-programma-di-beta-testing-di-hbr-cloud-api
 author: ludusrusso
 lang: it
 description: ""

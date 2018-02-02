@@ -1,5 +1,7 @@
 ---
 title: "Docker, this stranger!"
+redirect_from:
+ - /2018/01/18/docker-this-stranger/
 layout: post
 date: 2018-01-18
 image: https://logz.io/wp-content/uploads/2016/01/docker-facebook.png

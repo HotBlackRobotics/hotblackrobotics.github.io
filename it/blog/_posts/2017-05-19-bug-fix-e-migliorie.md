@@ -7,7 +7,9 @@ headerImage: false
 lang: it
 tag:
 
-redirect_from: /blog/posts/2017-05-19-bug-fix-e-migliorie
+redirect_from: 
+ - /2017/05/19/bug-fix-e-migliorie/
+ - /blog/posts/2017-05-19-bug-fix-e-migliorie
 author: ludusrusso
 description: ""
 ---

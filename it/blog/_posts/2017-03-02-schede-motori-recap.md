@@ -6,7 +6,9 @@ image:
 headerImage: false
 tag:
 
-redirect_from: /blog/posts/2017-03-02-schede-motori-recap
+redirect_from: 
+ - /2017/03/02/schede-motori-recap/
+ - /blog/posts/2017-03-02-schede-motori-recap
 author: sgabello
 lang: it
 description: ""

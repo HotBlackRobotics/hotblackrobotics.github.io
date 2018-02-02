@@ -12,7 +12,9 @@ tag:
  - Gpiozero
  - Python
 category: blog
-redirect_from: /blog/posts/2017-01-17-hb-cloud-tutorial-1-uso-dei-led
+redirect_from: 
+ - /2017/01/17/hb-cloud-tutorial-1-uso-dei-led/
+ - /blog/posts/2017-01-17-hb-cloud-tutorial-1-uso-dei-led
 author: ludusrusso
 description: "Iniziamo ad utilizzare la piattaforma di Cloud Robotics"
 ---

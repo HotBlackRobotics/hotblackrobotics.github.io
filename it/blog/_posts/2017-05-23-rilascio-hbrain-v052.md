@@ -9,7 +9,9 @@ tag:
  - Updates
  - Hbrain
 
-redirect_from: /blog/posts/2017-05-23-rilascio-hbrain-v052
+redirect_from: 
+ - /2017/05/23/rilascio-hbrain-v052/
+ - /blog/posts/2017-05-23-rilascio-hbrain-v052
 author: ludusrusso
 description: ""
 ---

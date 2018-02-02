@@ -11,7 +11,9 @@ tag:
  - Avogadro
  - Hbr
 
-redirect_from: /blog/posts/2017-01-23-hb-robotics-e-itis-avogadro-resoconto-della-prima-settmana
+redirect_from: 
+ - /2017/01/23/hb-robotics-e-itis-avogadro-resoconto-della-prima-settmana/
+ - /blog/posts/2017-01-23-hb-robotics-e-itis-avogadro-resoconto-della-prima-settmana
 author: ludusrusso
 description: "Il resoconto della prima settimana di alternanza Scuola-Lavoro presso la scuola ITIS Avogadro di Torino"
 ---

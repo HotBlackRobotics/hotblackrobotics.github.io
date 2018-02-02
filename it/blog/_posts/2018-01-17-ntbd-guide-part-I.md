@@ -232,6 +232,7 @@ Per adattare l'archiettura NTBD ad un manipolatore diverso da EEZYBOT, è necess
 I componenti astratti sono implementati nell'Immagine Docker *ntbd_manipulator* e, come spiegato nella ["Parte I: una panoramica"](#parte-i-una-panoramica), dipendono dal braccio robotico scelto e vanno quindi modificati conformemente alla struttura scelta.
 
 **Note**:
+- Suggerisco di leggere la [Parte I](#parte-i-una-panoramica) e la [Parte II](#parte-ii-tutorial) per capire cosa deve essere modificato per integrare un manipolatore con NTBD e come connettere i dispositivi esterni per il controllo e per le WebApps.
 - Per poter fare il build delle Immagini Docker è necessario [installare Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions). In questo tutorial assumo che il lettore abbia delle conoscenze su come sviluppare applicazioni in Docker. Per consigli sulla fase development, leggere l'[appendice](#appendice-docker-prod-vs-docker-devel).
 
 ## 1. Modificare i componenti astratti di NTBD
@@ -262,7 +263,7 @@ docker-compose -f docker-compose.intel.yml up
 ```
 che sfrutta il tool [Docker Compose](https://docs.docker.com/compose/overview/) con configurazione specificata nel file [docker-compose.intel.yml](https://github.com/HotBlackRobotics/ntbd/blob/06f5af9c35c814ff039fc60e410531724c96a11c/NTBD_manipulator/docker-compose.intel.yml).
 
-L'integrazione di un nuovo braccio finisce qua, per informazioni a proposito dell'utilizzo delle WebApp implementate, vedi il [Post Parte II: un tutorial]().
+L'integrazione di un nuovo braccio finisce qua, per informazioni a proposito dell'utilizzo delle WebApp implementate, vedi il [Post Parte II: tutorial](#parte-ii-tutorial).
 
 ## Appendice: Docker prod vs Docker devel
 Quando si lavora con Docker conviene, per motivi di organizzazione e ordine, usare un'Immagine per lo sviluppo (Development Image) ed una per la produzione (Production Image). Quest'ultima è la versione finale dell'applicazioe Docker, pronta per la distribuzione, mentre la prima è usata durante lo sviluppo dell'applicazione. Viene "buildata" un'immagine comune sulla quale si vanno a sviluppare la versione Prod e la versione Dev e, con qualche accorgimento, si può sfruttare al meglio il sistema di caching per la fase di *build* dell'immagine. Infatti, se i file modificati sono ancora in fase di debug, ad ogni build i layer, anche se già buildati in precedenza, vengono ri-buildati.
