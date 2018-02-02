@@ -8,6 +8,7 @@ tag:
  - ROS
  - Scuola
 redirect_from:
+ - /2017/01/16/hb-robotics-allalternanza-scuola-lavoro-nellitis-avogadro/
  - /blog/posts/2017-01-16-hb-robotics-allalternanza-scuola-lavoro-nellitis-avogadro
 author: ludusrusso
 description: ""

@@ -8,7 +8,9 @@ lang: it
 tag:
  - Shop
 
-redirect_from: /blog/posts/2017-01-13-kit-meccanica-20-euro
+redirect_from: 
+ - /2017/01/13/kit-meccanica-20-euro/
+ - /blog/posts/2017-01-13-kit-meccanica-20-euro
 author: sgabello
 description: "Il kit comprende tutte le parti da stamprare in 3D."
 ---

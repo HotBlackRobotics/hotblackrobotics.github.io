@@ -1,5 +1,7 @@
 ---
 title: "Laboratori ROS LADISPE Politecnico di Torino"
+redirect_from:
+ - /2017/12/15/corso-ros-ladispe-polito/
 layout: post
 date: 2017-12-15
 last_modified_at: 2018-02-01

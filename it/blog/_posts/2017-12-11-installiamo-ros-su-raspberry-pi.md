@@ -12,6 +12,7 @@ tag:
  - Robotica
 
 redirect_from:
+ - /2017/12/11/installiamo-ros-su-raspberry-pi/
  - /blog/posts/2017-01-13-installiamo-ros-su-raspberry-pi
  - /2017/01/13/installiamo-ros-su-raspberry-pi/
 author: ludusrusso

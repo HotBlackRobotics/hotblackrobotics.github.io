@@ -9,7 +9,9 @@ tag:
  - Arduino
  - Raspberry
 
-redirect_from: /blog/posts/2017-06-16-collegare-un-arduino-in-parallelo-al-raspberry
+redirect_from: 
+ - /2017/06/16/collegare-un-arduino-in-parallelo-al-raspberry/
+ - /blog/posts/2017-06-16-collegare-un-arduino-in-parallelo-al-raspberry
 author: Pietro Chirio
 description: ""
 ---

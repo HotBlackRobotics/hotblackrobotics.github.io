@@ -1,5 +1,9 @@
 ---
 title: "NTBD: a step by step guide"
+redirect_from:
+ - /2018/01/17/ntbd-guide-part-I/
+ - /2018/01/17/ntbd-guide-part-II/
+ - /2018/01/17/ntbd-guide-part-III/
 layout: post
 date: 2018-01-17
 image: /assets/imgs/2018-01-17-ntbd/NTBD-logo-part1.png

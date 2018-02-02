@@ -11,7 +11,9 @@ tag:
  - Iot
  - Cloud
 
-redirect_from: /blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o
+redirect_from: 
+ - /2017/02/03/avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o/
+ - /blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o
 author: sgabello
 description: "Non avete un robot? C'è il robot in cloud accessibile da remoto tramite il vostro PC o cellulare"
 ---

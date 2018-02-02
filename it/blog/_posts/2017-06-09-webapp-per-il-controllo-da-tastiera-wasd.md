@@ -10,7 +10,9 @@ tag:
  - Controllo
  - Remoto
 
-redirect_from: /blog/posts/2017-06-09-webapp-per-il-controllo-da-tastiera-wasd
+redirect_from: 
+ - /2017/06/09/webapp-per-il-controllo-da-tastiera-wasd/
+ - /blog/posts/2017-06-09-webapp-per-il-controllo-da-tastiera-wasd
 author: Pietro Chirio
 description: "In questo tutorial vedremo come controllare un robot attraverso i tasti **wasd** per farlo muovere nelle 4 direzioni."
 ---

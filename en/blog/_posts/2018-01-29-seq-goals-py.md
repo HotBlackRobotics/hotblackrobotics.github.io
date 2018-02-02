@@ -1,5 +1,7 @@
 ---
 title: "Sending a sequence of Goals to ROS NavStack with Python"
+redirect_from:
+ - /2018/01/29/seq-goals-py/
 layout: post
 date: 2018-01-29
 image: /assets/imgs/2018-01-29-goal/cover_seq.png

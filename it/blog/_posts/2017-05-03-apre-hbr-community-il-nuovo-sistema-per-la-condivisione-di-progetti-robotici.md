@@ -8,7 +8,9 @@ lang: it
 tag:
  - Community
 
-redirect_from: /blog/posts/2017-05-03-apre-hbr-community-il-nuovo-sistema-per-la-condivisione-di-progetti-robotici
+redirect_from: 
+ - /2017/05/03/apre-hbr-community-il-nuovo-sistema-per-la-condivisione-di-progetti-robotici/
+ - /blog/posts/2017-05-03-apre-hbr-community-il-nuovo-sistema-per-la-condivisione-di-progetti-robotici
 author: ludusrusso
 description: ""
 ---

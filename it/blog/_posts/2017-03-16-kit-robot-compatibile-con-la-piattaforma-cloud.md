@@ -8,7 +8,9 @@ lang: it
 tag:
  - Kit
 
-redirect_from: /blog/posts/2017-03-16-kit-robot-compatibile-con-la-piattaforma-cloud
+redirect_from: 
+ - /2017/03/16/kit-robot-compatibile-con-la-piattaforma-cloud/
+ - /blog/posts/2017-03-16-kit-robot-compatibile-con-la-piattaforma-cloud
 author: sgabello
 description: ""
 ---

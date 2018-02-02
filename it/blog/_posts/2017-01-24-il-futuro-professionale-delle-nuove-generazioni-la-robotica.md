@@ -10,7 +10,9 @@ tag:
  - Developer
  - Vision
 
-redirect_from: /blog/posts/2017-01-24-il-futuro-professionale-delle-nuove-generazioni-la-robotica
+redirect_from: 
+ - /2017/01/24/il-futuro-professionale-delle-nuove-generazioni-la-robotica/
+ - /blog/posts/2017-01-24-il-futuro-professionale-delle-nuove-generazioni-la-robotica
 author: ludusrusso
 description: "Perché il mondo del lavoro del futuro sarà dominato dagli sviluppatori di applicazioni robotiche "
 ---

@@ -7,7 +7,9 @@ headerImage: false
 lang: it
 tag:
 
-redirect_from: /blog/posts/2017-03-16-spiderbot-cloud-con-controllo-vocale
+redirect_from: 
+ - /2017/03/16/spiderbot-cloud-con-controllo-vocale/
+ - /blog/posts/2017-03-16-spiderbot-cloud-con-controllo-vocale
 author: sgabello
 description: ""
 ---

@@ -10,7 +10,9 @@ tag:
  - Sd
  - Immagine
 
-redirect_from: /blog/posts/2017-03-24-immagine-sd-per-la-cloud-e-configurazione
+redirect_from: 
+ - /2017/03/24/immagine-sd-per-la-cloud-e-configurazione/
+ - /blog/posts/2017-03-24-immagine-sd-per-la-cloud-e-configurazione
 author: sgabello
 description: ""
 ---

@@ -8,7 +8,9 @@ lang: it
 tag:
  - Orobot101
 
-redirect_from: /blog/posts/2017-04-04-tradizionalmente-innovativi
+redirect_from: 
+ - /2017/04/04/tradizionalmente-innovativi/
+ - /blog/posts/2017-04-04-tradizionalmente-innovativi
 author: ludusrusso
 description: "Partnership tra HotBlack Robotics e Olivetti"
 ---

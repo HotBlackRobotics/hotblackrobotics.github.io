@@ -8,7 +8,9 @@ lang: it
 tag:
  - Shop
 
-redirect_from: /blog/posts/2017-01-13-kit-elettromeccanico
+redirect_from: 
+ - /2017/01/13/kit-elettromeccanico/
+ - /blog/posts/2017-01-13-kit-elettromeccanico
 author: sgabello
 description: "I componenti elettronici ed elettromeccanici"
 ---

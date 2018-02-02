@@ -1,5 +1,7 @@
 ---
 title: "Sending Goals to the Navigation Stack - Python ROS node version"
+redirect_from:
+ - /2018/01/29/action-client-py/
 layout: post
 date: 2018-01-29
 image: /assets/imgs/2018-01-29-goal/cover.png
