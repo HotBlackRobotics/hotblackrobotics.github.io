@@ -19,7 +19,7 @@ author: sgabello
 description: "Introduzione e visione tecnologica, Cloud Robotics e Internet delle Cose: l' Internet dei Robot"
 ---
 
- L'internet delle cose è quella visione tecnologica che vede "oggetti" interconnessi comunicare e processare dati tramite Internet. Fino a poco tempo fa gli unici oggetti collegati alla rete erano i computer, le stampanti e gli smartphone. Oggi iniziano a vedersi i primi oggetti "smart" collegati alla rete: ad esempio la smartTV o le console di videogame moderne.
+L'internet delle cose è quella visione tecnologica che vede "oggetti" interconnessi comunicare e processare dati tramite Internet. Fino a poco tempo fa gli unici oggetti collegati alla rete erano i computer, le stampanti e gli smartphone. Oggi iniziano a vedersi i primi oggetti "smart" collegati alla rete: ad esempio la smartTV o le console di videogame moderne.
 In futuro avremo tutti gli oggetti di casa nostra "smart": ci sarà il frigorifero connesso alla rete domotica della casa insieme a tutti gli elettrodomestici. Tutti questi dispositivi in casa integrati in una sola rete ottimizzeranno le risorse per sprecare meno elettricità e gas a seconda delle nostre necessità.
 
 Fuori dall' ambiente domestico troveremo, ad esempio, reti di sensori nella città per monitorare lo stato dei parcheggi che ti informeranno su dove è meglio parcheggiare; telecamere smart che sorveglieranno la città; sensori per il monitoraggio della temperatura e umidità nelle coltivazioni agricole.

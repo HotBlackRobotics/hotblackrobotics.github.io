@@ -9,6 +9,7 @@ layout: mainpage
 		<h1>
       {% if page.lang == 'it' %} Ultimi Post {% else %} Latest Posts {% endif %}
     </h1>
+		<a href="/it/blog/all/">Vedi tutti i post!</a>
 		<div class="row">
 			{% for post in posts limit:6 %}
 				{% if post.hidden != true %}

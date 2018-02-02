@@ -30,12 +30,9 @@ analytics-google: 'UA-109606520-1'
 # analytics-piwik-id: 1
 
 
-excerpt_separator: ""
 markdown: kramdown
 kramdown:
-  auto_ids: true
   toc_levels: 1..2
-
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
@@ -84,11 +81,6 @@ authors:
         picture: assets/images/fiorella.jpg
         twitter: fiorellasibona
 
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 560px / large = 810px
-width: large
-
 # if you don't need pagination, comment the *paginate* configs below
 # paginate: 5
 # paginate_path: "blog/:num/"
@@ -114,9 +106,6 @@ post-advance-links: [blog]
 
 # show author block at the end of a post ?
 show-author: true
-
-# do you want some animations?
-animation: true
 
 plugins:
   - jekyll-seo-tag
