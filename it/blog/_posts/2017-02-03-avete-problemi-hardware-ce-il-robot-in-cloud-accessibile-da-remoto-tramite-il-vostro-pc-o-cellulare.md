@@ -28,7 +28,7 @@ In pratica tutto quello che avete visto funzionare su Dotbot è da oggi disponib
 
 Lo schema sopra riassume questi concetti e vi mostra come i due mondi si interfacciano tramite la piattaforma. La cosa che più mi affascina della filosofia cloud è che si confonde la differenza tra mondo "fisico", ovvero ciò che possiamo "toccare", con quello cloud. Infatti a qualcuno verrebbe da pensare che in sostanza abbiamo creato soltanto un sofisticato simulatore.. no, niente di più sbagliato! Il robot in cloud, DotbotCloud, esiste davvero ed è esattamente come Dotbot. L'unica differenza è che il computer Linux di DotbotCloud è una macchina virtuale remotizzata da Amazon e nessuno con certezza può sapere fisicamente dove si trovi. Inoltre ovviamente non può avere nessun tipo di interazione con il mondo fisico. In pratica è come se DotbotCloud vivesse in un mondo parallelo. Quello che possiamo fare è usarlo come fosse un robot normale per poi riportare il nostro software su un robot "concreto" e il funzionamento sarà lo stesso! Vediamo subito cosa ci possiamo fare.
 
-## Primi passi con Dotbot in cloud ##
+## Primi passi con Dotbot in cloud
 
 Entriamo in piattaforma (effettuando il login) e cerchiamo il robot in cloud con il tasto "cerca robot". Nel mio caso ho un indirizzo ip così *54.191.14.121:8080* .
 

@@ -93,7 +93,7 @@ Anche questa procedura è un po' lenta, dovuta al fatto che sono tantissimi i mo
 
 Una volta installato, dobbiamo abilitare ROS all'avvio di ogni shell, in modo da avere tutti i comandi principali attivi. Si fa con il seguente comando
 
-```
+```bash
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 ```
 
@@ -105,7 +105,7 @@ Turtle Sim è un modulo ROS sviluppato per imparare ad utilizzarlo. È in partic
 
 Per installare il modulo, utilizziamo il comando
 
-```
+```bash
 sudo apt-get install ros-indigo-turtlesim
 ```
 
@@ -117,7 +117,7 @@ A questo punto iniziamo a divertirci. È importante, prima di tutto, dobbiamo ap
 
 Nella prima shell, digitiamo il comando
 
-```
+```bash
 roscore
 ```
 
@@ -169,7 +169,7 @@ che aprirà una finestra grafica in cui viene visualizzata una tartaruga stilizz
 
 A questo punto, non ci resta che lanciare un terzo nodo per mandare comandi di velocità alla tartaruga. Questo nodo si lancia (di nuovo su una shell distinta) con
 
-```
+```bash
 rosrun turtlesim turtle_teleop_key
 ```
 ![Shell ROS teleop](https://raw.githubusercontent.com/ludusrusso/images/master/ros_tutorial/teleop.png)

@@ -31,32 +31,32 @@ Lista:
 
 Per prima cosa montate i due Spider Robot come dalle istruzioni di Tiger. Poi smontate una parte dei robot e uniteli insieme come in figura.
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/1.jpeg)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/1.jpeg)
 
 Unite i cavetti di alimentazione dei motori ai connettori delle batterie. Dopo uniremo ai connettori delle batterie altri cavetti al ponte H.
 Ritagliate un pezzo di cartone di questa forma con due linguette da inserire dentro i supporti di plastica dei due robot.
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/2.jpeg)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/2.jpeg)
 
 Poi pinzate le linguette in modo da fissarle.
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/3.jpeg)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/3.jpeg)
 
 A questo punto fissate con delle fascette da idraulico tutto il sistema composto da Raspberry pi + ponte ad H + le 2 batterie.
 
 Così:
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/4.jpeg)
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/5.jpeg)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/4.jpeg)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/spiderbot_pics/5.jpeg)
 
 Ora effettuiamo i collegamenti.
 
 I pin del Raspberry sono:
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/RP2_Pinout%20(1).png)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/RP2_Pinout%20(1).png)
 
 Il ponte ad H:
 
-![] (https://i.ytimg.com/vi/mKfTi3iD518/maxresdefault.jpg)
+![](https://i.ytimg.com/vi/mKfTi3iD518/maxresdefault.jpg)
 
 Ora collegate ogni alimentazione dei motori (motere A e motore B) ai rispettivi mammut del ponte ad H. Poi collegate il controllo dei motori (A-1A, A-1B e B-1A, B-1B) con i GPIO 9,25 (pin 21,22 o contando 10 dal basso) e GPIO 22,23 (pin 15,16 o contando 13 dal basso)del Raspberry. Infine l'alimentazione la collegate a una delle due batterie (fate attenzione solo che abbia almeno 1 o 2 Ampere altrimenti i motori non hanno abbastanza potenza e non si muovono).
 
@@ -110,9 +110,6 @@ class Node(dotbot_ros.DotbotNode):
             speed_msg.dx = 0
             self.led_pub.publish(led_msg)
             self.speed_pub.publish(speed_msg)
-
-
-
 ```
 
 Per informazioni info@hotblackrobotics.com Per la licenza da beta tester gratis registratevi qui [http://www.hotblackrobotics.com/register](http://www.hotblackrobotics.com/register).

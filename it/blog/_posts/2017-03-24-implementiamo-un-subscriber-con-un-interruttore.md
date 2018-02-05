@@ -41,5 +41,4 @@ class Node(dotbot_ros.DotbotNode):
             self.led_pub.publish(led_msg)
             print "pressed"
             sys.stdout.flush()
-
 ```

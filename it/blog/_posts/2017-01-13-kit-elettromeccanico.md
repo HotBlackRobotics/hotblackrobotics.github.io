@@ -15,7 +15,7 @@ author: sgabello
 description: "I componenti elettronici ed elettromeccanici"
 ---
 
-![elettronica meccanica kit dotbot cloud] (http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487238456/elettromeccanica_hqrmoc.jpg)
+![elettronica meccanica kit dotbot cloud](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487238456/elettromeccanica_hqrmoc.jpg)
 
 ## I componenti elettronici ed elettromeccanici ##
 

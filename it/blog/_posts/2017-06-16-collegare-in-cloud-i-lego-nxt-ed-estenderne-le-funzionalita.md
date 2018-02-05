@@ -46,6 +46,7 @@ Possiamo ora testare la nostra app: aprite il file **keyboard_robotarm** nel bro
 Sketch ROS
 ---
 Scriviamo ora lo sketch in ROS che farà comunicare il nostro robot con la webapp.  Importiamo subito le librerie che utilizzeremo nel programma:
+
 ```python
 import dotbot_ros
 import sys
@@ -54,6 +55,7 @@ from nxt.motor import *
 from geometry_msgs.msg import Twist
 from time import sleep
 ```
+
 Ora nel `setup` andiamo a includere la stringa `self.NXT = nxt.locator.find_one_brick()` per far sì che il programma cerchi il lego NXT attraverso la connessione usb e inizializziamolo:
 
 ```python
@@ -66,6 +68,7 @@ self.m2 = Motor(self.NXT, PORT_B) #motore dell porta B
 self.m3 = Motor(self.NXT, PORT_C) #motore della porta C
 self.cnt = -1  
 ```
+
 Sempre nel **setup** creiamo un **subscriber** che sottoscriva il programma al messaggio della webapp da noi creata. Il nostro subscriber si sottoscriverà ad un topic chiamato`/keyboard` che scambia messaggi di tipo `std_msgs/Twist` inserendoli in una funzione callback chiamata `xyz` definita dai parmetri `self` e `msg` :
 
 ```python

@@ -23,8 +23,6 @@ Come primo passo dobbiamo registrarci [qui](https://willbeddow.com/signup)
 
 Una volta registrati possiamo iniziare a scrivere il codice:
 
-
-
     import dotbot_ros
     import requests
     import json
@@ -51,12 +49,14 @@ Come al solito, il nostro programma è composto da un nodo ROS, la funzione prin
 
     server_url = "https://willbeddow.com"
     payload = dict(username="USER", password="PASS")
+
  Server url è il link dove vengono inviate le richieste di tipo POST.
  Username e Password sono i dati necessari per l'autorizzazione.
 
     response = requests.post(url="{0}/api/start_session".format(server_url), data=payload).json()
     session_id = response["data"]["session_id"]
-  Inizio di una nuova sessione e creazione del session token.
+
+ Inizio di una nuova sessione e creazione del session token.
 
 
        command_data = dict(session_id=session_id, command="What is the meaning of life?")
@@ -147,10 +147,8 @@ La stessa cosa è uguale per la risposta:
     risposta = risp['text']
 La risposta viene tradotta dal inglese in italiano e viene trasformata in una stringa.
 
-
  Una volta eseguito il codice abbiamo in output questa finestra:
  ![enter image description here](http://i.imgur.com/P3afWcn.jpg)
-
 
 **Ora trasformiamo questo programma in una ChatBot (Telegram).**
 Per farlo basta creare un bot seguendo questa [guida](http://www.hotblackrobotics.com/blog/posts/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros).
