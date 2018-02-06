@@ -25,7 +25,7 @@ In questo tutorial vedremo come controllare un robot attraverso i tasti **wasd**
 
 La webapp
 -----
-Come prima cosa andiamo a sviluppare l'applicazione web che ci permetterà di controllare il robot tramite la tastiera.  [Da qui](https://github.com/sgabello1/WebApp) scaricate (pemendo sul pulsante **clone or download**) la cartella ed estraetela in un luogo facilmente raggiungibile.
+Come prima cosa andiamo a sviluppare l'applicazione web che ci permetterà di controllare il robot tramite la tastiera. [Da qui](https://github.com/sgabello1/WebApp) scaricate (pemendo sul pulsante **clone or download**) la cartella ed estraetela in un luogo facilmente raggiungibile.
 
 ![](https://user-images.githubusercontent.com/29255795/26967384-5320d1c2-4cfe-11e7-8e7f-1ca7de8dcf1b.png)
 
@@ -51,9 +51,11 @@ Sketch ROS
 ---------
 
 Scriviamo ora lo sketch in Ros che farà comunicare il nostro robot con la webapp.  Importiamo l'oggetto `Robot` dalla libreria `gpiozero` per gestirne il movimento e costruiamo le coppie di PIN GPIO a cui sono collegate i due motori, sfruttando i parametri left e right:
+
 ```python
 self.robot = Robot(left=(16, 19), right=(20, 26))
 ```
+
 ##Sottoscriviamoci ad un Topic ROS e usiamo le Callback
 
  Andiamo ad implementare una funzione di callback, chiamata `keyb_wasd`. Questa funzione (come tutte le funzioni di callback) avrà la seguente forma:

@@ -18,7 +18,7 @@ description: ""
 
 Una volta costruito lo SpiderBot come nel tutorial [http://www.hotblackrobotics.com/forum/support/22]( http://www.hotblackrobotics.com/forum/support/22 ) vi spiego come scrivere una semplice app per il controllo vocale! Il nostro SpiderBotCloud andrà avanti o indietro a seconda di ciò che direte!
 Leggetevi gli altri tutorial su questo sito per comprendere meglio le righe di codice che vi posterò qui.
-Una volta entrati in piattaforma da [http://www.hotblackrobotics.com/cloud](http://www.hotblackrobotics.com/cloud/index) e connesso il robot come nella Lezione 3 [http://www.hotblackrobotics.com/forum/support/4] (http://www.hotblackrobotics.com/forum/support/4) andate in Sketches. Create in nuovo programma con "New" dando il nome del codice che preferite ( o potete anche modificarne uno già esistente) e copiate il seguente codice:
+Una volta entrati in piattaforma da [http://www.hotblackrobotics.com/cloud](http://www.hotblackrobotics.com/cloud/index) e connesso il robot come nella Lezione 3 [http://www.hotblackrobotics.com/forum/support/4](http://www.hotblackrobotics.com/forum/support/4) andate in Sketches. Create in nuovo programma con "New" dando il nome del codice che preferite (o potete anche modificarne uno già esistente) e copiate il seguente codice:
 
 ```
 
@@ -45,13 +45,11 @@ class Node(dotbot_ros.DotbotNode):
         if speech_msg.data == 'dietro':
             speed_msg.sx = -90
             self.speed_pub.publish(speed_msg)
-
-
 ```
 
 Salvate e avviate il programma! Se non ci sono errori andate sul menù in alto dove c'è la voce "Apps" e aprite l'app di controllo vocale [http://www.hotblackrobotics.com/cloud/webgui/speech](http://www.hotblackrobotics.com/cloud/webgui/speech). Arriverrete su una pagina così (vi consigliamo di usare Chrome).
 
-![] (https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/voiceRecognition.png)
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/voiceRecognition.png)
 
 Connettete la web app con il tasto "connect" e premete il tasto centrale a forma di microfono per abilitare il controllo vocale. A questo punto dite ad alta voce " Avanti"  e il robot andrà avanti e "Dietro" e il robot andrà indietro! :)
 Potete provare ad aprire il sito della Web App anche da cellulare e farlo funzionare su mobile!

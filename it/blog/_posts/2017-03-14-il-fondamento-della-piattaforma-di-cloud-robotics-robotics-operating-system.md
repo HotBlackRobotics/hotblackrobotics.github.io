@@ -15,7 +15,7 @@ description: ""
 lang: it
 ---
 
-La base tecnologica su cui si basa la piattaforma di cloud robotics è [ROS (Robotic Operating System)] (http://wiki.ros.org/it). ROS è un framework software open source che permette lo sviluppo e la programmazione di robot. Fornisce le stesse funzioni di un sistema operativo come: astrazione dell'hardware, controllo dei dispositivi tramite driver, comunicazione tra processi, gestione delle applicazioni e altre funzioni di uso comune. Si presta particolarmente bene alle nostre esigenze legate all'internet delle cose poichè è un **sistema distribuito**, il che significa che diversi programmi sono distribuiti su robot differenti e comunicano tutti tramite la piattaforma.
+La base tecnologica su cui si basa la piattaforma di cloud robotics è [ROS (Robotic Operating System)](http://wiki.ros.org/it). ROS è un framework software open source che permette lo sviluppo e la programmazione di robot. Fornisce le stesse funzioni di un sistema operativo come: astrazione dell'hardware, controllo dei dispositivi tramite driver, comunicazione tra processi, gestione delle applicazioni e altre funzioni di uso comune. Si presta particolarmente bene alle nostre esigenze legate all'internet delle cose poichè è un **sistema distribuito**, il che significa che diversi programmi sono distribuiti su robot differenti e comunicano tutti tramite la piattaforma.
 
 Inoltre è particolarmente interessante perchè è utilizzato da tutti i principali sviluppatori software al mondo (sia accademici che industriali) come ad esempio Google, Stanford, ETH, MIT ecc.. Tant'è che è diventato lo *standard de fact0*.
 Di conseguenza ha un enorme community molto competente pronta a risolvere problemi e bachi ad ogni momento e lo sviluppo di codice open source rende la comunità molto attiva.
@@ -34,7 +34,7 @@ Nell'immagine sopra un esempio di comunicazione tra nodi attraverso i diversi to
 Rivediamo ora meglio i vari attori in piattaforma!
 
 ## Effettuate l'accesso alla piattaforma
-Andate sul sito di Hotblack Robotics (http://www.hotblackrobotics.com/) ed entrate nella piataforma http://www.hotblackrobotics.com/login?next=%2Fcloud%2F . Inserite le vostre credenziali e siete in cloud!
+Andate sul sito di Hotblack Robotics (http://www.hotblackrobotics.com/) ed entrate nella piattaforma http://www.hotblackrobotics.com/login?next=%2Fcloud%2F. Inserite le vostre credenziali e siete in cloud!
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudplatform.PNG)
 
@@ -52,7 +52,7 @@ Un nodo è un processo (un programma in esecuzione) all’interno della rete ROS
 
 In piattaforma trovate sempre sotto la voce "ROS" (http://www.hotblackrobotics.com/cloud/webgui/console) sotto la voce "Nodes List" la lista dei nodi attivi.
 
-![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/nodi.PNG )
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/nodi.PNG)
 
 ## Topic ##
 I topic sono i canali attraverso i quali i nodi comunicano nella rete.

@@ -179,7 +179,6 @@ def on_speed(self, msg):
     self.robot.value = (v_dx, v_sx)
 ```
 
-
 ### Sottoscrizione al topic
 
 Una volta implementata la funzione di callback, non ci resta che sottoscriverci al topic `speed` per poterla correttamente utilizzare. Per farlo, nella funzione `setup`, aggiungiamo la seguente linea di codice:

@@ -57,11 +57,14 @@ Procediamo ora a scrivere il codice di un semplice pulisher per pubblicare una s
 ros::NodeHandle nh;
 ```
 Ora dobbiamo definire il nostro publisher/subscriber. In questo caso lavoriamo su un publisher chiamato **chatter** che pubblicherà un messaggio di tipo **&str_msg**
+
 ```arduino
 std_msgs::String str_msg;
 ros::Publisher chatter("chatter", &str_msg);
 ```
+
 Nel **setup** inizializziamo il nostro nodo ROS e definiamo i topic a cui vogliamo sottoscriverci utilizzando la stinga `nh.subscribe(nomedeltopic)` e quelli che vogliamo pubblicare, come nel nostro caso, con la stringa `nh.advertise(nomedeltopic)`
+
 ```arduino
 void setup()
 {
@@ -71,6 +74,7 @@ void setup()
 ```
 
 Come ultimo passo nella funzione **loop** il nodo pubblica la stringa "Hello World" e si chiama la funzione `ros::spinOnce()` con la quale si gestiscono tutte le **callback**
+
 ```arduino
 void loop()
   {
@@ -80,8 +84,10 @@ void loop()
     delay(1000);
   }
 ```
+
 Codice completo
 ---
+
 ```arduino
 #include <ros.h>
 #include <std_msgs/String.h>

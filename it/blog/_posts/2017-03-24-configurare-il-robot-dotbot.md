@@ -16,8 +16,7 @@ author: sgabello
 description: ""
 ---
 
-##  Getting started     ##
-
+## Getting started
 
 Questo piccolo tutorial spiega come configurare il robot la prima volta e attaccarsi in piattaforma!
 Prima cosa scaricate l'immagine da copiare su SD da questo [link](https://sourceforge.net/projects/hbrain/).
@@ -37,13 +36,11 @@ Ora inserite l'SD nel Raspberry e prepariamoci a connetterlo ad internet!Accende
 
 ## Il Circuito base per i LED, Interruttori e Motori
 
-
-
 Per prima cosa andate su [http://www.hotblackrobotics.com/cloud/sketch/](http://www.hotblackrobotics.com/cloud/sketch/) e clonate il codice "example_driver". **Non dovete capire tutte le righe di codice** . basta aprirlo con "edit" e avviarlo con il tasto "run" in alto.
 
 Ora costruite un circuito così.
 
-![]( https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/schemaCompleto_bb.png )
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/schemaCompleto_bb.png )
 
 Collegando i fili per i MOTORI ai GPIO 16,19 (sinistra) e 20,26 (destra). I LED 1,2,3 ai GPIO 5,6,13 e gli INTERRUTTORI a 2 e 3.
 
@@ -66,7 +63,7 @@ Ora su Chrome andate su http://hotbot.local/wifi/schemes e si aprirà una scherm
 
 Premete su "Configure" e si aprirà una schermata con la lista delle reti locali.
 
-![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/list.PNG )
+![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/list.PNG)
 
 Voi ne selezionate una e digitate la password nella casella sottostante. Infine premete "Submit". Ci mette 1-2 minuti non temete! Aspettate fino a quando non vi arriva un pop-up di conferma. Poi ritornate su http://hotbot.local/wifi/schemes  e premete connect sulla rete che avete appena configurato. Riavviate o staccando il cavo di alimentazione o da piattaforma cloud (http://www.hotblackrobotics.com/cloud/robot) senza il cavo Ethernet. Aspettate fino a quando il LED non lampeggia...e siete connessi!
 
