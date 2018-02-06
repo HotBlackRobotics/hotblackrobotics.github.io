@@ -10,7 +10,9 @@ tag:
  - Dotbot
  - Hostname
 
-redirect_from: /blog/posts/2017-05-11-cambiare-nome-al-robot-dotbot-da-piattaforma
+redirect_from: 
+ - /2017/05/11/cambiare-nome-al-robot-dotbot-da-piattaforma/
+ - /blog/posts/2017-05-11-cambiare-nome-al-robot-dotbot-da-piattaforma
 author: ludusrusso
 description: ""
 ---

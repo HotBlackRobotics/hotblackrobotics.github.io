@@ -6,7 +6,9 @@ image:
 headerImage: false
 tag:
 
-redirect_from: /blog/posts/2017-02-20-come-creare-una-semplice-web-app-per-interagire-con-il-vostro-robot
+redirect_from: 
+ - /2017/02/20/come-creare-una-semplice-web-app-per-interagire-con-il-vostro-robot/
+ - /blog/posts/2017-02-20-come-creare-una-semplice-web-app-per-interagire-con-il-vostro-robot
 author: sgabello
 description: ""
 lang: it

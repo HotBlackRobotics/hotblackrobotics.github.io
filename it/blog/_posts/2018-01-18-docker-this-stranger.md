@@ -1,5 +1,7 @@
 ---
 title: "Docker, questo sconosciuto!"
+redirect_from:
+ - /2018/01/18/docker-questo-sconosciuto/
 layout: post
 date: 2018-01-18
 image: https://logz.io/wp-content/uploads/2016/01/docker-facebook.png
@@ -18,7 +20,7 @@ Oggi vorrei parlarvi di una tecnologia che sta acquistando sempre più importanz
 {:toc}
 
 # 1. Cos'è un contenitore?
-Alcuni di voi penseranno "Bhè chiaro! Una scatola, dove mettere qualcosa, per trasportarlo in modo compatto". Vi dirò che questo vostro pensiero ha senso, andiamo a vedere perchè: il concetto di contenitore è apparso per la prima volta con la tecnologia dei Linux Containers [LXC]( https://linuxcontainers.org/it/http://assemble.io), cioè un metodo di virtualizzazione a livello di sistema operativo che permette di  eseguire molteplici  sistemi Linux, chiamati *containers*,  i quali sono isolati e condividono lo stesso Kernel Linux.  Nel 2008 è stata rilasciata la versione 2.6.24 del Kernel Linux, la quale permetteva, per la prima volta, l'isolamento di risorse su hardware condiviso senza il bisogno delle Virtual Machines, il metodo di virtualizzazione più utilizzato fino ad allora.
+Alcuni di voi penseranno "Bhè chiaro! Una scatola, dove mettere qualcosa, per trasportarlo in modo compatto". Vi dirò che questo vostro pensiero ha senso, andiamo a vedere perchè: il concetto di contenitore è apparso per la prima volta con la tecnologia dei Linux Containers [LXC]( https://linuxcontainers.org/it/http://assemble.io), cioè un metodo di virtualizzazione a livello di sistema operativo che permette di eseguire molteplici  sistemi Linux, chiamati *containers*,  i quali sono isolati e condividono lo stesso Kernel Linux.  Nel 2008 è stata rilasciata la versione 2.6.24 del Kernel Linux, la quale permetteva, per la prima volta, l'isolamento di risorse su hardware condiviso senza il bisogno delle Virtual Machines, il metodo di virtualizzazione più utilizzato fino ad allora.
 
 ## 1.1. Contenitori Linux vs. Macchine Virtuali
  - *Virtualizzazione*:  come anticipato, i Linux Containers (LCs) forniscono virtualizzazione a livello di sistema operativo, mentre le Virtual Machines offrono la virtualizzazione dell'hardware.

@@ -1,5 +1,7 @@
 ---
 title: "Inviare una sequenza di Goals alla ROS NavStack usando Python"
+redirect_from:
+ - /2018/01/29/seq-goals-py-ita/
 layout: post
 date: 2018-01-29
 image: /assets/imgs/2018-01-29-goal/cover_seq_ita.png
@@ -14,7 +16,7 @@ description: "Inviare una sequenza di pose desiderate alla ROS Navigation Stack 
 
 Ciao a tutti!
 
-Se avete letto il mio post, ["Inviare Goals alla Navigation Stack - versione nodo ROS Python"](), adesso dovreste essere in grado di inviare un singlo goal ad un robot mobile usando un nodo python. Che ne dite, invece, di inviare una *sequenza* di pose desiderate? In questo post vi fornirò un esempio per inviare diverse pose desiderate (posizioni cartesiane + orientamento espresso con i quaternioni) per una base mobile alla [ROS Navigation Stack](http://wiki.ros.org/navigation). Questo tutorial è sviluppato scegliendo come base mobile il robot TurtleBot 3 simulato, ma il nodo python è valido per qualunque robot scelto. Prima farò una panoramica sulla soluzione adattata e poi verrà spiegato il codice.
+Se avete letto il mio post, ["Inviare Goals alla Navigation Stack - versione nodo ROS Python"]({{ site.baseurl }}{% post_url /it/blog/2018-01-29-action-client-py %}), adesso dovreste essere in grado di inviare un singlo goal ad un robot mobile usando un nodo python. Che ne dite, invece, di inviare una *sequenza* di pose desiderate? In questo post vi fornirò un esempio per inviare diverse pose desiderate (posizioni cartesiane + orientamento espresso con i quaternioni) per una base mobile alla [ROS Navigation Stack](http://wiki.ros.org/navigation). Questo tutorial è sviluppato scegliendo come base mobile il robot TurtleBot 3 simulato, ma il nodo python è valido per qualunque robot scelto. Prima farò una panoramica sulla soluzione adattata e poi verrà spiegato il codice.
 
 **Nota**: Uso ROS Kinetic. Assumerò che il lettore abbia conoscenze a proposito di [Nodi ROS](http://wiki.ros.org/Nodes), [Topics](http://wiki.ros.org/Topics), [Messaggi](http://wiki.ros.org/msg), [Actions](http://wiki.ros.org/actionlib#Overview) e Parametri ROS [ROS Parameters](http://wiki.ros.org/Parameter%20Server). La lettura del [post]() citato prima e relativa documentazione ROS è consigliata.
 
@@ -47,7 +49,11 @@ p_seq = [x1,y1,z1,x2,y2,z2,...xn,yn,zn]
 
 Dopo viene specificata la sequenza di angoli di impabardata (yaw angles) desiderati, espressi in gradi. Infatti, essendo il movimento del robot mobile sul piano xy, possiamo avere una variazione di orientamento solo attorno all'asse z del sistema di riferimento della mappa. Sicuramente il nostro robot non può inclinarsi entrando nel pavimento!
 <p align="center">
+<<<<<<< HEAD
+    <image src="/assets/imgs/2018-01-29-goal/rpy.png" /> 
+=======
     <image src="/assets/imgs/2018-01-29-goal/rpy.png" />
+>>>>>>> 11aa8f1d0342da4ab760c5e951037ebca9b9ac3a
 </p>
 <br>
 Gli angoli vanno specificati in gradi per mantenere l'inserimento dati semplice e verranno convertiti in radianti nel nodo. Più dettaglia saranno dati nelle sezioni seguenti.

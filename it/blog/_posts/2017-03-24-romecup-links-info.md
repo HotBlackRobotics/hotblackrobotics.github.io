@@ -8,7 +8,9 @@ lang: it
 tag:
  - News
 
-redirect_from: /blog/posts/2017-03-24-romecup-links-info
+redirect_from: 
+ - /2017/03/24/romecup-links-info/
+ - /blog/posts/2017-03-24-romecup-links-info
 author: sgabello
 description: ""
 ---

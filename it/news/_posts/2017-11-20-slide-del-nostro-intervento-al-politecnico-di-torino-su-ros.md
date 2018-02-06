@@ -10,6 +10,7 @@ tag:
  - Politecnico di Torino
 
 redirect_from:
+ - /2017/11/20/slide-del-nostro-intervento-al-politecnico-di-torino-su-ros/
  - /blog/posts/2017-05-09-slide-del-nostro-intervento-al-politecnico-di-torino-su-ros
  - /2017/05/09/slide-del-nostro-intervento-al-politecnico-di-torino-su-ros/
 author: ludusrusso

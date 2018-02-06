@@ -8,7 +8,9 @@ lang: it
 tag:
  - Hacking
 
-redirect_from: /blog/posts/2017-03-16-come-collegare-un-robot-comprato-da-tiger-spider-robot-in-piattaforma-cloud
+redirect_from: 
+ - /2017/03/16/come-collegare-un-robot-comprato-da-tiger-spider-robot-in-piattaforma-cloud/
+ - /blog/posts/2017-03-16-come-collegare-un-robot-comprato-da-tiger-spider-robot-in-piattaforma-cloud
 author: sgabello
 description: ""
 ---

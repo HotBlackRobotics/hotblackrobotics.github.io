@@ -1,5 +1,7 @@
 ---
 title: "Come compilare Immagini Docker per ARM su host Intel"
+redirect_from:
+ - /2018/01/22/docker-immagini-arm/
 layout: post
 date: 2018-01-22
 image: /assets/imgs/2018-01-22-docker-arm/Processor_ARM_anteprima.png

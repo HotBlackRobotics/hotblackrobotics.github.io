@@ -7,7 +7,9 @@ tag:
  - Rokers
  - Callforrokers
 
-redirect_from: /blog/posts/2017-09-21-call-for-rokers-robot-makers-2000-euro-in-palio
+redirect_from: 
+ - /2017/09/21/call-for-rokers-robot-makers-2000-euro-in-palio/
+ - /blog/posts/2017-09-21-call-for-rokers-robot-makers-2000-euro-in-palio
 author: sgabello
 description: "Call For ROKERS: robot + makers - 2000 Euro in palio!!"
 lang: it

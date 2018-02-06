@@ -8,7 +8,9 @@ lang: it
 tag:
  - Hacking
 
-redirect_from: /blog/posts/2017-03-16-spiderbotcloud-20-la-vendetta-2-gradi-di-liberta-e-controllo-vocale
+redirect_from: 
+ - /2017/03/16/spiderbotcloud-20-la-vendetta-2-gradi-di-liberta-e-controllo-vocale/
+ - /blog/posts/2017-03-16-spiderbotcloud-20-la-vendetta-2-gradi-di-liberta-e-controllo-vocale
 author: sgabello
 description: ""
 ---

@@ -6,7 +6,9 @@ image:
 headerImage: false
 tag:
 
-redirect_from: /blog/posts/2017-10-31-un-robot-al-museo-mufant-e-hotblack-robotics
+redirect_from: 
+ - /2017/10/31/un-robot-al-museo-mufant-e-hotblack-robotics/
+ - /blog/posts/2017-10-31-un-robot-al-museo-mufant-e-hotblack-robotics
 author: sgabello
 lang: it
 description: ""

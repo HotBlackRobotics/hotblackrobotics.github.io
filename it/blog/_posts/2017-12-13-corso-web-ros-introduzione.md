@@ -1,5 +1,7 @@
 ---
 title: "Video Corso ROS Rokers - Completati i video di Introduzione"
+redirect_from:
+ - /2017/12/13/corso-web-ros-introduzione/
 layout: post
 date: 2017-12-13
 image: /assets/imgs/2017-12-13-corso-web-ros-introduzione.md/main.png

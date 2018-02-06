@@ -8,7 +8,9 @@ lang: it
 tag:
  - Tutorial
 
-redirect_from: /blog/posts/2017-03-16-analizziamo-il-codice-del-primo-esempio-blink-led
+redirect_from: 
+ - /2017/03/16/analizziamo-il-codice-del-primo-esempio-blink-led/
+ - /blog/posts/2017-03-16-analizziamo-il-codice-del-primo-esempio-blink-led
 author: sgabello
 description: ""
 ---

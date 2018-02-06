@@ -13,7 +13,9 @@ tag:
  - Amazon
  - Aws
 
-redirect_from: /blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o-cellulare
+redirect_from: 
+ - /2017/02/03/avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o-cellulare/
+ - /blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o-cellulare
 author: sgabello
 description: "Avete problemi hardware? C'è il robot in cloud accessibile da remoto tramite il vostro PC o cellulare"
 ---
