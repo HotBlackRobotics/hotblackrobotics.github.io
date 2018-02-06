@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000">
+  <a class="navbar-brand" href="/"><strong>HotBlack</strong> Robotics</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/it/blog">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/it/news">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/it/inizia">Nuovo? Inizia da qui!</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav  justify-content-end">
+      <li class="nav-item">
+        {% if page.lang == 'en' %}
+          <a class="nav-link" href="{% if page.otherlanglink %}{{page.otherlanglink}}{% else %}/it/{% endif %}">Italiano</a>
+        {% else %}
+          <a class="nav-link" href="{% if page.otherlanglink %}{{page.otherlanglink}}{% else %}/en/{% endif %}">English</a>
+        {% endif %}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://cloud.hotblackrobotics.com/cloud/index">Accedi</a>
+      </li>
+    </ul>
+  </div>
+</nav>

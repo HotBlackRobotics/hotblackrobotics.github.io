@@ -1,0 +1,51 @@
+---
+layout: mainpage
+---
+
+{% assign posts = site.posts | where: "categories",page.lang | where: "categories", "blog"%}
+
+<section class="list">
+	<div class="container-fluid">
+		<h1>
+      {% if page.lang == 'it' %} Ultimi Post {% else %} Latest Posts {% endif %}
+    </h1>
+		<a href="/it/blog/all/">Vedi tutti i post!</a>
+		<div class="row">
+			{% for post in posts limit:6 %}
+				{% if post.hidden != true %}
+					{% include blog-post.html %}
+				{% endif %}
+			{% endfor %}
+		</div>
+
+		<h1> {% if page.lang == 'it' %} Post in Evidenza {% else %} Starred Posts {% endif %} </h1>
+		<div class="row">
+			{% for post in posts %}
+				{% if post.hidden != true %}
+					{% if post.starred == true %}
+						{% include blog-post.html type="starred"%}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div>
+
+
+		{% for maintag in site.data.tags %}
+		{% assign tag_posts = posts | where: "tags", maintag.name %}
+			{% if tag_posts.size > 0 %}
+			<h1> {% if page.lang == 'it' %} Post su {% else %} Post on {% endif %} {{ maintag.name }} </h1>
+			<div class="row">
+				{% for post in posts %}
+					{% if post.tags contains maintag.name %}
+						{% if post.hidden != true %}
+							{% include blog-post.html %}
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</div>
+			{% endif %}
+		{% endfor %}
+
+
+	</div>
+</section>

@@ -1,42 +1,68 @@
 ---
-layout: doubled
+layout: page
 ---
 
-
-
-      <h1 class="title">{{ page.title }}</h1>
-      <div class="date">
-          <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-          {% if site.read-time %} - {% include read-time.html %}{% endif %}
+<div class="post">
+  <div class="content">
+    {% if site.show-tags %}
+      <div class="tags">
+        <div class="list">
+          {% for tag in page.tags %}
+              <a class="item" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
       </div>
+    {% endif %}
+    <h1 class="title">{{ page.title }}</h1>
+    <span class="date">
+        Pubblicato il <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%m/%d/%Y" }}</time>
+        {% if site.read-time %} - lettura in {% include read-time.html content=content%}{% endif %}
+    </span>
+  </div>
 
-      {{content}}
 
-      {% if site.post-advance-links contains page.category %}
-          <div class="blog-navigation">
-              {% if page.previous.url %}
-                  <a class="prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
-              {% else %}
-                  <a class="prev"></a>
-              {% endif %}
-              {% if page.next.url %}
-                  <a class="next" href="{{ site.url }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
-              {% endif %}
-          </div>
-      {% endif %}
+  {% if site.show-author %}
+      {% include author.html class="top-author" %}
+  {% endif %}
 
-      {% if site.related %}
-          {% include related.html %}
-      {% endif %}
+  {% include index-generator.html %}
 
-      {% if site.show-author %}
-          {% include author.html %}
-      {% endif %}
+  {% if page.image and page.headerImage %}
+      <img src="{{ page.image }}" alt="{{ page.title }}">
+  {% endif %}
 
-      {% if site.disqus.categories contains page.category %}
-          {% include disqus.html %}
-      {% endif %}
+    <div class="content">
 
-      {% if site.mailinglist %}
-        {% include footer.html %}
-      {% endif %}
+
+    {{content}}
+
+    {% include index-generator.html %}
+
+  </div>
+
+  {% if site.post-advance-links contains page.category %}
+
+  {% assign posts = site.posts | where: "categories",page.lang %}
+    <div class="blog-navigation">
+    {% for post in posts %}
+        {% if post.title == page.title %}
+            {% unless forloop.last %}
+                {% assign next = posts[forloop.index] %}
+                <a class="prev" href="{{ site.url }}{{ next.url }}">&laquo; {{ next.title }}</a>
+            {% endunless %}
+            {% unless forloop.first %}
+              <a class="next" href="{{ site.url }}{{ prev.url }}"> {{ prev.title }} &raquo;</a>
+            {% endunless %}
+        {% endif %}
+        {% assign prev = post %}
+    {% endfor %}
+    </div>
+
+  {% endif %}
+
+  {% if site.show-author %}
+      {% include author.html %}
+  {% endif %}
+
+  {% include disqus.html %}
+</div>

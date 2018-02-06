@@ -1,0 +1,16 @@
+{% if page.multiple %}
+  <div class="post-index">
+    <h4> Indice </h4>
+    <ul>
+    {% for post in site.posts reversed %}
+      {% if post.multiple == page.multiple %}
+        {% if post == page %}
+          <li class="relatedPost"><a>{{ post.title }}</a></li>
+        {% else %}
+          <li class="relatedPost"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+{% endif %}

@@ -1,66 +1,134 @@
-.left-info
-  color: #fff
-  padding: 50px
-  text-align: center
+body
+	line-height: 1
+	font: 16px $fontSans
+	color: $alpha
+
+	.main
+		background-color: #F7F7F8 !important
+
+	.main-container
+		padding-top: 100px
+		padding-bottom: 50px
 
 
-@include media-breakpoint-up(sm)
-  .left-info
-    position: fixed
-    width: 30%
-    .col
-      padding-top: 40px
+h1, h2, h3, h4
+	font-family: $fontSans
+	color: $beta
+	-webkit-font-smoothing: antialiased
+	text-rendering: optimizeLegibility
 
+h1
+	font-size: 3rem
+	letter-spacing: -1px
+	color: $beta
+	font-weight: 700
 
+h2
+	font-size: 2.2rem
 
-@include media-breakpoint-down(sm)
-  .left-info
-    position: relative
-    width: 100%
+h3
+	font-size: 2rem
 
+h4
+	font-size: 1.6rem
 
-.author
-  .share
-    padding-top: 20px
+a
+	color: $delta
+	text-decoration: underline
 
-.main-row
-  @include media-breakpoint-up(sm)
-    min-height: calc(100vh - 56px)
+p
+	line-height: 1.7
+	color: $alpha
+	font-weight: 300
+	margin-bottom: 20px
+	letter-spacing: 0.4px
+	font-size: 12pt
 
-.post
-  @include media-breakpoint-up(sm)
-    padding: 60px !important
+	@media #{$mobile}
+		letter-spacing: 0.2px
 
-  @include media-breakpoint-down(sm)
-    padding: 50px 5px !important
+strong
+	font-weight: 400
+	color: #000
 
-  img
-    max-width: 100%
-  a.card
-    color: black
-    text-decoration: none
+ul,
+ol
+	li
+		line-height: 2.4rem
+		font-weight: 300
+		color: $alpha
+		font-size: 12pt
 
-  div.date
-    padding-bottom: 20px
-    font-style: italic
+img,
+pre,
+iframe
+	max-width: 100%
 
-  .quote
-    font-size: 120%
-    font-style: italic
-    border-left-width: 1px
-    border-left-style: solid
-    padding-left: 10px
+img,
+pre
+	border-radius: 4px
 
+figcaption
+	position: relative
+	top: -20px
+	left: 0
+	right: 0
+	margin: 0 auto
+	width: 100%
+	text-align: center
+	font-size: 1.3rem
+	color: $gama
+	font-weight: 300
 
-.soc
-  padding: 0
-  color: $hbr-main-color
-  li
-    display: inline-block
-    padding: 10px
+	@media #{$mobile}
+		font-size: 1.2rem
 
-.post-preview
-  h4
-    font-size: 1.1rem
-  p
-    font-size: 0.8rem
+blockquote
+	padding-left: 15px
+	border-left: 3px solid #eee
+
+hr
+	border: none
+	height: 1px
+	margin: 40px auto
+	background: #eee
+	width: 100%
+
+figure.highlight
+	width: 100%
+	margin: 0
+
+code,
+tt
+	padding: 1px 0
+	font-family: $fontMonospace
+	font-size: 12px
+	line-height: 20px
+	border-radius: 2px
+	border-radius: 2px
+
+pre
+	margin: 0
+	padding: 5px 10px
+	font-size: 12pt !important
+	overflow: auto
+	border: 1px solid $epsilon
+	border-radius: 2px
+
+.wrapper-normal,
+.wrapper-large
+	height: 100%
+	width: 96%
+	margin: 0 auto
+
+	@media #{$mobile}
+		width: 88%
+
+	@media #{$tablet}
+		width: 88%
+
+.wrapper-normal
+	max-width: 560px
+
+.wrapper-large
+	max-width: 810px

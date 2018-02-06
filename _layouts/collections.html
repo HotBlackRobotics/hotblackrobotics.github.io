@@ -1,0 +1,20 @@
+---
+layout: mainpage
+---
+
+{% assign posts = site.posts | where: "categories",page.lang | where: "categories", page.main_cat%}
+
+<section class="list">
+	<div class="container-fluid">
+		<h1>
+      {% if page.lang == 'it' %} Ultimi Post {% else %} Latest Posts {% endif %}
+    </h1>
+		<div class="row">
+			{% for post in posts %}
+				{% if post.hidden != true %}
+					{% include blog-post.html %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
