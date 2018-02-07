@@ -15,7 +15,7 @@ author: sgabello
 description: "Il kit comprende tutte le parti da stamprare in 3D."
 ---
 
-![kit meccanica dotbot cloud] (http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487238450/meccanica_hii2ip.jpg)
+![kit meccanica dotbot cloud](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487238450/meccanica_hii2ip.jpg)
 
 Il kit comprende tutte le parti da stamprare in 3D.
 

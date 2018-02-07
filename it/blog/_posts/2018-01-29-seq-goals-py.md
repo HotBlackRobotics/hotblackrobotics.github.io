@@ -49,11 +49,7 @@ p_seq = [x1,y1,z1,x2,y2,z2,...xn,yn,zn]
 
 Dopo viene specificata la sequenza di angoli di impabardata (yaw angles) desiderati, espressi in gradi. Infatti, essendo il movimento del robot mobile sul piano xy, possiamo avere una variazione di orientamento solo attorno all'asse z del sistema di riferimento della mappa. Sicuramente il nostro robot non può inclinarsi entrando nel pavimento!
 <p align="center">
-<<<<<<< HEAD
-    <image src="/assets/imgs/2018-01-29-goal/rpy.png" /> 
-=======
     <image src="/assets/imgs/2018-01-29-goal/rpy.png" />
->>>>>>> 11aa8f1d0342da4ab760c5e951037ebca9b9ac3a
 </p>
 <br>
 Gli angoli vanno specificati in gradi per mantenere l'inserimento dati semplice e verranno convertiti in radianti nel nodo. Più dettaglia saranno dati nelle sezioni seguenti.

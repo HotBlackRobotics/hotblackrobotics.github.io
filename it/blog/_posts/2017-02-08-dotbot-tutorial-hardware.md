@@ -26,13 +26,13 @@ Le parti si possono stampare con una stampante 3D (noi abbiamo usato una ShareBo
 * 1 X [db-bottom.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-bottom.stl)
 * 1 X [db-breadboard.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-breadboard.stl)
 
-* 1 X [db-supports.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-supports.stl ) [ **il file è unico ma i supporti per il motori da stampare sono 4**]
+* 1 X [db-supports.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-supports.stl ) [**il file è unico ma i supporti per il motori da stampare sono 4**]
 
 * 1 X [db-top.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-top.stl)
 
 * 8 x supporti rettangolari [db-rect.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/v04-db-dist-25-mm.stl)
 
-* 1 X [db-supports.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-supports.stl ) [ **il file è unico ma i supporti per il motori da stampare sono 4**]
+* 1 X [db-supports.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-supports.stl ) [**il file è unico ma i supporti per il motori da stampare sono 4**]
 
 * 1 X [db-top.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-top.stl)
 
