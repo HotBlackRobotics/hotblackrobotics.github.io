@@ -127,6 +127,28 @@ Il laboratorio sarà alla base per la costruzione dei vostri robot, la cui archi
 è solitamente basata su Arduino Slave per il controllo a basso livello di motori e sensori e
 Raspberry Pi con ROS da master che gestisce l'intelligenza.
 
+### Breve tutorial di installazione
+
+Installare `rosserial-python` e `rosserial-arduino``
+
+```bash
+sudo apt-get install ros-<DISTRO>-rosserial-python ros-<DISTRO>-rosserial-arduino
+```
+
+Generare le librerie da importare in Arduino IDE
+
+```bash
+rusrun rosserial-arduino make-libraries.py .
+```
+
+Questo creerà una cartella `ros_lib/` nella cartella attuale.
+
+Lanciare Rosserial
+
+```bash
+rusrun rosserial-python rosserial-node.py /dev/ttyACM0
+```
+
 ### Materiale
 
  - Pacchetto [ROSSerial](http://wiki.ros.org/rosserial)
