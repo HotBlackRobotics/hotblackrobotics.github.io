@@ -138,7 +138,7 @@ sudo apt-get install ros-<DISTRO>-rosserial-python ros-<DISTRO>-rosserial-arduin
 Generare le librerie da importare in Arduino IDE
 
 ```bash
-rusrun rosserial-arduino make-libraries.py .
+rusrun rosserial_arduino make_libraries.py .
 ```
 
 Questo creerà una cartella `ros_lib/` nella cartella attuale.
@@ -146,8 +146,16 @@ Questo creerà una cartella `ros_lib/` nella cartella attuale.
 Lanciare Rosserial
 
 ```bash
-rusrun rosserial-python rosserial-node.py /dev/ttyACM0
+rusrun rosserial_python serial_node.py <PORTA SERIALE>
 ```
+
+Le porte seriali si possono scoprire digitando su shell
+
+```bash
+ls /dev/tty*
+```
+
+Il nome della porta potrebbe essere `/dev/USB0` o `/dev/ttyACM0` in base al tipo di Arduino!
 
 ### Materiale
 
