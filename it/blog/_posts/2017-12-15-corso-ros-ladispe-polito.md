@@ -117,7 +117,7 @@ turtlesim.
 
 ## Secondo Incontro: 12/02/2018, ore 14:30
 
-**Scopo del laboratorio**: Configurare ROS con Arduino e [ROSSerial]() per controllare sensori e attuatori.
+**Scopo del laboratorio**: Configurare ROS con Arduino e [ROSSerial](http://wiki.ros.org/rosserial) per controllare sensori e attuatori.
 
 Avrete a disposizione degli Arduino UNO (o simili) da interfacciare con il vostro
 Raspberry Pi, insieme a vari sensori ed attuatori forniti dal laboratorio.
