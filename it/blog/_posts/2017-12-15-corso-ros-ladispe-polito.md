@@ -77,7 +77,7 @@ Molti progetti ([RoCon](http://wiki.ros.org/rocon), [Rapyuta](https://www.rapyut
 2. Alcune decisioni dei programmatori iniziali sono contemporaneamente il punto forte e il punto debole del progetto. Ad esempio, la scelta di mantenere lo standard di scambio messaggi il più generico possibile rispetto all'hardware, da una parte fa si che gli stessi algoritmi vadano bene per robot con forme e caratteristiche diverse (un robot umanoide uno su ruote e un quadricottero, in ROS, sono controllabili nello stesso modo). Dall'altro crea un grosso overhead nella dimensione dei messaggi.
 3. La curva di apprendimento di ROS è bella tosta, specialmente all'inizio (ve ne accorgerete se seguirete queste guide).
 
-## Primo Incontro
+## Primo Incontro
 
 Lo scopo del primo incontro è dare ai partecipanti la possibilità di prendere
 confidenza con le basi di ROS e con Linux, sistema operativo su cui ROS è
