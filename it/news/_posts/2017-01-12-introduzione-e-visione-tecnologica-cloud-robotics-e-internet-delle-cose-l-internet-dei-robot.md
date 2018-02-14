@@ -11,7 +11,6 @@ tag:
  - Vision
  - Iot
  - Trend
-category: blog
 redirect_from:
  - /2017/01/12/introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot/
  - /blog/posts/2017-01-12-introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot
