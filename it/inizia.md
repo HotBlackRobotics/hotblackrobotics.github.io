@@ -19,7 +19,7 @@ Se, nonostante questi problemi, sei comunque interessato ad utilizzarla, abbiamo
 sviluppato qeusta pagina appositamente per te. Qui dentro, trovi una serie di informazioni,
 tutorial e risorse su come utilizzare al meglio il sistema che abbiamo sviluppato.
 
-Ti consigliamo di iniziare leggendo la  nostra [visione tecnologica](/it/blog/2017/01/12/introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot) e le basi del sistema operativo [ROS](/it/blog/2017/03/14/il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system).
+Ti consigliamo di iniziare leggendo la  nostra [visione tecnologica](/it/news/2017/01/12/introduzione-e-visione-tecnologica-cloud-robotics-e-internet-delle-cose-l-internet-dei-robot/) e le basi del sistema operativo [ROS](/it/blog/2017/03/14/il-fondamento-della-piattaforma-di-cloud-robotics-robotics-operating-system).
 
 A questo punto, sei pronto per iniziare a smanettare con il robot.
 
@@ -53,7 +53,7 @@ Per imparare le basi della programmazione del robot, segui questi link.
  - [Implementiamo un subscriber con un interruttore](/it/blog/2017/03/24/implementiamo-un-subscriber-con-un-interruttore)
  - [Caricare il proprio progetto in piattaforma](/it/blog/2017/05/03/apre-hbr-community-il-nuovo-sistema-per-la-condivisione-di-progetti-robotici)
  - [Raspicam - come installare e utilizzare la camera per fare streaming da cloud](/it/blog/2017/04/10/utilizzare-la-raspicam-in-streaming-con-la-piattaforma-cloud)
- - [Installiamo ROS sul Raspberry pi](/it/blog/2017/01/13/installiamo-ros-su-raspberry-pi)
+ - [Installiamo ROS sul Raspberry pi](/it/blog/2017/12/11/installiamo-ros-su-raspberry-pi)
  - [HB Cloud Tutorial - Speech Bot: come far parlare il vostro robot](/it/blog/2017/02/02/hb-cloud-tutorial-speech-bot)
  - [Sviluppiamo un assistente robotico](/it/blog/2017/02/10/tutorial-usiamo-la-piattaforma-di-cloud-robotics-per-sviluppare-un-semplice-assistente-personale-robotico)
  - [Sviluppiamo un bot Telegram in ROS](/it/blog/2017/02/16/tutorial-sviluppiamo-un-bot-telegram-in-ros)
@@ -65,8 +65,8 @@ Per imparare le basi della programmazione del robot, segui questi link.
 
 ## Post
  - [Nasce l'associazione Rokers - Robot Makers per promuovere le attività di robotica](/it/blog/2017/05/08/nasce-rokers-la-community-di-robot-makers)
- - [Avogadro: resoconto prima settimana](/it/blog/2017/01/23/hb-robotics-e-itis-avogadro-resoconto-della-prima-settmana)
- - [La robotica di servizio creerà nuovi posti di lavoro grazie all'Internet delle Cose: l'arrivo della cloud robotics](/it/blog/2017/01/25/robotica)
+ - [Avogadro: resoconto prima settimana](/it/news/2017/01/23/hb-robotics-e-itis-avogadro-resoconto-della-prima-settmana)
+ - [La robotica di servizio creerà nuovi posti di lavoro grazie all'Internet delle Cose: l'arrivo della cloud robotics](/it/news/2017/01/25/robotica)
  - [Cosa si può fare con la nostra piattaforma di cloud robotics](/it/blog/2017/02/08/cosa-si-puo-fare-con-la-nostra-piattaforma-di-cloud-robotics)
  - [Recap schede motori](/it/blog/2017/03/02/schede-motori-recap)
  - [RomeCup](/it/blog/2017/03/24/romecup-links-info)
