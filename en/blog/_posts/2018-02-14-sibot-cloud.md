@@ -1,9 +1,9 @@
 ---
-title: "Controllare siBOT dalla piattaforma HBR"
+title: "How to control siBOT with the HBR platform"
 layout: post
 date: 2018-02-14
 image: /assets/imgs/2018-02-07-sibot-cloud/cover.png
-lang: it
+lang: en
 tag:
  - sibot
  - Arduino
@@ -12,38 +12,38 @@ tag:
  - Python
 
 author: fiorellazza
-description: "Come controllare il manipolatore siBOT utilizzando la piattaforma HBR"
+description: "How to control the siBOT manipulator using the HBR Cloud platform"
 ---
-In questo tutorial vedremo come collegare il manipolatore antropomorfo, siBOT, alla piattaforma HBR.
+In this tutorial we will see how to connect the anthropomorphic manipulator, siBOT, to the HBR platform.
 
-siBOT è l'insieme del design [EEZYBOT MK2](http://www.eezyrobots.it/eba_mk2.html), progetto italino Open Source, e del sistema di nodi ROS necessari a controllarlo. Ho utilizzato questo braccio per testare l'architettura sviluppata per il mio progetto di tesi, NTBD, di cui trovate maggiori informazioni in questo [post]({{ site.baseurl }}{% post_url /it/blog/2018-01-17-ntbd-guide-part-I %}).
+siBOT is the combination of the [EEZYBOT MK2](http://www.eezyrobots.it/eba_mk2.html) design, italian Open Source project, and of the ROS nodes system needed to control it. I have used this robotic arm for testing the architecture developed during my thesis project, NTBD, about which you can find further info in this [post]({{ site.baseurl }}{% post_url /en/blog/2018-01-17-ntbd-guide-part-I %}).
 
 <p align="center">
     <image src="/assets/imgs/2018-01-17-ntbd/sibot.png"  height="250"/>
 </p>
-Vedremo quali sono gli step necessari a collegare siBOT in Cloud per controllarlo da piattaforma HBR, sia nel **joint space** (invio degli angoli desiderati per i motori), sia nel **task space** (in questo caso invio posizioni desiderate nello spazio cartesiano che vengono convertite in angoli per i motori). 
-### Indice
+We will see which steps are needed to connect siBOT in Cloud to control it with HBR platform, either in the **joint space** (I send desired angles for the motors), either in the **task space** (in this case I send desired position in the Cartesian space that are then converted into motors' angles). 
+### Index
 * TOC
 {:toc}
 
-# 1. Ingredienti
- Ci serviranno: 
-- 1 braccio siBOT (braccio EEZYBOT MK2 + nodo ROS Arduino)
-- 1 Raspberry Pi con l'immagine HBrain sull'SD
+# 1. Ingredients
+ We will need: 
+- 1 siBOT arm (EEZYBOT MK2 arm + ROS Arduino node)
+- 1 Raspberry Pi with HBrain image on its SD
 
-# 2. Controllo nello spazio dei motori
+# 2. Control in the motor space
 <p align="center">
     <image src="/assets/imgs/2018-01-17-ntbd/5_eezybotfrontservo.jpg"  height="300"/>
 </p>
-Il controllo più semplice è quello nello spazio dei motori: basterà infatti decidere quali valori vogliamo dare ai tre servo motori ed inviarli al robot.
-Possiamo definire una sequenza di configurazioni:
+The most simple control is that in the motor space: indeed it is sufficient to decide which values we wanto to set for the three servo motors and send them to the robot.
+We can define a sequence of configurations:
 ```
 motors_list = [m11,m21,m31,m12,m22,m32,...m1n,m2n,m3n]
 ```
-e leggerla correttamente nel nostro sketch per inviare ciascuna sequenza in modo ciclico per far eseguire al robot una sorta di "routine".
+and read it correctly in our sketch to send each sequence in a cyclic way in order to make our robot do a sort of "routine". ".
 
-## 2.1 Generatore di valori servo desiderati - Sketch 
-Create un nuovo sketch e chiamatelo *motors_generator_sibot*. Il contenuto dovrà essere il seguente:
+## 2.1 Desired servo values generator - Sketch 
+Create a new sketch and call it *motors_generator_sibot*. The content will have to be the following:
 
 ```python
 import dotbot_ros
@@ -75,8 +75,8 @@ class Node(dotbot_ros.DotbotNode):
             time.sleep(3)
 ```
 
-## 2.2 Generatore di valori servo desiderati - Sketch con commenti
-Qui di seguito riporto il codice commentato. Come potete vedere, la struttura è quella utilizzata finora per i nodi ROS su HBrain: vengono definite le funzioni setup() e loop(), con l'aggiunta di una funzione di callback.
+## 2.2 Desired servo values generator - Sketch with comments
+Here I provide the code with comments. As you can see, the structure is that used since now for the ROS nodes on HBrain: functions setup() and loop() are defined with the addition of a callback function.
 
 ```python
 import dotbot_ros
@@ -87,24 +87,24 @@ class Node(dotbot_ros.DotbotNode):
     node_name = 'motors_generator'
 
     def setup(self):
-    # Definiamo un publisherper pubblicare le sequenze di motori
+    # We define a publisher to publish the motors sequences
         self.pub = dotbot_ros.Publisher('motors_nointerp', Int16MultiArray)
-    # Inizializziamo il valore del gripper a chiuso
+    # Initialize the value for the gripper as closed.
         self.gripper = 25
-    # Sequenza di angoli desiderati (da leggere 3 alla volta)
+    # Sequence of desired angles (to be read 3 at a time)
         motors_list = [90, 90, 90, 180, 100, 30, 0, 140, 60]
-    # Sequenza di configurazioni desiderate per il gripper
+    # Sequence of desired gripper configurations
         self.gripp_list = ['open','closed','open']
-    # Come detto, prendiamo i valori in gruppi da n elementi
+    # As said, we take the values in groups of n elements
         n = 3
-    # Il seguente codice ritorna una lista di liste da 3 elementi: 
+    # The following code returns a list of lists each one of 3 elements:
     # [[motor_seq1], [motor_seq2],...[motor_seqn]]
-        self.m_list = [motors_list[i:i+n] for i in range(0, len(motors_list), n)]     
+        self.m_list = [motors_list[i:i+n] for i in range(0, len(motors_list), n)]
         self.loop_rate = dotbot_ros.Rate(0.33)
-    
+
     def loop(self):
-    # Durante il ciclo for nella lista di liste, salvo anche l'indice 
-    # di ogni elemento così da poter ciclare nella lista di valori per il gripper
+    # During the for cycle in the list of lists, I save also the index of each
+    # element so as to cycle in my list of gripper values.
         for indx, motors_seq in enumerate(self.m_list): 
             seq = Int16MultiArray()
             if self.gripp_list[indx] == 'open':
@@ -112,22 +112,22 @@ class Node(dotbot_ros.DotbotNode):
             else:
                 self.gripper = 25
             seq.data = [m for m in motors_seq, self.gripper]
-    # Pubblichiamo sul topic definito da pub la sequenza di motori, 
-    # unione degli angoli dei miniservo dei giunti e il valore per il gripper.
+    # We publish on the topic defined by pub the sequence of motors,
+    # combination of the joints mini-servo angles and the gripper value.
             self.pub.publish(seq)
             time.sleep(3)
 ```
 
-# 3. Controllo della posizione dell'End Effector
-Abbiamo visto come controllare i valori dei motori di siBOT, ma spesso nella robotica industriale l'obbiettivo è controllare la posizione e l'orientamento dell'**End Effector** (**EE**) che in questo caso corrisponde al giunto della pinza (gripper).
+# 3. Control of the End Effector position
+We have seen how to control siBOT's motors values, but often in industrial robotics the aim is to control the position and orientation of the **End Effector** (**EE**) that in this case corresponds to the gripper joint.
 <p align="center">
     <image src="/assets/imgs/2018-02-07-sibot-cloud/5_trigoreal.jpeg"  height="300"/>
 </p>
-Per poter ottenere la posizione desiderata è necessario manipolare questa informazione e trasformarla in valori per i motori del braccio robotico, i quali sono l'unico modo per muovere il robot stesso. Questa operazione si chiama **cinematica inversa** e tramite calcoli, analitici o numerici, consente di trovare il valore dei motori corrispondenti ad una certa posizione dell'EE. Notate che in questo caso, possiamo definire solo la posizione desiderata (non l'orientamento) dal momento che la pinza non ruota per configurazione fisica del braccio.
-Anche in questo caso definiamo una sequenza di posizioni desiderate che vorremmo l'EE del braccio raggiungesse.
+In order to obtain the desired position it is necessary to manipulate the latter information and transform it into values for the robotic arm motors, which are the only way to move the robot itself. This operation is called **inverse kinematics** and, through some computations, analytical or numerical, allows to find the values of the motors corresponding to a certain EE position. Note that in this case we can only define the desired position (not the orientation) since the gripper does not rotate sdue to the arm physical configuration.
+Also in this case we define a sequence of desired positions that we'd like the robot EE to reach.
 
-## 3.1 Generatore di posizioni EE  - Sketch
-Create un nuovo sketch e chiamatelo *positions_generator_sibot*. Il contenuto dovrà essere il seguente:
+## 3.1 End Effector positions generator - Sketch
+Create a new sketch and call it *positions_generator_sibot*. The content will have to be the following:
 
 ```python
 import dotbot_ros
@@ -156,8 +156,8 @@ class Node(dotbot_ros.DotbotNode):
             time.sleep(3)
 ```
 
-## 3.2 Generatore di posizioni EE desiderate - Sketch con commenti
-Come potete notare, nel caso delle posizioni desiderate non abbiamo la funzione di callback all'arrivo di messaggi sul topic in cui viene specificato lo stato della pinza (gripper_value): questa funzione di callback verrà infatti definita nel nodo per la cinematica inversa in cui vengono pubblicati i valori dei servo-motori insieme al valore per il gripper sull'apposito topic.
+## 3.2 End Effector positions generator - Sketch with comments
+As you can notice, in the case of desired positions, we don't have the callback function called as new messages are received on the topic inwhich the gripper status is published (gripper_value): this function will be defined in the Inverse Kinematics node within which the servo-motors values together with the gripper value are published on the specific topic.
 
 ```python
 import dotbot_ros
@@ -168,38 +168,38 @@ class Node(dotbot_ros.DotbotNode):
     node_name = 'position_generator'
 
     def setup(self):
-    # Definiamo un publisher per pubblicare la sequenza di posizioni 
-    # per l'EE ed uno per il valore del gripper
+    # We define a publisher to publish the EE positions sequence and 
+    # one for the gripper value
         self.pub = dotbot_ros.Publisher('desired_position_nointerp', Point)
         self.pubG = dotbot_ros.Publisher('gripper_value', String)
-    # Posizioni in coordinate cartesiane espresse in millimetri
-    # (da leggere [x1,y1,z1,x2,y2,z2...xn,yn,zn])
+    # Positions in Cartesian coordinates expressed in millimeters.
+    # (to be read as [x1,y1,z1,x2,y2,z2...xn,yn,zn])
         desPos = [150, 0, 235, 130, 50, 140, 130, -30, 90]
-    # Sequenza di configurazioni desiderate per il gripper
+    # Sequence of desired configurations for the gripper
         self.gripp_list = ['open','closed','open']
-    # Come detto, prendiamo i valori in gruppi da n elementi
+    # As said, we take the values in groups of n elements
         n = 3
-    # Il seguente codice ritorna una lista di liste da 3 elementi. Ogni lista 
-    # è una posizione in coordinate Cartesiane: 
+    # The following code returns a list of lists of 3 elements.
+    # Each list is a position in Cartesian coordinates:
     # [[pos1], [pos2],...[posn]]
         self.desP = [desPos[i:i+n] for i in range(0, len(desPos), n)]
         self.loop_rate = dotbot_ros.Rate(0.33)
     
     def loop(self):
-    # Durante il ciclo for nella lista di liste, salvo anche l'indice 
-    # di ogni elemento così da poter ciclare nella lista di valori per il gripper
+    # During the for cycle in the list of lists, i savce also the index 
+    # of each element so as to cycle in the gripper values list
         for indx,pos in enumerate(self.desP):
-    # Pubblichiamo sul topic gripper_value la stringa per definire se la pinza
-    # debba essere aperta o chiusa in quella configurazione
+    # We publish the string to define if the gripper must be open or closed
+    # in that configuration, on the topic gripper_value
             self.pubG.publish(self.gripp_list[indx])
             des_pos =  Point(*pos)
-    # Pubblichiamo sul topic definito da pub la posizione desiderata, come messaggio Point
+    # We publish on the topic defined by pub, the desired position, as Point message
             self.pub.publish(des_pos)
             time.sleep(5)
 ```
-## 3.3 Nodo di cinematica inversa - Sketch
-Una volta che le posizioni desiderate verranno pubblicate, sarà necessario convertirle nei valori dei servo corrispondenti. Esistono molte soluzioni a seconda della complessità del problema (per esempio i gradi di libertà, Degrees Of Freedom) ma quella calcolata da me è di tipo geometrico, ancora possibile visti i 3 DOF del braccio.
-Create un nuovo sketch e chiamatelo *IK_sibot*. Il contenuto dovrà essere il seguente:
+## 3.3 Inverse kinematics node - Sketch
+Once the desired positions will be published, it will be necessary to convert it in the correspondent servo values. Many solutions exist, depending on the complexity of the problem ( e.g., the Degrees Of Freedom) but my solution is a geometrical one, still feasible having the arm only 3 DOF.
+Create a new sketch and call it *IK_sibot*. The content will have to be the following:
 
 ```python
 import dotbot_ros
@@ -276,8 +276,9 @@ class Node(dotbot_ros.DotbotNode):
             print " motor 3 has been saturated!" 
         stdout.flush()  
         self.pub.publish(values)
+
 ```
-## 3.4 Nodo di cinematica inversa - Sketch con commenti
+## 3.4 Inverse kinematics node - Sketch with comments
 
 ```python
 import dotbot_ros
@@ -296,7 +297,7 @@ class Node(dotbot_ros.DotbotNode):
         self.pub = dotbot_ros.Publisher('motors', Int16MultiArray)
         self.gripper = 25
 
-# Qui vengono definite alcune funzioni utili a risolvere la cinematica inversa
+# Here are defined some useful functions for the Inverse Kinematics problem solution
     def hipo(self,x,y):
         return math.sqrt(x*x + y*y)
 
@@ -311,24 +312,25 @@ class Node(dotbot_ros.DotbotNode):
 
     def deg(self,rad):
         return rad * 180 / math.pi
-# Funzione di callback per impostare il valore del servo della pinza 
-# a seconda della stringa pubblicata su gripper_value
+# Callback function to set the servo motors of the gripper, 
+# depending on the published string in gripper_value
     def gripper_callback(self, msg):
         if msg.data == "open":
             self.gripper = 100
         else:
             self.gripper = 25
-# Funzione di callback, chiamata alla ricezione della posizione desiderata 
-# sull'apposito topic, in cui vengono calcolati i valori per i servo ed uniti al valore del gripper
+# Callback function, called when a desired position is published on 
+# the specific topic, in which the values for the servos are computed
+# and combined with the gripper value.
     def callback(self,data):
         L0 = 50
         L1 = 35
         L2 = 150 
         L3 = 150
-# Posizione desiderata estrapolata dal messaggio di tipo Point
+# Desired position derived from the Point type message
         cartP = {'xEE':data.x, 'yEE': data.y, 'zEE': data.z}
         L = L0 + L1
-# Posizione desiderata in coordinate cilindriche
+# Desired position in cylindrical coordinates
         cylP = {'theta': math.atan(cartP['yEE']/cartP['xEE']), 'r':self.hipo(cartP['xEE'], cartP['yEE']), 'zhat':cartP['zEE']-L}
         zhat = cylP['zhat']
         rho = self.hipo(cylP['r'], zhat)
@@ -341,7 +343,7 @@ class Node(dotbot_ros.DotbotNode):
         values = Int16MultiArray()
         values.data = [self.deg(angle) for angle in angles]
         values.data.append(self.gripper)
-# Limitiamo i valori dei motori ai limiti definiti dalla struttura fisica del robot 
+# We limit the motors valuesto the limits defined by the physical structure of the robot
         if values.data[0] > 180:
             values.data[0] = 180
             print " motor 1 has been saturated!"
@@ -358,14 +360,13 @@ class Node(dotbot_ros.DotbotNode):
             values.data[2] = 20
             print " motor 3 has been saturated!"
         stdout.flush()
-# Pubblichiamo sul topic definito da pub la sequenza di motori, 
-# unione degli angoli dei miniservo dei giunti e il valore per il gripper.
+# We publish, on the topic defined by pub, the sequence of motors, combination of the joint miniservo angles and the gripper value.
         self.pub.publish(values)
 ```
-# 4. Interpolazione
-I nodi per controllare il manipolatore sono pronti però manca ancora un nodo che renda i movimenti da una configurazione all'altra più fluidi: un nodo di interpolazione. Per mantenere il tutto semplice assumiamo che non ci siano ostacoli da evitare ed implementiamo un'interpolazione di tipo lineare. Implementiamo quindi un nodo di path planning molto semplice.
-## 4.1 Nodo di path planning - Sketch con commenti
-Procederò direttamente a riportare il codice commentato. Copiate questo codice in uno sketch chiamato *linear_interp_sibot*.
+# 4. Interpolation
+The nodes for controlling the manipulator are ready but a node is missing, with the role of making the movements from one configuration to the other smoother: an interpolation node. For sake of simplicity we assume that no obstacles are present and we implement a linear interpolation. we thus implement a very simple path planning node.
+## 4.1 Path Planning node - Sketch with comments
+I will directly provide the commented code. Copy and paste this code in a sketch called *linear_interp_sibot*.
 
 ```python
 import dotbot_ros
@@ -378,7 +379,7 @@ class Node(dotbot_ros.DotbotNode):
     node_name = 'interpolator'
 
     def setup(self):
-# Definiamo i publisher e subscriber
+# We define the publisher and the subscribers
         self.pub = dotbot_ros.Publisher('desired_position', Point)
         self.pubM = dotbot_ros.Publisher('motors', Int16MultiArray)
         dotbot_ros.Subscriber("desired_position_nointerp", Point, self.callback)
@@ -388,14 +389,14 @@ class Node(dotbot_ros.DotbotNode):
         self.pointB = Point()
         self.motorA = Int16MultiArray()
         self.motorB = Int16MultiArray()
-# Qui vengono alcune funzioni utili al calcolo dei punti di interpolazione
+# Here some useful functions for the computation of the interpolation points are defined
     def coord_distance_AB(self,a,b):
         d = Point()
         d.x = abs(b.x-a.x)
         d.y = abs(b.y-a.y)
         d.z = abs(b.z-a.z)
         return d
-    
+
     def values_distance_AB(self,a,b):
         d = Int16MultiArray()
         d.data.append(abs(b.data[0]-a.data[0]))
@@ -403,9 +404,8 @@ class Node(dotbot_ros.DotbotNode):
         d.data.append(abs(b.data[2]-a.data[2]))
         return d
 
-# Funzione di callback chiamata alla ricezione di una sequenza di valori per i motori
-# Legge la sequenza corrente poi la paragona a quella precedente per calcolare i valori intermedi
-# in 20 steps (N=20)
+# Callback function called when the motors sequence is published
+# It reads the current sequence then compares it with the previous one to compute the intermediate values in 20 steps (N=20)
     def motors_callback(self,data):
         N = 20
         self.i += 1
@@ -435,14 +435,14 @@ class Node(dotbot_ros.DotbotNode):
                         M.data.append(self.motorA.data[2] - d.data[2]/N)
 
                     M.data.append(self.motorB.data[3])
-
+                    
                     self.pubM.publish(M)
                     self.motorA = M
                     self.i += 1
                     time.sleep(0.05)
-# Funzione di callback chiamata alla ricezione di una nuova posizione per l'EE
-# Legge la posizione corrente poi la paragona a quella precedente per calcolare i valori intermedi
-# in 20 steps (N=20)
+# Callback function called when a new EE position is published
+# It reads the current position then compares it to the previous one in order to
+# compute the intermediate values in 20 steps (N=20)
     def callback(self,data):
         N = 20
         self.i += 1
@@ -479,10 +479,10 @@ class Node(dotbot_ros.DotbotNode):
                     self.i += 1
                     time.sleep(0.05)
 ```
-NOTA: i valori per i servo possono essere solo interi, l'interpolazione quindi genera valori che possono essere diversi da quelli desiderati.
-# 5. Sketch Arduino
-Per poter controllare il manipolatore è necessario controllarne i motori con una scheda Arduino su cui verrà eseguito un nodo ROS seriale che leggerà i messaggi sui topic da noi specificati.
-Caricate sulla vostra scheda Arduino il seguente sketch:
+RMK: ithe values for the servos can only be integers, the interpolation thus generates values which may be different from the desired ones.
+# 5. Arduino Sketch
+In order to control the manipulator it is necessary to control its motors with an Arduino board on which a serial ROS node will be run which will read the messages on the topics we want it to read on.
+Load the following sketch on your Arduino board:
 ```c++
 /*
  * siBOT servo control
@@ -496,8 +496,8 @@ ros::NodeHandle  nh;
 
 Servo servo1, servo2, servo3, servo4;
 
-// Funzione di callback (quando una nuova sequenza di motori viene pubblicata
-// scrivi gli angoli sui rispettivi pin)
+// Callback function (when a new sequence of motors is published
+// write the angles on the respective pins)
 void motors_cb( const std_msgs::Int16MultiArray& angles_msg){
   
   servo1.write(angles_msg.data[0]);
@@ -507,8 +507,7 @@ void motors_cb( const std_msgs::Int16MultiArray& angles_msg){
   
 }
 
-// Definizione del subscriber. Notate che il topic è specifico al robot su cui stanno
-// eseguendo i nodi ROS (/hotbot/ in questo caso)
+// Subscriber definition. Note that the topic is specific to the robot on which the Ros nodes are running (/hotbot/ in this case)
 ros::Subscriber<std_msgs::Int16MultiArray> sub("/hotbot/motors",motors_cb);
 
 void setup(){
@@ -528,19 +527,19 @@ void loop(){
 }
 ```
 
-# 6. Avvio di Rosserial e run dei nodi 
-Affinchè il nodo seriale che esegue sulla scheda Arduino venga reso noto al sistema ROS, un nodo python seriale apposito deve essere lanciato. Per fare ciò attraverso la piattaforma, bisogna aprire questo [link](http://cloud.hotblackrobotics.com/cloud/webgui/camera) e cliccare su "Apri Manager Robot". Una volta aperta la pagina, dove compare "rosserial" cliccare su start per avviare il nodo seriale.
+# 6. Rosserial start and nodes run
+So as to advertise on the ROS system the serial node running on the Arduino, a specific python serial node must be launched. To do so through the paltform, it is necessary to open this [link](http://cloud.hotblackrobotics.com/cloud/webgui/camera) and click on "Apri Manager Robot". Once the page is open, click on start where "rosserial" appears in order to launch the serial node.
 
-Una volta lanciato il nodo seriale, non ci resta che runnare i nodi necessari al controllo del robot, a seconda del controllo scelto:
+As the serial node is launched, we just have to run the necessary nodes fot he robot control, depending on the chosen control:
 
-- Controllo nello spazio dei motori: motors_generator_sibot, linear_interp_sibot
-- Controllo della posizione dell'EE: positions_generator_sibot, IK_sibot, linear_interp_sibot
+- Control in the joint space: motors_generator_sibot, linear_interp_sibot
+- Control of the EE positionControllo della posizione dell'EE: positions_generator_sibot, IK_sibot, linear_interp_sibot
 
-# 7. Esercizi
+# 7. Exercises
 
-- Scrivere uno sketch chiamato *set_motors_sibot* che invii una sequenza per i motori ad ogni esecuzione di loop(). 
-- Scrivere uno sketch chiamato *set_position_sibot* che invii una posizione per l'EE ad ogni esecuzione di loop().
+- Write a sketch called *set_motors_sibot* which sends a sequence of motors for each loop() execution.
+- Write a sketch called *set_position_sibot* which send an EE position at each loop() execution. 
 
-**Hint**: sfruttate il codice fornito e modificatelo per renderlo più semplice ed usarlo come base per pubblicare sui topic giusti. Inoltre, per fare in modo che l'interpolazione venga eseguita basta runnare lo sketch *linear_interp_sibot* oltre allo sketch che avrete creato.
+**Hint**: exploit the porvided code and modify it to make it more simpler and use it as a base to publish on the right topics. Furthermore, to make the interpolation be executed, it is sfficient to run the *linear_interp_sibot* sketch in addition to the sketch you will write.
 
-**Ciao ciao!** :hibiscus:
+**Bye bye!** :hibiscus:
