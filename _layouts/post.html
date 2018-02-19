@@ -15,7 +15,7 @@ layout: page
     {% endif %}
     <h1 class="title">{{ page.title }}</h1>
     <span class="date">
-        Pubblicato il <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%m/%d/%Y" }}</time>
+        Pubblicato il <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%d/%m/%Y" }}</time>
         {% if site.read-time %} - lettura in {% include read-time.html content=content%}{% endif %}
     </span>
   </div>
