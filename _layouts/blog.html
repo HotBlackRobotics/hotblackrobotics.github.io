@@ -4,17 +4,6 @@ layout: mainpage
 
 {% assign posts = site.posts | where: "categories",page.lang | where: "categories", "blog"%}
 
-<div class="container search">
-	<div class="row">
-		<div class="col">
-			<div id="search-container">
-				<input type="text" id="search-input" placeholder="search..." class="form-control">
-				<ul id="results-container"></ul>
-			</div>
-		</div>
-	</div>
-</div>
-
 <section class="list">
 	<div class="container-fluid">
 		<h1>
