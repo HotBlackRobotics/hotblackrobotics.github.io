@@ -20,7 +20,7 @@ description: "Breve tutorial che spiega come abilitare la RaspiCam su ROS e la p
 
 In questo tutorial, vedremo molto brevemente come utilizzare la raspicam tramite il robot dotbot e fare streaming dell'immagine tramite ROS e la piattaforma cloud.
 
-Questa funzione è ancora in stato di test, quindi qualcosa potrebbe non funzionare. Nel caso, contattateci a info@hotblackrobotics.com
+Questa funzione è ancora in stato di test, quindi qualcosa potrebbe non funzionare. Nel caso, contattateci a **info@hotblackrobotics.com**.
 
 ## Connettere la RaspiCam
 

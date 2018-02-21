@@ -22,5 +22,5 @@ Invece la HG7881 così
 
 ![cloud robotics HG7881](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/maxresdefault.png)
 
-Oppure consigliamo anche la scheda motori in questo fantastico kit [CAM JAM](http://www.hotblackrobotics.com/forum/support/21)
+Oppure consigliamo anche la scheda motori in questo fantastico kit [CAM JAM](https://thepihut.com/collections/camjam-edukit/products/camjam-edukit-3-robotics)
 ![cloud robotics edu jam](https://cdn.shopify.com/s/files/1/0176/3274/products/101685_1024x1024.jpg?v=1477646110)

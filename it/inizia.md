@@ -48,7 +48,6 @@ Per imparare le basi della programmazione del robot, segui questi link.
  - [Collegare in cloud i LEGO NXT ed estenderne le funzionalità](/it/blog/2017/06/16/collegare-in-cloud-i-lego-nxt-ed-estenderne-le-funzionalita)
  - [Collegare un Arduino in parallelo al raspberry](/it/blog/2017/06/16/collegare-un-arduino-in-parallelo-al-raspberry)
  - [Implementare un motore d'intelligenza artificale sul vostro bot](/it/blog/2017/06/16/implementare-un-motore-dintelligenza-artificale-sul-vostro-bot)
- - [Webapp per il controllo da tastiera wasd](/it/blog/2017/06/09/webapp-per-il-controllo-da-tastiera-wasd)
  - [Implementiamo una WebApp per il controllo remoto da tastiera wasd](/it/blog/2017/06/09/webapp-per-il-controllo-da-tastiera-wasd)
  - [Implementiamo un subscriber con un interruttore](/it/blog/2017/03/24/implementiamo-un-subscriber-con-un-interruttore)
  - [Caricare il proprio progetto in piattaforma](/it/blog/2017/05/03/apre-hbr-community-il-nuovo-sistema-per-la-condivisione-di-progetti-robotici)

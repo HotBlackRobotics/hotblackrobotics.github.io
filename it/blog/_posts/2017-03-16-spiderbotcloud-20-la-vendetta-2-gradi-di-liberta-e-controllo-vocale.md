@@ -1,5 +1,5 @@
 ---
-title: "SpiderBotCloud 2.0 la vendetta - 2 gradi di libertà e controllo vocale"
+title: "SpiderBot Cloud 2.0 la vendetta - 2 gradi di libertà e controllo vocale"
 layout: post
 date: 2017-03-16 22:03:56
 image:
@@ -21,8 +21,8 @@ Il materiale utilizzato è lo stesso del tutorial precedente ma con una batteria
 Lista:
 
 * 2 spider robot comprati da Tiger
-* 2 power bank per cellulare da 5 Volt [http://www.dx.com/p/cylinder-shaped-external-6000mah-emergency-power-battery-charger-for-iphone-cell-phone-silver-206652#.WFpnUrbhB-V](http://www.dx.com/p/cylinder-shaped-external-6000mah-emergency-power-battery-charger-for-iphone-cell-phone-silver-206652#.WFpnUrbhB-V)
-* un ponte ad H. Io ho usato questo [http://eud.dx.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060](http://eud.dx.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060) ma anche in questo caso potete scegliere quello che volete. Qualcuno li costruisce anche a mano mettendo insieme 4 transistor!
+* 2 [power bank per cellulare da 5 Volt](http://www.dx.com/p/cylinder-shaped-external-6000mah-emergency-power-battery-charger-for-iphone-cell-phone-silver-206652#.WFpnUrbhB-V)
+* un ponte ad H. Io ho usato [questo](http://eud.dx.com/product/hg7881-two-channel-motor-driver-board-dark-blue-2-5-12v-2-pcs-844407060) ma anche in questo caso potete scegliere quello che volete. Qualcuno li costruisce anche a mano mettendo insieme 4 transistor!
 * un Raspberry PI 3
 * cavetti
 * fascette da idraulico
@@ -63,9 +63,9 @@ Ora collegate ogni alimentazione dei motori (motere A e motore B) ai rispettivi 
 Ora configurate il Raspberry come da [http://www.hotblackrobotics.com/forum/support/13](http://www.hotblackrobotics.com/forum/support/13).
 
 E siete pronti a partire!
-Se volete usare il controllo vocale copiate il codice da qui e usatelo tramite la Web App come spiegato qui [http://www.hotblackrobotics.com/forum/support/24](http://www.hotblackrobotics.com/forum/support/24).
+Se volete usare il controllo vocale copiate il codice da qui e usatelo tramite la Web App come spiegato [qui]({{ site.baseurl }}{% post_url /it/blog/2017-03-16-spiderbot-cloud-con-controllo-vocale %}).
 
-```
+```python
 
 import dotbot_ros
 from dotbot_msgs.msg import Led
@@ -112,4 +112,4 @@ class Node(dotbot_ros.DotbotNode):
             self.speed_pub.publish(speed_msg)
 ```
 
-Per informazioni info@hotblackrobotics.com Per la licenza da beta tester gratis registratevi qui [http://www.hotblackrobotics.com/register](http://www.hotblackrobotics.com/register).
+Per informazioni **info@hotblackrobotics.com**. Per la licenza da beta tester gratis registratevi [qui](http://cloud.hotblackrobotics.com/register).

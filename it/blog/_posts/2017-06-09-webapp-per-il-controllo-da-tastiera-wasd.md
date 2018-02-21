@@ -25,11 +25,11 @@ In questo tutorial vedremo come controllare un robot attraverso i tasti **wasd**
 
 La webapp
 -----
-Come prima cosa andiamo a sviluppare l'applicazione web che ci permetterà di controllare il robot tramite la tastiera. [Da qui](https://github.com/sgabello1/WebApp) scaricate (pemendo sul pulsante **clone or download**) la cartella ed estraetela in un luogo facilmente raggiungibile.
+Come prima cosa andiamo a sviluppare l'applicazione web che ci permetterà di controllare il robot tramite la tastiera. [Da qui](https://github.com/sgabello1/WebApp) scaricate (premendo sul pulsante **clone or download**) la cartella ed estraetela in un luogo facilmente raggiungibile.
 
 ![](https://user-images.githubusercontent.com/29255795/26967384-5320d1c2-4cfe-11e7-8e7f-1ca7de8dcf1b.png)
 
-Aprite la cartella **keyboardteleop_files** e aprite il file all'interno della cartella (la "struttura" in javascript della nostra webapp) con l'applicazione blocco note. A questo punto cercate le righe dove sono indicate le direzioni (nella forma `//command` e aggiungete sotto ognuno di essi la stringa `console.log("direzione")`, sostituendo la parola "direzione" in base a dove si dirigerà il robot.
+Aprite la cartella **keyboardteleop_files** e aprite il file all'interno della cartella (la "struttura" in javascript della nostra webapp) con l'applicazione blocco note. A questo punto cercate le righe dove sono indicate le direzioni (nella forma `//command`) e aggiungete sotto ognuno di essi la stringa `console.log("direzione")`, sostituendo la parola "direzione" in base a dove si dirigerà il robot.
 
 ![](https://user-images.githubusercontent.com/29255795/26967302-ff0a2fde-4cfd-11e7-8a97-693cca91596a.png)
 
@@ -37,7 +37,7 @@ Queste aggiunte serviranno a verificare l'effettiva funzionalità della nostra w
 
 ![](https://user-images.githubusercontent.com/29255795/26968358-0a5e8afc-4d02-11e7-983e-038aeaf409b3.png)
 
-Dovete ora sostituire questa stringa con quella che identifica il vostro robot. Per trovarla collegate il vostro robot al sito di Hotblack, aprite una qualunque webapp e aprite la sorgente della pagina (tasto destro)
+Dovete ora sostituire questa stringa con quella che identifica il vostro robot. Per trovarla collegate il vostro robot al sito di Hotblack, aprite una qualunque webapp e aprite la sorgente della pagina (tasto destro):
 
 ![](https://user-images.githubusercontent.com/29255795/26968706-438104f8-4d03-11e7-97f7-96e6deb0a765.png)
 
@@ -56,7 +56,7 @@ Scriviamo ora lo sketch in Ros che farà comunicare il nostro robot con la webap
 self.robot = Robot(left=(16, 19), right=(20, 26))
 ```
 
-##Sottoscriviamoci ad un Topic ROS e usiamo le Callback
+## Sottoscriviamoci ad un Topic ROS e usiamo le Callback
 
  Andiamo ad implementare una funzione di callback, chiamata `keyb_wasd`. Questa funzione (come tutte le funzioni di callback) avrà la seguente forma:
 
@@ -117,8 +117,7 @@ def keyb_wasd(self, msg):
     self.robot.value = (v_dx, v_sx)
 ```
 
-
-###Sottoscrizione al topic
+### Sottoscrizione al topic
 
 Una volta implementata la funzione di callback, non ci resta che sottoscriverci al topic `keyboard` per poterla correttamente utilizzare. Per farlo, nella funzione `setup`, aggiungiamo la seguente linea di codice:
 
@@ -131,7 +130,7 @@ ricordandoci di importare l'oggetto `Twist` da `geometry_msgs.msg`
 from geometry_msgs.msg import Twist
 ```
 
-###Codice completo
+### Codice completo
 
 Ecco il codice completo del nostro programma
 

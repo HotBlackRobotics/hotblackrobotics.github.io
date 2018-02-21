@@ -19,16 +19,16 @@ description: ""
 
 In questo tutorial vedremo come creare un semplice bot telegram in grado di controllare un robot in cloud.
 
-##Cosa serve?
+## Cosa serve?
 
 Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
 
 Questa volta, useremo un robot reale per dialogare con il robot! Ad ogni modo, potrete comunque richiedere il vostro robot virtuale per fare prove!
-Se volete utilizzare un robot virtuale scriveteci a info@hotblackrobotics.com!
+Se volete utilizzare un robot virtuale scriveteci a **info@hotblackrobotics.com**!
 
 Per prima cosa, è importate iscriversi alla piattaforma e collegarsi al robot, potete seguire le istruzioni all'inizio di [questo tutorial](http://www.hotblackrobotics.com/blog/posts/2017-02-10-tutorial-usiamo-la-piattaforma-di-cloud-robotics-per-sviluppare-un-semplice-assistente-personale-robotico).
 
-##Creazione di un Bot Telegram
+## Creazione di un Bot Telegram
 
 Per prima cosa, è necessario configurare un bot telegram! Per farlo, telegram mette a disposizione un bot (chiamato **BotFather**) in grado di creare altri bot.
 
@@ -51,19 +51,19 @@ Una volta creato il bot, cliccando sull'URL, potremmo aprire la chat! Ovviamente
 
 ![Bot Chat](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487249723/Schermata_2017-02-16_alle_13.54.43_xnqcvr.png)
 
-##Creazione del nostro programma
+## Creazione del nostro programma
 
 Una volta connessi, creiamo un nuovo programma chiamato *telebot*, seguendo le istruzioni di seguito.
 
 Dopo esserci loggati in piattaforma, apriamo il tab **sketches**.
 ![aprire sketches](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487253463/Schermata_2017-02-16_alle_13.44.25_zpckl8.png)
 
-Creiamo un nuovo scketch e apriamolo
+Creiamo un nuovo sketch e apriamolo
 
 ![nuovo sketch](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487253464/Schermata_2017-02-16_alle_13.44.32_zljmyj.png)
 ![aprire sketch](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487253460/Schermata_2017-02-16_alle_13.44.37_toe9mx.png)
 
-##Implementiamo un semplice Bot
+## Implementiamo un semplice Bot
 
 A questo punto, siamo pronti ad implementare un semplicissimo bot che risponde alla nostra chat.
 Nel programma appena crato, implementiamo il seguente codice.
@@ -107,7 +107,7 @@ Una volta implementato il programma, salviamo e lanciamo il codice! A questo pun
 
 ![bot dialogo](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1487250886/Schermata_2017-02-16_alle_14.09.45_dkn7v0.png)
 
-##Analizziamo il codice
+## Analizziamo il codice
 
 Come al solito, il nostro programma è composto da un nodo ROS, la funzione princiapale è la funzione `setup`, che si occupa di inizializzare il bot e creare una callback di gestione.
 
@@ -118,7 +118,6 @@ Come al solito, il nostro programma è composto da un nodo ROS, la funzione prin
 ```
 
 In particolare, la linea `self.bot = telepot.Bot(self.TOKEN)` crea il bot utilizzando il nostro token, mentre la seconda linea `self.bot.message_loop(self.handle)` dice che, ogni volta che un nuovo messaggio viene mandato al bot, bisogna chiamare la funzione `self.handle`.
-
 
 La funzione `handle`, quindi, viene chiamata quando un nuovo messaggi è mandato alla nostra chat, ed.è implementata come segue:
 
@@ -151,11 +150,11 @@ Ora possiamo analizzare la prima parola, rispondendo in modo diverso in base al 
 
 Per rispondere alla chat, utilizziamo il la riga `self.bot.sendMessage(chat_id, "ciao, come stai?") `, dove il primo parametro è l'id della chat stessa, mentre il secondo parametro è la stringa da mandare.
 
-###Esercizio
+### Esercizio
 
 Provate ad implemntare altri comandi!
 
-##Controlliamo il robot da chat telegram!
+## Controlliamo il robot da chat telegram!
 
 Una volta capito come mandare comandi al robot, possiamo tranquillamente implementare dei comandi per farlo muovere. Per farlo, bisogna modificare il nostro programma come segue.
 
@@ -164,7 +163,7 @@ Una volta capito come mandare comandi al robot, possiamo tranquillamente impleme
 3. Implementare i comandi nel costrutto `if ... elif ... else`
 4. Nei nuovi comandi, controllare i motori tramite l'oggetto Robot.
 
-Il nuovo codice implementato è il seguete
+Il nuovo codice implementato è il seguente
 
 ```python
 import dotbot_ros

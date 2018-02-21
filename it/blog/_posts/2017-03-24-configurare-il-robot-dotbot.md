@@ -19,7 +19,7 @@ description: ""
 ## Getting started
 
 Questo piccolo tutorial spiega come configurare il robot la prima volta e attaccarsi in piattaforma!
-Prima cosa scaricate l'immagine da copiare su SD da questo [link](https://sourceforge.net/projects/hbrain/).
+Prima cosa scaricate l'immagine da copiare su SD da [questo link]({{ site.baseurl }}{% post_url /it/blog/2017-03-24-immagine-sd-per-la-cloud-e-configurazione %}).
 
 Estraete il file (ricordandovi il percorso) e copiate il .img (sui xx B) sulla vostra SD. Io uso in Windows un programma che si chiama Win32 Disk Imager e funziona bene ;) Il funzionamento del programma è semplicissimo, immettete il percorso della vostra immagine e premete "scrivi".
 
@@ -36,7 +36,7 @@ Ora inserite l'SD nel Raspberry e prepariamoci a connetterlo ad internet!Accende
 
 ## Il Circuito base per i LED, Interruttori e Motori
 
-Per prima cosa andate su [http://www.hotblackrobotics.com/cloud/sketch/](http://www.hotblackrobotics.com/cloud/sketch/) e clonate il codice "example_driver". **Non dovete capire tutte le righe di codice** . basta aprirlo con "edit" e avviarlo con il tasto "run" in alto.
+Per prima cosa andate [qui](http://cloud.hotblackrobotics.com/cloud/sketch) e clonate il codice "example_driver". **Non dovete capire tutte le righe di codice**, basta aprirlo con "edit" e avviarlo con il tasto "run" in alto.
 
 Ora costruite un circuito così.
 
@@ -44,7 +44,7 @@ Ora costruite un circuito così.
 
 Collegando i fili per i MOTORI ai GPIO 16,19 (sinistra) e 20,26 (destra). I LED 1,2,3 ai GPIO 5,6,13 e gli INTERRUTTORI a 2 e 3.
 
-Ottimo! Ora fate il test hardware con [http://www.hotblackrobotics.com/cloud/webgui/hwtest](http://www.hotblackrobotics.com/cloud/webgui/hwtest) e controllate che tutto funzioni e sia configurato correttamente.
+Ottimo! Ora fate il test hardware con [http://cloud.hotblackrobotics.com/cloud/webgui/hwtest](http://cloud.hotblackrobotics.com/cloud/webgui/hwtest) e controllate che tutto funzioni e sia configurato correttamente.
 
 ## Connettersi ad una rete diversa da DotBot
 
@@ -65,6 +65,6 @@ Premete su "Configure" e si aprirà una schermata con la lista delle reti locali
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/list.PNG)
 
-Voi ne selezionate una e digitate la password nella casella sottostante. Infine premete "Submit". Ci mette 1-2 minuti non temete! Aspettate fino a quando non vi arriva un pop-up di conferma. Poi ritornate su http://hotbot.local/wifi/schemes  e premete connect sulla rete che avete appena configurato. Riavviate o staccando il cavo di alimentazione o da piattaforma cloud (http://www.hotblackrobotics.com/cloud/robot) senza il cavo Ethernet. Aspettate fino a quando il LED non lampeggia...e siete connessi!
+Voi ne selezionate una e digitate la password nella casella sottostante. Infine premete "Submit". Ci mette 1-2 minuti non temete! Aspettate fino a quando non vi arriva un pop-up di conferma. Poi ritornate su http://hotbot.local/wifi/schemes  e premete connect sulla rete che avete appena configurato. Riavviate o staccando il cavo di alimentazione o [da piattaforma cloud](http://cloud.hotblackrobotics.com/cloud/robot) senza il cavo Ethernet. Aspettate fino a quando il LED non lampeggia...e siete connessi!
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/Connected.jpeg)

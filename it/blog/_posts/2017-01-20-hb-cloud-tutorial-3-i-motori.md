@@ -34,7 +34,7 @@ Colleghiamo i motori al driver. L'alimentazione del driver va collegata alla bat
 
 Le due fasi dei motori, vanno collegate, rispettivamente, ai GPIO 16,19 (sinistra) e 20,26 (destra).
 
-> Importante: Ricordate di mettere in comune la massa (GND) dell'alimentazione dei motori con la massa del Raspberry Pi.
+> **Importante: Ricordate di mettere in comune la massa (GND) dell'alimentazione dei motori con la massa del Raspberry Pi.**
 
 ![schema motori raspberry](http://res.cloudinary.com/hbr/image/upload/v1485196535/motori_bb_fdxui2.png)
 

@@ -18,7 +18,7 @@ description: ""
 
 Qui di seguito un breve tutorial su come assemblare il robot Dotbot. In questo tutorial ci dedichiamo ad assemblare il  robot. Inoltre sono linkate le parti da stampare in 3D. **Un grazie speciale a Michele Maffucci da cui ho preso gran parte (o quasi tutto) per questo tutorial!** Vedi gli altri tutorial per la configurazione e la programmazione dei dotbot.
 
-## La lista delle parti meccaniche  ##
+## La lista delle parti meccaniche
 Le parti si possono stampare con una stampante 3D (noi abbiamo usato una ShareBot e stampiamo in PLA) e i link ai file STL sono in blu.
 
 * 2 X [db-ball_caster.stl](https://github.com/sgabello1/Dotbot-Kit-e-Tutorial/blob/master/db-ball_caster.stl)
@@ -40,7 +40,7 @@ Le parti si possono stampare con una stampante 3D (noi abbiamo usato una ShareBo
 
 * 4 x bulloncini di supporto al Raspberry
 
-## La lista dei componenti ##
+## La lista dei componenti
 
 *  4 viti M3 da  30 mm
 
@@ -112,7 +112,7 @@ Poi montiamo i supporti con le viti M3X16, dalla parte della ruota omnidireziona
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05_3.jpeg )
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.12.05_2.jpeg )
 
-E infine otteremo questo.
+E infine otterremo questo:
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/dotbot_git2/WhatsApp%20Image%202017-01-11%20at%2011.37.35.jpeg )
 

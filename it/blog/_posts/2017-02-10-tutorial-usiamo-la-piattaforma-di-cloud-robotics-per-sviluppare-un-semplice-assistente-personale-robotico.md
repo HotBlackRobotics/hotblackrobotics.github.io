@@ -22,7 +22,7 @@ description: "Usiamo la piattaforma di Cloud Robotics per sviluppare un semplice
 
 Ciao a tutti, iniziamo con questo post una serie di tutorial più completi per lo sviluppo di semplici applicazioni Robotiche. In particolare, in questo tutorial vedremo come sfruttare la nostra piattaforma per sviluppare un'applicazione che permetta di inviare comandi al robot tremite voce e ricevedere informazioni vocali dal robot stesso.
 
-##Cosa serve?
+## Cosa serve?
 
 Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale (tramite la cloud)](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
 
@@ -30,7 +30,7 @@ In questo tutorial, per semplicità, useremo un robot virtuale ma ovviamente si 
 
 Se volete utilizzare un robot virtuale scriveteci a info@hotblackrobotics.com!
 
-##Iniziamo: accediamo alla piattaforma e colleghiamoci al Robot
+## Iniziamo: accediamo alla piattaforma e colleghiamoci al Robot
 
 Accediamo al sito [www.hotblackrobotics.com](http://www.hotblackrobotics.com) ed effettuiamo il Login
 
@@ -51,7 +51,7 @@ Una volta cliccato "Cerca Robot", se tutto va bene, otterremo il seguente messag
 
 ![Robot Connesso](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486662843/Schermata_2017-02-09_alle_18.05.08_dwgqnj.png)
 
-##Creiamo il nostro programma
+## Creiamo il nostro programma
 
 Una volta connesso il robot, siamo pronti ad iniziare a sviluppare il programma! A questo punto andiamo sul tab *sketches*.
 
@@ -63,7 +63,7 @@ Creiamo un nuovo programma chiamato "assistente robotico" e successivamente prem
 
 Apriamo il file con il tasto "edit" e scriviamo il seguente programma.
 
-```
+```python
 import dotbot_ros
 from std_msgs.msg import String
 
