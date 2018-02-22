@@ -16,7 +16,7 @@ author: Pietro Chirio
 description: ""
 ---
 
-In questo tutorial vedremo come come collegare un Arduino UNO al nostro Raspberry con ROS. In questo modo potremmo sfruttare l'alto livello del codice di programmazione di ROS in parallelo alla versatilità nel controllo di sensori/motori/periferiche di Arduino.
+In questo tutorial vedremo come collegare un Arduino UNO al nostro Raspberry con ROS. In questo modo potremmo sfruttare l'alto livello del codice di programmazione di ROS in parallelo alla versatilità nel controllo di sensori/motori/periferiche di Arduino.
 
 # Nota Bene
 
@@ -48,9 +48,9 @@ In questo modo sarà sufficiente collegare l'Arduino al Raspberry attraverso una
 
 Scrittura di un semplice publisher per Arduino
 ----
-Procediamo ora a scrivere il codice di un semplice pulisher per pubblicare una stringa testuale sulla console ROS. Apriamo quindi l'Arduino IDE e iniziamo un nuovo progetto. Andiamo ad includere immediatamente le librerie che utilizzeremo e la stringa `ros: :NodeHandle  nh;` che permetterà al nostro programma di creare publisher e subscriber:
+Procediamo ora a scrivere il codice di un semplice pulisher per pubblicare una stringa testuale sulla console ROS. Apriamo quindi l'Arduino IDE e iniziamo un nuovo progetto. Andiamo ad includere immediatamente le librerie che utilizzeremo e la stringa `ros::NodeHandle  nh;` che permetterà al nostro programma di creare publisher e subscriber:
 
-```arduino
+```c++
 #include <ros.h>
 #include <std_msgs/String.h>
 
@@ -58,14 +58,14 @@ ros::NodeHandle nh;
 ```
 Ora dobbiamo definire il nostro publisher/subscriber. In questo caso lavoriamo su un publisher chiamato **chatter** che pubblicherà un messaggio di tipo **&str_msg**
 
-```arduino
+```c++
 std_msgs::String str_msg;
 ros::Publisher chatter("chatter", &str_msg);
 ```
 
-Nel **setup** inizializziamo il nostro nodo ROS e definiamo i topic a cui vogliamo sottoscriverci utilizzando la stinga `nh.subscribe(nomedeltopic)` e quelli che vogliamo pubblicare, come nel nostro caso, con la stringa `nh.advertise(nomedeltopic)`
+Nel **setup** inizializziamo il nostro nodo ROS e definiamo i topic a cui vogliamo sottoscriverci utilizzando la stringa `nh.subscribe(nomedeltopic)` e quelli che vogliamo pubblicare, come nel nostro caso, con la stringa `nh.advertise(nomedeltopic)`
 
-```arduino
+```c++
 void setup()
 {
   nh.initNode();
@@ -75,7 +75,7 @@ void setup()
 
 Come ultimo passo nella funzione **loop** il nodo pubblica la stringa "Hello World" e si chiama la funzione `ros::spinOnce()` con la quale si gestiscono tutte le **callback**
 
-```arduino
+```c++
 void loop()
   {
     str_msg.data = hello;
@@ -88,7 +88,7 @@ void loop()
 Codice completo
 ---
 
-```arduino
+```c++
 #include <ros.h>
 #include <std_msgs/String.h>
 

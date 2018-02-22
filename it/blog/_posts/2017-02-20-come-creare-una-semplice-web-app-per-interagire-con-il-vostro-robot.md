@@ -89,7 +89,7 @@ Dovete modificare l'indirizzo IP del robot quando usate questa funzione `start_r
 `.
 Una volta connesso, nel mio caso ho ricevuto l'indirizzo IP 192.168.0.104 e il robot si chiama "hotbot". Poi andiamo a dichirare un publisher, che pubbblica sul topic relativo al nome del vostro robot `/<nome del vostro robot>/command_velocity` un tipo di messaggio geometry_msgs/Twist.
 
-```
+```javascript
  var cmdVel = new ROSLIB.Topic({
     ros : ros,
     name : '/' + robot.name  + '/command_velocity',
@@ -99,7 +99,7 @@ Una volta connesso, nel mio caso ho ricevuto l'indirizzo IP 192.168.0.104 e il r
 
 Riempiamo il messaggio così
 
-```
+```javascript
 var twist = new ROSLIB.Message({
     linear : {
       x :100,
@@ -116,14 +116,14 @@ var twist = new ROSLIB.Message({
 
  e lo pubblichiamo
 
-```
+```javascript
   cmdVel.publish(twist);
 ```
 
 Per quanto riguara il subscriber, lo dichiariamo che rimanga in ascolto sul topic  `'/<nome del vostro robot>/listener'` (messaggio std_msgs/String).
  E la funzione di call back:
 
-```
+```javascript
   listener.subscribe(function(message) {
     console.log('Received message on ' + listener.name + ': ' + message.data);
   });

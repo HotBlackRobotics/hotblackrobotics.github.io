@@ -19,7 +19,7 @@ Benvenuto sul nostro sito Hotblack Robotics!
 
 ![cloud robotics iot](http://www.hotblackrobotics.com/static/img/mainsite/workshop/InternetDeiRobot.svg)
 
-Se hai un Raspberry Pi 3 e vuoi **iscriverti gratis** come beta tester in piattaforma vai su [http://www.hotblackrobotics.com/register](http://www.hotblackrobotics.com/register)
+Se hai un Raspberry Pi 3 e vuoi **iscriverti gratis** come beta tester in piattaforma vai [qui](http://cloud.hotblackrobotics.com/register).
 
 Se vuoi **comprare** un kit robotico scrivici a **info@hotblackrobotics.com** e metti come oggetto "ACQUISTO"
 

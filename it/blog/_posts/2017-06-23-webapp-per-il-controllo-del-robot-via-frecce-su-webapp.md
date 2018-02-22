@@ -31,14 +31,15 @@ La webapp
 
 **Analizziamo il codice:**
 All'interno del file abbiamo la prima parte scritta in JavaScript che permette alla Webapp di comunicare con la piattaforma (riga 42).
-
+```html
     <script type="text/javascript">
     start_ros('192.168.0.108', 'cyberbot', '192.168.0.108', '192.168.0.108/bridge/');
     </script>
+```
  IMPORTANTE: ricordate di modificare i campi '*192.168.0.108*' e '*cyberbot*' inserendo l'IP e il nome del bot.
 
 La seconda parte di questo file JavaScript si occupa di gestire la velocità (riga 47).
-
+```html
     <script>
     $(document).ready(function(){
 
@@ -75,10 +76,8 @@ La seconda parte di questo file JavaScript si occupa di gestire la velocità (ri
 
             });
 
-
-
     </script>
-
+```
 La funzione *update()*  è un  nodo publisher  che si sottoscrive al topic */velocita*  ed invia i dati ogni volta che lo slider viene trascinato.
 La velocità deve essere espressa nel range tra 0 e 1 quindi utilizziamo il formato *std_msgs/Float32*
 
@@ -90,22 +89,23 @@ Sketch ROS
 ----------
 
 Il primo passo è quello di importare le librerie:
-
+```python
     import dotbot_ros
     from sys import stdout
     from std_msgs.msg import String
     from std_msgs.msg import Float32
     from gpiozero import Robot
-
+```
    La prima libreria è ovviamente quella di ROS, la seconda è *stdout* che ha il compito di forzare la stampa effettiva sulla shell. Le librerie successive sono quelle che ci servono per estrarre i valori, cioè String per la direzione e Float32 per la velocità.  Importiamo l'oggetto Robot dalla libreria gpiozero per gestirne il movimento del robot.
 
 Come al solito, il nostro programma è composto da un nodo ROS, la funzione principale è la funzione setup, che si occupa di inizializzare il robot e creare una callback di gestione.
-
+```python
     self.speed = 0
     self.posizione = 'none'
     self.robot = Robot(left=(9, 10), right=(7, 8))
     dotbot_ros.Subscriber('comando', String, self.direzione)
     dotbot_ros.Subscriber('velocita', Float32, self.speedy)
+```
 Inizializziamo le variabili speed e posizione. Dopodichè cambiamo le coppie di Pin GPIO a cui sono collegate i due motori.
 
 Sottoscriviamoci ai Topic ROS e usiamo le Callback.
@@ -119,7 +119,7 @@ La stessa cosa vale per la velocità:
 Ci sottoscriviamo al nodo *velocita* , riceviamo un messaggio di tipo Float32 e passiamo i dati alla funzione di callback *speedy*.
 
 La funzione che mette insieme la direzione e la velocità è:
-
+```python
     def controller(self,speed,posizione):
             if self.posizione == 'avanti':
                 self.robot.forward(self.speed)
@@ -135,31 +135,29 @@ La funzione che mette insieme la direzione e la velocità è:
 
             elif self.posizione == 'stop':
                 self.robot.stop()
+```
 Questa funzione riceve come parametro  *self* (rappresenta il nodo), *speed* (la velocità) e *posizione*.
  La funzione *controller* viene chiamata in 2 casi:
 
- 1.
-
+1. Quando viene eseguita la funzione di callback "speedy":
+```python
     def speedy(self, msg):
                 self.speed = msg.data
                 self.controller(self.speed,self.posizione)
-
-Quando viene eseguita la funzione di callback "speedy" .
-
- 2.  
-
+```
+2. Quando viene eseguita la funzione di callback "direzione":
+```python
     def direzione(self, msg):
             self.posizione = msg.data
             self.controller(self.speed,self.posizione)
-
-Quando viene eseguita la funzione di callback "direzione".
+```
 N.B: Queste due funzioni non possono funzionare indipendentemente. Perchè il robot non può muoversi senza la velocità e senza direzione.
 
 Codice completo
 ---------------
 
 Ecco il codice completo del nostro programma
-
+```python
     import dotbot_ros
     from sys import stdout
     from std_msgs.msg import String
@@ -194,14 +192,11 @@ Ecco il codice completo del nostro programma
             elif self.posizione == 'stop':
                 self.robot.stop()
 
-
         def speedy(self, msg):
             self.speed = msg.data
             self.controller(self.speed,self.posizione)
 
-
-
-
         def direzione(self, msg):
             self.posizione = msg.data
             self.controller(self.speed,self.posizione)
+```

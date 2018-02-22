@@ -23,7 +23,7 @@ Ciao a tutti, iniziamo oggi questa serie di tutorial per insegnare a programmare
 
 ![roscore ROS shell](https://raw.githubusercontent.com/ludusrusso/images/master/hbr/tutorial/led.png)
 
-Questo primo tutorial è dedicato all'accensione e allo spegnimento del Led, e si basa sulla versione beta del sistema operativo [**HBrain** (v0.3.2)](). Scrivo questo tutorial in preparazione al percorso di alternanza scuola lavoro con l'ITIS Avogadro di Torino. Se qualcuno volesse però provare per conto proprio ad utilizzare la piattaforma ci contatti in privato per ricevere supporto.
+Questo primo tutorial è dedicato all'accensione e allo spegnimento del Led, e si basa sulla versione beta del sistema operativo **HBrain** (v0.3.2). Scrivo questo tutorial in preparazione al percorso di alternanza scuola lavoro con l'ITIS Avogadro di Torino. Se qualcuno volesse però provare per conto proprio ad utilizzare la piattaforma ci contatti in privato per ricevere supporto.
 
 ## Cos’è HB Cloud?
 **HB Cloud** è una piattaforma di cloud robotics che stiamo sviluppando in **HB Robotics**. Lo scopo è quello di permettere a makers, studenti e non professionisti di imparare in modo semplice l'utilizzo di tecnologie innovative nel mondo della Cloud Robotics, ed in particolare su ROS.
