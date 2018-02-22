@@ -34,7 +34,7 @@ Colleghiamo i motori al driver. L'alimentazione del driver va collegata alla bat
 
 Le due fasi dei motori, vanno collegate, rispettivamente, ai GPIO 16,19 (sinistra) e 20,26 (destra).
 
-> Importante: Ricordate di mettere in comune la massa (GND) dell'alimentazione dei motori con la massa del Raspberry Pi.
+> **Importante: Ricordate di mettere in comune la massa (GND) dell'alimentazione dei motori con la massa del Raspberry Pi.**
 
 ![schema motori raspberry](http://res.cloudinary.com/hbr/image/upload/v1485196535/motori_bb_fdxui2.png)
 
@@ -90,7 +90,7 @@ Se qualcosa non funziona, controllate che i motori siano alimentati e che le mas
 
 Controllare il robot in questo modo non gli permette di essere nè più nè meno di un semplice giocattolo. Proviamo quindi a fare qualcosa di più interessante: controllare il robot attraverso un topic.
 
-Per farlo, sottoscriviamoci ad un topic chiamato `speed` di tipo ` std_msgs/Int16MultiArray`. Per farlo, per prima cosa, dobbiamo capire cos’è e come si usa una funzione di callback.
+Per farlo, sottoscriviamoci ad un topic chiamato `speed` di tipo `std_msgs/Int16MultiArray`. Per farlo, per prima cosa, dobbiamo capire cos’è e come si usa una funzione di callback.
 
 ### Funzioni di Callback
 Come già spiegato in precedenza, una funzione di **callback** è una funzione che non viene esplicitamente chiamata dal nostro programma, ma è automaticamente eseguita al verificarsi di un certo evento *asincrono* (cioè un evento che è generato al di fuori del nostro programma).

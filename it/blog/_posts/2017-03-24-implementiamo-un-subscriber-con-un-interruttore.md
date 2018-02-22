@@ -17,7 +17,7 @@ description: ""
 
 Ora utilizziamo un po' di più l'hardware! Configuriamo un pin di input per dare il segnale ad un led per accendersi. Il codice a questo punto è molto semplice. Importiamo un messaggio nuovo che è Input. Questo è il messaggio che pubblicherà l'interruttore quando verrà premuto. Quindi abbiam un subscriber che rimane in ascolto, e ogni volta che l'interruttore viene premuto il subscriber richiamerà la funzione `on_input`. Dentro questa funzione in fine c'è un publisher che farà accendere i led  a frequenze diverse. C'è un trick inoltre che è led_msg.led1 = self.cnt % 2 == 1. Questa è la versione compatta del if-then-else che abbiamo visto prima per cambiare continuamente stato al lede da true a false. La sintassi in modo compatto è dividi self.cnt per 2 se da resto 0 allora o (False) se no è 1 (True).
 
-```
+```python
 import dotbot_ros
 from dotbot_msgs.msg import Input, Led
 import sys

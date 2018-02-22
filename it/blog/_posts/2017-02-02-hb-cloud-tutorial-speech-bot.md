@@ -31,7 +31,7 @@ Ora basterà scrivere un nodo ROS che pubblica sul nodo ```/<nome_del_vostro_rob
 
 Il nodo ROS è un semplice publisher di stringhe in tempi diversi. Una volta pubblicate tutte le stringhe terminiamo il nodo in modo da lasciare tutti i processi puliti con `rospy.signal_shutdown("spegniti")`.
 
-```
+```python
 import dotbot_ros
 from std_msgs.msg import String
 import rospy

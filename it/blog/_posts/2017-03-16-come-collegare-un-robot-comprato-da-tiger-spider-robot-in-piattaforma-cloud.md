@@ -43,7 +43,7 @@ Effettuate i collegamenti. Il filo rosso (+) lo inserite nel mammut del Motor A 
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/ponteH.jpeg)
 
-Scaricate l'immagine per il Raspberry da [qui](https://www.dropbox.com/s/zop0xgrcklc0951/dotbot_v0_2.rar?dl=1) e copiate sull'SD del Raspberry. Configurate il Raspberry che si possa connettere in cloud come nei tutorial precedenti. Ora montate con delle fascette il Raspberry sul supporto verticale insieme alla batteria!
+Scaricate l'immagine per il Raspberry da [qui]({{ site.baseurl }}{% post_url /it/blog/2017-03-24-immagine-sd-per-la-cloud-e-configurazione %}) e copiate sull'SD del Raspberry. Configurate il Raspberry che si possa connettere in cloud come nei tutorial precedenti. Ora montate con delle fascette il Raspberry sul supporto verticale insieme alla batteria!
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/Rasp.jpeg)
 
@@ -51,7 +51,7 @@ Ora facciamo i collegamenti. Secondo questo scema dei pin del raspberry collegat
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/tut/RP2_Pinout%20(1).png)
 
-Per farlo muovere collegatevi in piattaforma e usate l'app Test Hardware ( http://www.hotblackrobotics.com/cloud/webgui/hwtest ). Impostate il valore 100, 100 sui motori (anche se di fatto ne controllate solo uno) e premete set motor. Vedrete che lo spider bot inizierà a muoversi! Ovviamente mettendo valori diversi si muoverà più o meno veloce e cambiando segno al valore impostato si muoverà al contrario. Prossimo tutorial con due Spiderbot costruiremo uno Spider Bot in grado di andare avanti, indietro e pure girare!
+Per farlo muovere collegatevi in piattaforma e usate l'app [Test Hardware](http://cloud.hotblackrobotics.com/cloud/webgui/hwtest). Impostate il valore 100, 100 sui motori (anche se di fatto ne controllate solo uno) e premete set motor. Vedrete che lo spider bot inizierà a muoversi! Ovviamente mettendo valori diversi si muoverà più o meno veloce e cambiando segno al valore impostato si muoverà al contrario. Prossimo tutorial con due Spiderbot costruiremo uno Spider Bot in grado di andare avanti, indietro e pure girare!
 
 Per informazioni **info@hotblackrobotics.com**
-Per la licenza da beta tester gratis registratevi qui [http://www.hotblackrobotics.com/register](http://www.hotblackrobotics.com/register).
+Per la licenza da beta tester gratis registratevi [qui](http://cloud.hotblackrobotics.com/register).

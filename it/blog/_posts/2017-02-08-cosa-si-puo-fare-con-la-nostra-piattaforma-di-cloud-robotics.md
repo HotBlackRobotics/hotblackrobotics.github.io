@@ -66,7 +66,7 @@ Anche in questo caso, applicazioni molte semplice da implementare ma che fa capi
 - Riconoscimento vocale (TO DO)
 - [Sintesi vocale](http://www.hotblackrobotics.com/blog/posts/2017-02-02-hb-cloud-tutorial-speech-bot)
 
-###Hardware Abstraction
+### Hardware Abstraction
 
 A parte il nome che sembra complicato, l'idea dell'Hardware Abstrction è che la Cloud Robotics riesce ad isolare l'hardware dal software in un'applicazione robotica..
 
@@ -82,19 +82,19 @@ Questo è il nostro progettino natalizio.
 
 
 
-###Applicazioni di Robotica di Servizio
+### Applicazioni di Robotica di Servizio
 
 Quando diventerete bravi, potrete sviluppare la vostra applicazioni di [Robotica di Servizio e diventare dei veri e proprio RobotDeveloper](http://www.hotblackrobotics.com/blog/posts/2017-01-25-robotica)
 
 Vi linko alcuni video di applicazioni sviluppate negli anni da noi:
 
-####Robot@CED
+#### Robot@CED
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HlUB0oHuXrc" frameborder="0" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VH0q-UsDiQY" frameborder="0" allowfullscreen></iframe>
 
-####PARLOMA
+#### PARLOMA
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6MGJb_GqauU" frameborder="0" allowfullscreen></iframe>
 

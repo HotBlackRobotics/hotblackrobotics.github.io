@@ -21,7 +21,7 @@ Questo brevissimo post è un tutorial che spiega come cambiare nome al robot usa
 Questo tutorial prevede una versione del sistema operativo HBrain > 0.5
 
  - Collegare il robot alla rete wifi (o ethernet)
- - Accedere alla [piattaforma cloud](http://www.hotblackrobotics.com/cloud/index)
+ - Accedere alla [piattaforma cloud](http://cloud.hotblackrobotics.com/cloud)
  - Premere il pulsante "cerca robot", il nome del robot (di default è **hotbot**) apparirà nella tabella
 ![](https://github.com/ludusrusso/images/blob/master/hbr/tutorial/hostname/search.png?raw=true)
  - Connettersi al Robot, una volta connessi, è necessario refreshare la pagina
