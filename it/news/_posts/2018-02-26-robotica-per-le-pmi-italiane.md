@@ -5,7 +5,8 @@ date: 2018-02-26
 image: https://www.ennomotive.com/wp-content/uploads/2016/07/agency-spring_universal-robots_cvi_3-1.jpg
 lang: it
 tag:
- - ROS
+ - industry 4.0
+ - robotica collaborativa
 
 author: sgabello
 description: "Ecco il vademecum di robotica per le Piccole Medie Imprese"
