@@ -36,7 +36,7 @@ Vediamo le principali differenze:
 |programmazione semplificata e dinamica| programmazione più complessa e per niente flessibile |
 |lavora con l'uomo in sicurezza | lavora in una gabbia di protezione|
 
-Ok ora prendiamo in esame due lavorazioni molto usate nella PMI e vediamo come affronarle con la robotica collaborativa.
+Ok ora prendiamo in esame due lavorazioni molto usate nella PMI e vediamo come affrontarle con la robotica collaborativa.
 
 ## Saldatura ##
 
@@ -56,11 +56,11 @@ Maggiori informazioni su questo [blog](https://blog.robotiq.com/bid/72421/Collab
 
 ## Pick and place ##
 
-Discorso analogo si può fare per operazioni noiose ed inefficienti per la movimentazione di materiali all'interno della catena produttiva. Un esempio di pick and place si può trovare qui.
+Discorso analogo si può fare per operazioni noiose e ad oggi svolte in modo manuale per la movimentazione di materiali all'interno della catena produttiva. Un esempio di pick and place si può trovare qui.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pIcxOGo7ieU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-In questo caso, oltre a quello già anticipato, il robot collaborativo può essere ancora più dinamico aggiungendo anche una camera per la visione artificiale per individuare in modo automatico i pezzi da prendere. Anche in questo caso se la produzione cambiasse basterà aggiornare l'operazione che effettua il robot in modo davvero semplice.
+In questo caso, oltre a quello già anticipato, il robot collaborativo può essere ancora più dinamico aggiungendo anche una camera per la visione artificiale per individuare in modo automatico i pezzi da prendere. In questo caso il il vantaggio sta nell'evitare di stabilire a priori la posizione precisa dei pezzi nello spazio da reperire e sarà la visione artificiale ad individuarli in modo automatico.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/j2IPCZthTCw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -71,7 +71,7 @@ Qui ci sono un po' di esempi sul sito [Universal Robots](https://www.universal-r
 
 # Costi ##
 
-Come penso abbiate intuito mi piace molto la robotica di Universal Robots, non ho nessun vantaggio a consigliarla ma effettivamente è secondo me una delle migliori marche per i robot collaborativi. In ogni caso ovviamente anche KUKA e ABB hanno robot collaborativi e stanno lavorando più o meno verso la stessa direzione. Dovessi però impostare una semplice linea di saldatura o pick and place con le caratteristiche accennate sopra credo sceglierei un robot Universal Robots tra [questi](https://www.universal-robots.com/products/) che compaiono sul sito.
+Come penso abbiate intuito mi piace molto la robotica di Universal Robots, non ho nessun vantaggio a consigliarla ma effettivamente è secondo me una delle migliori marche per i robot collaborativi. In realtà non credo di essere il solo a pensarla così visto che negli ultimi anni Universal Robots è cresciuta in modo esponenziale grazie ai suoi incredibili prodotti. In ogni caso ovviamente anche KUKA e ABB hanno robot collaborativi e stanno lavorando più o meno verso la stessa direzione ma per ora i costi sono più alti e per lo più utilizzati a scopo di ricerca. Dovessi quindi impostare una semplice linea di saldatura o pick and place con le caratteristiche accennate sopra credo sceglierei un robot Universal Robots tra [questi](https://www.universal-robots.com/products/) che compaiono sul sito.
 
 La vera innovazione comunque per me rimane il confronto di prezzo tra la saldatura robotica in modo tradizionale che, facendo un preventivo molto grossolano, si aggira intorno ai 100 mila Euro mentre con la robotica collaborativa sui 30/50. Basta comunque tener presente che un robot Universal Robots si aggira sui 20 mila Euro.
 
@@ -84,7 +84,7 @@ Come spiegato da Dario D'elia di Tom's Hardware, da cui ho avuto il piacere di e
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TX4_QiOkArY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    
 
- Se siete interessati a portare la robotica all'interno della vostra azienda o ricevere maggiori informazioni vi prego di scrivermi! 
+ Se siete interessati a portare la robotica all'interno della vostra azienda o ricevere maggiori informazioni vi prego di scrivermi!
  <a class="btn btn-lg btn-secondary btn-block" href="mailto:info@hotblackrobotics.com">Manda una e-mail</a>
 
 **Ciao!** :robot:
