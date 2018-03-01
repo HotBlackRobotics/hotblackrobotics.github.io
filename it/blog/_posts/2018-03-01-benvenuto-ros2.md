@@ -4,6 +4,7 @@ layout: post
 date: 2018-03-01
 image: /assets/imgs/2018-03-01-benvenuto-ros2/main.png
 lang: it
+headerImage: true
 tag:
  - ROS
  - ROS 2
