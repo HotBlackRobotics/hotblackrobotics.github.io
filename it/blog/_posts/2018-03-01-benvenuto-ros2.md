@@ -62,7 +62,7 @@ Iniziano ad esserci dentro un po' di chicche e carinerie varie:
 
 Al momento mi sono limitato a leggere la doc e iniziare ad installarlo sul mio PC (nel momento in cui scrivo sto aspettando il download dei vari pacchetti). Ecco alcune cose che ho capito..
 
-Al momento, ROS 2 include solo quello che in ROS è chiamato (core), cioè l'insieme dei funzionamenti base che abilitano la comunicazione e la gestione dei pacchetti. Da ora in avanti seguirà la parte di migrazione e sapremo probabilmente solo tra qualche mese se sarà approvato ed utilizzato dalla community (la fonza di ROS è la community, non ROS in se). 
+Al momento, ROS 2 include solo quello che in ROS è chiamato *core*, cioè l'insieme dei funzionamenti base che abilitano la comunicazione e la gestione dei pacchetti. Da ora in avanti seguirà la parte di migrazione e sapremo probabilmente solo tra qualche mese se sarà approvato ed utilizzato dalla community (la forza di ROS è la community, non ROS in se). 
 
 Ancora quindi non ha troppo senso iniziare a guardarlo, ma certamente io lo farò per interesse e per divertimento. Se il progetto prenderà veramente il posto per cui è nato, cioè una naturale evoluzione del ROS originale, è sicuramente un'ottimo momento per iniziare a contribuirci!
 
