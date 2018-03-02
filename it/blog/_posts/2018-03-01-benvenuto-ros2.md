@@ -68,7 +68,7 @@ Ancora quindi non ha troppo senso iniziare a guardarlo, ma certamente io lo farÃ
 
 :D
 
-##Â Video
+## Video
 
 Vi lascio con un video in cui spiego cosa ne penso e le prime impressioni a caldo dopo averlo provato!
 
