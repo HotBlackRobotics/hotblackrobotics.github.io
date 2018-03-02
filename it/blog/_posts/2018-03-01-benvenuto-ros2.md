@@ -68,3 +68,13 @@ Ancora quindi non ha troppo senso iniziare a guardarlo, ma certamente io lo farÃ
 
 :D
 
+##Â Video
+
+Vi lascio con un video in cui spiego cosa ne penso e le prime impressioni a caldo dopo averlo provato!
+
+{% include youtube.html id="xi1TQMdXNWM" %}
+
+Le repo citate nel video sono le seguenti:
+
+ - [Docker ROS2](https://github.com/ludusrusso/docker_ros2_ament)
+ - [Primi test](https://github.com/ludusrusso/ros2_tests)
