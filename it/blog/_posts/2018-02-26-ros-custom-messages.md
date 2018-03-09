@@ -14,7 +14,7 @@ Ciao a tutti! Oggi metterò insieme una serie di informazioni che ho raccolto me
 Questa potrebbe essere la vostra situazione nel caso aveste bisogno di un tipo di messaggio base con l'intento di semplificare la vostra applicazione: infatti alcuni [messaggi standard di ROS](http://wiki.ros.org/std_msgs/) sono fin troppo complessi per l'uso semplice che si vuol ottenere.
 Spero che questo post possa riassumere e accelerare la creazione di messaggi custom. Iniziamo!
 
-### Index
+### Indice
 * TOC
 {:toc}
 
