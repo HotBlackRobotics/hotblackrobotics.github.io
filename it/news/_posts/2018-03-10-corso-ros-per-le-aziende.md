@@ -1,5 +1,5 @@
 ---
-title: "Corso di ROS Robot Operating System e navigazione autonoma per aziende"
+title: "Corso di ROS Robot Operating System e guida autonoma per aziende"
 layout: post
 date: 2018-03-9
 image: https://raw.githubusercontent.com/sgabello1/sganagesh/master/nav-auto-ros.jpg
@@ -10,7 +10,7 @@ tag:
  - Navigazione autonoma
 
 author: sgabello
-description: "Corso di ROS Robot Operating System e navigazione autonoma per aziende"
+description: "Corso di ROS Robot Operating System e guida autonoma per aziende"
 ---
 <div class="left-element mailchimp"> <h1> Iscriviti al corso </h1> <p> Ricevi maggior maggior informazioni ed il simulatore ROS per la navigazione autonoma </p> <a href="http://bit.ly/2IkaHZv" role="button" class="btn" target="blank"> Iscriviti </a>
 </div>
