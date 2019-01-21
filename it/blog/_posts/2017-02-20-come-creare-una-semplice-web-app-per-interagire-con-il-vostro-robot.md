@@ -28,7 +28,7 @@ Iniziamo a vedere il codice per una Web App di un publisher e subscriber in ROS.
 
 <script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
 <script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
-<script type="text/javascript" src="http://www.hotblackrobotics.com/cloud/webgui/static/js/initros.js"></script>
+<script type="text/javascript" src="http://hotblackrobotics.github.io/cloud/webgui/static/js/initros.js"></script>
 <script type="text/javascript">
 
 start_ros('192.168.0.104', 'hotbot', '192.168.0.104:9090', 'None');

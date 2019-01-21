@@ -37,7 +37,7 @@ La prima cosa che vedete della nostra piattaforma è un editor di testo che perm
 
 ![Interfaccia Cluod Robotics](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486571402/Schermata_2017-02-08_alle_17.27.39_sl8vdb.png)
 
-È anche possibile utilizzare dei Robot Virtuali in Cloud appositamente sviluppati per inziare a sviluppare in ROS senza avere necessariamente un hardware reale a disposizione, [trovate info qui](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o)
+È anche possibile utilizzare dei Robot Virtuali in Cloud appositamente sviluppati per inziare a sviluppare in ROS senza avere necessariamente un hardware reale a disposizione, [trovate info qui](http://hotblackrobotics.github.io/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o)
 
 Perchè abbiamo scelto di utilizzare ROS?
 I motivi sono due (più un terzo che però deriva dalla nostra esperienza):
@@ -64,7 +64,7 @@ Abbiamo sviluppato (e stiamo sviluppando) diverse modalità di interazione con i
 Anche in questo caso, applicazioni molte semplice da implementare ma che fa capire benissimo le potenzialità. Seguendo i tutorial qui sotto, potete creare un vero e proprio assistente virtuale che controlla il vostro robot.
 
 - Riconoscimento vocale (TO DO)
-- [Sintesi vocale](http://www.hotblackrobotics.com/blog/posts/2017-02-02-hb-cloud-tutorial-speech-bot)
+- [Sintesi vocale](http://hotblackrobotics.github.io/blog/posts/2017-02-02-hb-cloud-tutorial-speech-bot)
 
 ### Hardware Abstraction
 
@@ -84,7 +84,7 @@ Questo è il nostro progettino natalizio.
 
 ### Applicazioni di Robotica di Servizio
 
-Quando diventerete bravi, potrete sviluppare la vostra applicazioni di [Robotica di Servizio e diventare dei veri e proprio RobotDeveloper](http://www.hotblackrobotics.com/blog/posts/2017-01-25-robotica)
+Quando diventerete bravi, potrete sviluppare la vostra applicazioni di [Robotica di Servizio e diventare dei veri e proprio RobotDeveloper](http://hotblackrobotics.github.io/blog/posts/2017-01-25-robotica)
 
 Vi linko alcuni video di applicazioni sviluppate negli anni da noi:
 

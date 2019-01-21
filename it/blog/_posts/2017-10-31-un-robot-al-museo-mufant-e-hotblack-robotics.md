@@ -35,7 +35,7 @@ Il tutorial per costruire questo robot controllabile da remoto è semplice e con
 
 **Cosa ti serve**
 
-Il robot DotBot che uso è open source e puoi costruirtelo a casa. Il tutorial dettagliato per stampare la meccanica in 3D, le schede elettroniche e come farlo lo trovi [qui](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware).
+Il robot DotBot che uso è open source e puoi costruirtelo a casa. Il tutorial dettagliato per stampare la meccanica in 3D, le schede elettroniche e come farlo lo trovi [qui](http://hotblackrobotics.github.io/blog/posts/2017-02-08-dotbot-tutorial-hardware).
 
 Se però non hai ancora tempo di costruirti tutto il robot puoi già partire solo con:
 
@@ -51,31 +51,31 @@ Se però non hai ancora tempo di costruirti tutto il robot puoi già partire sol
 
 **Partiamo**
 
-1) vai sul sito [www.hotblackrobotics.com](http://www.hotblackrobotics.com/)
+1) vai sul sito [hotblackrobotics.github.io](http://hotblackrobotics.github.io/)
 
-2) Dopo aver visto il mio (fantastico) breve video accedi in piattaforma. In alto a destra premendo ["Registrati"](http://www.hotblackrobotics.com/register) ti registri.
+2) Dopo aver visto il mio (fantastico) breve video accedi in piattaforma. In alto a destra premendo ["Registrati"](http://hotblackrobotics.github.io/register) ti registri.
 
-3) Una volta autenticato/a ci sarà un altro (ancora più fantastico) video. Vai sotto e clicca su [**Tutorial**](http://www.hotblackrobotics.com/blog/posts/supporto-tecnico)
+3) Una volta autenticato/a ci sarà un altro (ancora più fantastico) video. Vai sotto e clicca su [**Tutorial**](http://hotblackrobotics.github.io/blog/posts/supporto-tecnico)
 
-4) Clicca sulla scritta arancione **["03-Scaricare HBrain - Immagine SD"](http://www.hotblackrobotics.com/blog/posts/2017-03-24-immagine-sd-per-la-cloud-e-configurazione)** e scarica l'immagine che va masterizzata sulla SD da inserire dentro il Raspberry Pi 3
+4) Clicca sulla scritta arancione **["03-Scaricare HBrain - Immagine SD"](http://hotblackrobotics.github.io/blog/posts/2017-03-24-immagine-sd-per-la-cloud-e-configurazione)** e scarica l'immagine che va masterizzata sulla SD da inserire dentro il Raspberry Pi 3
 
 5) Scarica l'immagine ed il programma per masterizzare [Etcher](https://etcher.io/). Masterizza sulla SD!
 
 6) Collega il tuo raspberry ad un cavo Ethernet e collegalo al tuo router di casa
 
-7) Accendi il Raspberry e dopo un po' (30 secondi - 1 minuto) [cerca il robot dalla piattaforma cloud](http://www.hotblackrobotics.com/cloud/index)
+7) Accendi il Raspberry e dopo un po' (30 secondi - 1 minuto) [cerca il robot dalla piattaforma cloud](http://hotblackrobotics.github.io/cloud/index)
 
 8) Ad un certo punto apparirà un robot che si chiama **hotbot**! Premi "connect".
 
-9) Ora vai su ["Skecthes"](http://www.hotblackrobotics.com/cloud/sketch/). Vai al fondo della pagina dove c'è scritto "Examples". Troverai un esempio che si chiama "Mufantbot".Premi "clone"!
+9) Ora vai su ["Skecthes"](http://hotblackrobotics.github.io/cloud/sketch/). Vai al fondo della pagina dove c'è scritto "Examples". Troverai un esempio che si chiama "Mufantbot".Premi "clone"!
 
 10) Adesso il programmino è andato in "programs". Ora premi il bottone "Edit". Vedrai che si apre il codice.
 
-11) Crea il tuo bot Telegram seguendo il [tutorial qui](http://www.hotblackrobotics.com/blog/posts/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros). Segui tutti i passaggi fino a "Creazione del nostro programma" siccome tu il programma lo copi da me ;)
+11) Crea il tuo bot Telegram seguendo il [tutorial qui](http://hotblackrobotics.github.io/blog/posts/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros). Segui tutti i passaggi fino a "Creazione del nostro programma" siccome tu il programma lo copi da me ;)
 
 12) Vai nel codice e dove c'è scritto TOKEN a riga 18 sostituisci "il_tuo_token" con il tuo token.
 
-13) Ora inserisci la telecamera per il Raspberry (RaspiCam). La attivi andando su "Apps" sulla barra in alto e selezionando [RaspiCam](http://www.hotblackrobotics.com/cloud/webgui/camera)
+13) Ora inserisci la telecamera per il Raspberry (RaspiCam). La attivi andando su "Apps" sulla barra in alto e selezionando [RaspiCam](http://hotblackrobotics.github.io/cloud/webgui/camera)
 
 14) Ora da questa pagina premi il pulsante ["Apri Manager Robot"](http://192.168.0.101:9001/).
 

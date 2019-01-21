@@ -44,7 +44,7 @@ Figura 2: Andamento delle previsioni del mercato della robotica nei relativi set
 
 ## Coltivare una nuova generazione di sviluppatori robotici ##
 
-In questa visione noi crediamo fermamente. Dopo un dottorato in robotica al Politecnico di Torino e un'esperienza di ricerca all'interno di laboratori TIM, abbiamo deciso di scommettere fortemente su questi temi e fondare [HotBlack Robotics](www.hotblackrobotics.com). Il nostro obiettivo è quello di eliminare la barriera all'ingresso di ROS democratizzando la robotica e offrire le potenzialità dell'Internet delle Cose con una piattaforma di **Cloud Robotics**.
+In questa visione noi crediamo fermamente. Dopo un dottorato in robotica al Politecnico di Torino e un'esperienza di ricerca all'interno di laboratori TIM, abbiamo deciso di scommettere fortemente su questi temi e fondare [HotBlack Robotics](hotblackrobotics.github.io). Il nostro obiettivo è quello di eliminare la barriera all'ingresso di ROS democratizzando la robotica e offrire le potenzialità dell'Internet delle Cose con una piattaforma di **Cloud Robotics**.
 
 Il nostro primo esperimento, quindi, è stato quello di fornire un percorso di alternanza scuola-lavoro all'ITIS Avogadro di Torino, dove abbiamo coinvolto 3 classi di quarta per un totale di 90 ragazzi (una classe di Elettrotecnici e due di Informatici).
 Il programma prevede una parte iniziale di costruzione e configurazione del robot DotBot (grazie al supporto di un insegnante e nostro amico [Michele Maffucci](http://www.maffucci.it/)), una parte di programmazione in ROS per poi finire con progetti personali per stimolare la creatività.
@@ -57,8 +57,8 @@ Figura 3: Il robot DotBot
 
 Figura 4: Il programma di alternanza scuola-lavoro
 
-Gli accessi alla piattaforma sono gratis e si ottengono registrandosi [www.hotblackrobotics.com/register](http://www.hotblackrobotics.com/register). Ci stiamo impegnando a scrivere una serie di [tutorial](http://www.hotblackrobotics.com/forum/support) e un [blog] (http://www.hotblackrobotics.com/blog/posts/) per rendere possibile a tutti la formazione su queste importanti tematiche anche in remoto tramite Internet.
+Gli accessi alla piattaforma sono gratis e si ottengono registrandosi [hotblackrobotics.github.io/register](http://hotblackrobotics.github.io/register). Ci stiamo impegnando a scrivere una serie di [tutorial](http://hotblackrobotics.github.io/forum/support) e un [blog] (http://hotblackrobotics.github.io/blog/posts/) per rendere possibile a tutti la formazione su queste importanti tematiche anche in remoto tramite Internet.
 
 Riusciremo a coltivare una nuova generazione di sviluppatori robotici?
 
-Se credi che queste tematiche siano interessanti inizia a seguirci sulla nostra pagina Facebook o su [www.hotblackrobotics.com](http://www.hotblackrobotics.com/register) !
+Se credi che queste tematiche siano interessanti inizia a seguirci sulla nostra pagina Facebook o su [hotblackrobotics.github.io](http://hotblackrobotics.github.io/register) !

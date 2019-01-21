@@ -17,7 +17,7 @@ description: ""
 
 Benvenuto sul nostro sito Hotblack Robotics!
 
-![cloud robotics iot](http://www.hotblackrobotics.com/static/img/mainsite/workshop/InternetDeiRobot.svg)
+![cloud robotics iot](http://hotblackrobotics.github.io/static/img/mainsite/workshop/InternetDeiRobot.svg)
 
 Se hai un Raspberry Pi 3 e vuoi **iscriverti gratis** come beta tester in piattaforma vai [qui](http://cloud.hotblackrobotics.com/register).
 

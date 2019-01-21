@@ -60,7 +60,7 @@ Il ponte ad H:
 
 Ora collegate ogni alimentazione dei motori (motere A e motore B) ai rispettivi mammut del ponte ad H. Poi collegate il controllo dei motori (A-1A, A-1B e B-1A, B-1B) con i GPIO 9,25 (pin 21,22 o contando 10 dal basso) e GPIO 22,23 (pin 15,16 o contando 13 dal basso)del Raspberry. Infine l'alimentazione la collegate a una delle due batterie (fate attenzione solo che abbia almeno 1 o 2 Ampere altrimenti i motori non hanno abbastanza potenza e non si muovono).
 
-Ora configurate il Raspberry come da [http://www.hotblackrobotics.com/forum/support/13](http://www.hotblackrobotics.com/forum/support/13).
+Ora configurate il Raspberry come da [http://hotblackrobotics.github.io/forum/support/13](http://hotblackrobotics.github.io/forum/support/13).
 
 E siete pronti a partire!
 Se volete usare il controllo vocale copiate il codice da qui e usatelo tramite la Web App come spiegato [qui]({{ site.baseurl }}{% post_url /it/blog/2017-03-16-spiderbot-cloud-con-controllo-vocale %}).

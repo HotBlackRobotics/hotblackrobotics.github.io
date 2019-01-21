@@ -21,12 +21,12 @@ In questo tutorial vedremo come creare un semplice bot telegram in grado di cont
 
 ## Cosa serve?
 
-Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
+Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://hotblackrobotics.github.io/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale](http://hotblackrobotics.github.io/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
 
 Questa volta, useremo un robot reale per dialogare con il robot! Ad ogni modo, potrete comunque richiedere il vostro robot virtuale per fare prove!
 Se volete utilizzare un robot virtuale scriveteci a **info@hotblackrobotics.com**!
 
-Per prima cosa, è importate iscriversi alla piattaforma e collegarsi al robot, potete seguire le istruzioni all'inizio di [questo tutorial](http://www.hotblackrobotics.com/blog/posts/2017-02-10-tutorial-usiamo-la-piattaforma-di-cloud-robotics-per-sviluppare-un-semplice-assistente-personale-robotico).
+Per prima cosa, è importate iscriversi alla piattaforma e collegarsi al robot, potete seguire le istruzioni all'inizio di [questo tutorial](http://hotblackrobotics.github.io/blog/posts/2017-02-10-tutorial-usiamo-la-piattaforma-di-cloud-robotics-per-sviluppare-un-semplice-assistente-personale-robotico).
 
 ## Creazione di un Bot Telegram
 

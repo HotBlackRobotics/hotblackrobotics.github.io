@@ -24,7 +24,7 @@ Ciao a tutti, iniziamo con questo post una serie di tutorial più completi per l
 
 ## Cosa serve?
 
-Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://www.hotblackrobotics.com/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale (tramite la cloud)](http://www.hotblackrobotics.com/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
+Per sviluppare questo progetto, vi servirà essere iscritti alla nostra piattaforma ed avere a disposizione un robot [reale](http://hotblackrobotics.github.io/blog/posts/2017-02-08-dotbot-tutorial-hardware) o [virtuale (tramite la cloud)](http://hotblackrobotics.github.io/blog/posts/2017-02-03-avete-problemi-hardware-ce-il-robot-in-cloud-accessibile-da-remoto-tramite-il-vostro-pc-o).
 
 In questo tutorial, per semplicità, useremo un robot virtuale ma ovviamente si può benissimo utilizzare il robot reale!
 
@@ -32,7 +32,7 @@ Se volete utilizzare un robot virtuale scriveteci a info@hotblackrobotics.com!
 
 ## Iniziamo: accediamo alla piattaforma e colleghiamoci al Robot
 
-Accediamo al sito [www.hotblackrobotics.com](http://www.hotblackrobotics.com) ed effettuiamo il Login
+Accediamo al sito [hotblackrobotics.github.io](http://hotblackrobotics.github.io) ed effettuiamo il Login
 
 ![sito hotblack robotics](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486657695/Schermata_2017-02-09_alle_17.24.27_o2js8p.png)
 

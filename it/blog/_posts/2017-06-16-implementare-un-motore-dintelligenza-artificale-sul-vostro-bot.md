@@ -151,7 +151,7 @@ La risposta viene tradotta dal inglese in italiano e viene trasformata in una st
  ![enter image description here](http://i.imgur.com/P3afWcn.jpg)
 
 **Ora trasformiamo questo programma in una ChatBot (Telegram).**
-Per farlo basta creare un bot seguendo questa [guida](http://www.hotblackrobotics.com/blog/posts/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros).
+Per farlo basta creare un bot seguendo questa [guida](http://hotblackrobotics.github.io/blog/posts/2017-02-16-tutorial-sviluppiamo-un-bot-telegram-in-ros).
 A questo punto, ottenuto il Token , implementiamolo nel nostro codice.
 
     import dotbot_ros

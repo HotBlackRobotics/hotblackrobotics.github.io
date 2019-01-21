@@ -18,7 +18,7 @@ lang: it
 ##**DEADLINE EXTEDED**##
 ##Vinci 2000 Euro con Call For ROKERS: robot + makers ##
 
-HotBlack Robotics apre una Call For Robot-Makers (ROKERS) per intercettare i migliori makers robotici d'Italia. Non ci sono temi specifici anzi cerchiamo idee innovative  e libere che usino la nostra piattaforma cloud [www.hotblackrobotics.com/cloud/index](http://www.hotblackrobotics.com/cloud/index)! Stimolate la vostra creatività per creare qualcosa di unico che generi l'effetto "WOW!".
+HotBlack Robotics apre una Call For Robot-Makers (ROKERS) per intercettare i migliori makers robotici d'Italia. Non ci sono temi specifici anzi cerchiamo idee innovative  e libere che usino la nostra piattaforma cloud [hotblackrobotics.github.io/cloud/index](http://hotblackrobotics.github.io/cloud/index)! Stimolate la vostra creatività per creare qualcosa di unico che generi l'effetto "WOW!".
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/Call4Rokers_square.jpg)
 
@@ -38,7 +38,7 @@ HotBlack Robotics apre una Call For Robot-Makers (ROKERS) per intercettare i mig
 
 <a href="https://goo.gl/forms/Zkq5LbNaaSc9IWX83" type="button" class="btn btn-lg btn-info">PROPONI LA TUA IDEA</a>
 
-Per info contattate **ermacora[punto]gabriele[at]gmail[punto]com** o date un'occhiata al nostro sito e i [progetti fin'ora creati](http://www.hotblackrobotics.com/blog/posts/)!
+Per info contattate **ermacora[punto]gabriele[at]gmail[punto]com** o date un'occhiata al nostro sito e i [progetti fin'ora creati](http://hotblackrobotics.github.io/blog/posts/)!
 
 # Qual'è la visione di HotBlack Robotics? #
 

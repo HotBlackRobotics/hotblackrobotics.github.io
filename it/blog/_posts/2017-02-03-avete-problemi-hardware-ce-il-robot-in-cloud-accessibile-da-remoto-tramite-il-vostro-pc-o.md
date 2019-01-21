@@ -38,7 +38,7 @@ Ora andiamo nella "ROS console" e vediamo cosa succede. Notiamo subito che ci so
 
 ![ros cloud]( http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486565927/Schermata_2017-02-08_alle_15.58.20_ovkqy6.png )
 
-Poi se apriamo la Web App in un altro tab [http://www.hotblackrobotics.com/cloud/webgui/turtle](http://www.hotblackrobotics.com/cloud/webgui/turtle) ritornando su "ROS Console" un nuovo topic nella sezione "Topic List" apparirà (command_velocity).  
+Poi se apriamo la Web App in un altro tab [http://hotblackrobotics.github.io/cloud/webgui/turtle](http://hotblackrobotics.github.io/cloud/webgui/turtle) ritornando su "ROS Console" un nuovo topic nella sezione "Topic List" apparirà (command_velocity).  
 
 ![](http://res.cloudinary.com/www-hotblackrobotics-com/image/upload/v1486566503/Schermata_2017-02-08_alle_16.07.55_othgq2.png)
 

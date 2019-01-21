@@ -34,7 +34,7 @@ Nell'immagine sopra un esempio di comunicazione tra nodi attraverso i diversi to
 Rivediamo ora meglio i vari attori in piattaforma!
 
 ## Effettuate l'accesso alla piattaforma
-Andate sul sito di Hotblack Robotics (http://www.hotblackrobotics.com/) ed entrate nella piattaforma http://www.hotblackrobotics.com/login?next=%2Fcloud%2F. Inserite le vostre credenziali e siete in cloud!
+Andate sul sito di Hotblack Robotics (http://hotblackrobotics.github.io/) ed entrate nella piattaforma http://hotblackrobotics.github.io/login?next=%2Fcloud%2F. Inserite le vostre credenziali e siete in cloud!
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/cloudplatform.PNG)
 
@@ -50,7 +50,7 @@ Un nodo è un processo (un programma in esecuzione) all’interno della rete ROS
     - Driver (controlla un sensore o attuatore
     - Elaborazione (esegue calcoli)
 
-In piattaforma trovate sempre sotto la voce "ROS" (http://www.hotblackrobotics.com/cloud/webgui/console) sotto la voce "Nodes List" la lista dei nodi attivi.
+In piattaforma trovate sempre sotto la voce "ROS" (http://hotblackrobotics.github.io/cloud/webgui/console) sotto la voce "Nodes List" la lista dei nodi attivi.
 
 ![](https://raw.githubusercontent.com/sgabello1/Dotbot-Kit-e-Tutorial/master/nodi.PNG)
 

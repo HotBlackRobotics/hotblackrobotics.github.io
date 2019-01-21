@@ -36,7 +36,7 @@ Il problema ovviamente può essere affrontato in modo molto più complesso e con
 
 # 2. Collegare la raspicam al Raspberry
 
-Seguite il tutorial scritto in precedenza che trovate [qui](http://www.hotblackrobotics.com/it/blog/2017/04/10/utilizzare-la-raspicam-in-streaming-con-la-piattaforma-cloud/).
+Seguite il tutorial scritto in precedenza che trovate [qui](http://hotblackrobotics.github.io/it/blog/2017/04/10/utilizzare-la-raspicam-in-streaming-con-la-piattaforma-cloud/).
 ![Connessione Camera](https://i.ytimg.com/vi/PTjOp8YV38U/maxresdefault.jpg)
 Una volta che è tutto funzionante possiamo procedere con il codice. Andiamo nella sezione della piattaforma cloud adibita a creare nuovi "sketches" e iniziamo a scrivere un nodo!
 

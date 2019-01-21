@@ -20,7 +20,7 @@ In questo tutorial vedremo come collegare un Arduino UNO al nostro Raspberry con
 
 # Nota Bene
 
-Per far funzionare questo tutorial, prima di tutto è necessario accedere al terminale, utilizzando [questa guida](http://www.hotblackrobotics.com/blog/posts/2017-05-23-accedere-al-terminale-linux-di-hbrain-da-browser), ed eseguire il seguente comando (basta fare copia incolla). Una volta fatto questo, riavviare il robot!
+Per far funzionare questo tutorial, prima di tutto è necessario accedere al terminale, utilizzando [questa guida](http://hotblackrobotics.github.io/blog/posts/2017-05-23-accedere-al-terminale-linux-di-hbrain-da-browser), ed eseguire il seguente comando (basta fare copia incolla). Una volta fatto questo, riavviare il robot!
 
 ```bash
 curl https://gist.githubusercontent.com/ludusrusso/a3533daae7a03c07ce55b90019f2a0ba/raw/c20b544de544f0c13577c31a3bc0322718c884d8/arduino_patch_hbrain | bash
